@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zásady ochrany osobních údajů — Chytrý košík</title>
+<meta name="description" content="Zásady ochrany osobních údajů aplikace Chytrý košík v souladu s GDPR.">
+<style>
+:root {
+  --primary: #4CAF50;
+  --cream: #F5EFE6;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --border: #e5e5e5;
+  --bg: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+  padding: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.header {
+  text-align: center;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--primary);
+}
+.header h1 {
+  color: var(--primary);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.meta {
+  background: var(--cream);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+h2 {
+  color: var(--primary);
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+p { margin-bottom: 12px; }
+ul { margin-bottom: 12px; padding-left: 24px; }
+li { margin-bottom: 6px; }
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+.provider-box {
+  background: var(--cream);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  border-left: 3px solid var(--primary);
+}
+.contact-box {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 24px;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer a { color: var(--primary); }
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  .container { padding: 24px 20px; }
+  .header h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>Zásady ochrany osobních údajů</h1>
+  <div class="subtitle">Aplikace Chytrý košík</div>
+</div>
+
+<div class="meta">
+  <strong>Verze:</strong> 1.1 (Firebase Analytics + Crashlytics)<br>
+  <strong>Účinnost od:</strong> 30.7.2026<br>
+  <strong>Poslední aktualizace:</strong> 8.6.2026
+</div>
+
+<h2>1. Správce osobních údajů</h2>
+<p>
+  <strong>Patrik Šedo</strong><br>
+  Praha, Česká republika<br>
+  E-mail pro ochranu osobních údajů: <a href="mailto:chytrykosik@gmail.com">chytrykosik@gmail.com</a><br>
+  E-mail pro podporu: <a href="mailto:chytrykosik@gmail.com">chytrykosik@gmail.com</a>
+</p>
+
+<h2>2. Jaké údaje zpracováváme</h2>
+<p>Aplikace Chytrý košík je navržena s principem datové minimalizace. Zpracováváme následující kategorie údajů:</p>
+
+<h3>2.1 Místně uložené údaje (zůstávají výhradně na vašem zařízení)</h3>
+<ul>
+  <li>Vaše preference receptů a oblíbené položky</li>
+  <li>Historie nákupního košíku a plánovaných jídel</li>
+  <li>Nastavení vybraného obchodu a filtrů</li>
+  <li>Označení „mám doma" pro jednotlivé suroviny</li>
+  <li>Vámi přidané poznámky a tipy k receptům</li>
+  <li>Stav rozpracovaných kroků v receptu</li>
+  <li>Anonymizovaný identifikátor zařízení (UUID generovaný lokálně, NEpropojený s e-mailem ani účtem)</li>
+</ul>
+<p>Tyto údaje neopouštějí vaše zařízení s výjimkou anonymního UUID předávaného analytickým službám (viz 2.2). Provozovatel nemá přístup k vašim osobním údajům.</p>
+
+<h3>2.2 Anonymní technické údaje (pouze pokud udělíte souhlas)</h3>
+<p>Aplikace využívá Google Firebase Analytics a Firebase Crashlytics ke sběru následujících anonymních dat:</p>
+
+<p><strong>a) Crash reporty (Firebase Crashlytics):</strong></p>
+<ul>
+  <li>Stack trace pádu aplikace (technický záznam chyby)</li>
+  <li>Verze aplikace, verze operačního systému, model zařízení</li>
+  <li>Lokalizace (jazyk: cz/sk/en)</li>
+  <li>Velikost obrazovky (kategorie: malá/střední/velká)</li>
+  <li>Anonymizovaný UUID zařízení</li>
+  <li>ŽÁDNÉ jméno, e-mail, telefonní číslo, GPS souřadnice ani jiné PII</li>
+</ul>
+
+<p><strong>b) Statistiky používání (Firebase Analytics) — seznam sledovaných událostí:</strong></p>
+<ul>
+  <li>app_open (spuštění aplikace)</li>
+  <li>onboarding_started, onboarding_completed (průchod prvotním nastavením)</li>
+  <li>recipe_viewed (ID receptu, kategorie)</li>
+  <li>recipe_added_to_cart (ID receptu, velikost košíku PŘED přidáním)</li>
+  <li>recipe_removed_from_cart (ID receptu)</li>
+  <li>search_performed (počet výsledků, použití filtru ano/ne — NIKDY samotný hledaný výraz)</li>
+  <li>filter_applied, filter_cleared (typ filtru)</li>
+  <li>cart_finalized (počet receptů, počet položek, rozsahová kategorie ceny)</li>
+  <li>store_selected (název obchodu)</li>
+  <li>prekvapme_used (použití funkce „Překvap mě")</li>
+  <li>skola_vareni_opened (ID receptu)</li>
+  <li>linked_recipe_followed (přechod mezi recepty)</li>
+  <li>sharing_used (typ sdíleného obsahu)</li>
+  <li>screen_view (název obrazovky — automaticky)</li>
+</ul>
+
+<p><strong>c) Technické informace:</strong></p>
+<ul>
+  <li>Verze aplikace, verze operačního systému, model zařízení, locale, časové pásmo</li>
+</ul>
+<p>Tyto údaje jsou plně anonymizované přes UUID nevázané na žádnou identifikovatelnou osobu.</p>
+
+<h3>2.3 Údaje při kontaktu s podporou</h3>
+<p>Pokud nás kontaktujete e-mailem, zpracováváme:</p>
+<ul>
+  <li>E-mailovou adresu</li>
+  <li>Obsah zprávy</li>
+  <li>Informace, které dobrovolně poskytnete</li>
+</ul>
+
+<h2>3. Účel zpracování</h2>
+<p><strong>3.1</strong> Místně uložené údaje slouží k personalizaci aplikace na vašem zařízení.</p>
+<p><strong>3.2</strong> Anonymní technické údaje slouží k:</p>
+<ul>
+  <li>Detekci a opravě chyb v aplikaci (Crashlytics)</li>
+  <li>Vylepšování funkcionality (Analytics)</li>
+  <li>Měření kvality uživatelské zkušenosti</li>
+  <li>Identifikaci nepoužívaných funkcí pro budoucí redesign</li>
+</ul>
+<p><strong>3.3</strong> Údaje z podpory slouží výhradně k vyřízení vašeho dotazu nebo problému.</p>
+
+<h2>4. Právní základ zpracování</h2>
+<p>V souladu s nařízením GDPR (Nařízení EU 2016/679):</p>
+<ul>
+  <li><strong>Místně uložené údaje:</strong> oprávněný zájem (čl. 6 odst. 1 písm. f) — umožnění funkce aplikace</li>
+  <li><strong>Anonymní technické údaje:</strong> souhlas (čl. 6 odst. 1 písm. a) — můžete kdykoli odvolat v nastavení aplikace</li>
+  <li><strong>Údaje z podpory:</strong> oprávněný zájem (čl. 6 odst. 1 písm. f) — vyřízení vašeho dotazu</li>
+</ul>
+
+<h2>5. Sdílení údajů s třetími stranami</h2>
+<p><strong>5.1</strong> Místně uložené údaje nejsou sdíleny s nikým.</p>
+<p><strong>5.2</strong> Anonymní technické údaje jsou zpracovávány následujícími zpracovateli:</p>
+
+<div class="provider-box">
+  <strong>Google Ireland Limited / Google LLC (USA)</strong>
+  <ul>
+    <li><strong>Služba:</strong> Firebase Analytics + Firebase Crashlytics</li>
+    <li><strong>Účel:</strong> crash reporting, statistiky používání</li>
+    <li><strong>Smluvní základ:</strong> Google Cloud Data Processing Addendum (DPA) v souladu s GDPR</li>
+    <li><strong>Datová lokace:</strong> Spojené státy americké, s adekvátními zárukami dle čl. 46 GDPR</li>
+    <li><strong>Bližší informace:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
+    <li><strong>Smluvní podmínky:</strong> <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener">cloud.google.com/terms/data-processing-addendum</a></li>
+  </ul>
+</div>
+
+<p>Všichni zpracovatelé jsou vázáni nařízením GDPR a smlouvami o zpracování osobních údajů.</p>
+<p><strong>5.3</strong> Údaje nejsou prodávány ani předávány třetím stranám pro marketingové účely.</p>
+<p><strong>5.4</strong> Údaje mohou být předány orgánům činným v trestním řízení pouze na základě platného soudního rozhodnutí.</p>
+
+<h2>6. Doba uchovávání</h2>
+<ul>
+  <li><strong>Místně uložené údaje:</strong> dokud nesmazete aplikaci nebo nepoužijete funkci „Vymazat data" v nastavení</li>
+  <li><strong>Anonymní technické údaje (Firebase Analytics):</strong> standardní retence 14 měsíců</li>
+  <li><strong>Anonymní technické údaje (Firebase Crashlytics):</strong> 90 dnů od posledního výskytu</li>
+  <li><strong>Údaje z e-mailové podpory:</strong> 3 roky od posledního kontaktu, poté smazány</li>
+</ul>
+
+<h2>7. Vaše práva</h2>
+<p>Jako subjekt údajů máte v souladu s GDPR právo:</p>
+<ul>
+  <li><strong>7.1</strong> Právo na informace — vědět, jaké údaje zpracováváme</li>
+  <li><strong>7.2</strong> Právo na přístup — vyžádat si kopii zpracovávaných údajů</li>
+  <li><strong>7.3</strong> Právo na opravu — požadovat opravu nepřesných údajů</li>
+  <li><strong>7.4</strong> Právo na výmaz (právo být zapomenut) — požadovat smazání údajů</li>
+  <li><strong>7.5</strong> Právo na omezení zpracování — dočasně omezit zpracování</li>
+  <li><strong>7.6</strong> Právo na přenositelnost — obdržet údaje ve strukturovaném formátu</li>
+  <li><strong>7.7</strong> Právo vznést námitku — proti zpracování na základě oprávněného zájmu</li>
+  <li><strong>7.8</strong> Právo odvolat souhlas — kdykoli odvolat souhlas s analytickými údaji v nastavení aplikace (funkce „Vypnout analytiku")</li>
+  <li><strong>7.9</strong> Právo na reset analytického ID — v nastavení můžete kdykoli vygenerovat nové anonymní UUID</li>
+  <li><strong>7.10</strong> Právo podat stížnost u dozorového úřadu:
+    <div class="provider-box" style="margin-top: 8px;">
+      Úřad pro ochranu osobních údajů<br>
+      Pplk. Sochora 27, 170 00 Praha 7<br>
+      <a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>
+    </div>
+  </li>
+</ul>
+<p>Pro uplatnění práv nás kontaktujte na: <a href="mailto:chytrykosik@gmail.com">chytrykosik@gmail.com</a>. Odpovíme nejpozději do 30 dnů od přijetí žádosti.</p>
+
+<h2>8. Zabezpečení údajů</h2>
+<p><strong>8.1</strong> Aplikace ukládá místní data v zabezpečené formě s využitím šifrování poskytovaného operačním systémem (iOS Keychain / Android Keystore).</p>
+<p><strong>8.2</strong> Komunikace s Firebase službami probíhá výhradně přes zašifrované spojení (HTTPS/TLS 1.2+).</p>
+<p><strong>8.3</strong> Firebase Analytics + Crashlytics využívají Google security infrastructure (ISO 27001, SOC 2 Type II certifikované).</p>
+<p><strong>8.4</strong> Provozovatel pravidelně aktualizuje aplikaci o bezpečnostní opravy.</p>
+
+<h2>9. Předávání údajů mimo EU</h2>
+<p>Anonymní technické údaje jsou předávány společnosti Google LLC (USA) prostřednictvím Firebase platformy. Předávání probíhá na základě:</p>
+<ul>
+  <li>Standardních smluvních doložek (Standard Contractual Clauses) schválených Evropskou komisí rozhodnutím (EU) 2021/914</li>
+  <li>EU-US Data Privacy Framework (Rozhodnutí Komise z 10.7.2023, Google je certifikovanou organizací)</li>
+  <li>Doplňujících technických a organizačních záruk dle čl. 46 GDPR</li>
+  <li>Google Cloud Data Processing Addendum dostupné na: <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener">cloud.google.com/terms/data-processing-addendum</a></li>
+</ul>
+
+<h2>10. Užívání dětmi</h2>
+<p>Aplikace není určena pro uživatele mladší 16 let. Vědomě nezpracováváme údaje dětí do 16 let. Pokud zjistíte, že jsme zpracovali údaje dítěte bez souhlasu rodiče, kontaktujte nás na <a href="mailto:chytrykosik@gmail.com">chytrykosik@gmail.com</a>.</p>
+<p>Firebase Analytics má v nastavení zapnutou ochranu nezletilých (COPPA compliance).</p>
+
+<h2>11. Změny zásad</h2>
+<p><strong>11.1</strong> Provozovatel je oprávněn tyto zásady aktualizovat.</p>
+<p><strong>11.2</strong> O zásadních změnách budeme informovat oznámením v aplikaci nejméně 14 dnů před účinností nové verze zásad.</p>
+<p><strong>11.3</strong> Pokračováním v používání aplikace po účinnosti nových zásad vyjadřujete s nimi souhlas.</p>
+
+<h2>12. Kontakt</h2>
+<div class="contact-box">
+  <p><strong>Pro dotazy ohledně ochrany osobních údajů:</strong></p>
+  <p>E-mail: <a href="mailto:chytrykosik@gmail.com">chytrykosik@gmail.com</a></p>
+  <br>
+  <p><strong>Provozovatel:</strong></p>
+  <p>Patrik Šedo, Praha, Česká republika</p>
+</div>
+
+<div class="footer">
+  <p>
+    <a href="/">Úvod</a> &middot;
+    <a href="/terms">Podmínky používání</a> &middot;
+    <a href="/privacy">Zásady ochrany údajů</a>
+  </p>
+  <p style="margin-top: 12px;">&copy; 2026 Chytrý košík &middot; Verze 1.1</p>
+</div>
+
+</div>
+</body>
+</html>
