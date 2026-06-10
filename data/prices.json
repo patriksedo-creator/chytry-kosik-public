@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-06-10T15:54:23.825272+02:00",
+    "generatedAt": "2026-06-10T20:25:27.343533+00:00",
     "staplesRequested": 50,
     "staplesMatchedFresh": 47,
-    "staplesCarriedForward": 0,
-    "totalStoreEntries": 134,
-    "apiRequests": 184,
+    "staplesCarriedForward": 1,
+    "totalStoreEntries": 137,
+    "apiRequests": 181,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -759,6 +759,54 @@
         "pricePerUnit": "399 Kč/kg"
       }
     },
+    "Sádlo 250g": {
+      "Kaufland": {
+        "price": 49.9,
+        "inSale": true,
+        "pricePerUnit": "50 Kč/kg",
+        "saleValidTo": "2026-06-16"
+      },
+      "Tesco": {
+        "price": 43.9,
+        "inSale": false,
+        "pricePerUnit": "176 Kč/kg"
+      },
+      "Globus": {
+        "price": 99.0,
+        "inSale": false,
+        "pricePerUnit": "248 Kč/kg"
+      }
+    },
+    "Smetana na vaření 12% 200ml": {
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "99 Kč/kg"
+      },
+      "Tesco": {
+        "price": 14.9,
+        "inSale": false,
+        "pricePerUnit": "74 Kč/kg"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "149 Kč/l"
+      }
+    },
+    "Kakao 100g": {
+      "Penny": {
+        "price": 34.9,
+        "inSale": true,
+        "pricePerUnit": "6 Kč/ks",
+        "saleValidTo": "2026-06-10"
+      },
+      "Globus": {
+        "price": 17.9,
+        "inSale": false,
+        "pricePerUnit": "447 Kč/kg"
+      }
+    },
     "Zakysaná smetana 200ml": {
       "Albert": {
         "price": 17.9,
@@ -792,36 +840,6 @@
         "price": 24.9,
         "inSale": false,
         "pricePerUnit": "142 Kč/kg"
-      }
-    },
-    "Smetana na vaření 12% 200ml": {
-      "Albert": {
-        "price": 19.9,
-        "inSale": false,
-        "pricePerUnit": "99 Kč/kg"
-      },
-      "Tesco": {
-        "price": 14.9,
-        "inSale": false,
-        "pricePerUnit": "74 Kč/kg"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "149 Kč/l"
-      }
-    },
-    "Kakao 100g": {
-      "Penny": {
-        "price": 34.9,
-        "inSale": true,
-        "pricePerUnit": "6 Kč/ks",
-        "saleValidTo": "2026-06-10"
-      },
-      "Globus": {
-        "price": 17.9,
-        "inSale": false,
-        "pricePerUnit": "447 Kč/kg"
       }
     }
   }
