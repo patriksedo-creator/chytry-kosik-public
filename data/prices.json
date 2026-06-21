@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-06-18T05:25:58.258741+00:00",
+    "generatedAt": "2026-06-21T05:50:30.496745+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 161,
     "staplesCarriedForward": 12,
-    "totalStoreEntries": 414,
-    "apiRequests": 613,
+    "totalStoreEntries": 413,
+    "apiRequests": 612,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -203,9 +203,9 @@
         "pricePerUnit": "80 Kč/kg"
       },
       "Globus": {
-        "price": 59.9,
+        "price": 69.9,
         "inSale": false,
-        "pricePerUnit": "120 Kč/kg"
+        "pricePerUnit": "140 Kč/kg"
       }
     },
     "Bobkový list 5g": {
@@ -1166,11 +1166,6 @@
         "pricePerUnit": "67 Kč/kg",
         "saleValidTo": "2026-06-23"
       },
-      "Tesco": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "227 Kč/kg"
-      },
       "Globus": {
         "price": 89.9,
         "inSale": false,
@@ -1184,9 +1179,9 @@
         "pricePerUnit": "40 Kč/l"
       },
       "Globus": {
-        "price": 32.9,
+        "price": 34.9,
         "inSale": false,
-        "pricePerUnit": "183 Kč/kg"
+        "pricePerUnit": "436 Kč/kg"
       }
     },
     "Mák mletý 200g": {
@@ -1821,9 +1816,9 @@
     },
     "Těstoviny penne 500g": {
       "Tesco": {
-        "price": 95.9,
+        "price": 51.9,
         "inSale": false,
-        "pricePerUnit": "384 Kč/kg"
+        "pricePerUnit": "104 Kč/kg"
       },
       "Globus": {
         "price": 62.9,
@@ -1874,9 +1869,9 @@
         "pricePerUnit": "866 Kč/kg"
       },
       "Globus": {
-        "price": 110.7,
+        "price": 33.9,
         "inSale": false,
-        "pricePerUnit": "369 Kč/kg"
+        "pricePerUnit": "424 Kč/kg"
       }
     },
     "Niva 100g": {
@@ -2072,9 +2067,9 @@
         "saleValidTo": "2026-06-23"
       },
       "Globus": {
-        "price": 59.95,
+        "price": 69.9,
         "inSale": false,
-        "pricePerUnit": "120 Kč/kg"
+        "pricePerUnit": "140 Kč/kg"
       }
     },
     "Meruňky 500g": {
