@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-06-22T06:15:18.031074+00:00",
+    "generatedAt": "2026-06-23T04:52:18.626383+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 162,
     "staplesCarriedForward": 12,
@@ -1245,9 +1245,9 @@
         "pricePerUnit": "92 Kč/kg"
       },
       "Globus": {
-        "price": 24.9,
+        "price": 19.9,
         "inSale": false,
-        "pricePerUnit": "62 Kč/kg"
+        "pricePerUnit": "50 Kč/kg"
       }
     },
     "Rýže dlouhozrnná 1kg": {
@@ -1325,9 +1325,9 @@
         "pricePerUnit": "46 Kč/kg"
       },
       "Globus": {
-        "price": 34.9,
+        "price": 24.9,
         "inSale": false,
-        "pricePerUnit": "174 Kč/kg"
+        "pricePerUnit": "124 Kč/kg"
       }
     },
     "Kuřecí stehna 1kg": {
@@ -2130,9 +2130,9 @@
         "pricePerUnit": "318 Kč/l"
       },
       "Globus": {
-        "price": 79.9,
+        "price": 49.9,
         "inSale": false,
-        "pricePerUnit": "340 Kč/l"
+        "pricePerUnit": "212 Kč/l"
       }
     },
     "Cola 2l": {
