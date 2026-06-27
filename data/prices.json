@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-06-26T04:59:55.264477+00:00",
+    "generatedAt": "2026-06-27T04:42:21.421762+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 164,
     "staplesCarriedForward": 13,
@@ -1694,9 +1694,9 @@
         "pricePerUnit": "374 Kč/kg"
       },
       "Globus": {
-        "price": 75.9,
+        "price": 89.55,
         "inSale": false,
-        "pricePerUnit": "3795 Kč/kg"
+        "pricePerUnit": "199 Kč/kg"
       }
     },
     "Vepřová krkovice 1kg": {
