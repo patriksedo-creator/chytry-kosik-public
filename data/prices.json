@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-06-27T04:42:21.421762+00:00",
+    "generatedAt": "2026-06-28T05:09:37.252135+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 164,
     "staplesCarriedForward": 13,
-    "totalStoreEntries": 409,
-    "apiRequests": 611,
+    "totalStoreEntries": 411,
+    "apiRequests": 613,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -829,6 +829,11 @@
         "pricePerUnit": "243 Kč/kg",
         "saleValidTo": "2026-06-28"
       },
+      "Tesco": {
+        "price": 41.9,
+        "inSale": false,
+        "pricePerUnit": "635 Kč/kg"
+      },
       "Globus": {
         "price": 74.9,
         "inSale": false,
@@ -1160,9 +1165,9 @@
         "saleValidTo": "2026-06-30"
       },
       "Tesco": {
-        "price": 39.9,
+        "price": 86.9,
         "inSale": false,
-        "pricePerUnit": "222 Kč/kg"
+        "pricePerUnit": "174 Kč/l"
       },
       "Globus": {
         "price": 34.9,
@@ -1774,6 +1779,11 @@
         "inSale": true,
         "pricePerUnit": "0 Kč/ks",
         "saleValidTo": "2026-06-30"
+      },
+      "Globus": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "324 Kč/kg"
       }
     },
     "Vepřové mleté maso 500g": {
@@ -2232,9 +2242,9 @@
     },
     "Muškát bílé polosladké 750ml": {
       "Tesco": {
-        "price": 124.9,
+        "price": 129.9,
         "inSale": false,
-        "pricePerUnit": "167 Kč/l"
+        "pricePerUnit": "173 Kč/l"
       },
       "Globus": {
         "price": 99.9,
