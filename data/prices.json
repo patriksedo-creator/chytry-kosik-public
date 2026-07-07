@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-06T05:00:50.903694+00:00",
+    "generatedAt": "2026-07-07T04:39:35.434551+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 162,
     "staplesCarriedForward": 14,
@@ -303,15 +303,15 @@
         "saleValidTo": "2026-07-07"
       },
       "Penny": {
-        "price": 19.9,
+        "price": 34.9,
         "inSale": true,
-        "pricePerUnit": "80 Kč/l",
+        "pricePerUnit": "82 Kč/l",
         "saleValidTo": "2026-07-07"
       },
       "Globus": {
-        "price": 84.9,
+        "price": 59.9,
         "inSale": false,
-        "pricePerUnit": "212 Kč/kg"
+        "pricePerUnit": "150 Kč/kg"
       }
     },
     "Paprika červená 1ks": {
@@ -966,9 +966,9 @@
         "pricePerUnit": "938 Kč/kg"
       },
       "Globus": {
-        "price": 46.9,
+        "price": 31.9,
         "inSale": false,
-        "pricePerUnit": "229 Kč/l"
+        "pricePerUnit": "156 Kč/l"
       }
     },
     "Kmín celý 28g": {
