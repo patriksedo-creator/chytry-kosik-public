@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-11T03:57:38.737306+00:00",
+    "generatedAt": "2026-07-12T04:18:50.311282+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 161,
     "staplesCarriedForward": 15,
-    "totalStoreEntries": 420,
-    "apiRequests": 619,
+    "totalStoreEntries": 421,
+    "apiRequests": 620,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -75,6 +75,11 @@
       }
     },
     "Cukr krupice 1kg": {
+      "Tesco": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "20 Kč/kg"
+      },
       "Globus": {
         "price": 19.9,
         "inSale": false,
@@ -410,9 +415,9 @@
         "saleValidTo": "2026-07-12"
       },
       "Tesco": {
-        "price": 59.9,
+        "price": 79.9,
         "inSale": false,
-        "pricePerUnit": "300 Kč/kg"
+        "pricePerUnit": "266 Kč/kg"
       },
       "Globus": {
         "price": 54.9,
@@ -1583,9 +1588,9 @@
     },
     "Červené víno suché 750ml": {
       "Tesco": {
-        "price": 399.9,
+        "price": 69.9,
         "inSale": false,
-        "pricePerUnit": "133 Kč/l"
+        "pricePerUnit": "93 Kč/l"
       },
       "Globus": {
         "price": 69.9,
@@ -2251,9 +2256,9 @@
         "saleValidTo": "2026-07-14"
       },
       "Tesco": {
-        "price": 49.9,
+        "price": 199.9,
         "inSale": false,
-        "pricePerUnit": "333 Kč/kg"
+        "pricePerUnit": "89 Kč/l"
       },
       "Globus": {
         "price": 119.9,
@@ -2263,9 +2268,9 @@
     },
     "Muškát bílé polosladké 750ml": {
       "Tesco": {
-        "price": 124.9,
+        "price": 179.9,
         "inSale": false,
-        "pricePerUnit": "167 Kč/l"
+        "pricePerUnit": "240 Kč/l"
       },
       "Globus": {
         "price": 79.9,
