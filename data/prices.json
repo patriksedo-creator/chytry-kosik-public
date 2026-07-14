@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-13T04:22:29.145909+00:00",
+    "generatedAt": "2026-07-14T03:49:30.789395+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 160,
     "staplesCarriedForward": 16,
@@ -1582,9 +1582,9 @@
     },
     "Červené víno suché 750ml": {
       "Tesco": {
-        "price": 69.9,
+        "price": 199.9,
         "inSale": false,
-        "pricePerUnit": "93 Kč/l"
+        "pricePerUnit": "89 Kč/l"
       },
       "Globus": {
         "price": 69.9,
