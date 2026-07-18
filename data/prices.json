@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-17T03:53:15.938296+00:00",
+    "generatedAt": "2026-07-18T03:47:11.087117+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 161,
     "staplesCarriedForward": 17,
@@ -414,9 +414,9 @@
         "saleValidTo": "2026-07-21"
       },
       "Tesco": {
-        "price": 104.9,
+        "price": 91.9,
         "inSale": false,
-        "pricePerUnit": "140 Kč/l"
+        "pricePerUnit": "123 Kč/l"
       },
       "Globus": {
         "price": 179.9,
@@ -1156,9 +1156,9 @@
         "saleValidTo": "2026-07-21"
       },
       "Tesco": {
-        "price": 39.9,
+        "price": 54.9,
         "inSale": false,
-        "pricePerUnit": "399 Kč/kg"
+        "pricePerUnit": "11438 Kč/kg"
       },
       "Globus": {
         "price": 399.9,
