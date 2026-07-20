@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-19T04:15:04.699215+00:00",
+    "generatedAt": "2026-07-20T04:28:09.740030+00:00",
     "staplesRequested": 233,
-    "staplesMatchedFresh": 161,
-    "staplesCarriedForward": 17,
-    "totalStoreEntries": 413,
-    "apiRequests": 611,
+    "staplesMatchedFresh": 160,
+    "staplesCarriedForward": 18,
+    "totalStoreEntries": 411,
+    "apiRequests": 608,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -42,7 +42,7 @@
         "price": 144.9,
         "inSale": true,
         "pricePerUnit": "5 Kč/ks",
-        "saleValidTo": "2026-07-19"
+        "saleValidTo": "2026-07-22"
       },
       "Tesco": {
         "price": 79.9,
@@ -80,12 +80,6 @@
       }
     },
     "Cibule žlutá 1kg": {
-      "Lidl": {
-        "price": 13.9,
-        "inSale": true,
-        "pricePerUnit": "14 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Globus": {
         "price": 3.98,
         "inSale": false,
@@ -115,6 +109,12 @@
         "price": 19.9,
         "inSale": true,
         "pricePerUnit": "99 Kč/kg",
+        "saleValidTo": "2026-07-21"
+      },
+      "Billa": {
+        "price": 24.9,
+        "inSale": true,
+        "pricePerUnit": "100 Kč/l",
         "saleValidTo": "2026-07-21"
       },
       "Penny": {
@@ -166,17 +166,17 @@
         "pricePerUnit": "30 Kč/l",
         "saleValidTo": "2026-07-21"
       },
+      "Lidl": {
+        "price": 34.9,
+        "inSale": true,
+        "pricePerUnit": "35 Kč/l",
+        "saleValidTo": "2026-07-22"
+      },
       "Kaufland": {
         "price": 31.9,
         "inSale": true,
         "pricePerUnit": "32 Kč/l",
         "saleValidTo": "2026-07-21"
-      },
-      "Billa": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "30 Kč/l",
-        "saleValidTo": "2026-07-19"
       },
       "Penny": {
         "price": 169.9,
@@ -200,6 +200,12 @@
         "price": 49.9,
         "inSale": true,
         "pricePerUnit": "50 Kč/kg",
+        "saleValidTo": "2026-07-21"
+      },
+      "Penny": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "60 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
       "Tesco": {
@@ -365,6 +371,12 @@
       }
     },
     "Zakysaná smetana 200ml": {
+      "Lidl": {
+        "price": 22.9,
+        "inSale": true,
+        "pricePerUnit": "57 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Kaufland": {
         "price": 12.9,
         "inSale": true,
@@ -390,10 +402,10 @@
     },
     "Cherry rajčata 250g": {
       "Lidl": {
-        "price": 39.9,
+        "price": 5.9,
         "inSale": true,
-        "pricePerUnit": "133 Kč/kg",
-        "saleValidTo": "2026-07-19"
+        "pricePerUnit": "59 Kč/kg",
+        "saleValidTo": "2026-07-22"
       },
       "Tesco": {
         "price": 34.9,
@@ -456,12 +468,6 @@
       }
     },
     "Řepkový olej 1l": {
-      "Billa": {
-        "price": 26.9,
-        "inSale": true,
-        "pricePerUnit": "27 Kč/l",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 54.9,
         "inSale": false,
@@ -474,6 +480,12 @@
       }
     },
     "Brambory 2kg": {
+      "Lidl": {
+        "price": 49.9,
+        "inSale": true,
+        "pricePerUnit": "10 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Kaufland": {
         "price": 29.9,
         "inSale": true,
@@ -564,12 +576,6 @@
       }
     },
     "Cibule žlutá 1ks": {
-      "Lidl": {
-        "price": 13.9,
-        "inSale": true,
-        "pricePerUnit": "14 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Globus": {
         "price": 3.98,
         "inSale": false,
@@ -614,12 +620,6 @@
         "pricePerUnit": "120 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
-      "Penny": {
-        "price": 109.9,
-        "inSale": true,
-        "pricePerUnit": "110 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 114.9,
         "inSale": false,
@@ -656,12 +656,6 @@
       }
     },
     "Pomeranče 1kg": {
-      "Penny": {
-        "price": 22.9,
-        "inSale": true,
-        "pricePerUnit": "23 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 249.9,
         "inSale": false,
@@ -729,12 +723,6 @@
       }
     },
     "Pórek 1ks": {
-      "Penny": {
-        "price": 14.9,
-        "inSale": true,
-        "pricePerUnit": "15 Kč/ks",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 44.9,
         "inSale": false,
@@ -778,9 +766,9 @@
         "saleValidTo": "2026-07-21"
       },
       "Billa": {
-        "price": 8.9,
+        "price": 54.9,
         "inSale": true,
-        "pricePerUnit": "59 Kč/kg",
+        "pricePerUnit": "55 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
       "Penny": {
@@ -997,12 +985,6 @@
         "pricePerUnit": "466 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
-      "Penny": {
-        "price": 22.9,
-        "inSale": true,
-        "pricePerUnit": "23 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 19.9,
         "inSale": false,
@@ -1138,10 +1120,10 @@
     },
     "Mango 1ks": {
       "Lidl": {
-        "price": 59.9,
+        "price": 44.9,
         "inSale": true,
-        "pricePerUnit": "599 Kč/kg",
-        "saleValidTo": "2026-07-19"
+        "pricePerUnit": "449 Kč/kg",
+        "saleValidTo": "2026-07-22"
       },
       "Kaufland": {
         "price": 19.9,
@@ -1343,17 +1325,17 @@
         "pricePerUnit": "120 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
+      "Lidl": {
+        "price": 79.9,
+        "inSale": true,
+        "pricePerUnit": "80 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Kaufland": {
         "price": 84.9,
         "inSale": true,
         "pricePerUnit": "85 Kč/kg",
         "saleValidTo": "2026-07-21"
-      },
-      "Penny": {
-        "price": 89.9,
-        "inSale": true,
-        "pricePerUnit": "90 Kč/kg",
-        "saleValidTo": "2026-07-19"
       },
       "Tesco": {
         "price": 199.9,
@@ -1367,6 +1349,12 @@
       }
     },
     "Mandle 100g": {
+      "Lidl": {
+        "price": 49.9,
+        "inSale": true,
+        "pricePerUnit": "249 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Globus": {
         "price": 99.9,
         "inSale": false,
@@ -1457,7 +1445,7 @@
         "price": 32.9,
         "inSale": true,
         "pricePerUnit": "66 Kč/kg",
-        "saleValidTo": "2026-07-19"
+        "saleValidTo": "2026-07-22"
       },
       "Tesco": {
         "price": 17.5,
@@ -1661,12 +1649,6 @@
       }
     },
     "Česnek 1kg": {
-      "Penny": {
-        "price": 27.9,
-        "inSale": true,
-        "pricePerUnit": "139 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Tesco": {
         "price": 29.9,
         "inSale": false,
@@ -1706,12 +1688,6 @@
         "pricePerUnit": "199 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
-      "Lidl": {
-        "price": 69.9,
-        "inSale": true,
-        "pricePerUnit": "233 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Kaufland": {
         "price": 19.9,
         "inSale": true,
@@ -1748,12 +1724,6 @@
         "pricePerUnit": "135 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
-      "Lidl": {
-        "price": 18.9,
-        "inSale": true,
-        "pricePerUnit": "126 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Kaufland": {
         "price": 23.9,
         "inSale": true,
@@ -1764,6 +1734,12 @@
         "price": 17.9,
         "inSale": true,
         "pricePerUnit": "143 Kč/kg",
+        "saleValidTo": "2026-07-21"
+      },
+      "Penny": {
+        "price": 16.9,
+        "inSale": true,
+        "pricePerUnit": "0 Kč/ks",
         "saleValidTo": "2026-07-21"
       }
     },
@@ -1837,23 +1813,11 @@
         "pricePerUnit": "249 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
-      "Lidl": {
-        "price": 99.9,
-        "inSale": true,
-        "pricePerUnit": "240 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Kaufland": {
         "price": 29.9,
         "inSale": true,
         "pricePerUnit": "332 Kč/kg",
         "saleValidTo": "2026-07-21"
-      },
-      "Billa": {
-        "price": 89.9,
-        "inSale": true,
-        "pricePerUnit": "200 Kč/kg",
-        "saleValidTo": "2026-07-19"
       },
       "Penny": {
         "price": 89.9,
@@ -1929,14 +1893,6 @@
         "pricePerUnit": "749 Kč/kg"
       }
     },
-    "Gouda blok 300g": {
-      "Penny": {
-        "price": 38.9,
-        "inSale": true,
-        "pricePerUnit": "156 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      }
-    },
     "Hranolky mražené 1kg": {
       "Globus": {
         "price": 92.9,
@@ -1978,6 +1934,12 @@
       }
     },
     "Bezlepkový bochník 300g": {
+      "Lidl": {
+        "price": 34.9,
+        "inSale": true,
+        "pricePerUnit": "140 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Globus": {
         "price": 69.9,
         "inSale": false,
@@ -2022,6 +1984,12 @@
       }
     },
     "Rybí prsty 250g": {
+      "Lidl": {
+        "price": 69.9,
+        "inSale": true,
+        "pricePerUnit": "233 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Penny": {
         "price": 29.9,
         "inSale": true,
@@ -2061,16 +2029,16 @@
       }
     },
     "Meruňky 500g": {
-      "Lidl": {
-        "price": 49.9,
-        "inSale": true,
-        "pricePerUnit": "50 Kč/kg",
-        "saleValidTo": "2026-07-19"
-      },
       "Kaufland": {
         "price": 84.9,
         "inSale": true,
         "pricePerUnit": "85 Kč/kg",
+        "saleValidTo": "2026-07-21"
+      },
+      "Penny": {
+        "price": 49.9,
+        "inSale": true,
+        "pricePerUnit": "50 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
       "Tesco": {
@@ -2155,10 +2123,10 @@
         "saleValidTo": "2026-07-21"
       },
       "Lidl": {
-        "price": 29.9,
+        "price": 99.9,
         "inSale": true,
-        "pricePerUnit": "20 Kč/l",
-        "saleValidTo": "2026-07-19"
+        "pricePerUnit": "14 Kč/l",
+        "saleValidTo": "2026-07-22"
       },
       "Kaufland": {
         "price": 59.9,
@@ -2184,6 +2152,11 @@
       }
     },
     "Minerálka 1.5l": {
+      "Tesco": {
+        "price": 31.9,
+        "inSale": false,
+        "pricePerUnit": "46 Kč/l"
+      },
       "Globus": {
         "price": 19.9,
         "inSale": false,
@@ -2303,6 +2276,12 @@
         "pricePerUnit": "130 Kč/kg",
         "saleValidTo": "2026-07-21"
       },
+      "Lidl": {
+        "price": 59.9,
+        "inSale": true,
+        "pricePerUnit": "60 Kč/kg",
+        "saleValidTo": "2026-07-22"
+      },
       "Kaufland": {
         "price": 74.9,
         "inSale": true,
@@ -2330,6 +2309,14 @@
         "price": 111.2,
         "inSale": false,
         "pricePerUnit": "139 Kč/kg"
+      }
+    },
+    "Gouda blok 300g": {
+      "Penny": {
+        "price": 38.9,
+        "inSale": true,
+        "pricePerUnit": "156 Kč/kg",
+        "saleValidTo": "2026-07-19"
       }
     },
     "Eidam 30% plátky 100g": {
