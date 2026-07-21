@@ -1,12 +1,12 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-07-20T04:28:09.740030+00:00",
+    "generatedAt": "2026-07-21T04:00:58.442129+00:00",
     "staplesRequested": 233,
     "staplesMatchedFresh": 160,
     "staplesCarriedForward": 18,
-    "totalStoreEntries": 411,
-    "apiRequests": 608,
+    "totalStoreEntries": 409,
+    "apiRequests": 606,
     "mode": "full",
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true
@@ -431,9 +431,9 @@
         "pricePerUnit": "123 Kč/l"
       },
       "Globus": {
-        "price": 179.9,
+        "price": 129.9,
         "inSale": false,
-        "pricePerUnit": "60 Kč/l"
+        "pricePerUnit": "43 Kč/l"
       }
     },
     "Třtinový cukr 500g": {
@@ -1735,12 +1735,6 @@
         "inSale": true,
         "pricePerUnit": "143 Kč/kg",
         "saleValidTo": "2026-07-21"
-      },
-      "Penny": {
-        "price": 16.9,
-        "inSale": true,
-        "pricePerUnit": "0 Kč/ks",
-        "saleValidTo": "2026-07-21"
       }
     },
     "Vepřové mleté maso 500g": {
@@ -2152,11 +2146,6 @@
       }
     },
     "Minerálka 1.5l": {
-      "Tesco": {
-        "price": 31.9,
-        "inSale": false,
-        "pricePerUnit": "46 Kč/l"
-      },
       "Globus": {
         "price": 19.9,
         "inSale": false,
