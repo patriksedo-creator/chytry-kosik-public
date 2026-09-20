@@ -1,22 +1,1170 @@
 {
   "_meta": {
     "source": "potravinka.cz/api (sankcionované AI-agent API)",
-    "generatedAt": "2026-09-19T05:12:13.983091+00:00",
+    "generatedAt": "2026-09-20T05:29:23.632033+00:00",
     "configPool": 793,
-    "staplesRequested": 110,
-    "staplesMatchedFresh": 58,
-    "staplesCarriedForward": 350,
-    "carriedFromPrevious": 350,
-    "freshMatchRate": 0.527,
+    "staplesRequested": 122,
+    "staplesMatchedFresh": 63,
+    "staplesCarriedForward": 345,
+    "carriedFromPrevious": 345,
+    "freshMatchRate": 0.516,
     "totalStoreEntries": 884,
-    "apiRequests": 235,
+    "apiRequests": 263,
     "mode": "full",
-    "rotationGroup": 6,
+    "rotationGroup": 0,
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true,
     "qualityGateWarning": false
   },
   "prices": {
+    "Balkánský sýr 200g": {
+      "Albert": {
+        "price": 52.9,
+        "inSale": true,
+        "pricePerUnit": "212 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Lidl": {
+        "price": 19.9,
+        "inSale": true,
+        "pricePerUnit": "159 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-20"
+      },
+      "Billa": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "260 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-10-27"
+      },
+      "Tesco": {
+        "price": 289.0,
+        "inSale": false,
+        "pricePerUnit": "289 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "299 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Bobkový list 5g": {
+      "Tesco": {
+        "price": 5.5,
+        "inSale": false,
+        "pricePerUnit": "1100 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "3317 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Brambory 2kg": {
+      "Kaufland": {
+        "price": 49.9,
+        "inSale": true,
+        "pricePerUnit": "10 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 52.9,
+        "inSale": false,
+        "pricePerUnit": "212 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "80 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Brokolice čerstvá 350g": {
+      "Tesco": {
+        "price": 52.9,
+        "inSale": false,
+        "pricePerUnit": "212 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "160 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Bujón hovězí kostky 60g": {
+      "Tesco": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "446 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "277 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Bílý rum 0.7l": {
+      "Globus": {
+        "price": 469.9,
+        "inSale": false,
+        "pricePerUnit": "671 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Cherry rajčata 250g": {
+      "Lidl": {
+        "price": 34.9,
+        "inSale": true,
+        "pricePerUnit": "140 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-20"
+      },
+      "Tesco": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "200 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 54.9,
+        "inSale": false,
+        "pricePerUnit": "137 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Chilli olej 250ml": {
+      "Globus": {
+        "price": 189.9,
+        "inSale": false,
+        "pricePerUnit": "950 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Cibule granulovaná 22g": {
+      "Tesco": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "1359 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "1359 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Cuketa 1ks": {
+      "Tesco": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "50 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "250 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Cukr krystal 1kg": {
+      "Tesco": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "20 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "20 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Datle bez pecek 200g": {
+      "Globus": {
+        "price": 59.9,
+        "inSale": false,
+        "pricePerUnit": "300 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Dýně Hokkaido 1kg": {
+      "Penny": {
+        "price": 19.9,
+        "inSale": true,
+        "pricePerUnit": "20 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-20"
+      },
+      "Tesco": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "50 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Dýňový olej 250ml": {
+      "Tesco": {
+        "price": 239.9,
+        "inSale": false,
+        "pricePerUnit": "960 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 229.9,
+        "inSale": false,
+        "pricePerUnit": "920 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Ementál 100g": {
+      "Kaufland": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "299 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 63.9,
+        "inSale": false,
+        "pricePerUnit": "426 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 47.9,
+        "inSale": false,
+        "pricePerUnit": "239 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Gin 700ml": {
+      "Penny": {
+        "price": 599.9,
+        "inSale": true,
+        "pricePerUnit": "857 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "200 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Halloumi 250g": {
+      "Tesco": {
+        "price": 91.9,
+        "inSale": false,
+        "pricePerUnit": "408 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "533 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Hamburgerové bulky 4ks": {
+      "Tesco": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "123 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Houskový knedlík 500g": {
+      "Tesco": {
+        "price": 27.9,
+        "inSale": false,
+        "pricePerUnit": "70 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "250 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Jablka Golden 1kg": {
+      "Penny": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "30 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-20"
+      },
+      "Tesco": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "40 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 7.18,
+        "inSale": false,
+        "pricePerUnit": "40 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Jägermeister 700ml": {
+      "Kaufland": {
+        "price": 229.9,
+        "inSale": true,
+        "pricePerUnit": "460 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Billa": {
+        "price": 439.9,
+        "inSale": true,
+        "pricePerUnit": "880 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Penny": {
+        "price": 299.9,
+        "inSale": true,
+        "pricePerUnit": "600 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 329.9,
+        "inSale": false,
+        "pricePerUnit": "471 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "1248 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kiwi 1ks": {
+      "Tesco": {
+        "price": 24.9,
+        "inSale": false,
+        "pricePerUnit": "277 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kmín drcený 25g": {
+      "Tesco": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "711 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 25.9,
+        "inSale": false,
+        "pricePerUnit": "1036 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kokosové mléko 400ml": {
+      "Billa": {
+        "price": 39.9,
+        "inSale": true,
+        "pricePerUnit": "100 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "100 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 35.9,
+        "inSale": false,
+        "pricePerUnit": "299 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kozí sýr 100g": {
+      "Lidl": {
+        "price": 69.9,
+        "inSale": true,
+        "pricePerUnit": "466 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-20"
+      },
+      "Tesco": {
+        "price": 89.9,
+        "inSale": false,
+        "pricePerUnit": "899 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 86.9,
+        "inSale": false,
+        "pricePerUnit": "869 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kroupy 500g": {
+      "Tesco": {
+        "price": 17.9,
+        "inSale": false,
+        "pricePerUnit": "36 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "187 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kukuřice mražená 350g": {
+      "Globus": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "133 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kuřecí křídla 1kg": {
+      "Kaufland": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "60 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "240 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 134.9,
+        "inSale": false,
+        "pricePerUnit": "450 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Kysané zelí 500g": {
+      "Albert": {
+        "price": 27.9,
+        "inSale": true,
+        "pricePerUnit": "28 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Penny": {
+        "price": 10.9,
+        "inSale": true,
+        "pricePerUnit": "22 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 16.5,
+        "inSale": false,
+        "pricePerUnit": "33 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 129.9,
+        "inSale": false,
+        "pricePerUnit": "371 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Křen strouhaný 140g": {
+      "Tesco": {
+        "price": 59.9,
+        "inSale": false,
+        "pricePerUnit": "413 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "665 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Mléko plnotučné 1l": {
+      "Tesco": {
+        "price": 51.9,
+        "inSale": false,
+        "pricePerUnit": "55 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 27.9,
+        "inSale": false,
+        "pricePerUnit": "56 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Mouka hladká 1kg": {
+      "Tesco": {
+        "price": 33.9,
+        "inSale": false,
+        "pricePerUnit": "34 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 33.9,
+        "inSale": false,
+        "pricePerUnit": "34 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Mozzarella strouhaná 200g": {
+      "Globus": {
+        "price": 51.9,
+        "inSale": false,
+        "pricePerUnit": "208 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Mungo klíčky 200g": {
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "166 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Máslo 250g": {
+      "Kaufland": {
+        "price": 149.9,
+        "inSale": true,
+        "pricePerUnit": "600 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 229.9,
+        "inSale": false,
+        "pricePerUnit": "5474 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 169.9,
+        "inSale": false,
+        "pricePerUnit": "850 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Naan chléb 2ks": {
+      "Tesco": {
+        "price": 84.9,
+        "inSale": false,
+        "pricePerUnit": "42 Kč/ks",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Ocet 8% 1l": {
+      "Kaufland": {
+        "price": 64.9,
+        "inSale": true,
+        "pricePerUnit": "65 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Billa": {
+        "price": 54.9,
+        "inSale": true,
+        "pricePerUnit": "110 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Globus": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "140 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Ovesné vločky bezlepkové 500g": {
+      "Globus": {
+        "price": 26.9,
+        "inSale": false,
+        "pricePerUnit": "90 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Ovesný nápoj 1l": {
+      "Tesco": {
+        "price": 84.9,
+        "inSale": false,
+        "pricePerUnit": "85 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "37 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Paprika zelená 1ks": {
+      "Globus": {
+        "price": 17.48,
+        "inSale": false,
+        "pricePerUnit": "70 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Paprika žlutá 1ks": {
+      "Tesco": {
+        "price": 89.9,
+        "inSale": false,
+        "pricePerUnit": "90 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 19.78,
+        "inSale": false,
+        "pricePerUnit": "90 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Parmezán Grana Padano kus 200g": {
+      "Kaufland": {
+        "price": 59.9,
+        "inSale": true,
+        "pricePerUnit": "399 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Billa": {
+        "price": 97.9,
+        "inSale": true,
+        "pricePerUnit": "490 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-10-27"
+      },
+      "Penny": {
+        "price": 59.9,
+        "inSale": true,
+        "pricePerUnit": "0 Kč/ks",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 114.9,
+        "inSale": false,
+        "pricePerUnit": "574 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 179.9,
+        "inSale": false,
+        "pricePerUnit": "900 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Pastinák 500g": {
+      "Globus": {
+        "price": 44.9,
+        "inSale": false,
+        "pricePerUnit": "359 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Pinot Grigio DOC 0.75l": {
+      "Globus": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "107 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Pomeranče 1kg": {
+      "Albert": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "30 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 31.9,
+        "inSale": false,
+        "pricePerUnit": "64 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "8317 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Pražská šunka 100g": {
+      "Penny": {
+        "price": 24.9,
+        "inSale": true,
+        "pricePerUnit": "249 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 46.9,
+        "inSale": false,
+        "pricePerUnit": "469 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 44.9,
+        "inSale": false,
+        "pricePerUnit": "449 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Romadur 100g": {
+      "Albert": {
+        "price": 24.9,
+        "inSale": true,
+        "pricePerUnit": "249 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Penny": {
+        "price": 23.9,
+        "inSale": true,
+        "pricePerUnit": "239 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "246 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "300 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Růžičková kapusta 500g": {
+      "Tesco": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "66 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 22.9,
+        "inSale": false,
+        "pricePerUnit": "65 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Slivovice 500ml": {
+      "Tesco": {
+        "price": 689.0,
+        "inSale": false,
+        "pricePerUnit": "984 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 399.9,
+        "inSale": false,
+        "pricePerUnit": "800 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Slunečnicový olej 1l": {
+      "Tesco": {
+        "price": 64.9,
+        "inSale": false,
+        "pricePerUnit": "65 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "160 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Smetana na vaření 12% 200ml": {
+      "Albert": {
+        "price": 19.9,
+        "inSale": true,
+        "pricePerUnit": "99 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Kaufland": {
+        "price": 27.9,
+        "inSale": true,
+        "pricePerUnit": "139 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "133 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "149 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Smetanový sýr 200g": {
+      "Billa": {
+        "price": 15.9,
+        "inSale": true,
+        "pricePerUnit": "159 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 54.9,
+        "inSale": false,
+        "pricePerUnit": "305 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "363 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Soju 360ml": {
+      "Globus": {
+        "price": 139.9,
+        "inSale": false,
+        "pricePerUnit": "400 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Sýr s modrou plísní 100g": {
+      "Albert": {
+        "price": 26.9,
+        "inSale": true,
+        "pricePerUnit": "234 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Globus": {
+        "price": 27.9,
+        "inSale": false,
+        "pricePerUnit": "465 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Tabasco omáčka 60ml": {
+      "Tesco": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "1332 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Thajská červená kari pasta 400g": {
+      "Globus": {
+        "price": 159.9,
+        "inSale": false,
+        "pricePerUnit": "1142 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Vanilková zmrzlina 500ml": {
+      "Tesco": {
+        "price": 799.0,
+        "inSale": false,
+        "pricePerUnit": "799 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 54.9,
+        "inSale": false,
+        "pricePerUnit": "686 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Vitana Hřebíček celý 18g": {
+      "Tesco": {
+        "price": 42.9,
+        "inSale": false,
+        "pricePerUnit": "2383 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Vlašské ořechy 100g": {
+      "Albert": {
+        "price": 59.9,
+        "inSale": true,
+        "pricePerUnit": "300 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Penny": {
+        "price": 139.9,
+        "inSale": true,
+        "pricePerUnit": "280 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "600 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "400 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Ústřicová omáčka 250ml": {
+      "Tesco": {
+        "price": 53.9,
+        "inSale": false,
+        "pricePerUnit": "180 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "313 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Červené víno suché 750ml": {
+      "Tesco": {
+        "price": 199.9,
+        "inSale": false,
+        "pricePerUnit": "89 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "93 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Řepkový olej 1l": {
+      "Albert": {
+        "price": 29.9,
+        "inSale": true,
+        "pricePerUnit": "30 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Billa": {
+        "price": 32.9,
+        "inSale": true,
+        "pricePerUnit": "33 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20",
+        "saleValidTo": "2026-09-22"
+      },
+      "Tesco": {
+        "price": 54.9,
+        "inSale": false,
+        "pricePerUnit": "55 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 109.9,
+        "inSale": false,
+        "pricePerUnit": "440 Kč/l",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
+    "Šafrán 0.5g": {
+      "Tesco": {
+        "price": 43.9,
+        "inSale": false,
+        "pricePerUnit": "365833 Kč/kg",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      },
+      "Globus": {
+        "price": 109.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "scraped",
+        "lastScraped": "2026-09-20"
+      }
+    },
     "Arašídový olej 250ml": {
       "Globus": {
         "price": 269.9,
@@ -5416,796 +6564,6 @@
         "lastScraped": "2026-09-14"
       }
     },
-    "Balkánský sýr 200g": {
-      "Albert": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "166 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Billa": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "260 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-10-27"
-      },
-      "Penny": {
-        "price": 34.9,
-        "inSale": true,
-        "pricePerUnit": "174 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 299.0,
-        "inSale": false,
-        "pricePerUnit": "299 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "299 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Bobkový list 5g": {
-      "Tesco": {
-        "price": 5.5,
-        "inSale": false,
-        "pricePerUnit": "1100 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 19.9,
-        "inSale": false,
-        "pricePerUnit": "3317 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Brambory 2kg": {
-      "Lidl": {
-        "price": 21.9,
-        "inSale": true,
-        "pricePerUnit": "11 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-13"
-      },
-      "Tesco": {
-        "price": 52.9,
-        "inSale": false,
-        "pricePerUnit": "212 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "80 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Brokolice čerstvá 350g": {
-      "Tesco": {
-        "price": 52.9,
-        "inSale": false,
-        "pricePerUnit": "212 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "160 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Bujón hovězí kostky 60g": {
-      "Tesco": {
-        "price": 99.9,
-        "inSale": false,
-        "pricePerUnit": "446 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "277 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Bílý rum 0.7l": {
-      "Globus": {
-        "price": 469.9,
-        "inSale": false,
-        "pricePerUnit": "671 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Cherry rajčata 250g": {
-      "Lidl": {
-        "price": 34.9,
-        "inSale": true,
-        "pricePerUnit": "116 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-13"
-      },
-      "Tesco": {
-        "price": 99.9,
-        "inSale": false,
-        "pricePerUnit": "200 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 54.9,
-        "inSale": false,
-        "pricePerUnit": "137 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Chilli olej 250ml": {
-      "Globus": {
-        "price": 189.9,
-        "inSale": false,
-        "pricePerUnit": "950 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Cibule granulovaná 22g": {
-      "Tesco": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "1359 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "1359 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Cuketa 1ks": {
-      "Albert": {
-        "price": 24.9,
-        "inSale": true,
-        "pricePerUnit": "25 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "50 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 99.9,
-        "inSale": false,
-        "pricePerUnit": "250 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Cukr krystal 1kg": {
-      "Penny": {
-        "price": 14.9,
-        "inSale": true,
-        "pricePerUnit": "15 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 19.9,
-        "inSale": false,
-        "pricePerUnit": "20 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 19.9,
-        "inSale": false,
-        "pricePerUnit": "20 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Datle bez pecek 200g": {
-      "Globus": {
-        "price": 59.9,
-        "inSale": false,
-        "pricePerUnit": "300 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Dýně Hokkaido 1kg": {
-      "Kaufland": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "30 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "50 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Dýňový olej 250ml": {
-      "Tesco": {
-        "price": 239.9,
-        "inSale": false,
-        "pricePerUnit": "960 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 229.9,
-        "inSale": false,
-        "pricePerUnit": "920 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Ementál 100g": {
-      "Tesco": {
-        "price": 74.9,
-        "inSale": false,
-        "pricePerUnit": "374 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 37.9,
-        "inSale": false,
-        "pricePerUnit": "189 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Gin 700ml": {
-      "Tesco": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "200 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Halloumi 250g": {
-      "Billa": {
-        "price": 72.9,
-        "inSale": true,
-        "pricePerUnit": "324 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 91.9,
-        "inSale": false,
-        "pricePerUnit": "408 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 119.9,
-        "inSale": false,
-        "pricePerUnit": "533 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Hamburgerové bulky 4ks": {
-      "Tesco": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "123 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Houskový knedlík 500g": {
-      "Tesco": {
-        "price": 27.9,
-        "inSale": false,
-        "pricePerUnit": "70 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 74.9,
-        "inSale": false,
-        "pricePerUnit": "187 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Jablka Golden 1kg": {
-      "Tesco": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "40 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 7.18,
-        "inSale": false,
-        "pricePerUnit": "40 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Jägermeister 700ml": {
-      "Albert": {
-        "price": 299.0,
-        "inSale": true,
-        "pricePerUnit": "427 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Billa": {
-        "price": 359.9,
-        "inSale": true,
-        "pricePerUnit": "514 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 299.9,
-        "inSale": false,
-        "pricePerUnit": "428 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "1248 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kiwi 1ks": {
-      "Tesco": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "399 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kmín drcený 25g": {
-      "Tesco": {
-        "price": 19.9,
-        "inSale": false,
-        "pricePerUnit": "711 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 25.9,
-        "inSale": false,
-        "pricePerUnit": "1036 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kokosové mléko 400ml": {
-      "Kaufland": {
-        "price": 24.9,
-        "inSale": true,
-        "pricePerUnit": "62 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Billa": {
-        "price": 31.9,
-        "inSale": true,
-        "pricePerUnit": "80 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "100 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 35.9,
-        "inSale": false,
-        "pricePerUnit": "299 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kozí sýr 100g": {
-      "Albert": {
-        "price": 39.9,
-        "inSale": true,
-        "pricePerUnit": "399 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Kaufland": {
-        "price": 42.9,
-        "inSale": true,
-        "pricePerUnit": "429 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 89.9,
-        "inSale": false,
-        "pricePerUnit": "899 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 86.9,
-        "inSale": false,
-        "pricePerUnit": "869 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kroupy 500g": {
-      "Tesco": {
-        "price": 17.9,
-        "inSale": false,
-        "pricePerUnit": "36 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "187 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kukuřice mražená 350g": {
-      "Globus": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "133 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kuřecí křídla 1kg": {
-      "Albert": {
-        "price": 69.9,
-        "inSale": true,
-        "pricePerUnit": "117 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Kaufland": {
-        "price": 79.9,
-        "inSale": true,
-        "pricePerUnit": "80 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 119.9,
-        "inSale": false,
-        "pricePerUnit": "240 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 149.9,
-        "inSale": false,
-        "pricePerUnit": "500 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Kysané zelí 500g": {
-      "Lidl": {
-        "price": 11.9,
-        "inSale": true,
-        "pricePerUnit": "24 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-13"
-      },
-      "Tesco": {
-        "price": 16.5,
-        "inSale": false,
-        "pricePerUnit": "33 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 129.9,
-        "inSale": false,
-        "pricePerUnit": "371 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Křen strouhaný 140g": {
-      "Tesco": {
-        "price": 59.9,
-        "inSale": false,
-        "pricePerUnit": "413 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "665 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Mléko plnotučné 1l": {
-      "Lidl": {
-        "price": 9.9,
-        "inSale": true,
-        "pricePerUnit": "10 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-13"
-      },
-      "Penny": {
-        "price": 19.9,
-        "inSale": true,
-        "pricePerUnit": "20 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 51.9,
-        "inSale": false,
-        "pricePerUnit": "55 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 27.9,
-        "inSale": false,
-        "pricePerUnit": "56 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Mouka hladká 1kg": {
-      "Tesco": {
-        "price": 33.9,
-        "inSale": false,
-        "pricePerUnit": "34 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 33.9,
-        "inSale": false,
-        "pricePerUnit": "34 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Mozzarella strouhaná 200g": {
-      "Globus": {
-        "price": 42.9,
-        "inSale": false,
-        "pricePerUnit": "172 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Mungo klíčky 200g": {
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "166 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Máslo 250g": {
-      "Tesco": {
-        "price": 26.9,
-        "inSale": false,
-        "pricePerUnit": "108 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 169.9,
-        "inSale": false,
-        "pricePerUnit": "850 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Naan chléb 2ks": {
-      "Tesco": {
-        "price": 84.9,
-        "inSale": false,
-        "pricePerUnit": "42 Kč/ks",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Ocet 8% 1l": {
-      "Kaufland": {
-        "price": 47.9,
-        "inSale": true,
-        "pricePerUnit": "96 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Penny": {
-        "price": 10.9,
-        "inSale": true,
-        "pricePerUnit": "11 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Globus": {
-        "price": 69.9,
-        "inSale": false,
-        "pricePerUnit": "140 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Ovesné vločky bezlepkové 500g": {
-      "Globus": {
-        "price": 26.9,
-        "inSale": false,
-        "pricePerUnit": "90 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Ovesný nápoj 1l": {
-      "Tesco": {
-        "price": 84.9,
-        "inSale": false,
-        "pricePerUnit": "85 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 36.9,
-        "inSale": false,
-        "pricePerUnit": "37 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Paprika zelená 1ks": {
-      "Globus": {
-        "price": 17.48,
-        "inSale": false,
-        "pricePerUnit": "70 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Paprika žlutá 1ks": {
-      "Tesco": {
-        "price": 89.9,
-        "inSale": false,
-        "pricePerUnit": "90 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 19.78,
-        "inSale": false,
-        "pricePerUnit": "90 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Parmezán Grana Padano kus 200g": {
-      "Albert": {
-        "price": 59.9,
-        "inSale": true,
-        "pricePerUnit": "599 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 51.9,
-        "inSale": false,
-        "pricePerUnit": "519 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 179.9,
-        "inSale": false,
-        "pricePerUnit": "900 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Pastinák 500g": {
-      "Tesco": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "416 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 44.9,
-        "inSale": false,
-        "pricePerUnit": "359 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Pinot Grigio DOC 0.75l": {
-      "Globus": {
-        "price": 79.9,
-        "inSale": false,
-        "pricePerUnit": "107 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
     "Pistácie nesolené 100g": {
       "Kaufland": {
         "price": 79.9,
@@ -6214,231 +6572,6 @@
         "source": "scraped",
         "lastScraped": "2026-09-13",
         "saleValidTo": "2026-09-15"
-      }
-    },
-    "Pomeranče 1kg": {
-      "Kaufland": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "30 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Penny": {
-        "price": 11.9,
-        "inSale": true,
-        "pricePerUnit": "8 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 31.9,
-        "inSale": false,
-        "pricePerUnit": "64 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 49.9,
-        "inSale": false,
-        "pricePerUnit": "8317 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Pražská šunka 100g": {
-      "Tesco": {
-        "price": 46.9,
-        "inSale": false,
-        "pricePerUnit": "469 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 44.9,
-        "inSale": false,
-        "pricePerUnit": "449 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Romadur 100g": {
-      "Billa": {
-        "price": 24.9,
-        "inSale": true,
-        "pricePerUnit": "249 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-10-27"
-      },
-      "Penny": {
-        "price": 24.9,
-        "inSale": true,
-        "pricePerUnit": "249 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 36.9,
-        "inSale": false,
-        "pricePerUnit": "246 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 119.9,
-        "inSale": false,
-        "pricePerUnit": "300 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Růžičková kapusta 500g": {
-      "Tesco": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "66 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 22.9,
-        "inSale": false,
-        "pricePerUnit": "65 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Slivovice 500ml": {
-      "Albert": {
-        "price": 299.0,
-        "inSale": true,
-        "pricePerUnit": "598 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Penny": {
-        "price": 269.9,
-        "inSale": true,
-        "pricePerUnit": "540 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 689.0,
-        "inSale": false,
-        "pricePerUnit": "984 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 399.9,
-        "inSale": false,
-        "pricePerUnit": "800 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Slunečnicový olej 1l": {
-      "Albert": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "30 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Kaufland": {
-        "price": 29.9,
-        "inSale": true,
-        "pricePerUnit": "30 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Billa": {
-        "price": 65.9,
-        "inSale": true,
-        "pricePerUnit": "66 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 64.9,
-        "inSale": false,
-        "pricePerUnit": "65 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 79.9,
-        "inSale": false,
-        "pricePerUnit": "160 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Smetana na vaření 12% 200ml": {
-      "Kaufland": {
-        "price": 10.9,
-        "inSale": true,
-        "pricePerUnit": "54 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Penny": {
-        "price": 14.9,
-        "inSale": true,
-        "pricePerUnit": "74 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13",
-        "saleValidTo": "2026-09-15"
-      },
-      "Tesco": {
-        "price": 14.9,
-        "inSale": false,
-        "pricePerUnit": "74 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 29.9,
-        "inSale": false,
-        "pricePerUnit": "149 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Smetanový sýr 200g": {
-      "Tesco": {
-        "price": 54.9,
-        "inSale": false,
-        "pricePerUnit": "305 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 39.9,
-        "inSale": false,
-        "pricePerUnit": "363 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Soju 360ml": {
-      "Globus": {
-        "price": 139.9,
-        "inSale": false,
-        "pricePerUnit": "400 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
       }
     },
     "Sušené švestky 200g": {
@@ -6454,138 +6587,6 @@
         "price": 69.9,
         "inSale": false,
         "pricePerUnit": "350 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Sýr s modrou plísní 100g": {
-      "Globus": {
-        "price": 27.9,
-        "inSale": false,
-        "pricePerUnit": "465 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Tabasco omáčka 60ml": {
-      "Tesco": {
-        "price": 79.9,
-        "inSale": false,
-        "pricePerUnit": "1332 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Thajská červená kari pasta 400g": {
-      "Globus": {
-        "price": 159.9,
-        "inSale": false,
-        "pricePerUnit": "1142 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Vanilková zmrzlina 500ml": {
-      "Tesco": {
-        "price": 799.0,
-        "inSale": false,
-        "pricePerUnit": "799 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 54.9,
-        "inSale": false,
-        "pricePerUnit": "686 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Vitana Hřebíček celý 18g": {
-      "Tesco": {
-        "price": 42.9,
-        "inSale": false,
-        "pricePerUnit": "2383 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Vlašské ořechy 100g": {
-      "Tesco": {
-        "price": 119.9,
-        "inSale": false,
-        "pricePerUnit": "600 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 59.9,
-        "inSale": false,
-        "pricePerUnit": "300 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Ústřicová omáčka 250ml": {
-      "Tesco": {
-        "price": 53.9,
-        "inSale": false,
-        "pricePerUnit": "180 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 79.9,
-        "inSale": false,
-        "pricePerUnit": "313 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Červené víno suché 750ml": {
-      "Tesco": {
-        "price": 199.9,
-        "inSale": false,
-        "pricePerUnit": "89 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 69.9,
-        "inSale": false,
-        "pricePerUnit": "93 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Řepkový olej 1l": {
-      "Tesco": {
-        "price": 54.9,
-        "inSale": false,
-        "pricePerUnit": "55 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 109.9,
-        "inSale": false,
-        "pricePerUnit": "440 Kč/l",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      }
-    },
-    "Šafrán 0.5g": {
-      "Tesco": {
-        "price": 43.9,
-        "inSale": false,
-        "pricePerUnit": "365833 Kč/kg",
-        "source": "scraped",
-        "lastScraped": "2026-09-13"
-      },
-      "Globus": {
-        "price": 109.9,
-        "inSale": false,
-        "pricePerUnit": "",
         "source": "scraped",
         "lastScraped": "2026-09-13"
       }
