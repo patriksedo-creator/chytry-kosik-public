@@ -14,7 +14,8 @@
     "rotationGroup": 3,
     "schemaNote": "prices = STORE_PRICES tvar (data/storePrices.ts). Day 2 = overlay na AI baseline.",
     "qualityGatePassed": true,
-    "qualityGateWarning": true
+    "qualityGateWarning": true,
+    "mergedWoltAt": "2026-10-21T01:10:53.232Z"
   },
   "prices": {
     "Arašídy solené 200g": {
@@ -65,6 +66,16 @@
         "pricePerUnit": "100 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "118 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "66f4111b4447164acceaa70e",
+        "gtin": "8594062420484",
+        "woltName": "Avelopa bramborové noky"
       }
     },
     "Bulgur 500g": {
@@ -137,6 +148,16 @@
         "pricePerUnit": "50 Kč/ks",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "34 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "a38a2cbce9c0555ca1785b72",
+        "gtin": "8414243060103",
+        "woltName": "Albertova tržnice celer řapíkatý"
       }
     },
     "Chléb konzumní 500g": {
@@ -187,6 +208,16 @@
         "pricePerUnit": "15 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "21.90 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "82c6aef3e614d54567ff1a41",
+        "gtin": "8594000230250",
+        "woltName": "TTD cukr krupice bílý"
       }
     },
     "Debrecínka 100g": {
@@ -714,6 +745,16 @@
         "pricePerUnit": "719 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 89.9,
+        "inSale": false,
+        "pricePerUnit": "1490 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "915acb53b088186b0ee9925f",
+        "gtin": "8590421021026",
+        "woltName": "Emma makadamové ořechy"
       }
     },
     "Cielo Primasole Primitivo 0.75l": {
@@ -723,6 +764,16 @@
         "pricePerUnit": "233 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 179,
+        "inSale": false,
+        "pricePerUnit": "238,67 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "dda2dab868587faea200067f",
+        "gtin": "8008900001020",
+        "woltName": "Cielo Primasole Primitivo"
       }
     },
     "Chianti Classico DOCG 750ml": {
@@ -732,6 +783,16 @@
         "pricePerUnit": "293 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Albert": {
+        "price": 224,
+        "inSale": false,
+        "pricePerUnit": "298,67 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "5e0c24f9d73db37f0a3cc7d3",
+        "gtin": "8009620820083",
+        "woltName": "Cavatina Chianti Classico DOCG Riserva"
       }
     },
     "Sůl jedlá mořská 1kg": {
@@ -796,6 +857,16 @@
         "pricePerUnit": "20 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 12.9,
+        "inSale": false,
+        "pricePerUnit": "12 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "48e5d7dcb81af9bdfbc05f62",
+        "gtin": "8590421045794",
+        "woltName": "Albert mouka hladká pšeničná"
       }
     },
     "Olivový olej 500ml": {
@@ -1622,6 +1693,16 @@
         "pricePerUnit": "350 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 27.9,
+        "inSale": false,
+        "pricePerUnit": "175 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "3a2d19e2eaee7107856931e3",
+        "gtin": "8590421014929",
+        "woltName": "Emma rozinky"
       }
     },
     "Žampiony bílé 250g": {
@@ -1842,6 +1923,16 @@
         "pricePerUnit": "274 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "349.50 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "37dc16e398e28b0b8969bb92",
+        "gtin": "8851613002347",
+        "woltName": "Orient Gourmet rybí omáčka"
       }
     },
     "Kmín celý 28g": {
@@ -1890,6 +1981,16 @@
         "pricePerUnit": "277 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 41.9,
+        "inSale": false,
+        "pricePerUnit": "26 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "2be08a3387fa23bbbcfc49d2",
+        "gtin": "8585002429520",
+        "woltName": "Maggi bujón zeleninový"
       }
     },
     "Salát ledový 1ks": {
@@ -1914,6 +2015,16 @@
         "pricePerUnit": "35 Kč/ks",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 25.9,
+        "inSale": false,
+        "pricePerUnit": "26 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "8373d2621f014aa560688df9",
+        "gtin": "8590421086155",
+        "woltName": "Albert salát ledový"
       }
     },
     "Banány 1kg": {
@@ -2302,6 +2413,16 @@
         "pricePerUnit": "199 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "185 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "c9594f0b36ad4f2d5bb384f5",
+        "gtin": "8592459001896",
+        "woltName": "Emma mák mletý"
       }
     },
     "Mandle 100g": {
@@ -2569,6 +2690,16 @@
         "pricePerUnit": "400 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 41.9,
+        "inSale": false,
+        "pricePerUnit": "450 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "f245423f29ec1ad8bb185b46",
+        "gtin": "8594000731207",
+        "woltName": "Emma mandle plátky blanšírované"
       }
     },
     "Javorový sirup 250ml": {
@@ -2585,6 +2716,16 @@
         "pricePerUnit": "685 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 177,
+        "inSale": false,
+        "pricePerUnit": "596 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "40e9f268411d865916a3c6af",
+        "gtin": "8594185450153",
+        "woltName": "Carters javorový sirup"
       }
     },
     "Lískové ořechy 100g": {
@@ -2676,6 +2817,16 @@
         "pricePerUnit": "120 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "72 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "ce3036024edd371e9152e0f0",
+        "gtin": "8590077310130",
+        "woltName": "Penam Toustový chléb celozrnný, krájený"
       }
     },
     "Kmín mletý 25g": {
@@ -2740,6 +2891,16 @@
         "pricePerUnit": "599 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "31 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "492c41b0783a4eb0e7fd287a",
+        "gtin": "8590421034699",
+        "woltName": "Albert rukola"
       }
     },
     "Kurkuma mletá Kotányi 18g": {
@@ -2790,6 +2951,16 @@
         "pricePerUnit": "40 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "42 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "089cff24b3cf3abda6e86204",
+        "gtin": "27677759",
+        "woltName": "Dýně Hokkaido"
       }
     },
     "Arašídové máslo 350g": {
@@ -2840,6 +3011,16 @@
         "pricePerUnit": "110 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "155 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "684165b162e50ad07781b3ee",
+        "gtin": "8590421051726",
+        "woltName": "Albert škrob bramborový"
       }
     },
     "Rýže arborio 500g": {
@@ -2874,6 +3055,16 @@
         "pricePerUnit": "299 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 40.9,
+        "inSale": false,
+        "pricePerUnit": "264 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "5fbdba920582ef3aa3300b36",
+        "gtin": "8595021607724",
+        "woltName": "Galbani Mozzarella"
       }
     },
     "Quinoa bílá 500g": {
@@ -3015,6 +3206,16 @@
         "pricePerUnit": "2550 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 31.9,
+        "inSale": false,
+        "pricePerUnit": "36 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "64da78ccd401b6dc3637e4a6",
+        "gtin": "8593837256006",
+        "woltName": "Vitana Hřebíček celý"
       }
     },
     "Droždí sušené 7g": {
@@ -3113,6 +3314,16 @@
         "pricePerUnit": "60 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "78 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "f51810219ef6c34941ae6757",
+        "gtin": "8590421055106",
+        "woltName": "Kuřecí játra"
       }
     },
     "Polníček 100g": {
@@ -3988,6 +4199,16 @@
         "pricePerUnit": "140 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 59.9,
+        "inSale": false,
+        "pricePerUnit": "62 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "24a1ef69b013a36c78c5c41e",
+        "gtin": "8590681000557",
+        "woltName": "Batáty"
       }
     },
     "Veltlínské zelené 0.75l": {
@@ -4470,6 +4691,16 @@
         "pricePerUnit": "999 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 74.9,
+        "inSale": false,
+        "pricePerUnit": "950 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "43006ca619390f3edb0b0767",
+        "gtin": "5906259709990",
+        "woltName": "Albert losos uzený kousky"
       }
     },
     "Kardamom mletý 20g": {
@@ -4527,6 +4758,16 @@
         "pricePerUnit": "199 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "275 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "d75b76eb5dd00a748116298c",
+        "gtin": "8594013394611",
+        "woltName": "Škvarky křupavé"
       }
     },
     "Mungo klíčky 200g": {
@@ -4553,6 +4794,16 @@
         "pricePerUnit": "48 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "30 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "5ca551bbe6e381824d427479",
+        "gtin": "9006900208929",
+        "woltName": "Pfanner granátové jablko"
       }
     },
     "Rýže basmati 500g": {
@@ -4741,6 +4992,16 @@
         "pricePerUnit": "2442 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 52.9,
+        "inSale": false,
+        "pricePerUnit": "41 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "965f60f07906620bd75a6885",
+        "gtin": "8590132041115",
+        "woltName": "Kotányi mlýnek Pepř černý celý"
       }
     },
     "Chia semínka 200g": {
@@ -4935,6 +5196,16 @@
         "pricePerUnit": "13 Kč/ks",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "25 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "e15288bbf3dbe0ab7c4cc00c",
+        "gtin": "8594009794159",
+        "woltName": "Albertova tržnice salát  little gem"
       }
     },
     "Kuřecí křídla 1kg": {
@@ -4959,6 +5230,16 @@
         "pricePerUnit": "169 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "72 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "bd9a25a94836b81d4b0528ba",
+        "gtin": "24252126",
+        "woltName": "Kuřecí křídla"
       }
     },
     "Kandované višně 100g": {
@@ -5245,6 +5526,16 @@
         "pricePerUnit": "408 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 87.9,
+        "inSale": false,
+        "pricePerUnit": "484 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "369423888dad04c2ba6b2710",
+        "gtin": "5201168915013",
+        "woltName": "Dodoni Halloumi"
       }
     },
     "Pita chléb 4ks": {
@@ -5644,6 +5935,16 @@
         "pricePerUnit": "233 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 97.9,
+        "inSale": false,
+        "pricePerUnit": "205 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "8e39c8182113561a6a61a0e6",
+        "gtin": "8590421040621",
+        "woltName": "Albert špekáčky"
       }
     },
     "Pepř černý mletý 50g": {
@@ -5965,6 +6266,16 @@
         "pricePerUnit": "333 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 139.9,
+        "inSale": false,
+        "pricePerUnit": "285 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "13895228e4e70eba38aa2a22",
+        "gtin": "8590421065884",
+        "woltName": "Nature's Promise kimchi pálivé"
       }
     },
     "Naan chléb 2ks": {
@@ -6503,6 +6814,16 @@
         "pricePerUnit": "120 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Albert": {
+        "price": 33.9,
+        "inSale": false,
+        "pricePerUnit": "68 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "c2fb564af8a817bcae8931a8",
+        "gtin": "8590421051184",
+        "woltName": "Chléb mlynářský žitný"
       }
     },
     "Pomelo 1ks": {
@@ -6921,6 +7242,534 @@
         "pricePerUnit": "113 Kč/100g",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      }
+    },
+    "Hoisin omáčka 150ml": {
+      "Albert": {
+        "price": 43.9,
+        "inSale": false,
+        "pricePerUnit": "293 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "41b08d5bf943571de7a444ad",
+        "gtin": "8595241523378",
+        "woltName": "Asia Time Hoisin omáčka"
+      }
+    },
+    "Šafrán 4g": {
+      "Albert": {
+        "price": 42.9,
+        "inSale": false,
+        "pricePerUnit": "6725 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "d237fa868bff2e9d889dd83f",
+        "gtin": "8590132010081",
+        "woltName": "Kotányi Šafrán pravý"
+      }
+    },
+    "Rýže natural 500g": {
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "76 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "b09e5dbcd566601c11bcc4f4",
+        "gtin": "8594004491275",
+        "woltName": "Lagris rýže natural"
+      }
+    },
+    "Chardonnay 0.75l": {
+      "Albert": {
+        "price": 199,
+        "inSale": false,
+        "pricePerUnit": "185 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "d010a8df821d26137dfdee5f",
+        "gtin": "3035130710106",
+        "woltName": "B&G Chardonnay"
+      }
+    },
+    "Vaječné nudle 500g": {
+      "Albert": {
+        "price": 76.9,
+        "inSale": false,
+        "pricePerUnit": "153.80 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "85064b751c5c06563393574e",
+        "gtin": "6947593023600",
+        "woltName": "Pearl River Bridge Sušené vaječné těstoviny 500g"
+      }
+    },
+    "Mungo klíčky 330g": {
+      "Albert": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "191 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "b8e98a23a2b6fb15e3724d71",
+        "gtin": "9120012040014",
+        "woltName": "Shan'shi Klíčky fazolí mungo ve sladkoslaném nálevu 330g"
+      }
+    },
+    "Bezlepkový bochník 300g": {
+      "Albert": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "183 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "863ae03579a6ab828eff5b86",
+        "gtin": "8590421072653",
+        "woltName": "Albert bochník bezlepkový"
+      }
+    },
+    "Zázvor nakládaný růžový 200g": {
+      "Albert": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "249.50 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "21fa0acb671ec6b4ddf462bc",
+        "gtin": "6947593024539",
+        "woltName": "Pearl River Bridge růžový zázvor krájený"
+      }
+    },
+    "Kávová zrna Espresso 250g": {
+      "Albert": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "516 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "e14044aa9bdb07e1e21c2ec7",
+        "gtin": "8000070053526",
+        "woltName": "Lavazza Qualità Rossa kapsle"
+      }
+    },
+    "Barilla Basilico 400g": {
+      "Albert": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "185 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "88355965175dd44896834e87",
+        "gtin": "8076809569101",
+        "woltName": "Barilla Basilico rajčatová omáčka"
+      }
+    },
+    "Sójové mléko 1l": {
+      "Albert": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "49 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "830a746c7052d35b0714eb26",
+        "gtin": "5411188543381",
+        "woltName": "Alpro sojový nápoj"
+      }
+    },
+    "Špičaté zelí 1ks": {
+      "Albert": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "50 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "543ac4ce618c851e3b85b27c",
+        "gtin": "26159775",
+        "woltName": "Zelí bílé špičaté"
+      }
+    },
+    "Červená řepa čerstvá 500g": {
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "56 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "0eaa907c6adad0a4ee2cacf9",
+        "gtin": "8590681000472",
+        "woltName": "Řepa červená"
+      }
+    },
+    "Mango čerstvé 1ks": {
+      "Albert": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "49 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "33fc3722fb10ba44549a4b4c",
+        "gtin": "8594023949733",
+        "woltName": "Albert Excellent mango"
+      }
+    },
+    "Pekingské zelí 1kg": {
+      "Albert": {
+        "price": 44.9,
+        "inSale": false,
+        "pricePerUnit": "39 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "f2150b41384857ef39d3becb",
+        "gtin": "8590681000397",
+        "woltName": "Zelí pekingské"
+      }
+    },
+    "Kokosový ořech 1ks": {
+      "Albert": {
+        "price": 69.9,
+        "inSale": false,
+        "pricePerUnit": "49 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "1fcf322db006699ef3b00f8b",
+        "gtin": "8938535840155",
+        "woltName": "Kokosový ořech čerstvý"
+      }
+    },
+    "Udon nudle 200g": {
+      "Albert": {
+        "price": 47.9,
+        "inSale": false,
+        "pricePerUnit": "225 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "8f5525939b4dd8414b1e0f09",
+        "gtin": "8851613003801",
+        "woltName": "Orient Gourmet Udon nudle"
+      }
+    },
+    "Kuřecí krky 500g": {
+      "Albert": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "84 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "80fe995e52a05b309cf82759",
+        "gtin": "8590421055113",
+        "woltName": "Kuřecí krky"
+      }
+    },
+    "Château Tour Bordeaux 0.75l": {
+      "Albert": {
+        "price": 159,
+        "inSale": false,
+        "pricePerUnit": "212,00 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "cec07c7213eb29095d7c6c66",
+        "gtin": "3176481016636",
+        "woltName": "Château Tour červené víno Bordeaux"
+      }
+    },
+    "Sommelier Collection Primitivo Puglia 0.75l": {
+      "Albert": {
+        "price": 109.9,
+        "inSale": false,
+        "pricePerUnit": "238,67 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "2d5e65cba0bf6fb5c9099d34",
+        "gtin": "8590421063453",
+        "woltName": "Sommelier Collection Primitivo Puglia IGT"
+      }
+    },
+    "Habánské sklepy Rulandské modré 0.75l": {
+      "Albert": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "159,87 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "dbe03357601594db2e520e04",
+        "gtin": "8594008553559",
+        "woltName": "Habánské sklepy Rulandské modré"
+      }
+    },
+    "Pfanner borůvka 1l": {
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "39,90 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "464fc1f5d394e0322e9db98a",
+        "gtin": "9006900207717",
+        "woltName": "Pfanner borůvka"
+      }
+    },
+    "Albert mix červeného ovoce 2l": {
+      "Albert": {
+        "price": 129.9,
+        "inSale": false,
+        "pricePerUnit": "49,95 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "71ac74d333ac26afa93c6642",
+        "gtin": "8590421081600",
+        "woltName": "Albert čerstvá šťáva mix červeného ovoce"
+      }
+    },
+    "Jablečný mošt 5l": {
+      "Albert": {
+        "price": 179,
+        "inSale": false,
+        "pricePerUnit": "35,80 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "aa50c8cc39b99d2f34512f44",
+        "gtin": "8590185000374",
+        "woltName": "Jablečný mošt"
+      }
+    },
+    "Fuet 150g": {
+      "Albert": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "412.67 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "b47271a3efb03ccfcb8c4ca8",
+        "gtin": "8590421519998",
+        "woltName": "Albert Excellent Fuet Extra"
+      }
+    },
+    "Mortadela s pistáciemi 80g": {
+      "Albert": {
+        "price": 24.9,
+        "inSale": false,
+        "pricePerUnit": "461 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "c3c9f3d35c59bade97431a9d",
+        "gtin": "8600197488821",
+        "woltName": "Albert Excellent Mortadella"
+      }
+    },
+    "Smetana ke šlehání 33% 250ml": {
+      "Albert": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "147.60 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "8d7b97cd9a68dc9f44502905",
+        "gtin": "8590421044612",
+        "woltName": "Albert čerstvá smetana ke šlehání 33%"
+      }
+    },
+    "Pepř mlýnek Kotányi 36g": {
+      "Albert": {
+        "price": 52.9,
+        "inSale": false,
+        "pricePerUnit": "75 Kč/ks",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "965f60f07906620bd75a6885",
+        "gtin": "8590132041115",
+        "woltName": "Kotányi mlýnek Pepř černý celý"
+      }
+    },
+    "Bohemia sekt Brut 0.75l": {
+      "Albert": {
+        "price": 179,
+        "inSale": false,
+        "pricePerUnit": "233.33 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "5db7f53c24ad9eb456d2b3e0",
+        "gtin": "8594000940098",
+        "woltName": "Bohemia Sekt Brut"
+      }
+    },
+    "Chilli mleté 28g": {
+      "Albert": {
+        "price": 11.9,
+        "inSale": false,
+        "pricePerUnit": "425 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "56f58fc543a103e1840ee847",
+        "gtin": "8590421047804",
+        "woltName": "Albert Chilli mleté"
+      }
+    },
+    "Chilli kousky 18g": {
+      "Albert": {
+        "price": 15.9,
+        "inSale": false,
+        "pricePerUnit": "883 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "26e9c629ad1c2fa05bd01b7d",
+        "gtin": "8593837256013",
+        "woltName": "Vitana Chilli kousky"
+      }
+    },
+    "Skořice mletá 25g": {
+      "Albert": {
+        "price": 8.5,
+        "inSale": false,
+        "pricePerUnit": "340 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "45e6b13539bddd9ad9ecb6c1",
+        "gtin": "8590421047729",
+        "woltName": "Albert Skořice mletá"
+      }
+    },
+    "Kardamom mletý 10g": {
+      "Albert": {
+        "price": 41.9,
+        "inSale": false,
+        "pricePerUnit": "4190 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "8eb7310e880df299fb66eb41",
+        "gtin": "8590132015079",
+        "woltName": "Kotányi Kardamom mletý"
+      }
+    },
+    "Koriandr mletý 25g": {
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "796 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "79c4d2cba0605ff420b83156",
+        "gtin": "8593837259489",
+        "woltName": "Vitana Koriandr mletý"
+      }
+    },
+    "Fenykl celý 23g": {
+      "Albert": {
+        "price": 15.9,
+        "inSale": false,
+        "pricePerUnit": "691 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "5d95e3e836a172cb2556e20f",
+        "gtin": "8593837255757",
+        "woltName": "Vitana Fenykl celý"
+      }
+    },
+    "Hřebíček celý 20g": {
+      "Albert": {
+        "price": 19.9,
+        "inSale": false,
+        "pricePerUnit": "995 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "75f74f89852e852e48e9e9c7",
+        "gtin": "8590421047774",
+        "woltName": "Albert Hřebíček celý"
+      }
+    },
+    "Muškátový oříšek celý 9g": {
+      "Albert": {
+        "price": 23.9,
+        "inSale": false,
+        "pricePerUnit": "2656 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "22c00fa7c492051791c31643",
+        "gtin": "8593837256730",
+        "woltName": "Vitana Muškátový ořech"
+      }
+    },
+    "Muškátový květ mletý 13g": {
+      "Albert": {
+        "price": 24.9,
+        "inSale": false,
+        "pricePerUnit": "1915 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "de8b90514c76e4b4ae9bafce",
+        "gtin": "8593837255764",
+        "woltName": "Vitana Muškátový květ"
+      }
+    },
+    "Hořčičné semínko bílé 28g": {
+      "Albert": {
+        "price": 15.9,
+        "inSale": false,
+        "pricePerUnit": "568 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "54279e0eb0f502256a142685",
+        "gtin": "8593837255726",
+        "woltName": "Vitana Hořčičné semínko"
+      }
+    },
+    "Rulandské modré 750ml": {
+      "Albert": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "159,87 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "dbe03357601594db2e520e04",
+        "gtin": "8594008553559",
+        "woltName": "Habánské sklepy Rulandské modré"
+      }
+    },
+    "Sauvignon 750ml": {
+      "Albert": {
+        "price": 149.9,
+        "inSale": false,
+        "pricePerUnit": "199,87 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "def3adadf1a71f5ba2a9d836",
+        "gtin": "8590421059661",
+        "woltName": "Sommelier Collection Sauvignon"
+      }
+    },
+    "Vepřový bok 1kg": {
+      "Albert": {
+        "price": 179,
+        "inSale": false,
+        "pricePerUnit": "179 Kč/kg",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "436c32c7e7bab612e7dabe6f",
+        "gtin": "22840400",
+        "woltName": "Vepřový bok plátky"
+      }
+    },
+    "Paul Mas Cabernet Sauvignon 750ml": {
+      "Albert": {
+        "price": 119.9,
+        "inSale": false,
+        "pricePerUnit": "159,87 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "572c894a7af2eed366de1111",
+        "gtin": "3760040420271",
+        "woltName": "Paul Mas Cabernet Sauvignon"
+      }
+    },
+    "Sommelier Collection Carménère 750ml": {
+      "Albert": {
+        "price": 134.9,
+        "inSale": false,
+        "pricePerUnit": "179,87 Kč/l",
+        "source": "wolt",
+        "lastScraped": "2026-10-21",
+        "woltItemId": "59b221db64279974f1435b67",
+        "gtin": "8590421062968",
+        "woltName": "Sommelier Collection Carmenére"
       }
     }
   }
