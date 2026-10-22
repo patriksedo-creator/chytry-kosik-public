@@ -18,7 +18,8 @@
     "gapMergeAt": "2026-10-22T02:24:49.720841+02:00",
     "gapMergedPkgs": 88,
     "gapMergedCells": 181,
-    "mergedWoltAt": "2026-10-22T01:24:49.529Z"
+    "mergedWoltAt": "2026-10-22T01:24:49.529Z",
+    "mergedLidlAt": "2026-10-22T01:53:37.123Z"
   },
   "prices": {
     "Arašídy solené 200g": {
@@ -271,6 +272,16 @@
         "woltItemId": "f85b3fcc9de08f5dc796a508",
         "gtin": null,
         "woltName": "Cukr krupice 1 kg"
+      },
+      "Lidl": {
+        "price": 16.9,
+        "inSale": false,
+        "pricePerUnit": "16.90 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051920",
+        "lidlName": "Cukr krupice",
+        "url": "https://www.lidl.cz/p/cukr-krupice/p10051920"
       }
     },
     "Debrecínka 100g": {
@@ -517,6 +528,16 @@
         "pricePerUnit": "87 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-21"
+      },
+      "Lidl": {
+        "price": 24.9,
+        "inSale": false,
+        "pricePerUnit": "36 Kč/ks",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10053970",
+        "lidlName": "Květák",
+        "url": "https://www.lidl.cz/p/kvetak/p10053970"
       }
     },
     "Listové těsto chlazené 275g": {
@@ -1000,6 +1021,16 @@
         "woltItemId": "f3d39c89b5701d84d1f940e7",
         "gtin": "4304218733191",
         "woltName": "Globus Řecký extra olivový olej panenský 500 ml"
+      },
+      "Lidl": {
+        "price": 189.9,
+        "inSale": false,
+        "pricePerUnit": "299.80 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051882",
+        "lidlName": "Olivový olej extra panenský",
+        "url": "https://www.lidl.cz/p/olivovy-olej-extra-panensky/p10051882"
       }
     },
     "Sůl jedlá 1kg": {
@@ -1439,6 +1470,16 @@
         "pricePerUnit": "70 Kč/l",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Lidl": {
+        "price": 36.9,
+        "inSale": false,
+        "pricePerUnit": "51 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051895",
+        "lidlName": "Řepkový olej",
+        "url": "https://www.lidl.cz/p/repkovy-olej/p10051895"
       }
     },
     "Třtinový cukr 500g": {
@@ -2618,6 +2659,16 @@
         "woltItemId": "36f71d1e1c1954ac4a918aae",
         "gtin": null,
         "woltName": "K_CLASSIC Dlouhozrnná rýže 1 kg"
+      },
+      "Lidl": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "41 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051886",
+        "lidlName": "Dlouhozrnná rýže",
+        "url": "https://www.lidl.cz/p/dlouhozrnna-ryze/p10051886"
       }
     },
     "Hovězí mleté maso 500g": {
@@ -3603,6 +3654,16 @@
         "pricePerUnit": "90 Kč/kg",
         "source": "scraped",
         "lastScraped": "2026-10-20"
+      },
+      "Lidl": {
+        "price": 49.9,
+        "inSale": false,
+        "pricePerUnit": "96 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051907",
+        "lidlName": "Jasmínová rýže",
+        "url": "https://www.lidl.cz/p/jasminova-ryze/p10051907"
       }
     },
     "Mascarpone 250g": {
@@ -5417,6 +5478,16 @@
         "woltItemId": "43006ca619390f3edb0b0767",
         "gtin": "5906259709990",
         "woltName": "Albert losos uzený kousky"
+      },
+      "Lidl": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "690 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10052214",
+        "lidlName": "Losos uzený teplým kouřem",
+        "url": "https://www.lidl.cz/p/losos-uzeny-teplym-kourem/p10052214"
       }
     },
     "Kardamom mletý 20g": {
@@ -5564,6 +5635,16 @@
         "woltItemId": "79bbe3484626f008864c9888",
         "gtin": null,
         "woltName": "K-Classic Basmati rýže 500g"
+      },
+      "Lidl": {
+        "price": 59.9,
+        "inSale": false,
+        "pricePerUnit": "74 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051896",
+        "lidlName": "Rýže Basmati",
+        "url": "https://www.lidl.cz/p/ryze-basmati/p10051896"
       }
     },
     "Kyselina citronová 20g": {
@@ -8270,6 +8351,16 @@
         "source": "scraped",
         "lastScraped": "2026-09-14",
         "saleValidTo": "2026-09-15"
+      },
+      "Lidl": {
+        "price": 44.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10057258",
+        "lidlName": "Candát filet premium",
+        "url": "https://www.lidl.cz/p/candat-filet-premium/p10057258"
       }
     },
     "Bezlepková pečicí směs 500g": {
@@ -9490,6 +9581,16 @@
         "lastScraped": "2026-10-22",
         "realName": "Sensoy Sushi rýže Akitakomachi 500g",
         "realSize": "500g"
+      },
+      "Lidl": {
+        "price": 79.9,
+        "inSale": false,
+        "pricePerUnit": "85 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10045390",
+        "lidlName": "Sushi",
+        "url": "https://www.lidl.cz/p/sushi/p10045390"
       }
     },
     "Provensálské koření 15g": {
@@ -9967,6 +10068,16 @@
         "lastScraped": "2026-10-22",
         "realName": "Váš Výběr Baby mrkev 300g",
         "realSize": "300g"
+      },
+      "Lidl": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10052174",
+        "lidlName": "Baby mrkev",
+        "url": "https://www.lidl.cz/p/baby-mrkev/p10052174"
       }
     },
     "Konopná semínka loupaná 200g": {
@@ -10306,6 +10417,16 @@
         "gtin": "6947593023600",
         "woltName": "Pearl River Bridge Sušené vaječné těstoviny 500g",
         "regularPrice": 76.9
+      },
+      "Lidl": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051887",
+        "lidlName": "Čerstvé vaječné nudle",
+        "url": "https://www.lidl.cz/p/cerstve-vajecne-nudle/p10051887"
       }
     },
     "Mungo klíčky 330g": {
@@ -11063,6 +11184,16 @@
         "woltItemId": "afc10571c1dd033f185fe29c",
         "gtin": null,
         "woltName": "Vepřový bok s kostí Globus"
+      },
+      "Lidl": {
+        "price": 99.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050614",
+        "lidlName": "Vepřový bok s kostí",
+        "url": "https://www.lidl.cz/p/veprovy-bok-s-kosti/p10050614"
       }
     },
     "Paul Mas Cabernet Sauvignon 750ml": {
@@ -11743,6 +11874,16 @@
         "woltItemId": "0561dbac83bd7e8c13d06d35",
         "gtin": null,
         "woltName": "Kuřecí prsní řízky"
+      },
+      "Lidl": {
+        "price": 169.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050598",
+        "lidlName": "Kuřecí prsní řízky",
+        "url": "https://www.lidl.cz/p/kureci-prsni-rizky/p10050598"
       }
     },
     "Vici Surimi tyčinky": {
@@ -13575,6 +13716,16 @@
         "woltItemId": "5575e06f8e67d0c4cf45e8d1",
         "gtin": "8590421051900",
         "woltName": "Gustona kolínka"
+      },
+      "Lidl": {
+        "price": 15.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051881",
+        "lidlName": "Kolínka",
+        "url": "https://www.lidl.cz/p/kolinka/p10051881"
       }
     },
     "Dr.Oetker Krém na dukátové buchtičky": {
@@ -14313,6 +14464,16 @@
         "woltItemId": "0b90ae8e5fd6e57464c89e79",
         "gtin": "8595006329825",
         "woltName": "Vodňanská kachna Kachní stehna mražená 500 g"
+      },
+      "Lidl": {
+        "price": 299,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10052104",
+        "lidlName": "Deluxe Konfitovaná kachní stehna, 2 ks",
+        "url": "https://www.lidl.cz/p/deluxe-konfitovana-kachni-stehna-2-ks/p10052104"
       }
     },
     "Bucatini 500g": {
@@ -14911,6 +15072,16 @@
         "woltItemId": "2ff25b16f895f8094999f075",
         "gtin": "8594003840210",
         "woltName": "Jupí Sirup lesní směs 0,7l"
+      },
+      "Lidl": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "78.43 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054143",
+        "lidlName": "Jupí Sirup lesní směs",
+        "url": "https://www.lidl.cz/p/kofola-jupi-sirup-lesni-smes/p10054143"
       }
     },
     "Jupí sirup citrón": {
@@ -15491,6 +15662,16 @@
         "woltItemId": "23db117d91ccdbd907c06116",
         "gtin": null,
         "woltName": "Vepřová krkovice bez kosti"
+      },
+      "Lidl": {
+        "price": 179.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050613",
+        "lidlName": "Vepřová krkovice bez kosti - 4 plátky",
+        "url": "https://www.lidl.cz/p/veprova-krkovice-bez-kosti-4-platky/p10050613"
       }
     },
     "Qualivo Vepřová krkovice bez kosti": {
@@ -17166,6 +17347,16 @@
         "woltItemId": "7b6f9421ab2c24038f53b5ad",
         "gtin": "2908500000002",
         "woltName": "Kuřecí prsní a stehenní řízky mix"
+      },
+      "Lidl": {
+        "price": 139.9,
+        "inSale": false,
+        "pricePerUnit": "140 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050596",
+        "lidlName": "Kuřecí stehenní řízky",
+        "url": "https://www.lidl.cz/p/kureci-stehenni-rizky/p10050596"
       }
     },
     "Hovězí s kostí 1kg": {
@@ -17640,6 +17831,16 @@
         "woltItemId": "c628c980bed29d0442285f5e",
         "gtin": null,
         "woltName": "K-Mistři od fochu Vepřová pečeně bez kosti, plátky"
+      },
+      "Lidl": {
+        "price": 169.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050612",
+        "lidlName": "Vepřová pečeně bez kosti, 5 plátků",
+        "url": "https://www.lidl.cz/p/veprova-pecene-bez-kosti-5-platku/p10050612"
       }
     },
     "Smetanito Smetanové giga tavený sýr": {
@@ -17834,6 +18035,16 @@
         "woltItemId": "647d2fb0266c8ab26e58ceb3",
         "gtin": "8595022762163",
         "woltName": "Klasa Linecké rohlíčky polomáčené 170 g"
+      },
+      "Lidl": {
+        "price": 22.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10056426",
+        "lidlName": "KLASA Linecké rohlíčky",
+        "url": "https://www.lidl.cz/p/klasa-linecke-rohlicky/p10056426"
       }
     },
     "Arax Lavaš chléb maxi 2 ks": {
@@ -18337,6 +18548,16 @@
         "woltItemId": "86db87eb016a8551b06faadf",
         "gtin": "5051007132725",
         "woltName": "Tesco Vídeňské párky 200g"
+      },
+      "Lidl": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "175 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10055516",
+        "lidlName": "PIKOK PURE Vídeňské párky",
+        "url": "https://www.lidl.cz/p/pikok-pure-videnske-parky/p10055516"
       }
     },
     "Zátkovy Vaječné Mušličky 500g": {
@@ -18575,6 +18796,16 @@
         "woltItemId": "fed08490983faca915a04fd2",
         "gtin": "8594003840173",
         "woltName": "Jupí Sirup pomeranč 0,7l"
+      },
+      "Lidl": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "78.43 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054141",
+        "lidlName": "Jupí Sirup pomeranč",
+        "url": "https://www.lidl.cz/p/kofola-jupi-sirup-pomeranc/p10054141"
       }
     },
     "Andros Shot Immunity s příchutí limety a zázvoru": {
@@ -20621,6 +20852,186 @@
         "woltItemId": "4a1afcb2a9f5b4544fb64ffa",
         "gtin": "8594010512247",
         "woltName": "Veto Vegi Steak yakoma-so 150 g"
+      }
+    },
+    "Tarhoňa 250g": {
+      "Lidl": {
+        "price": 11.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051900",
+        "lidlName": "Tarhoňa",
+        "url": "https://www.lidl.cz/p/tarhona/p10051900"
+      }
+    },
+    "Hovězí líčka ~500g": {
+      "Lidl": {
+        "price": 399,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10052103",
+        "lidlName": "Hovězí líčka",
+        "url": "https://www.lidl.cz/p/hovezi-licka/p10052103"
+      }
+    },
+    "Rohlík proteinový": {
+      "Lidl": {
+        "price": 5.27,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10053664",
+        "lidlName": "Proteinový rohlík",
+        "url": "https://www.lidl.cz/p/proteinovy-rohlik/p10053664"
+      }
+    },
+    "Kofola 2l": {
+      "Lidl": {
+        "price": 29.9,
+        "inSale": false,
+        "pricePerUnit": "19.95 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054127",
+        "lidlName": "Kofola",
+        "url": "https://www.lidl.cz/p/kofola/p10054127"
+      }
+    },
+    "Coca-Cola Zero Zero": {
+      "Lidl": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "69.39 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054133",
+        "lidlName": "Coca-Cola Zero",
+        "url": "https://www.lidl.cz/p/coca-cola-coca-cola-zero/p10054133"
+      }
+    },
+    "Madeta Jihočeské máslo 82 %": {
+      "Lidl": {
+        "price": 46.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054149",
+        "lidlName": "Jihočeské máslo 82%",
+        "url": "https://www.lidl.cz/p/madeta-jihoceske-maslo-82/p10054149"
+      }
+    },
+    "Zelí bílé krouhané": {
+      "Lidl": {
+        "price": 8.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10057270",
+        "lidlName": "Zelí bílé na krouhání",
+        "url": "https://www.lidl.cz/p/zeli-bile-na-krouhani/p10057270"
+      }
+    },
+    "Vepřová kýta plátky, 4 ks": {
+      "Lidl": {
+        "price": 159.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10050610",
+        "lidlName": "Vepřová kýta řízky 4-5 plátků",
+        "url": "https://www.lidl.cz/p/veprova-kyta-rizky-4-5-platku/p10050610"
+      }
+    },
+    "Pražma královská kuchaná": {
+      "Lidl": {
+        "price": 28.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10046545",
+        "lidlName": "Pražma královská",
+        "url": "https://www.lidl.cz/p/prazma-kralovska/p10046545"
+      }
+    },
+    "Kitchin Rýže parboiled": {
+      "Lidl": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051893",
+        "lidlName": "Parboiled rýže",
+        "url": "https://www.lidl.cz/p/parboiled-ryze/p10051893"
+      }
+    },
+    "Coca-Cola": {
+      "Lidl": {
+        "price": 34.9,
+        "inSale": false,
+        "pricePerUnit": "59.8 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054129",
+        "lidlName": "Coca-Cola Regular",
+        "url": "https://www.lidl.cz/p/coca-cola-coca-cola-regular/p10054129"
+      }
+    },
+    "Filo těsto 250g": {
+      "Lidl": {
+        "price": 39.9,
+        "inSale": false,
+        "pricePerUnit": "236 Kč/kg",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10057240",
+        "lidlName": "Filo těsto",
+        "url": "https://www.lidl.cz/p/filo-testo/p10057240"
+      }
+    },
+    "Kitchin Farfalle N. 154": {
+      "Lidl": {
+        "price": 15.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10051878",
+        "lidlName": "Farfalle",
+        "url": "https://www.lidl.cz/p/farfalle/p10051878"
+      }
+    },
+    "Schubert BIO Natur vejce M–L": {
+      "Lidl": {
+        "price": 64.9,
+        "inSale": false,
+        "pricePerUnit": "",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10054167",
+        "lidlName": "Bio vejce M-L 6 ks.",
+        "url": "https://www.lidl.cz/p/bio-vejce-m-l-6-ks/p10054167"
+      }
+    },
+    "Kláštorná Kalcia jemně sycená": {
+      "Lidl": {
+        "price": 14.9,
+        "inSale": false,
+        "pricePerUnit": "37.8 Kč/l",
+        "source": "lidl",
+        "lastScraped": "2026-10-22",
+        "lidlErp": "10055760",
+        "lidlName": "Kláštorná kalcia",
+        "url": "https://www.lidl.cz/p/klastorna-kalcia/p10055760"
       }
     }
   }
