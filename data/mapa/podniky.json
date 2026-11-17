@@ -2313,5 +2313,1886 @@
   "lon": 14.642705,
   "uroven": "pivni_stezka",
   "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "U Bílého anděla",
+  "typ": "cukrarna",
+  "adresa": "Masarykovo nám. 42/26, Nový Jičín",
+  "mesto": "Nový Jičín",
+  "lat": 49.594426,
+  "lon": 18.01114,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "U Růženky",
+  "typ": "cukrarna",
+  "adresa": "Vitorazská 237, Suchdol nad Lužnicí",
+  "mesto": "Suchdol nad Lužnicí",
+  "lat": 48.887839,
+  "lon": 14.874733,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna Ella",
+  "typ": "cukrarna",
+  "adresa": "Zadov 2, Stachy",
+  "mesto": "Stachy",
+  "lat": 49.066101,
+  "lon": 13.622337,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kavárna Staré časy",
+  "typ": "kavarna",
+  "adresa": "Školská 155, Ronov nad Doubravou",
+  "mesto": "Ronov nad Doubravou",
+  "lat": 49.888185,
+  "lon": 15.531532,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Sweet Dot TeSa",
+  "typ": "cukrarna",
+  "adresa": "Záblatí 21, Dříteň",
+  "mesto": "Dříteň",
+  "lat": 49.134803,
+  "lon": 14.282618,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Eleanor Café",
+  "typ": "kavarna",
+  "adresa": "Hlavní 33, Žulová",
+  "mesto": "Žulová",
+  "lat": 50.30858,
+  "lon": 17.097369,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Myš Café",
+  "typ": "cukrarna",
+  "adresa": "Benešovská 132, Sázava",
+  "mesto": "Sázava",
+  "lat": 49.872384,
+  "lon": 14.896946,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Káva s párou",
+  "typ": "kavarna",
+  "adresa": "Jarošova 165/32, Litoměřice (Předměstí)",
+  "mesto": "Litoměřice",
+  "lat": 50.531599,
+  "lon": 14.131203,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Mevan's Coffee",
+  "typ": "cukrarna",
+  "adresa": "nám. Svobody 104, Zlaté Hory",
+  "mesto": "Zlaté Hory",
+  "lat": 50.262044,
+  "lon": 17.396496,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kavárna Klid",
+  "typ": "kavarna",
+  "adresa": "Čapkova 71, Semily",
+  "mesto": "Semily",
+  "lat": 50.60269,
+  "lon": 15.335694,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna Zlatá Pecka",
+  "typ": "cukrarna",
+  "adresa": "Pecka 11, Pecka",
+  "mesto": "Pecka",
+  "lat": 50.479854,
+  "lon": 15.608474,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Horská cukrárna",
+  "typ": "cukrarna",
+  "adresa": "náměstí T. G. Masaryka 661, Smržovka",
+  "mesto": "Smržovka",
+  "lat": 50.739055,
+  "lon": 15.244529,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna Sedmihorky",
+  "typ": "cukrarna",
+  "adresa": "Sedmihorky 93, Karlovice",
+  "mesto": "Karlovice",
+  "lat": 50.560674,
+  "lon": 15.201259,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Gelateria Corso",
+  "typ": "zmrzlinarna",
+  "adresa": "nám. Krále Jiřího z Poděbrad 494/43, Cheb",
+  "mesto": "Cheb",
+  "lat": 50.079896,
+  "lon": 12.369924,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna kavárna Karel Červinka",
+  "typ": "cukrarna",
+  "adresa": "Jablonec nad Jizerou 254",
+  "mesto": "Jablonec nad Jizerou",
+  "lat": 50.704048,
+  "lon": 15.429349,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kavárna Cukrárna Pod Ronovem",
+  "typ": "cukrarna",
+  "adresa": "Víska 21, Kravaře",
+  "mesto": "Kravaře",
+  "lat": 50.634979,
+  "lon": 14.392817,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Sladká.",
+  "typ": "cukrarna",
+  "adresa": "U Parku 1614, Hluboká nad Vltavou",
+  "mesto": "Hluboká nad Vltavou",
+  "lat": 49.057919,
+  "lon": 14.435608,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna, Kavárna Šlágr",
+  "typ": "cukrarna",
+  "adresa": "Francouzská 563/72, Praha 10 (Vinohrady)",
+  "mesto": "Praha",
+  "lat": 50.071954,
+  "lon": 14.445733,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Moccacafé",
+  "typ": "cukrarna",
+  "adresa": "Pražská 232/1, Tábor",
+  "mesto": "Tábor",
+  "lat": 49.413701,
+  "lon": 14.661256,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlinový svět",
+  "typ": "zmrzlinarna",
+  "adresa": "Rožmberská 28, Třeboň",
+  "mesto": "Třeboň",
+  "lat": 49.004211,
+  "lon": 14.772432,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chata Rovina",
+  "typ": "restaurace",
+  "adresa": "Dobrá Voda 16, Hartmanice",
+  "mesto": "Hartmanice",
+  "lat": 49.157359,
+  "lon": 13.421851,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro U Kapra",
+  "typ": "bistro",
+  "adresa": "Dukelská 106, Třeboň",
+  "mesto": "Třeboň",
+  "lat": 49.003994,
+  "lon": 14.773285,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Wellness & Restaurant U Fandy",
+  "typ": "restaurace",
+  "adresa": "Lhotka 180",
+  "mesto": "Lhotka",
+  "lat": 49.922183,
+  "lon": 16.434679,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kolnička",
+  "typ": "restaurace",
+  "adresa": "1. máje 826, Luka nad Jihlavou",
+  "mesto": "Luka nad Jihlavou",
+  "lat": 49.373334,
+  "lon": 15.705285,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Krčma U Žraloka",
+  "typ": "pivnice",
+  "adresa": "Vlkovec 36, Chocerady",
+  "mesto": "Chocerady",
+  "lat": 49.873926,
+  "lon": 14.814034,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Zastávka Nižbor",
+  "typ": "restaurace",
+  "adresa": "K Nádraží 379, Nižbor",
+  "mesto": "Nižbor",
+  "lat": 50.003038,
+  "lon": 13.999349,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hladík & Žíža Janská bouda",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Janská 198, Janské Lázně",
+  "mesto": "Janské Lázně",
+  "lat": 50.623615,
+  "lon": 15.76837,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Matoušků",
+  "typ": "restaurace",
+  "adresa": "Kondrac 57",
+  "mesto": "Kondrac",
+  "lat": 49.666468,
+  "lon": 14.884155,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kafé Ořech",
+  "typ": "kavarna",
+  "adresa": "Poříčská 1612, Mnichovo Hradiště",
+  "mesto": "Mnichovo Hradiště",
+  "lat": 50.521606,
+  "lon": 14.971667,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Burgr's Club",
+  "typ": "bistro",
+  "adresa": "21. dubna 694, Lednice",
+  "mesto": "Lednice",
+  "lat": 48.800911,
+  "lon": 16.803358,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Valašská hospoda U Janíka",
+  "typ": "restaurace",
+  "adresa": "Horečky 890, Frenštát pod Radhoštěm",
+  "mesto": "Frenštát pod Radhoštěm",
+  "lat": 49.546324,
+  "lon": 18.196838,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Hubálků",
+  "typ": "restaurace",
+  "adresa": "Kostelecká Lhota 40, Kostelec nad Orlicí",
+  "mesto": "Kostelec nad Orlicí",
+  "lat": 50.103441,
+  "lon": 16.210488,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vlkovská hospoda",
+  "typ": "restaurace",
+  "adresa": "Vlkov 93",
+  "mesto": "Vlkov",
+  "lat": 49.325371,
+  "lon": 16.198414,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Naše BiSTRO",
+  "typ": "restaurace",
+  "adresa": "Tyršova 319/28, Jeseník",
+  "mesto": "Jeseník",
+  "lat": 50.227669,
+  "lon": 17.195609,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kynutá buchta bistro",
+  "typ": "bistro",
+  "adresa": "Náměstí 15, Horní Planá",
+  "mesto": "Horní Planá",
+  "lat": 48.766294,
+  "lon": 14.032542,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Café Bistro Na svahu",
+  "typ": "bistro",
+  "adresa": "Zadov, Stachy",
+  "mesto": "Stachy",
+  "lat": 49.07186,
+  "lon": 13.626839,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "BRATRS bistro",
+  "typ": "bistro",
+  "adresa": "Brno, Bystrc ev. č. 2771",
+  "mesto": "Brno",
+  "lat": 49.217516,
+  "lon": 16.50633,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro Zelňačka",
+  "typ": "bistro",
+  "adresa": "Karlovarská 131, Měděnec",
+  "mesto": "Měděnec",
+  "lat": 50.421504,
+  "lon": 13.11212,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Tvarůžková cukrárna",
+  "typ": "cukrarna",
+  "adresa": "Komenského 325/7, Loštice",
+  "mesto": "Loštice",
+  "lat": 49.745384,
+  "lon": 16.929374,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Obžerstvení u kostela",
+  "typ": "bistro",
+  "adresa": "Hlince",
+  "mesto": "Hlince",
+  "lat": 49.948227,
+  "lon": 13.625024,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro Stodola",
+  "typ": "kavarna",
+  "adresa": "Albrechtice v Jizerských horách 367",
+  "mesto": "Albrechtice v Jizerských horách",
+  "lat": 50.758481,
+  "lon": 15.293134,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro V Zahradě",
+  "typ": "bistro",
+  "adresa": "Čsl. armády 20, Zeleneč",
+  "mesto": "Zeleneč",
+  "lat": 50.135835,
+  "lon": 14.659236,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro Vintrovka 1",
+  "typ": "bistro",
+  "adresa": "Korytná",
+  "mesto": "Korytná",
+  "lat": 48.932464,
+  "lon": 17.6792,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro Andrea",
+  "typ": "bistro",
+  "adresa": "Vítězná 474, Abertamy",
+  "mesto": "Abertamy",
+  "lat": 50.371053,
+  "lon": 12.814839,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "KAFE KINO.",
+  "typ": "kavarna",
+  "adresa": "1. máje 428, Hrádek nad Nisou",
+  "mesto": "Hrádek nad Nisou",
+  "lat": 50.851005,
+  "lon": 14.84463,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro u Martina",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Splzov 14, Železný Brod",
+  "mesto": "Železný Brod",
+  "lat": 50.653965,
+  "lon": 15.218305,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro J & J",
+  "typ": "bistro",
+  "adresa": "Gen. Svobody 244/9, Šumperk",
+  "mesto": "Šumperk",
+  "lat": 49.966375,
+  "lon": 16.973026,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Větrné bistro",
+  "typ": "bistro",
+  "adresa": "Prášily",
+  "mesto": "Prášily",
+  "lat": 49.105101,
+  "lon": 13.378694,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bezlepkové Bistro u Vrzky",
+  "typ": "bistro",
+  "adresa": "Svatojánská 144, Jindřichův Hradec I",
+  "mesto": "Jindřichův Hradec",
+  "lat": 49.144131,
+  "lon": 15.004123,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Klaploto bistro",
+  "typ": "bistro",
+  "adresa": "Masarykovo nám. 22, Třeboň I",
+  "mesto": "Třeboň",
+  "lat": 49.004308,
+  "lon": 14.77225,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Rustic Coffee & Brunch",
+  "typ": "kavarna",
+  "adresa": "Černohorská 85, Janské Lázně",
+  "mesto": "Janské Lázně",
+  "lat": 50.630299,
+  "lon": 15.779721,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Crémista - gelateria Strážný",
+  "typ": "zmrzlinarna",
+  "adresa": "Strážný 42",
+  "mesto": "Strážný",
+  "lat": 48.908822,
+  "lon": 13.720283,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Odpočívadlo u Hajtmanů",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Pitín 204",
+  "mesto": "Pitín",
+  "lat": 48.990474,
+  "lon": 17.889571,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda Na mýtince",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Hřebečníky, Šlovice 9",
+  "mesto": "Šlovice",
+  "lat": 49.971345,
+  "lon": 13.748658,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Okno do Šumavy",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Srní 2",
+  "mesto": "Srní",
+  "lat": 49.783228,
+  "lon": 15.871457,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "O FOUS LEPŠÍ KAFE",
+  "typ": "kavarna",
+  "adresa": "Hutě pod Třemšínem 52, Rožmitál pod Třemšínem",
+  "mesto": "Rožmitál pod Třemšínem",
+  "lat": 49.590419,
+  "lon": 13.803737,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Občerstvení u Červené jámy",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Abertamy, Hřebečná",
+  "mesto": "Abertamy",
+  "lat": 50.368744,
+  "lon": 12.81826,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka Pod Kostelem",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Svojanov 126",
+  "mesto": "Svojanov",
+  "lat": 49.624251,
+  "lon": 16.410427,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina U Leknínu",
+  "typ": "zmrzlinarna",
+  "adresa": "Břehyně 280, Doksy",
+  "mesto": "Doksy",
+  "lat": 50.574771,
+  "lon": 14.692502,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kafíčko v lese",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Janov 205",
+  "mesto": "Janov",
+  "lat": 49.837236,
+  "lon": 16.386955,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Občerstvení Krömerova bouda",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Albrechtice v Jizerských horách",
+  "mesto": "Albrechtice v Jizerských horách",
+  "lat": 50.792008,
+  "lon": 15.274672,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Občerstvení u Coufalů",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Nová Hlína 59, Třeboň",
+  "mesto": "Třeboň",
+  "lat": 49.033666,
+  "lon": 14.792696,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "U MATCHY bistro s pekárnou",
+  "typ": "bistro",
+  "adresa": "Průmyslová 250, Jaroměř, Pražské Předměstí",
+  "mesto": "Jaroměř",
+  "lat": 50.337806,
+  "lon": 15.916597,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Umanutá Koza",
+  "typ": "kavarna",
+  "adresa": "Kryštofovy Hamry",
+  "mesto": "Kryštofovy Hamry",
+  "lat": 50.499462,
+  "lon": 13.136091,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bohemian Coffee House",
+  "typ": "kavarna",
+  "adresa": "Třída 9. května 1097/41, Rumburk 1",
+  "mesto": "Rumburk",
+  "lat": 50.954996,
+  "lon": 14.55227,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zahrádka v Podhradí",
+  "typ": "kavarna",
+  "adresa": "Podhradí 11, Třemošnice",
+  "mesto": "Třemošnice",
+  "lat": 49.880704,
+  "lon": 15.587463,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Káva od cesty",
+  "typ": "kavarna",
+  "adresa": "Hamr 88",
+  "mesto": "Hamr",
+  "lat": 48.94903,
+  "lon": 14.912253,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Turistka",
+  "typ": "kavarna",
+  "adresa": "Barborská 29/22, Kutná Hora (Vnitřní Město)",
+  "mesto": "Kutná Hora",
+  "lat": 49.947497,
+  "lon": 15.264862,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Mandlárna",
+  "typ": "kavarna",
+  "adresa": "Na Úvoze 1448/2, Hustopeče",
+  "mesto": "Hustopeče",
+  "lat": 48.937908,
+  "lon": 16.736945,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Milovská kavárna",
+  "typ": "kavarna",
+  "adresa": "České Milovy 31, Křižánky",
+  "mesto": "Křižánky",
+  "lat": 49.678468,
+  "lon": 16.093392,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kafe Žebřík",
+  "typ": "kavarna",
+  "adresa": "Na Hrázi 622, Sušice II",
+  "mesto": "Sušice",
+  "lat": 49.228702,
+  "lon": 13.5142,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "nejencafé",
+  "typ": "kavarna",
+  "adresa": "Jáchymovská 149, Abertamy",
+  "mesto": "Abertamy",
+  "lat": 50.368436,
+  "lon": 12.817965,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivnice Clock",
+  "typ": "pivnice",
+  "adresa": "Školní 2, Potštejn",
+  "mesto": "Potštejn",
+  "lat": 50.08218,
+  "lon": 16.307584,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivní laboratoř U Rumlíka",
+  "typ": "pivnice",
+  "adresa": "Družstevní ochoz 1307/30, Praha 4 (Nusle)",
+  "mesto": "Praha",
+  "lat": 50.056411,
+  "lon": 14.443808,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivovarský dům Benedict",
+  "typ": "pivnice",
+  "adresa": "Ječná 511/16, Praha 2 (Nové Město)",
+  "mesto": "Praha",
+  "lat": 50.075454,
+  "lon": 14.423677,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Posledního Mohykána",
+  "typ": "restaurace",
+  "adresa": "Vojtěchov 67, Hvozd",
+  "mesto": "Hvozd",
+  "lat": 49.652076,
+  "lon": 16.907626,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivnice Harcovna",
+  "typ": "pivnice",
+  "adresa": "Tylovice 1884, Rožnov pod Radhoštěm",
+  "mesto": "Rožnov pod Radhoštěm",
+  "lat": 49.455287,
+  "lon": 18.148867,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Výčep",
+  "typ": "pivnice",
+  "adresa": "Žižkovo nám. 18/18, Tábor",
+  "mesto": "Tábor",
+  "lat": 49.413702,
+  "lon": 14.658538,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Lípy",
+  "typ": "pivnice",
+  "adresa": "Zborná 16, Jihlava",
+  "mesto": "Jihlava",
+  "lat": 49.438926,
+  "lon": 15.574288,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hovoranský hostinec",
+  "typ": "restaurace",
+  "adresa": "Hovorany 131",
+  "mesto": "Hovorany",
+  "lat": 48.954505,
+  "lon": 16.985388,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivnice Podkova",
+  "typ": "pivnice",
+  "adresa": "Fryštátská 79/22, Karviná (Fryštát)",
+  "mesto": "Karviná",
+  "lat": 49.853643,
+  "lon": 18.543905,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka Na Trucovně",
+  "typ": "pivnice",
+  "adresa": "Bělokozly 23, Sázava",
+  "mesto": "Sázava",
+  "lat": 49.854577,
+  "lon": 14.898481,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Stodola Herink",
+  "typ": "pivnice",
+  "adresa": "Hlavní 7, Herink",
+  "mesto": "Herink",
+  "lat": 49.967578,
+  "lon": 14.575498,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka na ostrůvku",
+  "typ": "pivnice",
+  "adresa": "Fügnerovo nábř. 31, Bílovice nad Svitavou",
+  "mesto": "Bílovice nad Svitavou",
+  "lat": 49.248298,
+  "lon": 16.67353,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka Na Jedno",
+  "typ": "pivnice",
+  "adresa": "Kouty nad Desnou 7, Loučná nad Desnou",
+  "mesto": "Loučná nad Desnou",
+  "lat": 50.100898,
+  "lon": 17.107823,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivovar Bubeneč",
+  "typ": "pivnice",
+  "adresa": "Bubenečská 321/33, Praha 6 (Bubeneč)",
+  "mesto": "Praha",
+  "lat": 50.101226,
+  "lon": 14.404494,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivnice pod Pepřem - U Loužáka",
+  "typ": "pivnice",
+  "adresa": "Studené 4, Jílové u Prahy",
+  "mesto": "Jílové u Prahy",
+  "lat": 49.882221,
+  "lon": 14.483243,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Samovýčep pro dobré lidi",
+  "typ": "pivnice",
+  "adresa": "Vranov 70",
+  "mesto": "Vranov",
+  "lat": 49.311006,
+  "lon": 16.607483,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda Kačlehy",
+  "typ": "pivnice",
+  "adresa": "Kačlehy 26",
+  "mesto": "Kačlehy",
+  "lat": 49.107385,
+  "lon": 15.077135,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda U Taterů",
+  "typ": "pivnice",
+  "adresa": "Třebenice 6, Štěchovice",
+  "mesto": "Štěchovice",
+  "lat": 49.850984,
+  "lon": 14.405452,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Medová hospůdka",
+  "typ": "pivnice",
+  "adresa": "Mirochov 30, Chlum u Třeboně",
+  "mesto": "Chlum u Třeboně",
+  "lat": 49.00597,
+  "lon": 14.938152,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Lasíků",
+  "typ": "restaurace",
+  "adresa": "Tiché údolí 53/9, Únětice",
+  "mesto": "Únětice",
+  "lat": 50.149524,
+  "lon": 14.35984,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda U Kousala",
+  "typ": "pivnice",
+  "adresa": "Rýchorská 163, Trutnov (Horní Staré Město)",
+  "mesto": "Trutnov",
+  "lat": 50.595391,
+  "lon": 15.877429,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chalupa na Rozcestí",
+  "typ": "restaurace",
+  "adresa": "Pec pod Sněžkou 247",
+  "mesto": "Pec pod Sněžkou",
+  "lat": 50.70567,
+  "lon": 15.67492,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lesní hospůdka Na Skalce",
+  "typ": "pivnice",
+  "adresa": "Skalka, Blíževedly",
+  "mesto": "Blíževedly",
+  "lat": 50.587159,
+  "lon": 14.414631,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Minipivovar Kronl",
+  "typ": "pivnice",
+  "adresa": "Kollárova 94/26, Mariánské Lázně (Úšovice)",
+  "mesto": "Mariánské Lázně",
+  "lat": 49.958021,
+  "lon": 12.702095,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka U Hada",
+  "typ": "restaurace",
+  "adresa": "tř. Čs. armády 601, Jáchymov",
+  "mesto": "Jáchymov",
+  "lat": 50.375016,
+  "lon": 12.911573,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Kopů",
+  "typ": "restaurace",
+  "adresa": "Nezamyslice 58",
+  "mesto": "Nezamyslice",
+  "lat": 49.263301,
+  "lon": 13.672946,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Avalon - Keltská středověká krčma",
+  "typ": "restaurace",
+  "adresa": "Příční 46, Valtice",
+  "mesto": "Valtice",
+  "lat": 48.741039,
+  "lon": 16.754446,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Zmátlů",
+  "typ": "restaurace",
+  "adresa": "Sázava 27, Nový Rychnov",
+  "mesto": "Nový Rychnov",
+  "lat": 49.393885,
+  "lon": 15.330129,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec U Tyšerů",
+  "typ": "restaurace",
+  "adresa": "Jívka 341",
+  "mesto": "Jívka",
+  "lat": 50.588341,
+  "lon": 16.087047,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna Anežka",
+  "typ": "pekarna",
+  "adresa": "Palačov 82, Starý Jičín",
+  "mesto": "Starý Jičín",
+  "lat": 49.550443,
+  "lon": 17.921735,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna s bistrem u Havířů",
+  "typ": "pekarna",
+  "adresa": "Klimešova 225/68, Brno (Ořešín)",
+  "mesto": "Brno",
+  "lat": 49.276211,
+  "lon": 16.6063,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vilémovo Pekařství & Koloniál",
+  "typ": "pekarna",
+  "adresa": "nám. T. G. Masaryka 924/6, Poděbrady III",
+  "mesto": "Poděbrady",
+  "lat": 50.149277,
+  "lon": 15.122029,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Frgály od Bohušky",
+  "typ": "pekarna",
+  "adresa": "Velké Karlovice 991",
+  "mesto": "Velké Karlovice",
+  "lat": 49.358305,
+  "lon": 18.279454,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "DYMÁK PEKÁRNA",
+  "typ": "pekarna",
+  "adresa": "5. května 74, Heřmanův Městec",
+  "mesto": "Heřmanův Městec",
+  "lat": 49.945061,
+  "lon": 15.671269,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Srnková káva",
+  "typ": "kavarna",
+  "adresa": "Srní 17",
+  "mesto": "Srní",
+  "lat": 49.782655,
+  "lon": 15.873284,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna Fialka",
+  "typ": "cukrarna",
+  "adresa": "náměstí Svobody 51, Sušice I",
+  "mesto": "Sušice",
+  "lat": 49.230361,
+  "lon": 13.519304,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vendulčina pekárna",
+  "typ": "pekarna",
+  "adresa": "Frýdecká 434, Václavovice",
+  "mesto": "Václavovice",
+  "lat": 49.749951,
+  "lon": 18.378541,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "ChlebArt",
+  "typ": "pekarna",
+  "adresa": "Vídeňská 4, Nová Bystřice",
+  "mesto": "Nová Bystřice",
+  "lat": 49.018759,
+  "lon": 15.104654,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Café & Bistro V Pekárně",
+  "typ": "bistro",
+  "adresa": "Františka Halase 1887/12a, Hradec Králové (Nový Hradec Králové)",
+  "mesto": "Hradec Králové",
+  "lat": 50.199872,
+  "lon": 15.849465,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna Luníček",
+  "typ": "pekarna",
+  "adresa": "Černilov 237",
+  "mesto": "Černilov",
+  "lat": 50.263283,
+  "lon": 15.936505,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna na náměstí",
+  "typ": "pekarna",
+  "adresa": "Náměstí 173, Kašperské Hory",
+  "mesto": "Kašperské Hory",
+  "lat": 49.143839,
+  "lon": 13.554242,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Krchlebské koláče",
+  "typ": "pekarna",
+  "adresa": "Družstevní 68, Staňkov (Krchleby)",
+  "mesto": "Staňkov",
+  "lat": 49.544772,
+  "lon": 13.114228,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Haberská pekárna",
+  "typ": "pekarna",
+  "adresa": "V Bytovkách 391, Habry",
+  "mesto": "Habry",
+  "lat": 49.762753,
+  "lon": 15.481977,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Global Wines & Spirits",
+  "typ": "vinoteka",
+  "adresa": "Václavské náměstí 815/53, Praha 1 (Nové Město)",
+  "mesto": "Praha",
+  "lat": 50.080371,
+  "lon": 14.429501,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka STYLE",
+  "typ": "vinoteka",
+  "adresa": "Tyršova 145/26, Ostrava (Moravská Ostrava)",
+  "mesto": "Ostrava",
+  "lat": 49.835746,
+  "lon": 18.287505,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinařství Jan Plaček",
+  "typ": "vinoteka",
+  "adresa": "Moravské Bránice 348",
+  "mesto": "Moravské Bránice",
+  "lat": 49.082982,
+  "lon": 16.437608,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Víno Drábek",
+  "typ": "vinoteka",
+  "adresa": "V Sadech, Čejkovice",
+  "mesto": "Čejkovice",
+  "lat": 48.905169,
+  "lon": 16.938695,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro U kostela & Vinotéka",
+  "typ": "bistro",
+  "adresa": "Lukov 69",
+  "mesto": "Lukov",
+  "lat": 50.602225,
+  "lon": 14.368869,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dvorek jako víno",
+  "typ": "kavarna",
+  "adresa": "Bulhary 107",
+  "mesto": "Bulhary",
+  "lat": 48.830075,
+  "lon": 16.751335,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka Vínovín",
+  "typ": "vinoteka",
+  "adresa": "Pražská 3737/102, Znojmo",
+  "mesto": "Znojmo",
+  "lat": 48.855434,
+  "lon": 16.048946,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka a vinárna Jezuitská",
+  "typ": "vinoteka",
+  "adresa": "Jezuitská 176/10, Znojmo",
+  "mesto": "Znojmo",
+  "lat": 48.858534,
+  "lon": 16.047669,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Mini bistro - Vinotéka u Dušků",
+  "typ": "vinoteka",
+  "adresa": "28. října 149, Suchdol nad Lužnicí",
+  "mesto": "Suchdol nad Lužnicí",
+  "lat": 48.88942,
+  "lon": 14.876085,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka/Pivotéka v Podhájí",
+  "typ": "vinoteka",
+  "adresa": "Podhájí 266, Jedovnice",
+  "mesto": "Jedovnice",
+  "lat": 49.345283,
+  "lon": 16.76111,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "CerFis Wines",
+  "typ": "vinoteka",
+  "adresa": "Farská 172, Trutnov (Vnitřní Město)",
+  "mesto": "Trutnov",
+  "lat": 50.561643,
+  "lon": 15.915158,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kafíno",
+  "typ": "kavarna",
+  "adresa": "Malá 161, Nové Město na Moravě",
+  "mesto": "Nové Město na Moravě",
+  "lat": 49.56582,
+  "lon": 16.076409,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka Adina",
+  "typ": "vinoteka",
+  "adresa": "Novákova 877/30, Mladá Boleslav III",
+  "mesto": "Mladá Boleslav",
+  "lat": 50.411903,
+  "lon": 14.923962,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna a kavárna U tří císařů",
+  "typ": "cukrarna",
+  "adresa": "Palackého náměstí 73, Slavkov u Brna",
+  "mesto": "Slavkov u Brna",
+  "lat": 49.152675,
+  "lon": 16.877053,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrářství a pekařství Stáňa",
+  "typ": "cukrarna",
+  "adresa": "Pražská 159, Jíloviště",
+  "mesto": "Jíloviště",
+  "lat": 49.927256,
+  "lon": 14.341272,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kašša lahůdky",
+  "typ": "lahudky",
+  "adresa": "Průmyslová 246, Kladno",
+  "mesto": "Kladno",
+  "lat": 50.159501,
+  "lon": 14.11461,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Potraviny Flop Straka",
+  "typ": "lahudky",
+  "adresa": "Nová 185, Kunžak",
+  "mesto": "Kunžak",
+  "lat": 49.120464,
+  "lon": 15.189744,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bonté Gelaterie",
+  "typ": "zmrzlinarna",
+  "adresa": "V Pražské bráně 70/3, Beroun-Centrum",
+  "mesto": "Beroun",
+  "lat": 49.964244,
+  "lon": 14.075317,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Motorest pod Slunečnou",
+  "typ": "restaurace",
+  "adresa": "Dětřichov nad Bystřicí 173",
+  "mesto": "Dětřichov nad Bystřicí",
+  "lat": 49.834403,
+  "lon": 17.401939,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Karlov",
+  "typ": "zmrzlinarna",
+  "adresa": "Čáslavská, Kutná Hora",
+  "mesto": "Kutná Hora",
+  "lat": 49.947336,
+  "lon": 15.276941,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Točená zmrzlina U Macha",
+  "typ": "zmrzlinarna",
+  "adresa": "Hradecká, Jaroměř",
+  "mesto": "Jaroměř",
+  "lat": 50.337158,
+  "lon": 15.897211,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "BUDKA",
+  "typ": "zmrzlinarna",
+  "adresa": "Dolní Čermná 391",
+  "mesto": "Dolní Čermná",
+  "lat": 49.979076,
+  "lon": 16.56459,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina z Rožmíku",
+  "typ": "zmrzlinarna",
+  "adresa": "Náměstí 58, Rožmitál pod Třemšínem",
+  "mesto": "Rožmitál pod Třemšínem",
+  "lat": 49.602738,
+  "lon": 13.863193,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Ruzyně",
+  "typ": "zmrzlinarna",
+  "adresa": "Drnovská 574/42, Praha 6 (Ruzyně)",
+  "mesto": "Praha",
+  "lat": 50.084377,
+  "lon": 14.309593,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Valchov",
+  "typ": "zmrzlinarna",
+  "adresa": "Valchov 61",
+  "mesto": "Valchov",
+  "lat": 49.471801,
+  "lon": 16.719276,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cukrárna U Borůvky",
+  "typ": "cukrarna",
+  "adresa": "Kyjevská 525/6, Praha 6 (Dejvice)",
+  "mesto": "Praha",
+  "lat": 50.098737,
+  "lon": 14.398407,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlinárna Husova Crème de la Crème",
+  "typ": "zmrzlinarna",
+  "adresa": "Husova 231/12, Praha 1 (Staré Město)",
+  "mesto": "Praha",
+  "lat": 50.085706,
+  "lon": 14.418297,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Zlín - Miroslav Mokroš",
+  "typ": "zmrzlinarna",
+  "adresa": "Štefánikova 2425, Zlín",
+  "mesto": "Zlín",
+  "lat": 49.223266,
+  "lon": 17.695156,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Srbsko",
+  "typ": "zmrzlinarna",
+  "adresa": "Srbsko, Kněžmost",
+  "mesto": "Kněžmost",
+  "lat": 50.505738,
+  "lon": 15.099558,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro u Strnada",
+  "typ": "zmrzlinarna",
+  "adresa": "Lipové náměstí 102, Doksy",
+  "mesto": "Doksy",
+  "lat": 50.567449,
+  "lon": 14.65845,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina od Zrcadla",
+  "typ": "zmrzlinarna",
+  "adresa": "Dlouhá 48, Březno",
+  "mesto": "Březno",
+  "lat": 50.402618,
+  "lon": 13.423928,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "ICEKRAM",
+  "typ": "zmrzlinarna",
+  "adresa": "Plhovská 695, Náchod",
+  "mesto": "Náchod",
+  "lat": 50.417229,
+  "lon": 16.168539,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kiosek Ptáčci",
+  "typ": "rychle_obcerstveni",
+  "adresa": "Škrdlovice 14",
+  "mesto": "Škrdlovice",
+  "lat": 49.634355,
+  "lon": 15.929204,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Agnes zmrzka",
+  "typ": "zmrzlinarna",
+  "adresa": "Palackého náměstí 24/20, Brno (Řečkovice)",
+  "mesto": "Brno",
+  "lat": 49.250808,
+  "lon": 16.581969,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zmrzlina Sedlec",
+  "typ": "zmrzlinarna",
+  "adresa": "Na Chmelnici, Kutná Hora",
+  "mesto": "Kutná Hora",
+  "lat": 49.965256,
+  "lon": 15.291588,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kavárna a čajovna V Kaštanech",
+  "typ": "kavarna",
+  "adresa": "V Kaštanech 91, Dačice II",
+  "mesto": "Dačice",
+  "lat": 49.078213,
+  "lon": 15.431812,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kavárna Nobilis Tilia",
+  "typ": "kavarna",
+  "adresa": "Vlčí Hora 139, Krásná Lípa",
+  "mesto": "Krásná Lípa",
+  "lat": 50.931888,
+  "lon": 14.465061,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dobrá čajovna Kutná Hora",
+  "typ": "cajovna",
+  "adresa": "Havlíčkovo náměstí 84/7, Kutná Hora (Vnitřní Město)",
+  "mesto": "Kutná Hora",
+  "lat": 49.948601,
+  "lon": 15.267751,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bezejmenná čajovna",
+  "typ": "cajovna",
+  "adresa": "Šťáhlavice 63, Šťáhlavy",
+  "mesto": "Šťáhlavy",
+  "lat": 49.667535,
+  "lon": 13.524681,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Expediční klubovna Brno",
+  "typ": "cajovna",
+  "adresa": "Jezuitská 6/1, Brno",
+  "mesto": "Brno",
+  "lat": 49.196792,
+  "lon": 16.609342,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna Setkání",
+  "typ": "cajovna",
+  "adresa": "Vojtěšská 209/2, Praha (Nové Město)",
+  "mesto": "Praha",
+  "lat": 50.077683,
+  "lon": 14.415278,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajový obchod a Tao čajovna",
+  "typ": "cajovna",
+  "adresa": "Klášterní, Česká Lípa",
+  "mesto": "Česká Lípa",
+  "lat": 50.687455,
+  "lon": 14.535417,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dobrá čajovna Brno",
+  "typ": "cajovna",
+  "adresa": "Františkánská 502/6, Brno",
+  "mesto": "Brno",
+  "lat": 49.192601,
+  "lon": 16.611885,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dobrá Čajovna Tábor",
+  "typ": "cajovna",
+  "adresa": "Tomkova 1240/2, Tábor",
+  "mesto": "Tábor",
+  "lat": 49.413908,
+  "lon": 14.666738,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna U zlatého kohouta",
+  "typ": "cajovna",
+  "adresa": "Michalská 430/3, Praha (Staré Město)",
+  "mesto": "Praha",
+  "lat": 50.084627,
+  "lon": 14.419854,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna U Bílého draka",
+  "typ": "cajovna",
+  "adresa": "Jiráskova 521, Hronov",
+  "mesto": "Hronov",
+  "lat": 50.48079,
+  "lon": 16.181097,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Moje Čajovna",
+  "typ": "cajovna",
+  "adresa": "Štefánikova 3316, Zlín",
+  "mesto": "Zlín",
+  "lat": 49.224592,
+  "lon": 17.675712,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dobrá čajovna Náročného pijáka",
+  "typ": "cajovna",
+  "adresa": "Jurečkova 1811/18, Ostrava (Moravská Ostrava)",
+  "mesto": "Ostrava",
+  "lat": 49.83488,
+  "lon": 18.286939,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovnička - Jan Liška",
+  "typ": "cajovna",
+  "adresa": "Mládežnická 471, Neratovice",
+  "mesto": "Neratovice",
+  "lat": 50.257699,
+  "lon": 14.520795,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna u Pekla",
+  "typ": "cajovna",
+  "adresa": "sady Pětatřicátníků 49/29, Plzeň (Jižní Předměstí)",
+  "mesto": "Plzeň",
+  "lat": 49.749119,
+  "lon": 13.373384,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Nalitý Čaj",
+  "typ": "cajovna",
+  "adresa": "Vídeňská 282/80, Brno (Štýřice)",
+  "mesto": "Brno",
+  "lat": 49.178512,
+  "lon": 16.595209,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cha Dō",
+  "typ": "cajovna",
+  "adresa": "Zelný trh 293/10, Brno",
+  "mesto": "Brno",
+  "lat": 49.192823,
+  "lon": 16.609116,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna a klub Ulita",
+  "typ": "cajovna",
+  "adresa": "B. Němcové 2431/2a, Blansko",
+  "mesto": "Blansko",
+  "lat": 49.36161,
+  "lon": 16.648567,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna Kašmír",
+  "typ": "cajovna",
+  "adresa": "Jiráskova 602, Kadaň",
+  "mesto": "Kadaň",
+  "lat": 50.376913,
+  "lon": 13.267848,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čajovna U Džoudyho",
+  "typ": "cajovna",
+  "adresa": "Jugoslávská 670/7, Praha (Vinohrady)",
+  "mesto": "Praha",
+  "lat": 50.075741,
+  "lon": 14.43142,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chata Adélka & kavárna",
+  "typ": "kavarna",
+  "adresa": "Boží Dar 104",
+  "mesto": "Boží Dar",
+  "lat": 50.411341,
+  "lon": 12.922224,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekařství NIPPAN BAKERY",
+  "typ": "pekarna",
+  "adresa": "K Barrandovu 1173/8, Praha (Hlubočepy)",
+  "mesto": "Praha",
+  "lat": 50.026547,
+  "lon": 14.367713,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekařství Pana Koláčka",
+  "typ": "pekarna",
+  "adresa": "Kytlická 756/15, Praha (Prosek)",
+  "mesto": "Praha",
+  "lat": 50.125636,
+  "lon": 14.506008,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekařství Towers Café",
+  "typ": "pekarna",
+  "adresa": "Tlumačovská 2766/26, Praha (Stodůlky)",
+  "mesto": "Praha",
+  "lat": 50.040171,
+  "lon": 14.335764,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna Pec nám spadla",
+  "typ": "pekarna",
+  "adresa": "Lovosická 610/21, Praha (Prosek)",
+  "mesto": "Praha",
+  "lat": 50.124986,
+  "lon": 14.503002,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekařství U Dolského potoka",
+  "typ": "pekarna",
+  "adresa": "Špindlerův Mlýn 278",
+  "mesto": "Špindlerův Mlýn",
+  "lat": 50.724926,
+  "lon": 15.609131,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Obchod vínem Podskalí",
+  "typ": "vinoteka",
+  "adresa": "Podskalská 1291/13, Praha (Nové Město)",
+  "mesto": "Praha",
+  "lat": 50.069421,
+  "lon": 14.415406,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinařství Vladimír Tetur - Vinotéka",
+  "typ": "vinoteka",
+  "adresa": "Hlavní ev. č. 693, Velké Bílovice",
+  "mesto": "Velké Bílovice",
+  "lat": 48.849388,
+  "lon": 16.892052,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinotéka v Zámecké bráně",
+  "typ": "vinoteka",
+  "adresa": "Zámek 2, Valtice",
+  "mesto": "Valtice",
+  "lat": 48.740879,
+  "lon": 16.756128,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Winebar Telč",
+  "typ": "vinoteka",
+  "adresa": "Hradební 26, Telč (Vnitřní Město)",
+  "mesto": "Telč",
+  "lat": 49.183046,
+  "lon": 15.454181,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Vinoterie",
+  "typ": "vinoteka",
+  "adresa": "T. G. Masaryka 39/24, Svitavy (Předměstí)",
+  "mesto": "Svitavy",
+  "lat": 49.757488,
+  "lon": 16.464078,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Eldorádo pivnice",
+  "typ": "pivnice",
+  "adresa": "Bořivojova 235/1, Olomouc (Lazce)",
+  "mesto": "Olomouc",
+  "lat": 49.598571,
+  "lon": 17.252164,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "malý pivo",
+  "typ": "pivnice",
+  "adresa": "Mrštíkova 2450/1, Praha (Vinohrady)",
+  "mesto": "Praha",
+  "lat": 50.072657,
+  "lon": 14.48561,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kurnik Šopa Hospoda",
+  "typ": "pivnice",
+  "adresa": "Pavlouskova 4457/24, Ostrava (Poruba)",
+  "mesto": "Ostrava",
+  "lat": 49.838795,
+  "lon": 18.162974,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Poctivej Výčep",
+  "typ": "pivnice",
+  "adresa": "Přemyšlenská 1684/1, Praha (Kobylisy)",
+  "mesto": "Praha",
+  "lat": 50.12617,
+  "lon": 14.447565,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Ruelto Café",
+  "typ": "kavarna",
+  "adresa": "Nádražní 44/86, Praha (Smíchov)",
+  "mesto": "Praha",
+  "lat": 50.068775,
+  "lon": 14.406379,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Aida Balkan market",
+  "typ": "lahudky",
+  "adresa": "Holečkova 1205/93, Praha (Košíře)",
+  "mesto": "Praha",
+  "lat": 50.071166,
+  "lon": 14.383018,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "FRYENDS & pivovar Netopýrka",
+  "typ": "restaurace",
+  "adresa": "Česká 141/31, Brno",
+  "mesto": "Brno",
+  "lat": 49.19727,
+  "lon": 16.605134,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Mexicali Mercado",
+  "typ": "restaurace",
+  "adresa": "Kovářská 939/4, Praha (Libeň)",
+  "mesto": "Praha",
+  "lat": 50.106043,
+  "lon": 14.491737,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "OVOCNÝ SVĚTOZOR",
+  "typ": "cukrarna",
+  "adresa": "Počátecká 412/14, Praha (Michle)",
+  "mesto": "Praha",
+  "lat": 50.044012,
+  "lon": 14.455959,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví a uzenářství Mareček",
+  "typ": "reznictvi",
+  "adresa": "Želiv 164",
+  "mesto": "Želiv",
+  "lat": 49.529582,
+  "lon": 15.221625,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Patrik",
+  "typ": "reznictvi",
+  "adresa": "Jistebník 452",
+  "mesto": "Jistebník",
+  "lat": 49.745881,
+  "lon": 18.132631,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Touškovské řeznictví a uzenářství",
+  "typ": "reznictvi",
+  "adresa": "Čemínská 172, Město Touškov",
+  "mesto": "Město Touškov",
+  "lat": 49.776715,
+  "lon": 13.250586,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Josefovská uzenina",
+  "typ": "reznictvi",
+  "adresa": "Guldova 55, Jaroměř (Josefov)",
+  "mesto": "Jaroměř",
+  "lat": 50.337821,
+  "lon": 15.931159,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví a bistro u Waldy",
+  "typ": "reznictvi",
+  "adresa": "Mírové náměstí 332, Verneřice",
+  "mesto": "Verneřice",
+  "lat": 50.661371,
+  "lon": 14.300878,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Prostě MASO",
+  "typ": "reznictvi",
+  "adresa": "Křešice 39, Olbramovice",
+  "mesto": "Olbramovice",
+  "lat": 49.660003,
+  "lon": 14.608983,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví & bistro - Jaroslav Durček",
+  "typ": "reznictvi",
+  "adresa": "Masarykova 421/6, Litoměřice (Předměstí)",
+  "mesto": "Litoměřice",
+  "lat": 50.537731,
+  "lon": 14.12815,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Maso - závod Hovorany",
+  "typ": "reznictvi",
+  "adresa": "Hovorany 828",
+  "mesto": "Hovorany",
+  "lat": 48.941678,
+  "lon": 16.987218,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví - uzenářství U Pozdníků",
+  "typ": "reznictvi",
+  "adresa": "Masarykovo nám. 349, Nové Dvory",
+  "mesto": "Nové Dvory",
+  "lat": 49.97138,
+  "lon": 15.326215,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví U Petra",
+  "typ": "reznictvi",
+  "adresa": "Pod Valy 2893, Uherský Brod",
+  "mesto": "Uherský Brod",
+  "lat": 49.021887,
+  "lon": 17.6443,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "MAJER - ŘEZNICTVÍ A UZENÁŘSTVÍ",
+  "typ": "reznictvi",
+  "adresa": "Sídliště 996, Třemošná",
+  "mesto": "Třemošná",
+  "lat": 49.816094,
+  "lon": 13.395259,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Domacihovezi.cz - Masomat",
+  "typ": "reznictvi",
+  "adresa": "Čelina 1, Borotice",
+  "mesto": "Borotice",
+  "lat": 49.732231,
+  "lon": 14.327134,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Jakl",
+  "typ": "reznictvi",
+  "adresa": "Mírové náměstí 109, Broumov",
+  "mesto": "Broumov",
+  "lat": 50.584691,
+  "lon": 16.332198,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Šindelová",
+  "typ": "reznictvi",
+  "adresa": "Šindelová 116",
+  "mesto": "Šindelová",
+  "lat": 50.318759,
+  "lon": 12.602806,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Koudelka",
+  "typ": "reznictvi",
+  "adresa": "Střelské Hoštice 2",
+  "mesto": "Střelské Hoštice",
+  "lat": 49.297084,
+  "lon": 13.755897,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zbyněk Solnař",
+  "typ": "reznictvi",
+  "adresa": "Školní náměstí 18, Hostomice",
+  "mesto": "Hostomice",
+  "lat": 50.587436,
+  "lon": 13.808075,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "ŘEZNICTVÍ SLOUPNICE",
+  "typ": "reznictvi",
+  "adresa": "Dr. E. Beneše 1446, Česká Třebová",
+  "mesto": "Česká Třebová",
+  "lat": 49.905879,
+  "lon": 16.443757,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví-uzenařství Jůza",
+  "typ": "reznictvi",
+  "adresa": "Čebín 575",
+  "mesto": "Čebín",
+  "lat": 49.313624,
+  "lon": 16.47881,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Uzenářství Marek Aron",
+  "typ": "reznictvi",
+  "adresa": "Biskupská 1139/4, Praha (Nové Město)",
+  "mesto": "Praha",
+  "lat": 50.090369,
+  "lon": 14.434938,
+  "uroven": "vyber_ck"
  }
 ]
