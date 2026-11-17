@@ -11,46 +11,70 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;1,800;1,900&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
 <style>
 :root{--pink:#FF2E97;--cyan:#2de2e6;--lime:#c8e84b;--ink:#0b0318}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0;background:#120726;color:#fff;font-family:'Barlow Semi Condensed','Arial Narrow',Arial,sans-serif;font-size:17px;line-height:1.5;display:flex;flex-direction:column;min-height:100vh}
-header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 20px;background:linear-gradient(180deg,#1b0b4a,#120726);border-bottom:2px solid var(--pink);box-shadow:0 2px 24px rgba(255,46,151,.4)}
+header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:14px 20px;background:linear-gradient(180deg,#1b0b4a,#120726);border-bottom:2px solid var(--pink);box-shadow:0 2px 24px rgba(255,46,151,.4)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{width:38px;height:38px;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,.4))}
 .brand span{font-family:'Yellowtail',cursive;font-size:30px;color:#fff0f8;text-shadow:0 0 6px var(--pink),0 0 18px var(--pink)}
 .tag{font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
 .spacer{flex:1 1 auto}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{min-height:40px;padding:0 16px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#fff;font:600 15px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;transition:background .2s,box-shadow .2s}
+.chip{min-height:40px;padding:0 16px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#fff;font:600 15px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .2s,box-shadow .2s}
 .chip:hover{box-shadow:0 0 16px var(--cyan)}
 .chip.on{background:var(--cyan);color:#150628}
-.chip:disabled{opacity:.4;cursor:not-allowed;border-color:#5a5a6e;box-shadow:none}
 .locbtn{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--lime);color:#150628;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
 .locbtn:hover{box-shadow:0 0 22px var(--lime)}
-#map{flex:1 1 auto;min-height:420px;background:#0b0318}
-/* GTA neon nadech na tmave dlazdice */
-.leaflet-tile-pane{filter:hue-rotate(230deg) saturate(1.55) contrast(1.12) brightness(1.04)}
-.leaflet-container{background:#0b0318;font-family:inherit}
-/* neonovy spendlik */
-.pin{position:relative;width:30px;height:30px;transform:translateY(-4px)}
-.pin .dot{position:absolute;inset:0;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ink);border:2px solid var(--cyan);box-shadow:0 0 10px var(--cyan),0 0 2px #fff;display:flex;align-items:center;justify-content:center}
-.pin svg{transform:rotate(45deg);width:15px;height:15px}
-.leaflet-popup-content-wrapper{background:#160a33;color:#fff;border:2px solid var(--pink);box-shadow:0 0 26px rgba(255,46,151,.5);border-radius:14px}
-.leaflet-popup-tip{background:#160a33;border:2px solid var(--pink)}
-.leaflet-popup-content{margin:14px 16px;font-size:15px}
-.pop-name{font-weight:800;font-style:italic;font-size:18px;text-transform:uppercase;color:#fff}
-.pop-addr{color:#cbb9ef;font-size:13px;margin:2px 0 10px}
+.wrap{flex:1 1 auto;position:relative;min-height:440px}
+#map{position:absolute;inset:0;background:#07031a}
+/* GTA neon pop na vektorovou mapu */
+.maplibregl-canvas{filter:saturate(1.2) contrast(1.06) brightness(1.02)}
+.maplibregl-ctrl-attribution{background:rgba(11,3,24,.72)!important}
+.maplibregl-ctrl-attribution a{color:var(--lime)!important}
+.maplibregl-ctrl-group{background:#160a33!important;border:1px solid rgba(45,226,230,.5)!important;box-shadow:0 0 14px rgba(45,226,230,.35)!important}
+.maplibregl-ctrl-group button+button{border-top:1px solid rgba(45,226,230,.3)!important}
+.maplibregl-ctrl-group button span{filter:invert(1)}
+/* popup */
+.maplibregl-popup-content{background:#160a33;color:#fff;border:2px solid var(--pink);box-shadow:0 0 26px rgba(255,46,151,.5);border-radius:14px;padding:14px 16px}
+.maplibregl-popup-tip{border-top-color:#160a33!important;border-bottom-color:#160a33!important}
+.maplibregl-popup-close-button{color:#cbb9ef;font-size:20px;padding:2px 8px}
+.pop-name{font-weight:800;font-style:italic;font-size:18px;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:8px}
+.pop-dot{width:12px;height:12px;border-radius:50%;box-shadow:0 0 8px currentColor;flex:0 0 auto}
+.pop-addr{color:#cbb9ef;font-size:13px;margin:3px 0 10px}
 .times{display:flex;flex-direction:column;gap:6px}
 .trow{display:flex;align-items:center;gap:8px}
-.trow b{display:inline-flex;align-items:center;gap:6px;min-width:66px;color:#eaffff}
+.trow b{display:inline-flex;align-items:center;gap:6px;min-width:70px;color:#eaffff;font-weight:700}
 .trow .v{font-weight:600}
 .muted{color:#9f8fc4}
-.leaflet-control-attribution{background:rgba(11,3,24,.7)!important;color:#b9a9e0!important}
-.leaflet-control-attribution a{color:var(--lime)!important}
-@media (max-width:620px){.tag{display:none}}
+/* uzivatelska poloha */
+.me-dot{width:18px;height:18px;border-radius:50%;background:#c8e84b;box-shadow:0 0 0 3px #0d0626,0 0 16px #c8e84b}
+/* legenda */
+.legend{position:absolute;left:12px;bottom:26px;z-index:600;background:rgba(14,6,36,.82);border:1px solid rgba(45,226,230,.45);border-radius:12px;padding:10px 12px;backdrop-filter:blur(4px);box-shadow:0 0 18px rgba(45,226,230,.25);max-width:150px}
+.legend h4{margin:0 0 7px;font:800 12px/1 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.legend .row{display:flex;align-items:center;gap:8px;font-size:13px;color:#e9e0ff;margin:4px 0}
+.legend .d{width:11px;height:11px;border-radius:50%;box-shadow:0 0 7px currentColor;flex:0 0 auto}
+/* filtr panel (jako Na ovoce) */
+.panel{position:absolute;right:12px;top:12px;z-index:700;width:244px;background:rgba(18,8,46,.96);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden;display:none}
+.panel.open{display:block}
+.panel .ph{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(180deg,#241056,#160a33);border-bottom:1px solid rgba(45,226,230,.3)}
+.panel .ph h3{margin:0;font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.panel .x{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.panel .list{padding:8px 6px;max-height:50vh;overflow:auto}
+.panel label{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;font-size:16px;color:#f2ecff}
+.panel label:hover{background:rgba(45,226,230,.1)}
+.panel .d{width:14px;height:14px;border-radius:50%;box-shadow:0 0 8px currentColor;flex:0 0 auto}
+.panel .nm{flex:1 1 auto;font-weight:600}
+.panel input[type=checkbox]{width:22px;height:22px;accent-color:var(--cyan);cursor:pointer}
+.panel .foot{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(45,226,230,.3)}
+.panel .foot button{flex:1 1 auto;min-height:42px;border-radius:999px;font:800 14px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;border:2px solid var(--cyan);background:#150628;color:#eaffff}
+.panel .foot .save{border:0;background:var(--lime);color:#150628;font-style:italic}
+.panel .foot button:hover{box-shadow:0 0 16px var(--cyan)}
+.panel .foot .save:hover{box-shadow:0 0 18px var(--lime)}
+@media (max-width:620px){.tag{display:none}.legend{bottom:12px;left:8px}.panel{right:8px;left:8px;width:auto}}
 </style>
 </head>
 <body>
@@ -59,48 +83,103 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   <span class="tag">Mapa · pilot Praha</span>
   <span class="spacer"></span>
   <div class="chips">
-    <button type="button" class="chip on" data-filter="vse">Vše</button>
-    <button type="button" class="chip" data-filter="obchody">Obchody</button>
-    <button type="button" class="chip" disabled title="Přidáme později">Podniky</button>
+    <button type="button" class="chip" id="allbtn">Vše</button>
+    <button type="button" class="chip on" id="filterbtn">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"></path></svg>
+      Filtry
+    </button>
   </div>
   <button type="button" class="locbtn" id="locbtn">
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
     Moje poloha
   </button>
 </header>
-<div id="map"></div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<div class="wrap">
+  <div id="map"></div>
+
+  <!-- Filtr: nastavit vyber retezcu (jako Na ovoce) -->
+  <div class="panel" id="panel">
+    <div class="ph"><h3>Nastavit výběr</h3><button type="button" class="x" id="panelx" aria-label="Zavřít">&times;</button></div>
+    <div class="list" id="panellist"></div>
+    <div class="foot">
+      <button type="button" id="selall">Vybrat vše</button>
+      <button type="button" class="save" id="save">Uložit</button>
+    </div>
+  </div>
+
+  <!-- Legenda: barva = retezec -->
+  <div class="legend"><h4>Řetězce</h4><div id="legendrows"></div></div>
+</div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
 (function(){
-  var PRAHA = [50.0755, 14.4378];
-  var map = L.map('map', {zoomControl:true}).setView(PRAHA, 12);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 20, subdomains:'abcd',
-    attribution: '&copy; OpenStreetMap, &copy; CARTO | prodejny: OpenStreetMap (ODbL)'
-  }).addTo(map);
+  var PRAHA = [14.4378, 50.0755]; // [lon,lat] pro MapLibre
+  var CHAINS = ['Lidl','Albert','Kaufland','Penny','Billa','Tesco','Globus'];
+  var COLORS = {
+    Lidl:'#ffd400', Albert:'#1f8bff', Kaufland:'#ff2d2d', Penny:'#ff2ec4',
+    Billa:'#ff8a1e', Tesco:'#25e05a', Globus:'#a65cff'
+  };
+  var LS_KEY = 'ck_mapa_filtr';
 
-  var storeIcon = L.divIcon({
-    className:'', iconSize:[30,30], iconAnchor:[15,30], popupAnchor:[0,-28],
-    html:'<div class="pin"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#2de2e6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 12h10L20 7H6"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle></svg></div></div>'
+  // nacteni ulozeneho vyberu (default = vse)
+  var active = {};
+  CHAINS.forEach(function(c){ active[c]=true; });
+  try{
+    var saved = JSON.parse(localStorage.getItem(LS_KEY)||'null');
+    if(saved && typeof saved==='object'){ CHAINS.forEach(function(c){ active[c] = saved[c]!==false; }); }
+  }catch(e){}
+
+  var map = new maplibregl.Map({
+    container:'map',
+    style:'https://tiles.openfreemap.org/styles/dark', // OpenFreeMap: zdarma, bez klice, bez limitu
+    center:PRAHA, zoom:11, attributionControl:false, hash:false
   });
+  map.addControl(new maplibregl.AttributionControl({compact:true, customAttribution:'prodejny: OpenStreetMap (ODbL)'}));
+  map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'bottom-right');
 
-  var userLoc = null, userMarker = null;
-  var markers = [];
+  // ---- GTA neon prebarveni (svitici silnice magenta/cyan, tmava voda) ----
+  var NEON = {
+    'background':            {'background-color':'#07031a'},
+    'water':                 {'fill-color':'#04010d'},
+    'water_name':            {},
+    'highway_motorway_casing':{'line-color':'#ff2e97','line-blur':4,'line-opacity':0.45,'line-width':['interpolate',['linear'],['zoom'],8,2,16,14]},
+    'highway_motorway_inner': {'line-color':'#ff8fd1','line-blur':0.5,'line-opacity':0.98},
+    'highway_motorway_subtle':{'line-color':'#8a1f5a','line-opacity':0.6},
+    'highway_major_casing':  {'line-color':'#ff2e97','line-blur':3,'line-opacity':0.32},
+    'highway_major_inner':   {'line-color':'#ff6ec0','line-blur':0.4,'line-opacity':0.92},
+    'highway_major_subtle':  {'line-color':'#5c2449','line-opacity':0.7},
+    'highway_minor':         {'line-color':'#2de2e6','line-blur':0.5,'line-opacity':0.82},
+    'highway_path':          {'line-color':'#1f8a9c','line-opacity':0.45},
+    'railway':               {'line-color':'#7a3cff','line-opacity':0.5},
+    'railway_transit':       {'line-color':'#7a3cff','line-opacity':0.4}
+  };
+  function applyNeon(){
+    Object.keys(NEON).forEach(function(id){
+      if(!map.getLayer(id)) return;
+      var props = NEON[id];
+      Object.keys(props).forEach(function(p){
+        try{ map.setPaintProperty(id, p, props[p]); }catch(e){}
+      });
+    });
+  }
 
+  // ---- data + body ----
   function fmtMin(sec){ if(sec==null) return null; var m=Math.round(sec/60); return m<1?'<1 min':m+' min'; }
 
-  function route(profilePath, prof, a, b){
-    // a,b = [lat,lon]; FOSSGIS verejny OSRM
+  function route(profilePath, prof, a, b){ // a,b = [lat,lon]; FOSSGIS verejny OSRM
     var url='https://routing.openstreetmap.de/'+profilePath+'/route/v1/'+prof+'/'+a[1]+','+a[0]+';'+b[1]+','+b[0]+'?overview=false';
     return fetch(url).then(function(r){return r.json();}).then(function(j){
-      if(j && j.routes && j.routes[0]) return j.routes[0].duration;
-      return null;
+      return (j && j.routes && j.routes[0]) ? j.routes[0].duration : null;
     }).catch(function(){return null;});
   }
 
+  var userLoc = null, userMarker = null;
+
   function popupHtml(s){
-    return '<div class="pop-name">'+s.nazev+'</div>'+
+    var color = COLORS[s.retezec]||'#2de2e6';
+    return '<div class="pop-name"><span class="pop-dot" style="color:'+color+';background:'+color+'"></span>'+s.nazev+'</div>'+
       (s.adresa?'<div class="pop-addr">'+s.adresa+'</div>':'<div class="pop-addr muted">'+s.retezec+'</div>')+
       '<div class="times">'+
         '<div class="trow"><b>🚶 Pěšky</b><span class="v" data-foot>—</span></div>'+
@@ -108,8 +187,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
         '<div class="trow"><b>🚌 MHD</b><span class="v muted">brzy</span></div>'+
       '</div>';
   }
-
   function fillTimes(s, popupEl){
+    if(!popupEl) return;
     var footEl = popupEl.querySelector('[data-foot]');
     var carEl  = popupEl.querySelector('[data-car]');
     if(!userLoc){
@@ -124,44 +203,133 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     route('routed-car','driving',userLoc,dest).then(function(d){ if(carEl) carEl.textContent=fmtMin(d)||'nedostupné'; });
   }
 
-  function addStores(list){
-    list.forEach(function(s){
-      var m=L.marker([s.lat,s.lon],{icon:storeIcon});
-      m.storeData=s;
-      m.bindPopup(function(){return popupHtml(s);});
-      m.on('popupopen', function(ev){ fillTimes(s, ev.popup.getElement()); });
-      m.addTo(map); markers.push(m);
-    });
+  var ALL = []; // vsechny prodejny
+  function toFC(list){
+    return {type:'FeatureCollection', features:list.map(function(s){
+      return {type:'Feature', geometry:{type:'Point', coordinates:[s.lon,s.lat]},
+        properties:{nazev:s.nazev, retezec:s.retezec, adresa:s.adresa||'', color:COLORS[s.retezec]||'#2de2e6', ini:(s.retezec||'?').charAt(0)}};
+    })};
+  }
+  function filteredFC(){
+    return toFC(ALL.filter(function(s){ return active[s.retezec]; }));
   }
 
-  fetch('/data/mapa/prodejny_praha.json').then(function(r){return r.json();}).then(function(list){
-    addStores(list);
-    if(markers.length){
-      var g=L.featureGroup(markers);
-      map.fitBounds(g.getBounds().pad(0.08));
-    }
-  }).catch(function(e){ console.error('prodejny load error', e); });
+  function addLayers(){
+    map.addSource('stores', {type:'geojson', data:filteredFC(), cluster:true, clusterRadius:48, clusterMaxZoom:13});
 
-  // Moje poloha
-  var locIcon=L.divIcon({className:'',iconSize:[18,18],iconAnchor:[9,9],
-    html:'<div style="width:18px;height:18px;border-radius:50%;background:#c8e84b;box-shadow:0 0 0 3px #0d0626,0 0 16px #c8e84b"></div>'});
-  document.getElementById('locbtn').addEventListener('click', function(){
-    if(!navigator.geolocation){ map.setView(PRAHA,12); return; }
-    navigator.geolocation.getCurrentPosition(function(pos){
-      userLoc=[pos.coords.latitude,pos.coords.longitude];
-      if(userMarker) map.removeLayer(userMarker);
-      userMarker=L.marker(userLoc,{icon:locIcon,zIndexOffset:1000}).addTo(map).bindTooltip('Jsi tady');
-      map.setView(userLoc,13);
-    }, function(){ // odmitnuto / chyba -> default Praha
-      map.setView(PRAHA,12);
-    }, {enableHighAccuracy:true, timeout:8000});
+    // shluk: zarici halo
+    map.addLayer({id:'cluster-glow', type:'circle', source:'stores', filter:['has','point_count'], paint:{
+      'circle-color':['step',['get','point_count'],'#2de2e6',10,'#ffd400',30,'#ff2ec4'],
+      'circle-radius':['step',['get','point_count'],22,10,28,30,36],
+      'circle-blur':1, 'circle-opacity':0.45
+    }});
+    // shluk: jadro
+    map.addLayer({id:'clusters', type:'circle', source:'stores', filter:['has','point_count'], paint:{
+      'circle-color':['step',['get','point_count'],'#2de2e6',10,'#ffd400',30,'#ff2ec4'],
+      'circle-radius':['step',['get','point_count'],15,10,19,30,25],
+      'circle-stroke-width':2, 'circle-stroke-color':'#ffffff', 'circle-stroke-opacity':0.85
+    }});
+    map.addLayer({id:'cluster-count', type:'symbol', source:'stores', filter:['has','point_count'], layout:{
+      'text-field':['get','point_count_abbreviated'], 'text-font':['Noto Sans Regular'], 'text-size':14
+    }, paint:{'text-color':'#0b0318'}});
+
+    // jednotlivy spendlik: zare
+    map.addLayer({id:'pt-glow', type:'circle', source:'stores', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':13, 'circle-blur':1, 'circle-opacity':0.5
+    }});
+    // jednotlivy spendlik: jadro v barve retezce
+    map.addLayer({id:'points', type:'circle', source:'stores', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':8,
+      'circle-stroke-width':1.6, 'circle-stroke-color':'#ffffff', 'circle-stroke-opacity':0.9
+    }});
+    // ikona = inicial retezce
+    map.addLayer({id:'pt-label', type:'symbol', source:'stores', filter:['!',['has','point_count']], layout:{
+      'text-field':['get','ini'], 'text-font':['Noto Sans Regular'], 'text-size':11, 'text-allow-overlap':true
+    }, paint:{'text-color':'#0b0318'}});
+
+    // kliky
+    map.on('click','clusters',function(e){
+      var f=e.features[0];
+      map.getSource('stores').getClusterExpansionZoom(f.properties.cluster_id,function(err,z){
+        if(err) return; map.easeTo({center:f.geometry.coordinates, zoom:z});
+      });
+    });
+    map.on('click','points',function(e){
+      var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
+      var s={nazev:p.nazev, retezec:p.retezec, adresa:p.adresa, lon:c[0], lat:c[1]};
+      var popup=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupHtml(s)).addTo(map);
+      fillTimes(s, popup.getElement());
+    });
+    ['clusters','points'].forEach(function(id){
+      map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
+      map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
+    });
+  }
+  function refreshData(){
+    var src=map.getSource('stores'); if(src) src.setData(filteredFC());
+  }
+
+  map.on('load', function(){
+    applyNeon();
+    fetch('/data/mapa/prodejny_praha.json').then(function(r){return r.json();}).then(function(list){
+      ALL = list;
+      addLayers();
+      var pts = list.filter(function(s){ return active[s.retezec]; });
+      if(pts.length){
+        var b=new maplibregl.LngLatBounds();
+        pts.forEach(function(s){ b.extend([s.lon,s.lat]); });
+        map.fitBounds(b, {padding:60, maxZoom:13, duration:0});
+      }
+    }).catch(function(e){ console.error('prodejny load error', e); });
   });
 
-  // filtr chips (Vse / Obchody prozatim stejne; Podniky disabled)
-  document.querySelectorAll('.chip[data-filter]').forEach(function(c){
-    c.addEventListener('click', function(){
-      document.querySelectorAll('.chip[data-filter]').forEach(function(o){o.classList.toggle('on',o===c);});
-    });
+  // ---- Moje poloha ----
+  document.getElementById('locbtn').addEventListener('click', function(){
+    if(!navigator.geolocation){ map.flyTo({center:PRAHA, zoom:11}); return; }
+    navigator.geolocation.getCurrentPosition(function(pos){
+      userLoc=[pos.coords.latitude,pos.coords.longitude];
+      var el=document.createElement('div'); el.className='me-dot';
+      if(userMarker) userMarker.remove();
+      userMarker=new maplibregl.Marker({element:el}).setLngLat([userLoc[1],userLoc[0]]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
+      map.flyTo({center:[userLoc[1],userLoc[0]], zoom:13});
+    }, function(){ map.flyTo({center:PRAHA, zoom:11}); }, {enableHighAccuracy:true, timeout:8000});
+  });
+
+  // ---- Legenda ----
+  var lr=document.getElementById('legendrows');
+  CHAINS.forEach(function(c){
+    var row=document.createElement('div'); row.className='row';
+    row.innerHTML='<span class="d" style="color:'+COLORS[c]+';background:'+COLORS[c]+'"></span>'+c;
+    lr.appendChild(row);
+  });
+
+  // ---- Filtr panel (zaskrtavatka + Vybrat vse + Ulozit) ----
+  var panel=document.getElementById('panel');
+  var list=document.getElementById('panellist');
+  CHAINS.forEach(function(c){
+    var lbl=document.createElement('label');
+    lbl.innerHTML='<span class="d" style="color:'+COLORS[c]+';background:'+COLORS[c]+'"></span><span class="nm">'+c+'</span>'+
+      '<input type="checkbox" data-c="'+c+'"'+(active[c]?' checked':'')+'>';
+    list.appendChild(lbl);
+  });
+  function openPanel(){ panel.classList.add('open'); document.getElementById('filterbtn').classList.add('on'); }
+  function closePanel(){ panel.classList.remove('open'); document.getElementById('filterbtn').classList.remove('on'); }
+  document.getElementById('filterbtn').addEventListener('click', function(){ panel.classList.contains('open')?closePanel():openPanel(); });
+  document.getElementById('panelx').addEventListener('click', closePanel);
+  document.getElementById('selall').addEventListener('click', function(){
+    list.querySelectorAll('input[type=checkbox]').forEach(function(cb){ cb.checked=true; });
+  });
+  document.getElementById('save').addEventListener('click', function(){
+    list.querySelectorAll('input[type=checkbox]').forEach(function(cb){ active[cb.getAttribute('data-c')]=cb.checked; });
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(active)); }catch(e){}
+    refreshData(); closePanel();
+  });
+  // rychle "Vse"
+  document.getElementById('allbtn').addEventListener('click', function(){
+    CHAINS.forEach(function(c){ active[c]=true; });
+    list.querySelectorAll('input[type=checkbox]').forEach(function(cb){ cb.checked=true; });
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(active)); }catch(e){}
+    refreshData(); closePanel();
   });
 })();
 </script>
