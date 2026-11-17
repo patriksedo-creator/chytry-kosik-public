@@ -284,6 +284,12 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     map.addLayer({id:'pt-label', type:'symbol', source:'stores', filter:['!',['has','point_count']], layout:{
       'text-field':['get','ini'], 'text-font':['Noto Sans Regular'], 'text-size':11, 'text-allow-overlap':true
     }, paint:{'text-color':'#0b0318'}});
+    // nazev retezce u spendliku (jako Google), az pri priblizeni; nepreklada se, pri oddaleni zmizi
+    map.addLayer({id:'pt-name', type:'symbol', source:'stores', filter:['!',['has','point_count']], minzoom:14, layout:{
+      'text-field':['get','retezec'], 'text-font':['Noto Sans Bold'],
+      'text-size':['interpolate',['linear'],['zoom'],14,11,18,15],
+      'text-offset':[0,1.1], 'text-anchor':'top', 'text-allow-overlap':false, 'text-optional':true
+    }, paint:{'text-color':['get','color'], 'text-halo-color':'#07031a', 'text-halo-width':2, 'text-halo-blur':0.3}});
 
     // kliky
     map.on('click','clusters',function(e){
