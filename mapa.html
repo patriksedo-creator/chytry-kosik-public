@@ -283,14 +283,14 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   var mode = 'obchody'; // 'obchody' | 'podniky'
 
   // Podniky: TYP (barva spendliku) + UROVEN (odznak = prstenec)
-  var VT_LABEL = {restaurace:'Restaurace', kavarna:'Kavárna', pivnice:'Pivnice', bistro:'Bistro', cukrarna:'Cukrárna', reznictvi:'Řeznictví', obchod:'Obchod', trh:'Trh', vyrobce:'Výrobce'};
-  var VT_INI   = {restaurace:'R', kavarna:'K', pivnice:'P', bistro:'B', cukrarna:'C', reznictvi:'Ř', obchod:'O', trh:'T', vyrobce:'V'};
-  var VT_COLOR = {restaurace:'#ff4b4b', kavarna:'#ff9e2c', pivnice:'#f2d20c', bistro:'#2ee6c6', cukrarna:'#ff6ad5', reznictvi:'#ff3d6e', obchod:'#35a0ff', trh:'#7a6bff', vyrobce:'#9be52e'};
-  var VT_ORDER = ['restaurace','kavarna','pivnice','bistro','cukrarna','reznictvi','obchod','trh','vyrobce'];
-  var VU_LABEL = {michelin:'Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr Chytrého košíku'};
-  var VU_SHORT = {michelin:'★ Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr CK'};
-  var VU_COLOR = {michelin:'#ffd700', gault:'#e5e4e2', bib:'#cd7f32', vyber_ck:'#ffffff'}; // prstenec/odznak
-  var VU_ORDER = ['michelin','gault','bib','vyber_ck'];
+  var VT_LABEL = {restaurace:'Restaurace', kavarna:'Kavárna', pivnice:'Pivnice', bistro:'Bistro', cukrarna:'Cukrárna', reznictvi:'Řeznictví', obchod:'Obchod', trh:'Trh', vyrobce:'Výrobce', pivovar:'Pivovar', hospoda:'Hospoda'};
+  var VT_INI   = {restaurace:'R', kavarna:'K', pivnice:'P', bistro:'B', cukrarna:'C', reznictvi:'Ř', obchod:'O', trh:'T', vyrobce:'V', pivovar:'Pv', hospoda:'H'};
+  var VT_COLOR = {restaurace:'#ff4b4b', kavarna:'#ff9e2c', pivnice:'#f2d20c', bistro:'#2ee6c6', cukrarna:'#ff6ad5', reznictvi:'#ff3d6e', obchod:'#35a0ff', trh:'#7a6bff', vyrobce:'#9be52e', pivovar:'#e8961e', hospoda:'#b5794a'};
+  var VT_ORDER = ['restaurace','kavarna','pivnice','bistro','cukrarna','reznictvi','obchod','trh','vyrobce','pivovar','hospoda'];
+  var VU_LABEL = {michelin:'Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr Chytrého košíku', pivni_stezka:'Pivní stezka'};
+  var VU_SHORT = {michelin:'★ Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr CK', pivni_stezka:'Pivní stezka'};
+  var VU_COLOR = {michelin:'#ffd700', gault:'#e5e4e2', bib:'#cd7f32', vyber_ck:'#ffffff', pivni_stezka:'#58c93a'}; // prstenec/odznak
+  var VU_ORDER = ['michelin','gault','bib','vyber_ck','pivni_stezka'];
   var LS_VT = 'ck_mapa_podniky_typ', LS_VU = 'ck_mapa_podniky_uroven';
 
   // aktivni mnoziny (naplni se z dat po nacteni; default vse zaskrtnuto)

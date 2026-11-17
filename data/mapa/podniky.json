@@ -1843,5 +1843,475 @@
   "lat": 50.103176,
   "lon": 14.478745,
   "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivovar Fries",
+  "typ": "pivovar",
+  "adresa": "Horský hotel Friesovy boudy, Strážné 95, 543 52 Strážné",
+  "mesto": "Strážné",
+  "lat": 50.681769,
+  "lon": 15.635283,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar Trautenberk",
+  "typ": "pivovar",
+  "adresa": "Horní Malá Úpa 87, 542 27 Malá Úpa",
+  "mesto": "Malá Úpa",
+  "lat": 50.745517,
+  "lon": 15.822015,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pecký pivovar",
+  "typ": "pivovar",
+  "adresa": "Pec pod Sněžkou 124, 542 21 Pec pod Sněžkou",
+  "mesto": "Pec pod Sněžkou",
+  "lat": 50.691214,
+  "lon": 15.767514,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar Hendrych",
+  "typ": "pivovar",
+  "adresa": "Horská 192, 543 02 Vrchlabí",
+  "mesto": "Vrchlabí",
+  "lat": 50.6549,
+  "lon": 15.603267,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar Krkonošský medvěd",
+  "typ": "pivovar",
+  "adresa": "Horská 198, 543 02 Vrchlabí",
+  "mesto": "Vrchlabí",
+  "lat": 50.642966,
+  "lon": 15.608525,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar U Čápa",
+  "typ": "pivovar",
+  "adresa": "Příchovice 1, 468 48 Příchovice",
+  "mesto": "Příchovice",
+  "lat": 49.562029,
+  "lon": 13.339352,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar na Perlíčku (Prdek)",
+  "typ": "pivovar",
+  "adresa": "Horská chata Na Perlíčku - Prdek, Paseky nad Jizerou 222, 512 47 Paseky nad Jizerou",
+  "mesto": "Paseky nad Jizerou",
+  "lat": 50.739216,
+  "lon": 15.393651,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar Novosad (Sklárna Harrachov)",
+  "typ": "pivovar",
+  "adresa": "Nový Svět 95, 512 46 Harrachov",
+  "mesto": "Harrachov",
+  "lat": 50.781726,
+  "lon": 15.418976,
+  "uroven": "pivni_stezka",
+  "stezka": "krkonose"
+ },
+ {
+  "nazev": "Pivovar Paroháč (Luční bouda)",
+  "typ": "pivovar",
+  "adresa": "Luční bouda, Pec pod Sněžkou 203, 542 21 Pec pod Sněžkou",
+  "mesto": "Pec pod Sněžkou",
+  "lat": 50.734525,
+  "lon": 15.696628,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "Pivovar Kunratice (Muflon)",
+  "typ": "pivovar",
+  "adresa": "Vídeňská 405, 148 00 Praha 4 - Kunratice",
+  "mesto": "Praha - Kunratice",
+  "lat": 50.007588,
+  "lon": 14.479762,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "Pivovar Kocour",
+  "typ": "pivovar",
+  "adresa": "Rumburská 1920, 407 47 Varnsdorf",
+  "mesto": "Varnsdorf",
+  "lat": 50.92004,
+  "lon": 14.60354,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "Pivovar Permon",
+  "typ": "pivovar",
+  "adresa": "Komenského 77, 356 01 Sokolov",
+  "mesto": "Sokolov",
+  "lat": 50.178814,
+  "lon": 12.637851,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "Přátelský pivovar Malešov",
+  "typ": "pivovar",
+  "adresa": "Malešov 56, 285 41 Malešov",
+  "mesto": "Malešov",
+  "lat": 49.911285,
+  "lon": 15.221803,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "Minipivovar Bobr",
+  "typ": "pivovar",
+  "adresa": "U Mlýna 8, 267 29 Zadní Třebaň",
+  "mesto": "Zadní Třebaň",
+  "lat": 49.91977,
+  "lon": 14.21002,
+  "uroven": "pivni_stezka",
+  "stezka": "-"
+ },
+ {
+  "nazev": "U Černého vola",
+  "typ": "hospoda",
+  "adresa": "Loretánské náměstí 107/1, 118 00 Praha 1 - Hradčany",
+  "mesto": "Praha",
+  "lat": 50.088148,
+  "lon": 14.391847,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Hrocha",
+  "typ": "pivnice",
+  "adresa": "Thunovská 178/10, 118 00 Praha 1 - Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.089188,
+  "lon": 14.403195,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Kocoura",
+  "typ": "hospoda",
+  "adresa": "Nerudova 205/2, 118 00 Praha 1 - Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.088689,
+  "lon": 14.401998,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Zlatého tygra",
+  "typ": "pivnice",
+  "adresa": "Husova 228/17, 110 00 Praha 1 - Staré Město",
+  "mesto": "Praha",
+  "lat": 50.085817,
+  "lon": 14.418036,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Zlatého slona",
+  "typ": "pivnice",
+  "adresa": "Havelská 9, 110 00 Praha 1 - Staré Město",
+  "mesto": "Praha",
+  "lat": 50.084884,
+  "lon": 14.420688,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Medvídků",
+  "typ": "pivovar",
+  "adresa": "Na Perštýně 7, 100 01 Praha 1 - Staré Město",
+  "mesto": "Praha",
+  "lat": 50.082912,
+  "lon": 14.418696,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Dvou koček",
+  "typ": "hospoda",
+  "adresa": "Uhelný trh 415/10, 110 00 Praha 1 - Staré Město",
+  "mesto": "Praha",
+  "lat": 50.083513,
+  "lon": 14.420487,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Buldoka",
+  "typ": "hospoda",
+  "adresa": "Preslova 353/1, 150 00 Praha 5 - Smíchov",
+  "mesto": "Praha",
+  "lat": 50.072493,
+  "lon": 14.406753,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "U Veverky",
+  "typ": "restaurace",
+  "adresa": "Eliášova 324/14, 160 00 Praha 6 - Bubeneč",
+  "mesto": "Praha",
+  "lat": 50.099033,
+  "lon": 14.402189,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "Dva Kohouti",
+  "typ": "pivovar",
+  "adresa": "Sokolovská 81/55, 186 00 Praha 8 - Karlín",
+  "mesto": "Praha",
+  "lat": 50.093141,
+  "lon": 14.446825,
+  "uroven": "pivni_stezka",
+  "stezka": "praha-pivni-zoo"
+ },
+ {
+  "nazev": "Minipivovar Kněžínek",
+  "typ": "pivovar",
+  "adresa": "Haklovy Dvory 2235, 370 05 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 49.002972,
+  "lon": 14.403181,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Minipivovar Krajinská 27",
+  "typ": "pivovar",
+  "adresa": "Krajinská 27, 370 01 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.976867,
+  "lon": 14.473642,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Pivovar Hluboká",
+  "typ": "pivovar",
+  "adresa": "nám. Čsl. armády 1111, 373 41 Hluboká nad Vltavou",
+  "mesto": "Hluboká nad Vltavou",
+  "lat": 49.050951,
+  "lon": 14.436069,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Minipivovar BEERANEK",
+  "typ": "pivovar",
+  "adresa": "Kněžskodvorská 20, 370 04 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.993337,
+  "lon": 14.475273,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Rodinný pivovar Bukovar",
+  "typ": "pivovar",
+  "adresa": "Jiráskovo náměstí 54, 373 65 Dolní Bukovsko",
+  "mesto": "Dolní Bukovsko",
+  "lat": 49.171338,
+  "lon": 14.581504,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Vltavotýnský pivovar",
+  "typ": "pivovar",
+  "adresa": "Pivovarská 510, 375 01 Týn nad Vltavou",
+  "mesto": "Týn nad Vltavou",
+  "lat": 49.222942,
+  "lon": 14.426896,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Pivovarský dvůr Lipan",
+  "typ": "pivovar",
+  "adresa": "Dražíč 50, 375 01 Dražíč",
+  "mesto": "Dražíč",
+  "lat": 49.305679,
+  "lon": 14.380962,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Výzkumný a výukový minipivovar FZT JU",
+  "typ": "pivovar",
+  "adresa": "Na Zlaté stoce 690/3, 370 05 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.975077,
+  "lon": 14.455362,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Pivovar Solnice",
+  "typ": "pivovar",
+  "adresa": "Hroznová 187/34, 370 01 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.97624,
+  "lon": 14.472521,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Budějovický Budvar",
+  "typ": "pivovar",
+  "adresa": "K. Světlé 512/4, 370 04 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.993409,
+  "lon": 14.476505,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Pivovar Samson",
+  "typ": "pivovar",
+  "adresa": "Lidická tř. 458/51, 370 01 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.963299,
+  "lon": 14.474245,
+  "uroven": "pivni_stezka",
+  "stezka": "budejovicko"
+ },
+ {
+  "nazev": "Pivovar 66",
+  "typ": "pivovar",
+  "adresa": "Sosnová 66",
+  "mesto": "Sosnová",
+  "lat": 50.65233,
+  "lon": 14.534509,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Lesní bistro",
+  "typ": "restaurace",
+  "adresa": "U koupaliště, Česká Kamenice",
+  "mesto": "Česká Kamenice",
+  "lat": 50.804413,
+  "lon": 14.416783,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Sklářská krčma AJETO",
+  "typ": "hospoda",
+  "adresa": "Lindava 167",
+  "mesto": "Lindava",
+  "lat": 50.748805,
+  "lon": 14.659779,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Beranův pivovar",
+  "typ": "hospoda",
+  "adresa": "Trávníček 14, Bílá",
+  "mesto": "Bílá",
+  "lat": 50.628191,
+  "lon": 15.029775,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivnice Jítravský dvorec",
+  "typ": "pivnice",
+  "adresa": "Jítrava 70, Rynoltice",
+  "mesto": "Rynoltice",
+  "lat": 50.792369,
+  "lon": 14.855393,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pačinek Glass",
+  "typ": "restaurace",
+  "adresa": "Kunratice u Cvikova 147, Cvikov",
+  "mesto": "Cvikov",
+  "lat": 50.771052,
+  "lon": 14.669439,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivovar Lípák",
+  "typ": "pivovar",
+  "adresa": "Náměstí Osvobození 297, Česká Lípa",
+  "mesto": "Česká Lípa",
+  "lat": 50.685871,
+  "lon": 14.534232,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Minipivovar Helene",
+  "typ": "pivovar",
+  "adresa": "Kytlice 120",
+  "mesto": "Kytlice",
+  "lat": 50.812658,
+  "lon": 14.531854,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivovar Kotouč",
+  "typ": "pivovar",
+  "adresa": "Pivovarská 3, Česká Kamenice",
+  "mesto": "Česká Kamenice",
+  "lat": 50.79803,
+  "lon": 14.414832,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivovar Born",
+  "typ": "pivovar",
+  "adresa": "Nám. Míru 100, Nový Bor",
+  "mesto": "Nový Bor",
+  "lat": 50.760211,
+  "lon": 14.557213,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivovar Falkenštejn",
+  "typ": "pivovar",
+  "adresa": "Křinické nám. 7, Krásná Lípa",
+  "mesto": "Krásná Lípa",
+  "lat": 50.913942,
+  "lon": 14.507621,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
+ },
+ {
+  "nazev": "Pivovar Cvikov",
+  "typ": "pivovar",
+  "adresa": "Pivovarská 405, Cvikov",
+  "mesto": "Cvikov",
+  "lat": 50.777056,
+  "lon": 14.642705,
+  "uroven": "pivni_stezka",
+  "stezka": "luzicke-hory"
  }
 ]
