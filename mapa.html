@@ -444,13 +444,28 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 
   var STORE_LAYERS=['cluster-glow','clusters','cluster-count','pt-glow','points','pt-label','pt-name'];
   var VENUE_LAYERS=['v-cluster-glow','v-clusters','v-cluster-count','v-pt-glow','v-points','v-pt-label','v-pt-name'];
-  function setMode(m){
+  function boundsOf(list){
+    if(!list || !list.length) return null;
+    var b=new maplibregl.LngLatBounds();
+    list.forEach(function(p){ b.extend([p.lon,p.lat]); });
+    return b;
+  }
+  // Obchody = pilot Praha; Podniky = cela CR (clustering resi hustotu)
+  function fitMode(animate){
+    var b = mode==='podniky'
+      ? boundsOf(ALLV)
+      : boundsOf(ALL.filter(function(s){ return active[s.retezec]; }));
+    if(!b) return;
+    map.fitBounds(b, {padding:50, maxZoom: mode==='podniky'?11:13, duration: animate?600:0});
+  }
+  function setMode(m, animate){
     mode=m;
     STORE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='obchody'?'visible':'none'); });
     VENUE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='podniky'?'visible':'none'); });
     document.getElementById('modeObchody').classList.toggle('on', m==='obchody');
     document.getElementById('modePodniky').classList.toggle('on', m==='podniky');
     buildLegend(); buildPanel();
+    fitMode(animate!==false);
   }
 
   map.on('load', function(){
@@ -458,18 +473,12 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     applyLabels();
     Promise.all([
       fetch('/data/mapa/prodejny_praha.json').then(function(r){return r.json();}).catch(function(){return [];}),
-      fetch('/data/mapa/podniky_praha.json').then(function(r){return r.json();}).catch(function(){return [];})
+      fetch('/data/mapa/podniky.json').then(function(r){return r.json();}).catch(function(){return [];})
     ]).then(function(res){
       ALL = res[0]||[]; ALLV = res[1]||[];
       initVenueFilters();
       addStoreLayers(); addVenueLayers();
-      setMode('obchody');
-      var pts = ALL.filter(function(s){ return active[s.retezec]; });
-      if(pts.length){
-        var b=new maplibregl.LngLatBounds();
-        pts.forEach(function(s){ b.extend([s.lon,s.lat]); });
-        map.fitBounds(b, {padding:60, maxZoom:13, duration:0});
-      }
+      setMode('obchody', false);
     }).catch(function(e){ console.error('data load error', e); });
   });
 

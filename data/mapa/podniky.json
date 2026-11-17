@@ -1,0 +1,1847 @@
+[
+ {
+  "nazev": "Maso a uzeniny u Slavíčků",
+  "typ": "reznictvi",
+  "adresa": "Krhanická 543/42, Praha 12",
+  "mesto": "Praha",
+  "lat": 50.016408,
+  "lon": 14.439205,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Dolejš",
+  "typ": "reznictvi",
+  "adresa": "Náměstí prezidenta Masaryka 14, Praha 4 - Kunratice 148 00",
+  "mesto": "Praha",
+  "lat": 50.013318,
+  "lon": 14.485685,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Terrys Steak",
+  "typ": "reznictvi",
+  "adresa": "Italská 17, Praha 2 (+ 2 další pobočky)",
+  "mesto": "Praha",
+  "lat": 50.077729,
+  "lon": 14.435841,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Slezské uzeniny",
+  "typ": "reznictvi",
+  "adresa": "Na Olšinách 361/1, 737 01 Český Těšín (HQ)",
+  "mesto": "Český Těšín",
+  "lat": 49.751845,
+  "lon": 18.61791,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví u Slavíků",
+  "typ": "reznictvi",
+  "adresa": "Náchodská 693, Hradec Králové",
+  "mesto": "Hradec Králové",
+  "lat": 50.235802,
+  "lon": 15.792962,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Dědouch",
+  "typ": "reznictvi",
+  "adresa": "Lannova tř. 17/15, 370 01 České Budějovice (HQ)",
+  "mesto": "České Budějovice",
+  "lat": 48.974554,
+  "lon": 14.480599,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Novák maso-uzeniny",
+  "typ": "reznictvi",
+  "adresa": "Chelčického 627, Roudnice nad Labem (HQ)",
+  "mesto": "Roudnice nad Labem",
+  "lat": 50.42861,
+  "lon": 14.290859,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví Karel Klouček",
+  "typ": "reznictvi",
+  "adresa": "Fučíkova 647, 463 61 Raspenava",
+  "mesto": "Raspenava",
+  "lat": 50.897344,
+  "lon": 15.139339,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Řeznictví U Hrušků",
+  "typ": "reznictvi",
+  "adresa": "Liptál 43, 755 01",
+  "mesto": "Liptál",
+  "lat": 49.291143,
+  "lon": 17.923696,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Sapa Trip",
+  "typ": "obchod",
+  "adresa": "Libušská 319/126, 142 00 Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.002928,
+  "lon": 14.471385,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "OZ Vyšehradská",
+  "typ": "obchod",
+  "adresa": "U Trati 3328/38b, Praha 10",
+  "mesto": "Praha",
+  "lat": 50.0671,
+  "lon": 14.489773,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Tamda Foods",
+  "typ": "obchod",
+  "adresa": "Libušská 319/126, 142 00 Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.015005,
+  "lon": 14.455804,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "TTTM Sapa",
+  "typ": "trh",
+  "adresa": "Libušská 319/126, 142 00 Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.002928,
+  "lon": 14.471385,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Thiện Hành",
+  "typ": "restaurace",
+  "adresa": "Libušská 319, Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.002333,
+  "lon": 14.475766,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bồ Đề Tâm",
+  "typ": "bistro",
+  "adresa": "Praha 4-Libuš (jižně od hlavního areálu Sapa)",
+  "mesto": "Praha",
+  "lat": 49.994559,
+  "lon": 14.4675,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lan Đê",
+  "typ": "kavarna",
+  "adresa": "Libušská 319, Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.002344,
+  "lon": 14.4757,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chị Hai Streetfood",
+  "typ": "restaurace",
+  "adresa": "Libušská 319, Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.001477,
+  "lon": 14.469924,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bún Cá Hải Phòng",
+  "typ": "restaurace",
+  "adresa": "Libušská 319, Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.00354,
+  "lon": 14.473859,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Wanhao 新萬好食品 (Cina Potraviny)",
+  "typ": "obchod",
+  "adresa": "Libušská 319/126, Praha 4 Sapa 14200",
+  "mesto": "Praha",
+  "lat": 50.002913,
+  "lon": 14.47134,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Ăn Vặt Thúy Vi",
+  "typ": "kavarna",
+  "adresa": "Libušská 319/126, Praha 4-Libuš",
+  "mesto": "Praha",
+  "lat": 50.002267,
+  "lon": 14.471478,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Korejský obchod (Sieu Thi Han Quoc)",
+  "typ": "obchod",
+  "adresa": "Praha 4-Libuš (Libušská 319)",
+  "mesto": "Praha",
+  "lat": 50.087465,
+  "lon": 14.421254,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Papilio",
+  "typ": "restaurace",
+  "adresa": "Tyršova náves 1, 267 16 Vysoký Újezd",
+  "mesto": "Vysoký Újezd",
+  "lat": 49.993134,
+  "lon": 14.205624,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "La Degustation Bohême Bourgeoise",
+  "typ": "restaurace",
+  "adresa": "Haštalská 18, 110 00 Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.091032,
+  "lon": 14.425106,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Field",
+  "typ": "restaurace",
+  "adresa": "U Milosrdných 12, 110 00 Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.091863,
+  "lon": 14.422531,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Casa de Carli",
+  "typ": "restaurace",
+  "adresa": "Vězeňská 116/5, 110 00 Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.090492,
+  "lon": 14.421717,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Levitate",
+  "typ": "restaurace",
+  "adresa": "Vinohradská 1128/47, 120 00 Praha 2-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.077469,
+  "lon": 14.440297,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Štangl",
+  "typ": "restaurace",
+  "adresa": "Pernerova 49, 186 00 Praha 8-Karlín",
+  "mesto": "Praha",
+  "lat": 50.09133,
+  "lon": 14.45442,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Entrée",
+  "typ": "restaurace",
+  "adresa": "Ostravská 975, 779 00 Olomouc 9",
+  "mesto": "Olomouc",
+  "lat": 49.589607,
+  "lon": 17.286779,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Essens",
+  "typ": "restaurace",
+  "adresa": "K zámečku 16, 691 43 Hlohovec-Lednice na Moravě",
+  "mesto": "Hlohovec",
+  "lat": 48.778383,
+  "lon": 16.758656,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "La Villa",
+  "typ": "restaurace",
+  "adresa": "Stráže 3661, 760 01 Zlín 1",
+  "mesto": "Zlín",
+  "lat": 49.237639,
+  "lon": 17.654235,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Výčep",
+  "typ": "pivnice",
+  "adresa": "Korunní 1304/92, 101 00 Praha 10-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.075286,
+  "lon": 14.453596,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Alma",
+  "typ": "bistro",
+  "adresa": "V Jirchářích 150/8, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.080078,
+  "lon": 14.416553,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Bohém",
+  "typ": "restaurace",
+  "adresa": "Šantovo nám. 181, 570 01 Litomyšl",
+  "mesto": "Litomyšl",
+  "lat": 49.870891,
+  "lon": 16.313055,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Goldie",
+  "typ": "restaurace",
+  "adresa": "Žižkovo Náměstí 20, 390 01 Tábor 1",
+  "mesto": "Tábor",
+  "lat": 49.413544,
+  "lon": 14.658201,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "The Eatery",
+  "typ": "bistro",
+  "adresa": "U Uranie 18, 170 00 Praha 7-Holešovice",
+  "mesto": "Praha",
+  "lat": 50.107455,
+  "lon": 14.45091,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Na Kopci",
+  "typ": "bistro",
+  "adresa": "K Závěrce 2774, 150 00 Praha 5",
+  "mesto": "Praha",
+  "lat": 50.056664,
+  "lon": 14.402557,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Miura Hotel Restaurant",
+  "typ": "restaurace",
+  "adresa": "Čeladná 887, 739 12 Čeladná",
+  "mesto": "Čeladná",
+  "lat": 49.548956,
+  "lon": 18.336974,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Long Story Short Eatery & Bakery",
+  "typ": "cukrarna",
+  "adresa": "Koželužská 945, 779 00 Olomouc 9",
+  "mesto": "Olomouc",
+  "lat": 49.597887,
+  "lon": 17.25856,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Šupina a Šupinka",
+  "typ": "restaurace",
+  "adresa": "Valy 155, 379 01 Třeboň",
+  "mesto": "Třeboň",
+  "lat": 49.001959,
+  "lon": 14.770146,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Dvůr Perlová voda",
+  "typ": "restaurace",
+  "adresa": "Kostelec nad Ohří 13, 413 01 Budyně nad Ohří",
+  "mesto": "Kostelec nad Ohří",
+  "lat": 50.395364,
+  "lon": 14.091494,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "ATELIER bar & bistro",
+  "typ": "bistro",
+  "adresa": "Kobližná 71, 602 00 Brno-město",
+  "mesto": "Brno",
+  "lat": 49.195244,
+  "lon": 16.609038,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Valoria Brno - Restaurant & Catering",
+  "typ": "restaurace",
+  "adresa": "Bohunická 292/2, 619 00 Brno-jih",
+  "mesto": "Brno",
+  "lat": 49.163283,
+  "lon": 16.604578,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Šatlava",
+  "typ": "restaurace",
+  "adresa": "Dlouhá 101/13, 500 03 Hradec Králové 3",
+  "mesto": "Hradec Králové",
+  "lat": 50.209211,
+  "lon": 15.832751,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Dejvická 34 by Tomáš Černý",
+  "typ": "restaurace",
+  "adresa": "Dejvická 397/34, 160 00 Praha 6-Bubeneč",
+  "mesto": "Praha",
+  "lat": 50.097858,
+  "lon": 14.403022,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "U Matěje Kotrby",
+  "typ": "restaurace",
+  "adresa": "U Matěje 152/1, 160 00 Praha 6-Dejvice",
+  "mesto": "Praha",
+  "lat": 50.113562,
+  "lon": 14.379048,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Perk Restaurant",
+  "typ": "restaurace",
+  "adresa": "17. listopadu 413/1, 787 01 Šumperk",
+  "mesto": "Šumperk",
+  "lat": 49.965841,
+  "lon": 16.980075,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Štipec",
+  "typ": "bistro",
+  "adresa": "Riegrova 208/5, 301 00 Plzeň 3-Vnitřní Město",
+  "mesto": "Plzeň",
+  "lat": 49.747271,
+  "lon": 13.375783,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Zámecká restaurace",
+  "typ": "restaurace",
+  "adresa": "Svinaře 1",
+  "mesto": "Svinaře",
+  "lat": 49.891967,
+  "lon": 14.184231,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chateau Dobříš",
+  "typ": "restaurace",
+  "adresa": "nám. Svobody 1, 263 01 Dobříš",
+  "mesto": "Dobříš",
+  "lat": 49.78131,
+  "lon": 14.179017,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivo & Basilico Caffe Restaurant",
+  "typ": "restaurace",
+  "adresa": "Zámecká 203/2, Praha 1-Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.088774,
+  "lon": 14.402123,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro na Zámku",
+  "typ": "bistro",
+  "adresa": "Bohdanečská 259, Praha-Vinoř",
+  "mesto": "Praha",
+  "lat": 50.149305,
+  "lon": 14.564131,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Na Zámku",
+  "typ": "restaurace",
+  "adresa": "Náměstí 1, Chrast u Chrudimě",
+  "mesto": "Chrast",
+  "lat": 49.900976,
+  "lon": 15.937143,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zámecká fořtovna P. Metternich",
+  "typ": "restaurace",
+  "adresa": "Obora 59, 331 51 Kaznějov",
+  "mesto": "Obora",
+  "lat": 49.889732,
+  "lon": 13.394904,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pivovar Prokopák",
+  "typ": "pivnice",
+  "adresa": "Do Klukovic 305, Praha 5-Barrandov",
+  "mesto": "Praha",
+  "lat": 50.035157,
+  "lon": 14.368906,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zámek Nový dvůr",
+  "typ": "restaurace",
+  "adresa": "Spálená č.p.1, Nový Kostel-Skalná",
+  "mesto": "Skalná",
+  "lat": 50.170234,
+  "lon": 12.361048,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Semmering restaurace",
+  "typ": "restaurace",
+  "adresa": "Slivenecká 77/1, Praha 5-Hlubočepy",
+  "mesto": "Praha",
+  "lat": 50.041147,
+  "lon": 14.394012,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Minigolf Praha 4",
+  "typ": "restaurace",
+  "adresa": "Nad Lesním divadlem 1214/4, Praha 4",
+  "mesto": "Praha",
+  "lat": 50.025859,
+  "lon": 14.433981,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Škopů",
+  "typ": "restaurace",
+  "adresa": "Slivenecká 50, Praha 5-Hlubočepy",
+  "mesto": "Praha",
+  "lat": 50.041018,
+  "lon": 14.392349,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chất",
+  "typ": "restaurace",
+  "adresa": "Libušská, Praha-Libuš",
+  "mesto": "Praha",
+  "lat": 49.993435,
+  "lon": 14.467767,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Mlýnec",
+  "typ": "restaurace",
+  "adresa": "Novotného lávka 9, Praha 1 110 00",
+  "mesto": "Praha",
+  "lat": 50.085405,
+  "lon": 14.413561,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "BUNČA - bún chả restaurace",
+  "typ": "restaurace",
+  "adresa": "Libušská, Praha-Libuš",
+  "mesto": "Praha",
+  "lat": 49.993435,
+  "lon": 14.467767,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "BUFÁČ",
+  "typ": "bistro",
+  "adresa": "K Hrnčířům 280, Praha-Šeberov",
+  "mesto": "Praha",
+  "lat": 50.003522,
+  "lon": 14.516473,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "U Martina",
+  "typ": "restaurace",
+  "adresa": "K Vilkám 1182, Praha-Dubeč",
+  "mesto": "Praha",
+  "lat": 50.053751,
+  "lon": 14.579964,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Piknik Park",
+  "typ": "restaurace",
+  "adresa": "Nosticova 470/8, Praha 1-Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.085291,
+  "lon": 14.4074,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "SOVA Modern Czech Cuisine",
+  "typ": "restaurace",
+  "adresa": "Veleslavínova 10, Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.08778,
+  "lon": 14.416377,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Malika Nusle",
+  "typ": "restaurace",
+  "adresa": "Na Pankráci 976/99, Praha 4-Nusle",
+  "mesto": "Praha",
+  "lat": 50.051265,
+  "lon": 14.439835,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "The Nest",
+  "typ": "restaurace",
+  "adresa": "Myslíkova 28, Praha 2-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.077983,
+  "lon": 14.418663,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "U Modré Kachničky",
+  "typ": "restaurace",
+  "adresa": "Nebovidská 460/6, Praha 1-Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.084728,
+  "lon": 14.405693,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda u nádraží",
+  "typ": "pivnice",
+  "adresa": "Luka pod Medníkem 30, Jílové u Prahy",
+  "mesto": "Jílové u Prahy",
+  "lat": 49.866476,
+  "lon": 14.461689,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hotel Malý Pivovar Klášter",
+  "typ": "pivnice",
+  "adresa": "Klášter Hradiště nad Jizerou 22, 294 15",
+  "mesto": "Klášter Hradiště nad Jizerou",
+  "lat": 50.52453,
+  "lon": 14.946119,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "SenSa Restaurant",
+  "typ": "restaurace",
+  "adresa": "Senovážná 1394/8, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.086492,
+  "lon": 14.42923,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Terra e Mare",
+  "typ": "restaurace",
+  "adresa": "Pštrossova 29, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.079794,
+  "lon": 14.415242,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Zastávka Nižbor",
+  "typ": "restaurace",
+  "adresa": "K Nádraží 379, 267 05 Nižbor",
+  "mesto": "Nižbor",
+  "lat": 50.003038,
+  "lon": 13.999349,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Venue",
+  "typ": "bistro",
+  "adresa": "Havelská 4, Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.084305,
+  "lon": 14.420561,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec Na Kopečku",
+  "typ": "pivnice",
+  "adresa": "Horská 174, Horní Maršov",
+  "mesto": "Horní Maršov",
+  "lat": 50.650992,
+  "lon": 15.818286,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Kata",
+  "typ": "restaurace",
+  "adresa": "Uhelná 596, Kutná Hora",
+  "mesto": "Kutná Hora",
+  "lat": 49.949444,
+  "lon": 15.274167,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Dačický",
+  "typ": "pivnice",
+  "adresa": "Rakova 8, Kutná Hora",
+  "mesto": "Kutná Hora",
+  "lat": 49.948304,
+  "lon": 15.264719,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace V Ruthardce",
+  "typ": "restaurace",
+  "adresa": "Dačického nám. 15, Kutná Hora",
+  "mesto": "Kutná Hora",
+  "lat": 49.948113,
+  "lon": 15.266658,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Tellerů",
+  "typ": "restaurace",
+  "adresa": "Vinohradská 1677/78, Praha 3-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.077201,
+  "lon": 14.452059,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "La Taifas",
+  "typ": "restaurace",
+  "adresa": "Hrusická 2617/3a, Praha 4-Záběhlice",
+  "mesto": "Praha",
+  "lat": 50.049259,
+  "lon": 14.485199,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Next Door by Imperial",
+  "typ": "restaurace",
+  "adresa": "Zlatnická 1126, 110 00 Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.089989,
+  "lon": 14.432235,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Barabizna Restaurant - Café",
+  "typ": "kavarna",
+  "adresa": "Pod Špitálem 363, Praha-Zbraslav",
+  "mesto": "Praha",
+  "lat": 49.978484,
+  "lon": 14.394936,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "V Zahradě",
+  "typ": "restaurace",
+  "adresa": "Schwaigerova 59/3, Praha 6-Bubeneč",
+  "mesto": "Praha",
+  "lat": 50.103462,
+  "lon": 14.408302,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Brambory",
+  "typ": "restaurace",
+  "adresa": "Na Pankráci 1724/129, Praha 4-Nusle",
+  "mesto": "Praha",
+  "lat": 50.051028,
+  "lon": 14.440889,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Sia Restaurant",
+  "typ": "restaurace",
+  "adresa": "V Celnici 1034/6, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.088187,
+  "lon": 14.430805,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Markéta",
+  "typ": "restaurace",
+  "adresa": "Ke Tvrzi 19, Praha-Královice",
+  "mesto": "Praha",
+  "lat": 50.039058,
+  "lon": 14.638083,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurant Pepř a Sůl",
+  "typ": "restaurace",
+  "adresa": "Krátkého 1, Praha 9",
+  "mesto": "Praha",
+  "lat": 50.111421,
+  "lon": 14.5005,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Na Hlavní 23",
+  "typ": "restaurace",
+  "adresa": "Na Hlavní 23/21, Praha 8-Březiněves",
+  "mesto": "Praha",
+  "lat": 50.16919,
+  "lon": 14.483643,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lehká hlava - vegetariánská restaurace",
+  "typ": "restaurace",
+  "adresa": "Boršov 280/2, Praha 1",
+  "mesto": "Praha",
+  "lat": 50.084048,
+  "lon": 14.414509,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Taro",
+  "typ": "restaurace",
+  "adresa": "Národní 10, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.081593,
+  "lon": 14.41685,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "U Lasíků",
+  "typ": "kavarna",
+  "adresa": "Tiché údolí 9, 252 62 Únětice-Horoměřice",
+  "mesto": "Horoměřice",
+  "lat": 50.131779,
+  "lon": 14.338729,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Grand Cru Restaurant",
+  "typ": "restaurace",
+  "adresa": "Lodecká 1181, 110 00 Praha 1-Petrská čtvrť",
+  "mesto": "Praha",
+  "lat": 50.091816,
+  "lon": 14.43298,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "La Veranda",
+  "typ": "restaurace",
+  "adresa": "Elišky Krásnohorské 2/10, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.09032,
+  "lon": 14.419976,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Restaurace U Malířů1543",
+  "typ": "restaurace",
+  "adresa": "Maltézské nám. 291, Praha 1-Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.086493,
+  "lon": 14.405316,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Miyabi",
+  "typ": "restaurace",
+  "adresa": "Navrátilova 664/10, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.078528,
+  "lon": 14.42333,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Portfolio restaurant",
+  "typ": "restaurace",
+  "adresa": "Lannův palác, Havlíčkova 1030/1, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.087465,
+  "lon": 14.421254,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "SASY.RE",
+  "typ": "restaurace",
+  "adresa": "Hubičkova 888/2, Praha 12-Modřany",
+  "mesto": "Praha",
+  "lat": 50.001669,
+  "lon": 14.422714,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurant a vinařství Salabka",
+  "typ": "restaurace",
+  "adresa": "K Bohnicím 849/2a, 171 00 Praha 7-Troja",
+  "mesto": "Praha",
+  "lat": 50.120767,
+  "lon": 14.40995,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Rybárna",
+  "typ": "bistro",
+  "adresa": "Na Dvorcích 184/3, Praha 4-Krč",
+  "mesto": "Praha",
+  "lat": 50.038759,
+  "lon": 14.437392,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Crêperie U Slepé kočičky",
+  "typ": "restaurace",
+  "adresa": "M. Horákové 600, Praha 7-Holešovice",
+  "mesto": "Praha",
+  "lat": 50.099271,
+  "lon": 14.417684,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pizza Gatto Nero Letná - Holešovice",
+  "typ": "restaurace",
+  "adresa": "Kostelní 1104/16, 170 00 Praha 7-Holešovice",
+  "mesto": "Praha",
+  "lat": 50.097769,
+  "lon": 14.431236,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Ristorantino da Matteo",
+  "typ": "restaurace",
+  "adresa": "Jirečkova 11, Praha 7-Holešovice",
+  "mesto": "Praha",
+  "lat": 50.099265,
+  "lon": 14.423212,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Papaiolo",
+  "typ": "restaurace",
+  "adresa": "Na Poříčí 1073/13, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.089707,
+  "lon": 14.432175,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospůdka U Štěpána",
+  "typ": "restaurace",
+  "adresa": "Vojetice 9, Petrovice u Sušice",
+  "mesto": "Petrovice u Sušice",
+  "lat": 49.219186,
+  "lon": 13.435343,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Dvůr Hoffmeister",
+  "typ": "restaurace",
+  "adresa": "Číčovice 45, 252 68 Číčovice",
+  "mesto": "Číčovice",
+  "lat": 50.154138,
+  "lon": 14.241245,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Drákulova Krčma",
+  "typ": "restaurace",
+  "adresa": "Jestřebice 41, Dobřeň-Kokořín",
+  "mesto": "Kokořín",
+  "lat": 50.429779,
+  "lon": 14.56679,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bassotto - Kavárna - Vinárna",
+  "typ": "kavarna",
+  "adresa": "Pštrossova 1926/4, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.077931,
+  "lon": 14.416468,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "SASY The Original",
+  "typ": "restaurace",
+  "adresa": "Havelská 496/29, Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.085892,
+  "lon": 14.42214,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Cucina",
+  "typ": "restaurace",
+  "adresa": "nám. T. G. Masaryka 895, Poděbrady",
+  "mesto": "Poděbrady",
+  "lat": 50.146339,
+  "lon": 15.121726,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda U Taterů",
+  "typ": "pivnice",
+  "adresa": "Třebenice 6, Štěchovice-Slapy nad Vltavou",
+  "mesto": "Slapy nad Vltavou",
+  "lat": 49.824827,
+  "lon": 14.389489,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace nejen DVOREK",
+  "typ": "restaurace",
+  "adresa": "tř. Míru 66, Pardubice I",
+  "mesto": "Pardubice",
+  "lat": 50.036492,
+  "lon": 15.773755,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "MG restaurace",
+  "typ": "restaurace",
+  "adresa": "Bezděčín 136, Mladá Boleslav-Bezděčín",
+  "mesto": "Mladá Boleslav",
+  "lat": 50.386029,
+  "lon": 14.901257,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Indian Restaurant Taaj Palace",
+  "typ": "restaurace",
+  "adresa": "Jenštejnská 1776/2, Praha 2-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.075023,
+  "lon": 14.41614,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Atelier Red&Wine restaurant",
+  "typ": "restaurace",
+  "adresa": "Rošických 603/4, Praha 5",
+  "mesto": "Praha",
+  "lat": 50.079758,
+  "lon": 14.403912,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Le Terroir",
+  "typ": "restaurace",
+  "adresa": "Kozí 916/5, Praha 1-Staré Město",
+  "mesto": "Praha",
+  "lat": 50.090067,
+  "lon": 14.422422,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Penzion Na Poště",
+  "typ": "restaurace",
+  "adresa": "Strašice 47",
+  "mesto": "Strašice",
+  "lat": 49.201976,
+  "lon": 13.729468,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec Na radnici",
+  "typ": "pivnice",
+  "adresa": "Nečtiny 1, Nečtiny",
+  "mesto": "Nečtiny",
+  "lat": 49.959043,
+  "lon": 13.159802,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Terasa u Zlaté studně",
+  "typ": "restaurace",
+  "adresa": "U Zlaté studně 166/4, 118 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.090681,
+  "lon": 14.404494,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Zlatá Praha (Fairmont Golden Prague)",
+  "typ": "restaurace",
+  "adresa": "Pařížská 30, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.091898,
+  "lon": 14.41901,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Brasserie 1932 (hotel Alcron)",
+  "typ": "restaurace",
+  "adresa": "Štěpánská 40, 110 00 Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.080077,
+  "lon": 14.426401,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pot-au-feu",
+  "typ": "bistro",
+  "adresa": "Rybná 13, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.08915,
+  "lon": 14.425847,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Marie B",
+  "typ": "bistro",
+  "adresa": "Dlouhá 37, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.090848,
+  "lon": 14.426514,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Vallmo",
+  "typ": "restaurace",
+  "adresa": "Plavecká 404/4, 128 00 Praha 2",
+  "mesto": "Praha",
+  "lat": 50.069097,
+  "lon": 14.415213,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Amano",
+  "typ": "restaurace",
+  "adresa": "Na Poříčí 48, 110 00 Nové Město",
+  "mesto": "Praha",
+  "lat": 50.090363,
+  "lon": 14.43667,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Antricote",
+  "typ": "restaurace",
+  "adresa": "Břehová 274/5, 110 00 Staré Město",
+  "mesto": "Praha",
+  "lat": 50.090873,
+  "lon": 14.417107,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Apelace 21",
+  "typ": "restaurace",
+  "adresa": "Záhřebská 21, 120 00 Praha 2-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.07267,
+  "lon": 14.436873,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Aromi",
+  "typ": "restaurace",
+  "adresa": "Náměstí Míru 1234/6, 120 00 Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.076189,
+  "lon": 14.436453,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Benjamin",
+  "typ": "restaurace",
+  "adresa": "Norská 602/14, 101 00 Praha 10-Vršovice",
+  "mesto": "Praha",
+  "lat": 50.071893,
+  "lon": 14.455461,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "CODA",
+  "typ": "restaurace",
+  "adresa": "Tržiště 368/9, 118 00 Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.087116,
+  "lon": 14.402684,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Cottocrudo",
+  "typ": "restaurace",
+  "adresa": "Veleslavínova 1098/2a, 110 00 Josefov",
+  "mesto": "Praha",
+  "lat": 50.08771,
+  "lon": 14.414537,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Dergi",
+  "typ": "restaurace",
+  "adresa": "Revoluční 25, 110 00 Staré Město",
+  "mesto": "Praha",
+  "lat": 50.092437,
+  "lon": 14.427011,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Divinis",
+  "typ": "restaurace",
+  "adresa": "Týnská 21, 110 00 Staré Město",
+  "mesto": "Praha",
+  "lat": 50.088839,
+  "lon": 14.423961,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "La Finestra",
+  "typ": "restaurace",
+  "adresa": "Platnéřská 90/13, 110 00 Staré Město",
+  "mesto": "Praha",
+  "lat": 50.087316,
+  "lon": 14.416146,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Matilda",
+  "typ": "restaurace",
+  "adresa": "Korunovační 17, 170 00 Praha 7",
+  "mesto": "Praha",
+  "lat": 50.10102,
+  "lon": 14.418237,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Etapa",
+  "typ": "kavarna",
+  "adresa": "Urxova 479/6, 186 00 Praha 8",
+  "mesto": "Praha",
+  "lat": 50.094535,
+  "lon": 14.457814,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Sweet and Pepper Days",
+  "typ": "bistro",
+  "adresa": "Anglická 19, 120 00 Praha 2",
+  "mesto": "Praha",
+  "lat": 50.076556,
+  "lon": 14.433968,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Anežka",
+  "typ": "kavarna",
+  "adresa": "Anežská 812/12, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.092195,
+  "lon": 14.423868,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bockem",
+  "typ": "restaurace",
+  "adresa": "Elišky Peškové 1095/5, 150 00 Praha 5",
+  "mesto": "Praha",
+  "lat": 50.077269,
+  "lon": 14.405109,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "BjuKitchen",
+  "typ": "cukrarna",
+  "adresa": "Jungmannova 27, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.081657,
+  "lon": 14.42228,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "420 Restaurant",
+  "typ": "restaurace",
+  "adresa": "Staroměstské náměstí 480/24, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.08671,
+  "lon": 14.420948,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "ŠNYCL",
+  "typ": "restaurace",
+  "adresa": "Nádražní 222/23, 151 34 Praha 5-Smíchov",
+  "mesto": "Praha",
+  "lat": 50.071111,
+  "lon": 14.403987,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Svatojánský Dvůr",
+  "typ": "restaurace",
+  "adresa": "Střížkovská 1/29A, 180 00 Praha 8",
+  "mesto": "Praha",
+  "lat": 50.125092,
+  "lon": 14.483034,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Tiskárna Národní",
+  "typ": "restaurace",
+  "adresa": "Národní 39, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.082894,
+  "lon": 14.420972,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Přidej si Šodó",
+  "typ": "kavarna",
+  "adresa": "Wuchterlova 1, 160 00 Praha 6",
+  "mesto": "Praha",
+  "lat": 50.097465,
+  "lon": 14.39758,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bistro Karel",
+  "typ": "bistro",
+  "adresa": "U Trojského zámku 2/6, 170 00 Praha 7 Troja",
+  "mesto": "Praha",
+  "lat": 50.115021,
+  "lon": 14.411528,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Osada",
+  "typ": "kavarna",
+  "adresa": "Osadní 774/35, 170 00 Praha 7",
+  "mesto": "Praha",
+  "lat": 50.104431,
+  "lon": 14.446646,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Domyno Burger",
+  "typ": "bistro",
+  "adresa": "Chýnovská, Praha 4 Lhotka",
+  "mesto": "Praha",
+  "lat": 50.01563,
+  "lon": 14.451776,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "New Fantasy",
+  "typ": "restaurace",
+  "adresa": "U Pejřárny 1044/1a, Praha-Libuš",
+  "mesto": "Praha",
+  "lat": 50.011606,
+  "lon": 14.458098,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Ve Mlýně",
+  "typ": "restaurace",
+  "adresa": "Jalodvorská 16, 140 00 Praha 4",
+  "mesto": "Praha",
+  "lat": 50.015966,
+  "lon": 14.457153,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace U Bezuchů",
+  "typ": "restaurace",
+  "adresa": "K Libuši 73/6, 148 00 Praha Kunratice",
+  "mesto": "Praha",
+  "lat": 50.013458,
+  "lon": 14.483854,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Červený Jelen",
+  "typ": "restaurace",
+  "adresa": "Hybernská 1034/5, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.087316,
+  "lon": 14.430846,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Il Morso",
+  "typ": "restaurace",
+  "adresa": "Za Pískovnou 1210/2, Praha 8 Dolní Chabry",
+  "mesto": "Praha",
+  "lat": 50.139968,
+  "lon": 14.450492,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "La Vie Bistro",
+  "typ": "bistro",
+  "adresa": "Mánesova 311/13, 120 00 Praha 2 Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.079023,
+  "lon": 14.436344,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Chiaki",
+  "typ": "restaurace",
+  "adresa": "Londýnská 73, Praha 2-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.076115,
+  "lon": 14.432818,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Bílá kráva",
+  "typ": "restaurace",
+  "adresa": "Rubešova 10, 120 00 Praha 2",
+  "mesto": "Praha",
+  "lat": 50.07777,
+  "lon": 14.432675,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "George Prime Steak",
+  "typ": "restaurace",
+  "adresa": "Platnéřská 19, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.087577,
+  "lon": 14.418502,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Café Savoy",
+  "typ": "kavarna",
+  "adresa": "Vítězná 5, 150 00 Praha 5",
+  "mesto": "Praha",
+  "lat": 50.080926,
+  "lon": 14.407216,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Čestr",
+  "typ": "restaurace",
+  "adresa": "Legerova 57/75, 120 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.080486,
+  "lon": 14.432955,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Eska Karlín",
+  "typ": "cukrarna",
+  "adresa": "Pernerova 49, 186 00 Praha 8",
+  "mesto": "Praha",
+  "lat": 50.09133,
+  "lon": 14.45442,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Biskup",
+  "typ": "restaurace",
+  "adresa": "Hradební 1, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.09099,
+  "lon": 14.426929,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kuchyň (Pražský hrad)",
+  "typ": "restaurace",
+  "adresa": "Salmovský palác, Hradčanské náměstí 186/1, 118 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.089204,
+  "lon": 14.397699,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Myšák (Pražský hrad)",
+  "typ": "kavarna",
+  "adresa": "Schwarzenberský palác, Hradčanské náměstí 2, 118 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.089115,
+  "lon": 14.396872,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "U Kalendů",
+  "typ": "cukrarna",
+  "adresa": "Rašínovo nábř. 383/58, 128 00 Praha 2-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.087465,
+  "lon": 14.421254,
+  "uroven": "bib"
+ },
+ {
+  "nazev": "Brasileiro U Zelené žáby",
+  "typ": "restaurace",
+  "adresa": "U Radnice 13/8, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.08742,
+  "lon": 14.419369,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Brasileiro Slovanský dům",
+  "typ": "restaurace",
+  "adresa": "Na Příkopě 22, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.085971,
+  "lon": 14.427583,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Café Imperial",
+  "typ": "kavarna",
+  "adresa": "Na Poříčí 15, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.089923,
+  "lon": 14.432811,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Lokál Dlouhááá",
+  "typ": "pivnice",
+  "adresa": "Dlouhá 33, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.090696,
+  "lon": 14.425758,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál U Bílé kuželky",
+  "typ": "pivnice",
+  "adresa": "Míšeňská 12, Praha 1-Malá Strana",
+  "mesto": "Praha",
+  "lat": 50.087733,
+  "lon": 14.407533,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál U Zavadilů",
+  "typ": "pivnice",
+  "adresa": "K Verneráku 70/1, Praha 4-Kunratice",
+  "mesto": "Praha",
+  "lat": 50.014176,
+  "lon": 14.485637,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál Nad Stromovkou",
+  "typ": "pivnice",
+  "adresa": "Nad Královskou oborou 232/31, Praha 7-Bubeneč",
+  "mesto": "Praha",
+  "lat": 50.103042,
+  "lon": 14.418312,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál Hamburk",
+  "typ": "pivnice",
+  "adresa": "Sokolovská 55, Praha 8-Karlín",
+  "mesto": "Praha",
+  "lat": 50.093159,
+  "lon": 14.446685,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál Pod Divadlem",
+  "typ": "pivnice",
+  "adresa": "Bezručova 315/34, Plzeň",
+  "mesto": "Plzeň",
+  "lat": 49.745907,
+  "lon": 13.374039,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál U Caipla",
+  "typ": "pivnice",
+  "adresa": "Kozí 115/3, Brno-střed",
+  "mesto": "Brno",
+  "lat": 49.195873,
+  "lon": 16.609449,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál Korunní",
+  "typ": "pivnice",
+  "adresa": "Korunní 984/39, Praha 2-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.075483,
+  "lon": 14.444105,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Lokál U Jiráta",
+  "typ": "pivnice",
+  "adresa": "Vodičkova 696/26, Praha 1-Nové Město",
+  "mesto": "Praha",
+  "lat": 50.080251,
+  "lon": 14.423911,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Country Life",
+  "typ": "obchod",
+  "adresa": "Melantrichova, Praha 1 (primary)",
+  "mesto": "Praha",
+  "lat": 50.085551,
+  "lon": 14.420851,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Plzeňka Hangár",
+  "typ": "restaurace",
+  "adresa": "Na Ohradě 94, 386 01 Strakonice 1",
+  "mesto": "Strakonice",
+  "lat": 49.257988,
+  "lon": 13.907023,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Bílý jednorožec",
+  "typ": "restaurace",
+  "adresa": "Žižkovo nám. 46, 379 01 Třeboň",
+  "mesto": "Třeboň",
+  "lat": 49.002731,
+  "lon": 14.771225,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Adam's Bar & Bistro",
+  "typ": "bistro",
+  "adresa": "Komenského nám. 138/10, 674 01 Třebíč 1-Vnitřní Město",
+  "mesto": "Třebíč",
+  "lat": 49.214847,
+  "lon": 15.876608,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "SHAGUN Indická Restaurace",
+  "typ": "restaurace",
+  "adresa": "Soukenická 187, 274 01 Slaný 1",
+  "mesto": "Slaný",
+  "lat": 50.230349,
+  "lon": 14.08447,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace u Sehnalů",
+  "typ": "restaurace",
+  "adresa": "Dolní Nová Ves 1, 507 81 Lázně Bělohrad",
+  "mesto": "Lázně Bělohrad",
+  "lat": 50.425761,
+  "lon": 15.584397,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Havlíkův Dvůr",
+  "typ": "restaurace",
+  "adresa": "Osek 88, 507 43 Osek",
+  "mesto": "Osek",
+  "lat": 49.819891,
+  "lon": 13.859056,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Promenáda",
+  "typ": "restaurace",
+  "adresa": "Tržiště 381/31, 360 01 Karlovy Vary 1",
+  "mesto": "Karlovy Vary",
+  "lat": 50.223003,
+  "lon": 12.88254,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Le Marché Karlovy Vary",
+  "typ": "restaurace",
+  "adresa": "Mariánskolázeňská 4, 360 01 Karlovy Vary 1",
+  "mesto": "Karlovy Vary",
+  "lat": 50.218156,
+  "lon": 12.883635,
+  "uroven": "michelin"
+ },
+ {
+  "nazev": "Restaurace Z",
+  "typ": "restaurace",
+  "adresa": "Harrachov 127, 512 46 Harrachov",
+  "mesto": "Harrachov",
+  "lat": 50.771361,
+  "lon": 15.393855,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hospoda U Nás",
+  "typ": "pivnice",
+  "adresa": "Dolní Světlá 78, 471 57 Mařenice-Krompach v Čechách",
+  "mesto": "Mařenice",
+  "lat": 50.83777,
+  "lon": 14.666731,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "CEJCH",
+  "typ": "restaurace",
+  "adresa": "Srbsko 35, 294 02 Kněžmost",
+  "mesto": "Kněžmost",
+  "lat": 50.505749,
+  "lon": 15.100594,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hostinec Vystřelený Vočko",
+  "typ": "pivnice",
+  "adresa": "Rabí 16, 342 01 Rabí",
+  "mesto": "Rabí",
+  "lat": 49.28093,
+  "lon": 13.618895,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Hoxton Burgers",
+  "typ": "restaurace",
+  "adresa": "Náměstí Míru 1221/4, 120 00 Praha 2-Vinohrady",
+  "mesto": "Praha",
+  "lat": 50.076146,
+  "lon": 14.435837,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "San Carlo Dittrichova",
+  "typ": "restaurace",
+  "adresa": "Dittrichova 1942/20, 120 00 Nové Město",
+  "mesto": "Praha",
+  "lat": 50.076236,
+  "lon": 14.415562,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Le Grill Restaurant",
+  "typ": "restaurace",
+  "adresa": "Hybernská 1002, 110 00 Praha 1",
+  "mesto": "Praha",
+  "lat": 50.087032,
+  "lon": 14.431412,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Restaurace Harfa",
+  "typ": "restaurace",
+  "adresa": "U Harfy 229, 190 00 Praha 9-Vysočany",
+  "mesto": "Praha",
+  "lat": 50.101719,
+  "lon": 14.504154,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Ekofarma Stehlík",
+  "typ": "vyrobce",
+  "adresa": "Zlatá Olešnice 281",
+  "mesto": "Zlatá Olešnice",
+  "lat": 50.702595,
+  "lon": 15.36513,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Kozí BIO farma Dolínek",
+  "typ": "vyrobce",
+  "adresa": "Břežanská e.č. 38, 250 70 Odolena Voda",
+  "mesto": "Odolena Voda",
+  "lat": 50.233412,
+  "lon": 14.410781,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Farma Bílkovi",
+  "typ": "vyrobce",
+  "adresa": "Chornice, okres Chrudim, Pardubický kraj",
+  "mesto": "Chornice",
+  "lat": 49.677013,
+  "lon": 16.745143,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Maletická farma",
+  "typ": "vyrobce",
+  "adresa": "Maletice, 398 11 Protivín (kontakt: Pražská 483/7, 397 01 Písek)",
+  "mesto": "Maletice",
+  "lat": 49.237473,
+  "lon": 14.188495,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Farma Jednorožec",
+  "typ": "vyrobce",
+  "adresa": "Roblín, chatová osada Roblín E19, 252 26 Třebotov",
+  "mesto": "Roblín",
+  "lat": 49.964996,
+  "lon": 14.255349,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "Pekárna Praktika",
+  "typ": "cukrarna",
+  "adresa": "Sokolovská 6/85, 186 00 Praha 8-Karlín",
+  "mesto": "Praha",
+  "lat": 50.094104,
+  "lon": 14.450912,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "55 Bakery",
+  "typ": "cukrarna",
+  "adresa": "Štefánikova 9/55, 150 00 Praha 5-Smíchov",
+  "mesto": "Praha",
+  "lat": 50.077634,
+  "lon": 14.404027,
+  "uroven": "vyber_ck"
+ },
+ {
+  "nazev": "TRITON Restaurant",
+  "typ": "restaurace",
+  "adresa": "Václavské náměstí 26, Praha 1",
+  "mesto": "Praha",
+  "lat": 50.082684,
+  "lon": 14.425149,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Borgo Agnese",
+  "typ": "restaurace",
+  "adresa": "Kopečná 43, 602 00 Brno",
+  "mesto": "Brno",
+  "lat": 49.191534,
+  "lon": 16.601551,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "STŮL",
+  "typ": "restaurace",
+  "adresa": "U Matěje 152/1, Praha 6 160 00",
+  "mesto": "Praha",
+  "lat": 50.113148,
+  "lon": 14.37973,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Augustine Restaurant",
+  "typ": "restaurace",
+  "adresa": "Letenská 12/33, Praha 1 118 00",
+  "mesto": "Praha",
+  "lat": 50.089087,
+  "lon": 14.406881,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Monastiq Restaurant",
+  "typ": "restaurace",
+  "adresa": "Nebovidská 459/1, Praha 1 118 00",
+  "mesto": "Praha",
+  "lat": 50.08472,
+  "lon": 14.405461,
+  "uroven": "gault"
+ },
+ {
+  "nazev": "Hadog",
+  "typ": "restaurace",
+  "adresa": "Sokolovská 379/204, 180 00 Praha 8-Palmovka",
+  "mesto": "Praha",
+  "lat": 50.103176,
+  "lon": 14.478745,
+  "uroven": "vyber_ck"
+ }
+]
