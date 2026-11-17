@@ -188,6 +188,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       if(!map.getLayer(id)) return;
       var c=LABELS[id];
       try{ map.setLayerZoomRange(id, c.z[0], c.z[1]); }catch(e){}
+      // ceske nazvy s fallbackem (name:cs -> name:latin -> name)
+      try{ map.setLayoutProperty(id,'text-field',['coalesce',['get','name:cs'],['get','name:latin'],['get','name']]); }catch(e){}
       try{ map.setLayoutProperty(id,'text-font',['Noto Sans Bold']); }catch(e){}
       try{ map.setLayoutProperty(id,'text-size', c.size); }catch(e){}
       if(c.paint){ try{ map.setLayoutProperty(id,'text-letter-spacing',0.04); }catch(e){} }
