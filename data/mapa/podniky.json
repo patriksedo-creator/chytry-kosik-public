@@ -6,7 +6,9 @@
   "mesto": "Praha",
   "lat": 50.016408,
   "lon": 14.439205,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Dolejš",
@@ -15,7 +17,9 @@
   "mesto": "Praha",
   "lat": 50.013318,
   "lon": 14.485685,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Terrys Steak",
@@ -24,7 +28,9 @@
   "mesto": "Praha",
   "lat": 50.077729,
   "lon": 14.435841,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Slezské uzeniny",
@@ -33,7 +39,9 @@
   "mesto": "Český Těšín",
   "lat": 49.751845,
   "lon": 18.61791,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví u Slavíků",
@@ -42,7 +50,9 @@
   "mesto": "Hradec Králové",
   "lat": 50.235802,
   "lon": 15.792962,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Dědouch",
@@ -51,7 +61,9 @@
   "mesto": "České Budějovice",
   "lat": 48.974554,
   "lon": 14.480599,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Novák maso-uzeniny",
@@ -60,7 +72,9 @@
   "mesto": "Roudnice nad Labem",
   "lat": 50.42861,
   "lon": 14.290859,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Karel Klouček",
@@ -69,7 +83,9 @@
   "mesto": "Raspenava",
   "lat": 50.897344,
   "lon": 15.139339,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví U Hrušků",
@@ -78,7 +94,9 @@
   "mesto": "Liptál",
   "lat": 49.291143,
   "lon": 17.923696,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Sapa Trip",
@@ -87,7 +105,9 @@
   "mesto": "Praha",
   "lat": 50.002928,
   "lon": 14.471385,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "OZ Vyšehradská",
@@ -96,7 +116,9 @@
   "mesto": "Praha",
   "lat": 50.0671,
   "lon": 14.489773,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Tamda Foods",
@@ -105,7 +127,9 @@
   "mesto": "Praha",
   "lat": 50.015005,
   "lon": 14.455804,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "TTTM Sapa",
@@ -114,7 +138,9 @@
   "mesto": "Praha",
   "lat": 50.002928,
   "lon": 14.471385,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Thiện Hành",
@@ -123,7 +149,9 @@
   "mesto": "Praha",
   "lat": 50.002333,
   "lon": 14.475766,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bồ Đề Tâm",
@@ -132,7 +160,9 @@
   "mesto": "Praha",
   "lat": 49.994559,
   "lon": 14.4675,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lan Đê",
@@ -141,7 +171,9 @@
   "mesto": "Praha",
   "lat": 50.002344,
   "lon": 14.4757,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chị Hai Streetfood",
@@ -150,7 +182,9 @@
   "mesto": "Praha",
   "lat": 50.001477,
   "lon": 14.469924,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bún Cá Hải Phòng",
@@ -159,7 +193,9 @@
   "mesto": "Praha",
   "lat": 50.00354,
   "lon": 14.473859,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Wanhao 新萬好食品 (Cina Potraviny)",
@@ -168,7 +204,9 @@
   "mesto": "Praha",
   "lat": 50.002913,
   "lon": 14.47134,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Ăn Vặt Thúy Vi",
@@ -177,7 +215,9 @@
   "mesto": "Praha",
   "lat": 50.002267,
   "lon": 14.471478,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Korejský obchod (Sieu Thi Han Quoc)",
@@ -186,7 +226,9 @@
   "mesto": "Praha",
   "lat": 50.087465,
   "lon": 14.421254,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Papilio",
@@ -195,7 +237,9 @@
   "mesto": "Vysoký Újezd",
   "lat": 49.993134,
   "lon": 14.205624,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "La Degustation Bohême Bourgeoise",
@@ -204,7 +248,10 @@
   "mesto": "Praha",
   "lat": 50.091032,
   "lon": 14.425106,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Field",
@@ -213,7 +260,10 @@
   "mesto": "Praha",
   "lat": 50.091863,
   "lon": 14.422531,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Casa de Carli",
@@ -222,7 +272,10 @@
   "mesto": "Praha",
   "lat": 50.090492,
   "lon": 14.421717,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Levitate",
@@ -231,7 +284,10 @@
   "mesto": "Praha",
   "lat": 50.077469,
   "lon": 14.440297,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Štangl",
@@ -240,7 +296,10 @@
   "mesto": "Praha",
   "lat": 50.09133,
   "lon": 14.45442,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Entrée",
@@ -249,7 +308,10 @@
   "mesto": "Olomouc",
   "lat": 49.589607,
   "lon": 17.286779,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Essens",
@@ -258,7 +320,10 @@
   "mesto": "Hlohovec",
   "lat": 48.778383,
   "lon": 16.758656,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "La Villa",
@@ -267,7 +332,10 @@
   "mesto": "Zlín",
   "lat": 49.237639,
   "lon": 17.654235,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Výčep",
@@ -276,7 +344,10 @@
   "mesto": "Praha",
   "lat": 50.075286,
   "lon": 14.453596,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Alma",
@@ -285,7 +356,10 @@
   "mesto": "Praha",
   "lat": 50.080078,
   "lon": 14.416553,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Bohém",
@@ -294,7 +368,9 @@
   "mesto": "Litomyšl",
   "lat": 49.870891,
   "lon": 16.313055,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Goldie",
@@ -303,7 +379,9 @@
   "mesto": "Tábor",
   "lat": 49.413544,
   "lon": 14.658201,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "The Eatery",
@@ -312,7 +390,10 @@
   "mesto": "Praha",
   "lat": 50.107455,
   "lon": 14.45091,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Na Kopci",
@@ -321,7 +402,9 @@
   "mesto": "Praha",
   "lat": 50.056664,
   "lon": 14.402557,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Miura Hotel Restaurant",
@@ -330,7 +413,9 @@
   "mesto": "Čeladná",
   "lat": 49.548956,
   "lon": 18.336974,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Long Story Short Eatery & Bakery",
@@ -339,7 +424,10 @@
   "mesto": "Olomouc",
   "lat": 49.597887,
   "lon": 17.25856,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Šupina a Šupinka",
@@ -348,7 +436,9 @@
   "mesto": "Třeboň",
   "lat": 49.001959,
   "lon": 14.770146,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Dvůr Perlová voda",
@@ -357,7 +447,9 @@
   "mesto": "Kostelec nad Ohří",
   "lat": 50.395364,
   "lon": 14.091494,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "ATELIER bar & bistro",
@@ -366,7 +458,9 @@
   "mesto": "Brno",
   "lat": 49.195244,
   "lon": 16.609038,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Valoria Brno - Restaurant & Catering",
@@ -375,7 +469,9 @@
   "mesto": "Brno",
   "lat": 49.163283,
   "lon": 16.604578,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Šatlava",
@@ -384,7 +480,9 @@
   "mesto": "Hradec Králové",
   "lat": 50.209211,
   "lon": 15.832751,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Dejvická 34 by Tomáš Černý",
@@ -393,7 +491,10 @@
   "mesto": "Praha",
   "lat": 50.097858,
   "lon": 14.403022,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "U Matěje Kotrby",
@@ -402,7 +503,9 @@
   "mesto": "Praha",
   "lat": 50.113562,
   "lon": 14.379048,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Perk Restaurant",
@@ -411,7 +514,9 @@
   "mesto": "Šumperk",
   "lat": 49.965841,
   "lon": 16.980075,
-  "uroven": "bib"
+  "oceneni": [
+   "bib"
+  ]
  },
  {
   "nazev": "Štipec",
@@ -420,7 +525,10 @@
   "mesto": "Plzeň",
   "lat": 49.747271,
   "lon": 13.375783,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Zámecká restaurace",
@@ -429,7 +537,9 @@
   "mesto": "Svinaře",
   "lat": 49.891967,
   "lon": 14.184231,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chateau Dobříš",
@@ -438,7 +548,9 @@
   "mesto": "Dobříš",
   "lat": 49.78131,
   "lon": 14.179017,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivo & Basilico Caffe Restaurant",
@@ -447,7 +559,9 @@
   "mesto": "Praha",
   "lat": 50.088774,
   "lon": 14.402123,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro na Zámku",
@@ -456,7 +570,9 @@
   "mesto": "Praha",
   "lat": 50.149305,
   "lon": 14.564131,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Na Zámku",
@@ -465,7 +581,9 @@
   "mesto": "Chrast",
   "lat": 49.900976,
   "lon": 15.937143,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zámecká fořtovna P. Metternich",
@@ -474,7 +592,9 @@
   "mesto": "Obora",
   "lat": 49.889732,
   "lon": 13.394904,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivovar Prokopák",
@@ -483,7 +603,9 @@
   "mesto": "Praha",
   "lat": 50.035157,
   "lon": 14.368906,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zámek Nový dvůr",
@@ -492,7 +614,9 @@
   "mesto": "Skalná",
   "lat": 50.170234,
   "lon": 12.361048,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Semmering restaurace",
@@ -501,7 +625,9 @@
   "mesto": "Praha",
   "lat": 50.041147,
   "lon": 14.394012,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Minigolf Praha 4",
@@ -510,7 +636,9 @@
   "mesto": "Praha",
   "lat": 50.025859,
   "lon": 14.433981,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Škopů",
@@ -519,7 +647,9 @@
   "mesto": "Praha",
   "lat": 50.041018,
   "lon": 14.392349,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chất",
@@ -528,7 +658,9 @@
   "mesto": "Praha",
   "lat": 49.993435,
   "lon": 14.467767,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Mlýnec",
@@ -537,7 +669,10 @@
   "mesto": "Praha",
   "lat": 50.085405,
   "lon": 14.413561,
-  "uroven": "gault"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "BUNČA - bún chả restaurace",
@@ -546,7 +681,9 @@
   "mesto": "Praha",
   "lat": 49.993435,
   "lon": 14.467767,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "BUFÁČ",
@@ -555,7 +692,9 @@
   "mesto": "Praha",
   "lat": 50.003522,
   "lon": 14.516473,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "U Martina",
@@ -564,7 +703,9 @@
   "mesto": "Praha",
   "lat": 50.053751,
   "lon": 14.579964,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Piknik Park",
@@ -573,7 +714,9 @@
   "mesto": "Praha",
   "lat": 50.085291,
   "lon": 14.4074,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "SOVA Modern Czech Cuisine",
@@ -582,7 +725,9 @@
   "mesto": "Praha",
   "lat": 50.08778,
   "lon": 14.416377,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Malika Nusle",
@@ -591,7 +736,9 @@
   "mesto": "Praha",
   "lat": 50.051265,
   "lon": 14.439835,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "The Nest",
@@ -600,7 +747,9 @@
   "mesto": "Praha",
   "lat": 50.077983,
   "lon": 14.418663,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "U Modré Kachničky",
@@ -609,7 +758,9 @@
   "mesto": "Praha",
   "lat": 50.084728,
   "lon": 14.405693,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda u nádraží",
@@ -618,7 +769,9 @@
   "mesto": "Jílové u Prahy",
   "lat": 49.866476,
   "lon": 14.461689,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hotel Malý Pivovar Klášter",
@@ -627,7 +780,9 @@
   "mesto": "Klášter Hradiště nad Jizerou",
   "lat": 50.52453,
   "lon": 14.946119,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "SenSa Restaurant",
@@ -636,7 +791,9 @@
   "mesto": "Praha",
   "lat": 50.086492,
   "lon": 14.42923,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Terra e Mare",
@@ -645,7 +802,9 @@
   "mesto": "Praha",
   "lat": 50.079794,
   "lon": 14.415242,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zastávka Nižbor",
@@ -654,7 +813,9 @@
   "mesto": "Nižbor",
   "lat": 50.003038,
   "lon": 13.999349,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Venue",
@@ -663,7 +824,9 @@
   "mesto": "Praha",
   "lat": 50.084305,
   "lon": 14.420561,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec Na Kopečku",
@@ -672,7 +835,9 @@
   "mesto": "Horní Maršov",
   "lat": 50.650992,
   "lon": 15.818286,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Kata",
@@ -681,7 +846,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.949444,
   "lon": 15.274167,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Dačický",
@@ -690,7 +857,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.948304,
   "lon": 15.264719,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace V Ruthardce",
@@ -699,7 +868,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.948113,
   "lon": 15.266658,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Tellerů",
@@ -708,7 +879,9 @@
   "mesto": "Praha",
   "lat": 50.077201,
   "lon": 14.452059,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "La Taifas",
@@ -717,7 +890,9 @@
   "mesto": "Praha",
   "lat": 50.049259,
   "lon": 14.485199,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Next Door by Imperial",
@@ -726,7 +901,9 @@
   "mesto": "Praha",
   "lat": 50.089989,
   "lon": 14.432235,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Barabizna Restaurant - Café",
@@ -735,7 +912,9 @@
   "mesto": "Praha",
   "lat": 49.978484,
   "lon": 14.394936,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "V Zahradě",
@@ -744,7 +923,9 @@
   "mesto": "Praha",
   "lat": 50.103462,
   "lon": 14.408302,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Brambory",
@@ -753,7 +934,10 @@
   "mesto": "Praha",
   "lat": 50.051028,
   "lon": 14.440889,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Sia Restaurant",
@@ -762,7 +946,9 @@
   "mesto": "Praha",
   "lat": 50.088187,
   "lon": 14.430805,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Markéta",
@@ -771,7 +957,9 @@
   "mesto": "Praha",
   "lat": 50.039058,
   "lon": 14.638083,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurant Pepř a Sůl",
@@ -780,7 +968,9 @@
   "mesto": "Praha",
   "lat": 50.111421,
   "lon": 14.5005,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Na Hlavní 23",
@@ -789,7 +979,9 @@
   "mesto": "Praha",
   "lat": 50.16919,
   "lon": 14.483643,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lehká hlava - vegetariánská restaurace",
@@ -798,7 +990,9 @@
   "mesto": "Praha",
   "lat": 50.084048,
   "lon": 14.414509,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Taro",
@@ -807,7 +1001,10 @@
   "mesto": "Praha",
   "lat": 50.081593,
   "lon": 14.41685,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "U Lasíků",
@@ -816,7 +1013,9 @@
   "mesto": "Horoměřice",
   "lat": 50.131779,
   "lon": 14.338729,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Grand Cru Restaurant",
@@ -825,7 +1024,9 @@
   "mesto": "Praha",
   "lat": 50.091816,
   "lon": 14.43298,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "La Veranda",
@@ -834,7 +1035,9 @@
   "mesto": "Praha",
   "lat": 50.09032,
   "lon": 14.419976,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Restaurace U Malířů1543",
@@ -843,7 +1046,9 @@
   "mesto": "Praha",
   "lat": 50.086493,
   "lon": 14.405316,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Miyabi",
@@ -852,7 +1057,9 @@
   "mesto": "Praha",
   "lat": 50.078528,
   "lon": 14.42333,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Portfolio restaurant",
@@ -861,7 +1068,9 @@
   "mesto": "Praha",
   "lat": 50.087465,
   "lon": 14.421254,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "SASY.RE",
@@ -870,7 +1079,9 @@
   "mesto": "Praha",
   "lat": 50.001669,
   "lon": 14.422714,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurant a vinařství Salabka",
@@ -879,7 +1090,9 @@
   "mesto": "Praha",
   "lat": 50.120767,
   "lon": 14.40995,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Rybárna",
@@ -888,7 +1101,9 @@
   "mesto": "Praha",
   "lat": 50.038759,
   "lon": 14.437392,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Crêperie U Slepé kočičky",
@@ -897,7 +1112,9 @@
   "mesto": "Praha",
   "lat": 50.099271,
   "lon": 14.417684,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pizza Gatto Nero Letná - Holešovice",
@@ -906,7 +1123,9 @@
   "mesto": "Praha",
   "lat": 50.097769,
   "lon": 14.431236,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Ristorantino da Matteo",
@@ -915,7 +1134,10 @@
   "mesto": "Praha",
   "lat": 50.099265,
   "lon": 14.423212,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Papaiolo",
@@ -924,7 +1146,9 @@
   "mesto": "Praha",
   "lat": 50.089707,
   "lon": 14.432175,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka U Štěpána",
@@ -933,7 +1157,9 @@
   "mesto": "Petrovice u Sušice",
   "lat": 49.219186,
   "lon": 13.435343,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dvůr Hoffmeister",
@@ -942,7 +1168,9 @@
   "mesto": "Číčovice",
   "lat": 50.154138,
   "lon": 14.241245,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Drákulova Krčma",
@@ -951,7 +1179,9 @@
   "mesto": "Kokořín",
   "lat": 50.429779,
   "lon": 14.56679,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bassotto - Kavárna - Vinárna",
@@ -960,7 +1190,9 @@
   "mesto": "Praha",
   "lat": 50.077931,
   "lon": 14.416468,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "SASY The Original",
@@ -969,7 +1201,9 @@
   "mesto": "Praha",
   "lat": 50.085892,
   "lon": 14.42214,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cucina",
@@ -978,7 +1212,9 @@
   "mesto": "Poděbrady",
   "lat": 50.146339,
   "lon": 15.121726,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda U Taterů",
@@ -987,7 +1223,9 @@
   "mesto": "Slapy nad Vltavou",
   "lat": 49.824827,
   "lon": 14.389489,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace nejen DVOREK",
@@ -996,7 +1234,9 @@
   "mesto": "Pardubice",
   "lat": 50.036492,
   "lon": 15.773755,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "MG restaurace",
@@ -1005,7 +1245,9 @@
   "mesto": "Mladá Boleslav",
   "lat": 50.386029,
   "lon": 14.901257,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Indian Restaurant Taaj Palace",
@@ -1014,7 +1256,9 @@
   "mesto": "Praha",
   "lat": 50.075023,
   "lon": 14.41614,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Atelier Red&Wine restaurant",
@@ -1023,7 +1267,9 @@
   "mesto": "Praha",
   "lat": 50.079758,
   "lon": 14.403912,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Le Terroir",
@@ -1032,7 +1278,9 @@
   "mesto": "Praha",
   "lat": 50.090067,
   "lon": 14.422422,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Penzion Na Poště",
@@ -1041,7 +1289,9 @@
   "mesto": "Strašice",
   "lat": 49.201976,
   "lon": 13.729468,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec Na radnici",
@@ -1050,7 +1300,9 @@
   "mesto": "Nečtiny",
   "lat": 49.959043,
   "lon": 13.159802,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Terasa u Zlaté studně",
@@ -1059,7 +1311,9 @@
   "mesto": "Praha",
   "lat": 50.090681,
   "lon": 14.404494,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Zlatá Praha (Fairmont Golden Prague)",
@@ -1068,7 +1322,9 @@
   "mesto": "Praha",
   "lat": 50.091898,
   "lon": 14.41901,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Brasserie 1932 (hotel Alcron)",
@@ -1077,7 +1333,10 @@
   "mesto": "Praha",
   "lat": 50.080077,
   "lon": 14.426401,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pot-au-feu",
@@ -1086,7 +1345,10 @@
   "mesto": "Praha",
   "lat": 50.08915,
   "lon": 14.425847,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Marie B",
@@ -1095,7 +1357,10 @@
   "mesto": "Praha",
   "lat": 50.090848,
   "lon": 14.426514,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Vallmo",
@@ -1104,7 +1369,10 @@
   "mesto": "Praha",
   "lat": 50.069097,
   "lon": 14.415213,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Amano",
@@ -1113,7 +1381,10 @@
   "mesto": "Praha",
   "lat": 50.090363,
   "lon": 14.43667,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Antricote",
@@ -1122,7 +1393,9 @@
   "mesto": "Praha",
   "lat": 50.090873,
   "lon": 14.417107,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Apelace 21",
@@ -1131,7 +1404,9 @@
   "mesto": "Praha",
   "lat": 50.07267,
   "lon": 14.436873,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Aromi",
@@ -1140,7 +1415,10 @@
   "mesto": "Praha",
   "lat": 50.076189,
   "lon": 14.436453,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Benjamin",
@@ -1149,7 +1427,9 @@
   "mesto": "Praha",
   "lat": 50.071893,
   "lon": 14.455461,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "CODA",
@@ -1158,7 +1438,10 @@
   "mesto": "Praha",
   "lat": 50.087116,
   "lon": 14.402684,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Cottocrudo",
@@ -1167,7 +1450,10 @@
   "mesto": "Praha",
   "lat": 50.08771,
   "lon": 14.414537,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Dergi",
@@ -1176,7 +1462,9 @@
   "mesto": "Praha",
   "lat": 50.092437,
   "lon": 14.427011,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Divinis",
@@ -1185,7 +1473,10 @@
   "mesto": "Praha",
   "lat": 50.088839,
   "lon": 14.423961,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "La Finestra",
@@ -1194,7 +1485,9 @@
   "mesto": "Praha",
   "lat": 50.087316,
   "lon": 14.416146,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Matilda",
@@ -1203,7 +1496,9 @@
   "mesto": "Praha",
   "lat": 50.10102,
   "lon": 14.418237,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Etapa",
@@ -1212,7 +1507,9 @@
   "mesto": "Praha",
   "lat": 50.094535,
   "lon": 14.457814,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Sweet and Pepper Days",
@@ -1221,7 +1518,9 @@
   "mesto": "Praha",
   "lat": 50.076556,
   "lon": 14.433968,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Anežka",
@@ -1230,7 +1529,9 @@
   "mesto": "Praha",
   "lat": 50.092195,
   "lon": 14.423868,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bockem",
@@ -1239,7 +1540,10 @@
   "mesto": "Praha",
   "lat": 50.077269,
   "lon": 14.405109,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "BjuKitchen",
@@ -1248,7 +1552,9 @@
   "mesto": "Praha",
   "lat": 50.081657,
   "lon": 14.42228,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "420 Restaurant",
@@ -1257,7 +1563,10 @@
   "mesto": "Praha",
   "lat": 50.08671,
   "lon": 14.420948,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "ŠNYCL",
@@ -1266,7 +1575,9 @@
   "mesto": "Praha",
   "lat": 50.071111,
   "lon": 14.403987,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Svatojánský Dvůr",
@@ -1275,7 +1586,9 @@
   "mesto": "Praha",
   "lat": 50.125092,
   "lon": 14.483034,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Tiskárna Národní",
@@ -1284,7 +1597,9 @@
   "mesto": "Praha",
   "lat": 50.082894,
   "lon": 14.420972,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Přidej si Šodó",
@@ -1293,7 +1608,9 @@
   "mesto": "Praha",
   "lat": 50.097465,
   "lon": 14.39758,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro Karel",
@@ -1302,7 +1619,9 @@
   "mesto": "Praha",
   "lat": 50.115021,
   "lon": 14.411528,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Osada",
@@ -1311,7 +1630,9 @@
   "mesto": "Praha",
   "lat": 50.104431,
   "lon": 14.446646,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Domyno Burger",
@@ -1320,7 +1641,9 @@
   "mesto": "Praha",
   "lat": 50.01563,
   "lon": 14.451776,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "New Fantasy",
@@ -1329,7 +1652,9 @@
   "mesto": "Praha",
   "lat": 50.011606,
   "lon": 14.458098,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Ve Mlýně",
@@ -1338,7 +1663,9 @@
   "mesto": "Praha",
   "lat": 50.015966,
   "lon": 14.457153,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Bezuchů",
@@ -1347,7 +1674,9 @@
   "mesto": "Praha",
   "lat": 50.013458,
   "lon": 14.483854,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Červený Jelen",
@@ -1356,7 +1685,9 @@
   "mesto": "Praha",
   "lat": 50.087316,
   "lon": 14.430846,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Il Morso",
@@ -1365,7 +1696,9 @@
   "mesto": "Praha",
   "lat": 50.139968,
   "lon": 14.450492,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "La Vie Bistro",
@@ -1374,7 +1707,9 @@
   "mesto": "Praha",
   "lat": 50.079023,
   "lon": 14.436344,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chiaki",
@@ -1383,7 +1718,9 @@
   "mesto": "Praha",
   "lat": 50.076115,
   "lon": 14.432818,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bílá kráva",
@@ -1392,7 +1729,9 @@
   "mesto": "Praha",
   "lat": 50.07777,
   "lon": 14.432675,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "George Prime Steak",
@@ -1401,7 +1740,9 @@
   "mesto": "Praha",
   "lat": 50.087577,
   "lon": 14.418502,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Café Savoy",
@@ -1410,7 +1751,10 @@
   "mesto": "Praha",
   "lat": 50.080926,
   "lon": 14.407216,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čestr",
@@ -1419,7 +1763,10 @@
   "mesto": "Praha",
   "lat": 50.080486,
   "lon": 14.432955,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Eska Karlín",
@@ -1428,7 +1775,9 @@
   "mesto": "Praha",
   "lat": 50.09133,
   "lon": 14.45442,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Biskup",
@@ -1437,7 +1786,9 @@
   "mesto": "Praha",
   "lat": 50.09099,
   "lon": 14.426929,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kuchyň (Pražský hrad)",
@@ -1446,7 +1797,9 @@
   "mesto": "Praha",
   "lat": 50.089204,
   "lon": 14.397699,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Myšák (Pražský hrad)",
@@ -1455,7 +1808,9 @@
   "mesto": "Praha",
   "lat": 50.089115,
   "lon": 14.396872,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "U Kalendů",
@@ -1464,7 +1819,10 @@
   "mesto": "Praha",
   "lat": 50.087465,
   "lon": 14.421254,
-  "uroven": "bib"
+  "oceneni": [
+   "bib",
+   "gault"
+  ]
  },
  {
   "nazev": "Brasileiro U Zelené žáby",
@@ -1473,7 +1831,10 @@
   "mesto": "Praha",
   "lat": 50.08742,
   "lon": 14.419369,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Brasileiro Slovanský dům",
@@ -1482,7 +1843,10 @@
   "mesto": "Praha",
   "lat": 50.085971,
   "lon": 14.427583,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Café Imperial",
@@ -1491,7 +1855,10 @@
   "mesto": "Praha",
   "lat": 50.089923,
   "lon": 14.432811,
-  "uroven": "michelin"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "Lokál Dlouhááá",
@@ -1500,7 +1867,9 @@
   "mesto": "Praha",
   "lat": 50.090696,
   "lon": 14.425758,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál U Bílé kuželky",
@@ -1509,7 +1878,9 @@
   "mesto": "Praha",
   "lat": 50.087733,
   "lon": 14.407533,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál U Zavadilů",
@@ -1518,7 +1889,9 @@
   "mesto": "Praha",
   "lat": 50.014176,
   "lon": 14.485637,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál Nad Stromovkou",
@@ -1527,7 +1900,9 @@
   "mesto": "Praha",
   "lat": 50.103042,
   "lon": 14.418312,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál Hamburk",
@@ -1536,7 +1911,9 @@
   "mesto": "Praha",
   "lat": 50.093159,
   "lon": 14.446685,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál Pod Divadlem",
@@ -1545,7 +1922,9 @@
   "mesto": "Plzeň",
   "lat": 49.745907,
   "lon": 13.374039,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál U Caipla",
@@ -1554,7 +1933,9 @@
   "mesto": "Brno",
   "lat": 49.195873,
   "lon": 16.609449,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál Korunní",
@@ -1563,7 +1944,9 @@
   "mesto": "Praha",
   "lat": 50.075483,
   "lon": 14.444105,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lokál U Jiráta",
@@ -1572,7 +1955,9 @@
   "mesto": "Praha",
   "lat": 50.080251,
   "lon": 14.423911,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Country Life",
@@ -1581,7 +1966,9 @@
   "mesto": "Praha",
   "lat": 50.085551,
   "lon": 14.420851,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Plzeňka Hangár",
@@ -1590,7 +1977,9 @@
   "mesto": "Strakonice",
   "lat": 49.257988,
   "lon": 13.907023,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Bílý jednorožec",
@@ -1599,7 +1988,9 @@
   "mesto": "Třeboň",
   "lat": 49.002731,
   "lon": 14.771225,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Adam's Bar & Bistro",
@@ -1608,7 +1999,9 @@
   "mesto": "Třebíč",
   "lat": 49.214847,
   "lon": 15.876608,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "SHAGUN Indická Restaurace",
@@ -1617,7 +2010,9 @@
   "mesto": "Slaný",
   "lat": 50.230349,
   "lon": 14.08447,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace u Sehnalů",
@@ -1626,7 +2021,9 @@
   "mesto": "Lázně Bělohrad",
   "lat": 50.425761,
   "lon": 15.584397,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Havlíkův Dvůr",
@@ -1635,7 +2032,9 @@
   "mesto": "Osek",
   "lat": 49.819891,
   "lon": 13.859056,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Promenáda",
@@ -1644,7 +2043,9 @@
   "mesto": "Karlovy Vary",
   "lat": 50.223003,
   "lon": 12.88254,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Le Marché Karlovy Vary",
@@ -1653,7 +2054,9 @@
   "mesto": "Karlovy Vary",
   "lat": 50.218156,
   "lon": 12.883635,
-  "uroven": "michelin"
+  "oceneni": [
+   "michelin"
+  ]
  },
  {
   "nazev": "Restaurace Z",
@@ -1662,7 +2065,9 @@
   "mesto": "Harrachov",
   "lat": 50.771361,
   "lon": 15.393855,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda U Nás",
@@ -1671,7 +2076,9 @@
   "mesto": "Mařenice",
   "lat": 50.83777,
   "lon": 14.666731,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "CEJCH",
@@ -1680,7 +2087,9 @@
   "mesto": "Kněžmost",
   "lat": 50.505749,
   "lon": 15.100594,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec Vystřelený Vočko",
@@ -1689,7 +2098,9 @@
   "mesto": "Rabí",
   "lat": 49.28093,
   "lon": 13.618895,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hoxton Burgers",
@@ -1698,7 +2109,9 @@
   "mesto": "Praha",
   "lat": 50.076146,
   "lon": 14.435837,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "San Carlo Dittrichova",
@@ -1707,7 +2120,9 @@
   "mesto": "Praha",
   "lat": 50.076236,
   "lon": 14.415562,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Le Grill Restaurant",
@@ -1716,7 +2131,10 @@
   "mesto": "Praha",
   "lat": 50.087032,
   "lon": 14.431412,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "gault",
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Harfa",
@@ -1725,7 +2143,9 @@
   "mesto": "Praha",
   "lat": 50.101719,
   "lon": 14.504154,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Ekofarma Stehlík",
@@ -1734,7 +2154,9 @@
   "mesto": "Zlatá Olešnice",
   "lat": 50.702595,
   "lon": 15.36513,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kozí BIO farma Dolínek",
@@ -1743,7 +2165,9 @@
   "mesto": "Odolena Voda",
   "lat": 50.233412,
   "lon": 14.410781,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Farma Bílkovi",
@@ -1752,7 +2176,9 @@
   "mesto": "Chornice",
   "lat": 49.677013,
   "lon": 16.745143,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Maletická farma",
@@ -1761,7 +2187,9 @@
   "mesto": "Maletice",
   "lat": 49.237473,
   "lon": 14.188495,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Farma Jednorožec",
@@ -1770,7 +2198,9 @@
   "mesto": "Roblín",
   "lat": 49.964996,
   "lon": 14.255349,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna Praktika",
@@ -1779,7 +2209,9 @@
   "mesto": "Praha",
   "lat": 50.094104,
   "lon": 14.450912,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "55 Bakery",
@@ -1788,7 +2220,9 @@
   "mesto": "Praha",
   "lat": 50.077634,
   "lon": 14.404027,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "TRITON Restaurant",
@@ -1797,7 +2231,9 @@
   "mesto": "Praha",
   "lat": 50.082684,
   "lon": 14.425149,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Borgo Agnese",
@@ -1806,7 +2242,10 @@
   "mesto": "Brno",
   "lat": 49.191534,
   "lon": 16.601551,
-  "uroven": "gault"
+  "oceneni": [
+   "gault",
+   "michelin"
+  ]
  },
  {
   "nazev": "STŮL",
@@ -1815,7 +2254,9 @@
   "mesto": "Praha",
   "lat": 50.113148,
   "lon": 14.37973,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Augustine Restaurant",
@@ -1824,7 +2265,9 @@
   "mesto": "Praha",
   "lat": 50.089087,
   "lon": 14.406881,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Monastiq Restaurant",
@@ -1833,7 +2276,9 @@
   "mesto": "Praha",
   "lat": 50.08472,
   "lon": 14.405461,
-  "uroven": "gault"
+  "oceneni": [
+   "gault"
+  ]
  },
  {
   "nazev": "Hadog",
@@ -1842,7 +2287,9 @@
   "mesto": "Praha",
   "lat": 50.103176,
   "lon": 14.478745,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivovar Fries",
@@ -1851,7 +2298,9 @@
   "mesto": "Strážné",
   "lat": 50.681769,
   "lon": 15.635283,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1861,7 +2310,9 @@
   "mesto": "Malá Úpa",
   "lat": 50.745517,
   "lon": 15.822015,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1871,7 +2322,9 @@
   "mesto": "Pec pod Sněžkou",
   "lat": 50.691214,
   "lon": 15.767514,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1881,7 +2334,9 @@
   "mesto": "Vrchlabí",
   "lat": 50.6549,
   "lon": 15.603267,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1891,7 +2346,9 @@
   "mesto": "Vrchlabí",
   "lat": 50.642966,
   "lon": 15.608525,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1901,7 +2358,9 @@
   "mesto": "Příchovice",
   "lat": 50.7878,
   "lon": 15.3168,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1911,7 +2370,9 @@
   "mesto": "Paseky nad Jizerou",
   "lat": 50.739216,
   "lon": 15.393651,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1921,7 +2382,9 @@
   "mesto": "Harrachov",
   "lat": 50.781726,
   "lon": 15.418976,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "krkonose"
  },
  {
@@ -1931,7 +2394,9 @@
   "mesto": "Pec pod Sněžkou",
   "lat": 50.734525,
   "lon": 15.696628,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1941,7 +2406,9 @@
   "mesto": "Praha - Kunratice",
   "lat": 50.007588,
   "lon": 14.479762,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1951,7 +2418,9 @@
   "mesto": "Varnsdorf",
   "lat": 50.92004,
   "lon": 14.60354,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1961,7 +2430,9 @@
   "mesto": "Sokolov",
   "lat": 50.178814,
   "lon": 12.637851,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1971,7 +2442,9 @@
   "mesto": "Malešov",
   "lat": 49.911285,
   "lon": 15.221803,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1981,7 +2454,9 @@
   "mesto": "Zadní Třebaň",
   "lat": 49.91977,
   "lon": 14.21002,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "-"
  },
  {
@@ -1991,7 +2466,9 @@
   "mesto": "Praha",
   "lat": 50.088148,
   "lon": 14.391847,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2001,7 +2478,9 @@
   "mesto": "Praha",
   "lat": 50.089188,
   "lon": 14.403195,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2011,7 +2490,9 @@
   "mesto": "Praha",
   "lat": 50.088689,
   "lon": 14.401998,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2021,7 +2502,9 @@
   "mesto": "Praha",
   "lat": 50.085817,
   "lon": 14.418036,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2031,7 +2514,9 @@
   "mesto": "Praha",
   "lat": 50.084884,
   "lon": 14.420688,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2041,7 +2526,9 @@
   "mesto": "Praha",
   "lat": 50.082912,
   "lon": 14.418696,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2051,7 +2538,9 @@
   "mesto": "Praha",
   "lat": 50.083513,
   "lon": 14.420487,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2061,7 +2550,9 @@
   "mesto": "Praha",
   "lat": 50.072493,
   "lon": 14.406753,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2071,7 +2562,9 @@
   "mesto": "Praha",
   "lat": 50.099033,
   "lon": 14.402189,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2081,7 +2574,9 @@
   "mesto": "Praha",
   "lat": 50.093141,
   "lon": 14.446825,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "praha-pivni-zoo"
  },
  {
@@ -2091,7 +2586,9 @@
   "mesto": "České Budějovice",
   "lat": 49.002972,
   "lon": 14.403181,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2101,7 +2598,9 @@
   "mesto": "České Budějovice",
   "lat": 48.976867,
   "lon": 14.473642,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2111,7 +2610,9 @@
   "mesto": "Hluboká nad Vltavou",
   "lat": 49.050951,
   "lon": 14.436069,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2121,7 +2622,9 @@
   "mesto": "České Budějovice",
   "lat": 48.993337,
   "lon": 14.475273,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2131,7 +2634,9 @@
   "mesto": "Dolní Bukovsko",
   "lat": 49.171338,
   "lon": 14.581504,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2141,7 +2646,9 @@
   "mesto": "Týn nad Vltavou",
   "lat": 49.222942,
   "lon": 14.426896,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2151,7 +2658,9 @@
   "mesto": "Dražíč",
   "lat": 49.305679,
   "lon": 14.380962,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2161,7 +2670,9 @@
   "mesto": "České Budějovice",
   "lat": 48.975077,
   "lon": 14.455362,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2171,7 +2682,9 @@
   "mesto": "České Budějovice",
   "lat": 48.97624,
   "lon": 14.472521,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2181,7 +2694,9 @@
   "mesto": "České Budějovice",
   "lat": 48.993409,
   "lon": 14.476505,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2191,7 +2706,9 @@
   "mesto": "České Budějovice",
   "lat": 48.963299,
   "lon": 14.474245,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "budejovicko"
  },
  {
@@ -2201,7 +2718,9 @@
   "mesto": "Sosnová",
   "lat": 50.65233,
   "lon": 14.534509,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2211,7 +2730,9 @@
   "mesto": "Česká Kamenice",
   "lat": 50.804413,
   "lon": 14.416783,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2221,7 +2742,9 @@
   "mesto": "Lindava",
   "lat": 50.748805,
   "lon": 14.659779,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2231,7 +2754,9 @@
   "mesto": "Bílá",
   "lat": 50.628191,
   "lon": 15.029775,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2241,7 +2766,9 @@
   "mesto": "Rynoltice",
   "lat": 50.792369,
   "lon": 14.855393,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2251,7 +2778,9 @@
   "mesto": "Cvikov",
   "lat": 50.771052,
   "lon": 14.669439,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2261,7 +2790,9 @@
   "mesto": "Česká Lípa",
   "lat": 50.685871,
   "lon": 14.534232,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2271,7 +2802,9 @@
   "mesto": "Kytlice",
   "lat": 50.812658,
   "lon": 14.531854,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2281,7 +2814,9 @@
   "mesto": "Česká Kamenice",
   "lat": 50.79803,
   "lon": 14.414832,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2291,7 +2826,9 @@
   "mesto": "Nový Bor",
   "lat": 50.760211,
   "lon": 14.557213,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2301,7 +2838,9 @@
   "mesto": "Krásná Lípa",
   "lat": 50.913942,
   "lon": 14.507621,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2311,7 +2850,9 @@
   "mesto": "Cvikov",
   "lat": 50.777056,
   "lon": 14.642705,
-  "uroven": "pivni_stezka",
+  "oceneni": [
+   "pivni_stezka"
+  ],
   "stezka": "luzicke-hory"
  },
  {
@@ -2321,7 +2862,9 @@
   "mesto": "Nový Jičín",
   "lat": 49.594426,
   "lon": 18.01114,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "U Růženky",
@@ -2330,7 +2873,9 @@
   "mesto": "Suchdol nad Lužnicí",
   "lat": 48.887839,
   "lon": 14.874733,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna Ella",
@@ -2339,7 +2884,9 @@
   "mesto": "Stachy",
   "lat": 49.066101,
   "lon": 13.622337,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kavárna Staré časy",
@@ -2348,7 +2895,9 @@
   "mesto": "Ronov nad Doubravou",
   "lat": 49.888185,
   "lon": 15.531532,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Sweet Dot TeSa",
@@ -2357,7 +2906,9 @@
   "mesto": "Dříteň",
   "lat": 49.134803,
   "lon": 14.282618,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Eleanor Café",
@@ -2366,7 +2917,9 @@
   "mesto": "Žulová",
   "lat": 50.30858,
   "lon": 17.097369,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Myš Café",
@@ -2375,7 +2928,9 @@
   "mesto": "Sázava",
   "lat": 49.872384,
   "lon": 14.896946,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Káva s párou",
@@ -2384,7 +2939,9 @@
   "mesto": "Litoměřice",
   "lat": 50.531599,
   "lon": 14.131203,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Mevan's Coffee",
@@ -2393,7 +2950,9 @@
   "mesto": "Zlaté Hory",
   "lat": 50.262044,
   "lon": 17.396496,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kavárna Klid",
@@ -2402,7 +2961,9 @@
   "mesto": "Semily",
   "lat": 50.60269,
   "lon": 15.335694,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna Zlatá Pecka",
@@ -2411,7 +2972,9 @@
   "mesto": "Pecka",
   "lat": 50.479854,
   "lon": 15.608474,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Horská cukrárna",
@@ -2420,7 +2983,9 @@
   "mesto": "Smržovka",
   "lat": 50.739055,
   "lon": 15.244529,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna Sedmihorky",
@@ -2429,7 +2994,9 @@
   "mesto": "Karlovice",
   "lat": 50.560674,
   "lon": 15.201259,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Gelateria Corso",
@@ -2438,7 +3005,9 @@
   "mesto": "Cheb",
   "lat": 50.079896,
   "lon": 12.369924,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna kavárna Karel Červinka",
@@ -2447,7 +3016,9 @@
   "mesto": "Jablonec nad Jizerou",
   "lat": 50.704048,
   "lon": 15.429349,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kavárna Cukrárna Pod Ronovem",
@@ -2456,7 +3027,9 @@
   "mesto": "Kravaře",
   "lat": 50.634979,
   "lon": 14.392817,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Sladká.",
@@ -2465,7 +3038,9 @@
   "mesto": "Hluboká nad Vltavou",
   "lat": 49.057919,
   "lon": 14.435608,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna, Kavárna Šlágr",
@@ -2474,7 +3049,9 @@
   "mesto": "Praha",
   "lat": 50.071954,
   "lon": 14.445733,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Moccacafé",
@@ -2483,7 +3060,9 @@
   "mesto": "Tábor",
   "lat": 49.413701,
   "lon": 14.661256,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlinový svět",
@@ -2492,7 +3071,9 @@
   "mesto": "Třeboň",
   "lat": 49.004211,
   "lon": 14.772432,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chata Rovina",
@@ -2501,7 +3082,9 @@
   "mesto": "Hartmanice",
   "lat": 49.157359,
   "lon": 13.421851,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro U Kapra",
@@ -2510,7 +3093,9 @@
   "mesto": "Třeboň",
   "lat": 49.003994,
   "lon": 14.773285,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Wellness & Restaurant U Fandy",
@@ -2519,7 +3104,9 @@
   "mesto": "Lhotka",
   "lat": 49.922183,
   "lon": 16.434679,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kolnička",
@@ -2528,7 +3115,9 @@
   "mesto": "Luka nad Jihlavou",
   "lat": 49.373334,
   "lon": 15.705285,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Krčma U Žraloka",
@@ -2537,7 +3126,9 @@
   "mesto": "Chocerady",
   "lat": 49.873926,
   "lon": 14.814034,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Zastávka Nižbor",
@@ -2546,7 +3137,9 @@
   "mesto": "Nižbor",
   "lat": 50.003038,
   "lon": 13.999349,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hladík & Žíža Janská bouda",
@@ -2555,7 +3148,9 @@
   "mesto": "Janské Lázně",
   "lat": 50.623615,
   "lon": 15.76837,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Matoušků",
@@ -2564,7 +3159,9 @@
   "mesto": "Kondrac",
   "lat": 49.666468,
   "lon": 14.884155,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kafé Ořech",
@@ -2573,7 +3170,9 @@
   "mesto": "Mnichovo Hradiště",
   "lat": 50.521606,
   "lon": 14.971667,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Burgr's Club",
@@ -2582,7 +3181,9 @@
   "mesto": "Lednice",
   "lat": 48.800911,
   "lon": 16.803358,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Valašská hospoda U Janíka",
@@ -2591,7 +3192,9 @@
   "mesto": "Frenštát pod Radhoštěm",
   "lat": 49.546324,
   "lon": 18.196838,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Hubálků",
@@ -2600,7 +3203,9 @@
   "mesto": "Kostelec nad Orlicí",
   "lat": 50.103441,
   "lon": 16.210488,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vlkovská hospoda",
@@ -2609,7 +3214,9 @@
   "mesto": "Vlkov",
   "lat": 49.325371,
   "lon": 16.198414,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace Naše BiSTRO",
@@ -2618,7 +3225,9 @@
   "mesto": "Jeseník",
   "lat": 50.227669,
   "lon": 17.195609,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kynutá buchta bistro",
@@ -2627,7 +3236,9 @@
   "mesto": "Horní Planá",
   "lat": 48.766294,
   "lon": 14.032542,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Café Bistro Na svahu",
@@ -2636,7 +3247,9 @@
   "mesto": "Stachy",
   "lat": 49.07186,
   "lon": 13.626839,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "BRATRS bistro",
@@ -2645,7 +3258,9 @@
   "mesto": "Brno",
   "lat": 49.217516,
   "lon": 16.50633,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro Zelňačka",
@@ -2654,7 +3269,9 @@
   "mesto": "Měděnec",
   "lat": 50.421504,
   "lon": 13.11212,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Tvarůžková cukrárna",
@@ -2663,7 +3280,9 @@
   "mesto": "Loštice",
   "lat": 49.745384,
   "lon": 16.929374,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Obžerstvení u kostela",
@@ -2672,7 +3291,9 @@
   "mesto": "Hlince",
   "lat": 49.948227,
   "lon": 13.625024,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro Stodola",
@@ -2681,7 +3302,9 @@
   "mesto": "Albrechtice v Jizerských horách",
   "lat": 50.758481,
   "lon": 15.293134,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro V Zahradě",
@@ -2690,7 +3313,9 @@
   "mesto": "Zeleneč",
   "lat": 50.135835,
   "lon": 14.659236,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro Vintrovka 1",
@@ -2699,7 +3324,9 @@
   "mesto": "Korytná",
   "lat": 48.932464,
   "lon": 17.6792,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro Andrea",
@@ -2708,7 +3335,9 @@
   "mesto": "Abertamy",
   "lat": 50.371053,
   "lon": 12.814839,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "KAFE KINO.",
@@ -2717,7 +3346,9 @@
   "mesto": "Hrádek nad Nisou",
   "lat": 50.851005,
   "lon": 14.84463,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro u Martina",
@@ -2726,7 +3357,9 @@
   "mesto": "Železný Brod",
   "lat": 50.653965,
   "lon": 15.218305,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro J & J",
@@ -2735,7 +3368,9 @@
   "mesto": "Šumperk",
   "lat": 49.966375,
   "lon": 16.973026,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Větrné bistro",
@@ -2744,7 +3379,9 @@
   "mesto": "Prášily",
   "lat": 49.105101,
   "lon": 13.378694,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bezlepkové Bistro u Vrzky",
@@ -2753,7 +3390,9 @@
   "mesto": "Jindřichův Hradec",
   "lat": 49.144131,
   "lon": 15.004123,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Klaploto bistro",
@@ -2762,7 +3401,9 @@
   "mesto": "Třeboň",
   "lat": 49.004308,
   "lon": 14.77225,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Rustic Coffee & Brunch",
@@ -2771,7 +3412,9 @@
   "mesto": "Janské Lázně",
   "lat": 50.630299,
   "lon": 15.779721,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Crémista - gelateria Strážný",
@@ -2780,7 +3423,9 @@
   "mesto": "Strážný",
   "lat": 48.908822,
   "lon": 13.720283,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Odpočívadlo u Hajtmanů",
@@ -2789,7 +3434,9 @@
   "mesto": "Pitín",
   "lat": 48.990474,
   "lon": 17.889571,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda Na mýtince",
@@ -2798,7 +3445,9 @@
   "mesto": "Šlovice",
   "lat": 49.971345,
   "lon": 13.748658,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Okno do Šumavy",
@@ -2807,7 +3456,9 @@
   "mesto": "Srní",
   "lat": 49.783228,
   "lon": 15.871457,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "O FOUS LEPŠÍ KAFE",
@@ -2816,7 +3467,9 @@
   "mesto": "Rožmitál pod Třemšínem",
   "lat": 49.590419,
   "lon": 13.803737,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Občerstvení u Červené jámy",
@@ -2825,7 +3478,9 @@
   "mesto": "Abertamy",
   "lat": 50.368744,
   "lon": 12.81826,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka Pod Kostelem",
@@ -2834,7 +3489,9 @@
   "mesto": "Svojanov",
   "lat": 49.624251,
   "lon": 16.410427,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina U Leknínu",
@@ -2843,7 +3500,9 @@
   "mesto": "Doksy",
   "lat": 50.574771,
   "lon": 14.692502,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kafíčko v lese",
@@ -2852,7 +3511,9 @@
   "mesto": "Janov",
   "lat": 49.837236,
   "lon": 16.386955,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Občerstvení Krömerova bouda",
@@ -2861,7 +3522,9 @@
   "mesto": "Albrechtice v Jizerských horách",
   "lat": 50.792008,
   "lon": 15.274672,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Občerstvení u Coufalů",
@@ -2870,7 +3533,9 @@
   "mesto": "Třeboň",
   "lat": 49.033666,
   "lon": 14.792696,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "U MATCHY bistro s pekárnou",
@@ -2879,7 +3544,9 @@
   "mesto": "Jaroměř",
   "lat": 50.337806,
   "lon": 15.916597,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Umanutá Koza",
@@ -2888,7 +3555,9 @@
   "mesto": "Kryštofovy Hamry",
   "lat": 50.499462,
   "lon": 13.136091,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bohemian Coffee House",
@@ -2897,7 +3566,9 @@
   "mesto": "Rumburk",
   "lat": 50.954996,
   "lon": 14.55227,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zahrádka v Podhradí",
@@ -2906,7 +3577,9 @@
   "mesto": "Třemošnice",
   "lat": 49.880704,
   "lon": 15.587463,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Káva od cesty",
@@ -2915,7 +3588,9 @@
   "mesto": "Hamr",
   "lat": 48.94903,
   "lon": 14.912253,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Turistka",
@@ -2924,7 +3599,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.947497,
   "lon": 15.264862,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Mandlárna",
@@ -2933,7 +3610,9 @@
   "mesto": "Hustopeče",
   "lat": 48.937908,
   "lon": 16.736945,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Milovská kavárna",
@@ -2942,7 +3621,9 @@
   "mesto": "Křižánky",
   "lat": 49.678468,
   "lon": 16.093392,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kafe Žebřík",
@@ -2951,7 +3632,9 @@
   "mesto": "Sušice",
   "lat": 49.228702,
   "lon": 13.5142,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "nejencafé",
@@ -2960,7 +3643,9 @@
   "mesto": "Abertamy",
   "lat": 50.368436,
   "lon": 12.817965,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivnice Clock",
@@ -2969,7 +3654,9 @@
   "mesto": "Potštejn",
   "lat": 50.08218,
   "lon": 16.307584,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivní laboratoř U Rumlíka",
@@ -2978,7 +3665,9 @@
   "mesto": "Praha",
   "lat": 50.056411,
   "lon": 14.443808,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivovarský dům Benedict",
@@ -2987,7 +3676,9 @@
   "mesto": "Praha",
   "lat": 50.075454,
   "lon": 14.423677,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Posledního Mohykána",
@@ -2996,7 +3687,9 @@
   "mesto": "Hvozd",
   "lat": 49.652076,
   "lon": 16.907626,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivnice Harcovna",
@@ -3005,7 +3698,9 @@
   "mesto": "Rožnov pod Radhoštěm",
   "lat": 49.455287,
   "lon": 18.148867,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Výčep",
@@ -3014,7 +3709,9 @@
   "mesto": "Tábor",
   "lat": 49.413702,
   "lon": 14.658538,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Lípy",
@@ -3023,7 +3720,9 @@
   "mesto": "Jihlava",
   "lat": 49.438926,
   "lon": 15.574288,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hovoranský hostinec",
@@ -3032,7 +3731,9 @@
   "mesto": "Hovorany",
   "lat": 48.954505,
   "lon": 16.985388,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivnice Podkova",
@@ -3041,7 +3742,9 @@
   "mesto": "Karviná",
   "lat": 49.853643,
   "lon": 18.543905,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka Na Trucovně",
@@ -3050,7 +3753,9 @@
   "mesto": "Sázava",
   "lat": 49.854577,
   "lon": 14.898481,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Stodola Herink",
@@ -3059,7 +3764,9 @@
   "mesto": "Herink",
   "lat": 49.967578,
   "lon": 14.575498,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka na ostrůvku",
@@ -3068,7 +3775,9 @@
   "mesto": "Bílovice nad Svitavou",
   "lat": 49.248298,
   "lon": 16.67353,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka Na Jedno",
@@ -3077,7 +3786,9 @@
   "mesto": "Loučná nad Desnou",
   "lat": 50.100898,
   "lon": 17.107823,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivovar Bubeneč",
@@ -3086,7 +3797,9 @@
   "mesto": "Praha",
   "lat": 50.101226,
   "lon": 14.404494,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pivnice pod Pepřem - U Loužáka",
@@ -3095,7 +3808,9 @@
   "mesto": "Jílové u Prahy",
   "lat": 49.882221,
   "lon": 14.483243,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Samovýčep pro dobré lidi",
@@ -3104,7 +3819,9 @@
   "mesto": "Vranov",
   "lat": 49.311006,
   "lon": 16.607483,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda Kačlehy",
@@ -3113,7 +3830,9 @@
   "mesto": "Kačlehy",
   "lat": 49.107385,
   "lon": 15.077135,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda U Taterů",
@@ -3122,7 +3841,9 @@
   "mesto": "Štěchovice",
   "lat": 49.850984,
   "lon": 14.405452,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Medová hospůdka",
@@ -3131,7 +3852,9 @@
   "mesto": "Chlum u Třeboně",
   "lat": 49.00597,
   "lon": 14.938152,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Restaurace U Lasíků",
@@ -3140,7 +3863,9 @@
   "mesto": "Únětice",
   "lat": 50.149524,
   "lon": 14.35984,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospoda U Kousala",
@@ -3149,7 +3874,9 @@
   "mesto": "Trutnov",
   "lat": 50.595391,
   "lon": 15.877429,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chalupa na Rozcestí",
@@ -3158,7 +3885,9 @@
   "mesto": "Pec pod Sněžkou",
   "lat": 50.70567,
   "lon": 15.67492,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Lesní hospůdka Na Skalce",
@@ -3167,7 +3896,9 @@
   "mesto": "Blíževedly",
   "lat": 50.587159,
   "lon": 14.414631,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Minipivovar Kronl",
@@ -3176,7 +3907,9 @@
   "mesto": "Mariánské Lázně",
   "lat": 49.958021,
   "lon": 12.702095,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hospůdka U Hada",
@@ -3185,7 +3918,9 @@
   "mesto": "Jáchymov",
   "lat": 50.375016,
   "lon": 12.911573,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Kopů",
@@ -3194,7 +3929,9 @@
   "mesto": "Nezamyslice",
   "lat": 49.263301,
   "lon": 13.672946,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Avalon - Keltská středověká krčma",
@@ -3203,7 +3940,9 @@
   "mesto": "Valtice",
   "lat": 48.741039,
   "lon": 16.754446,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Zmátlů",
@@ -3212,7 +3951,9 @@
   "mesto": "Nový Rychnov",
   "lat": 49.393885,
   "lon": 15.330129,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Hostinec U Tyšerů",
@@ -3221,7 +3962,9 @@
   "mesto": "Jívka",
   "lat": 50.588341,
   "lon": 16.087047,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna Anežka",
@@ -3230,7 +3973,9 @@
   "mesto": "Starý Jičín",
   "lat": 49.550443,
   "lon": 17.921735,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna s bistrem u Havířů",
@@ -3239,7 +3984,9 @@
   "mesto": "Brno",
   "lat": 49.276211,
   "lon": 16.6063,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vilémovo Pekařství & Koloniál",
@@ -3248,7 +3995,9 @@
   "mesto": "Poděbrady",
   "lat": 50.149277,
   "lon": 15.122029,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Frgály od Bohušky",
@@ -3257,7 +4006,9 @@
   "mesto": "Velké Karlovice",
   "lat": 49.358305,
   "lon": 18.279454,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "DYMÁK PEKÁRNA",
@@ -3266,7 +4017,9 @@
   "mesto": "Heřmanův Městec",
   "lat": 49.945061,
   "lon": 15.671269,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Srnková káva",
@@ -3275,7 +4028,9 @@
   "mesto": "Srní",
   "lat": 49.782655,
   "lon": 15.873284,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna Fialka",
@@ -3284,7 +4039,9 @@
   "mesto": "Sušice",
   "lat": 49.230361,
   "lon": 13.519304,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vendulčina pekárna",
@@ -3293,7 +4050,9 @@
   "mesto": "Václavovice",
   "lat": 49.749951,
   "lon": 18.378541,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "ChlebArt",
@@ -3302,7 +4061,9 @@
   "mesto": "Nová Bystřice",
   "lat": 49.018759,
   "lon": 15.104654,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Café & Bistro V Pekárně",
@@ -3311,7 +4072,9 @@
   "mesto": "Hradec Králové",
   "lat": 50.199872,
   "lon": 15.849465,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna Luníček",
@@ -3320,7 +4083,9 @@
   "mesto": "Černilov",
   "lat": 50.263283,
   "lon": 15.936505,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna na náměstí",
@@ -3329,7 +4094,9 @@
   "mesto": "Kašperské Hory",
   "lat": 49.143839,
   "lon": 13.554242,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Krchlebské koláče",
@@ -3338,7 +4105,9 @@
   "mesto": "Staňkov",
   "lat": 49.544772,
   "lon": 13.114228,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Haberská pekárna",
@@ -3347,7 +4116,9 @@
   "mesto": "Habry",
   "lat": 49.762753,
   "lon": 15.481977,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Global Wines & Spirits",
@@ -3356,7 +4127,9 @@
   "mesto": "Praha",
   "lat": 50.080371,
   "lon": 14.429501,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka STYLE",
@@ -3365,7 +4138,9 @@
   "mesto": "Ostrava",
   "lat": 49.835746,
   "lon": 18.287505,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinařství Jan Plaček",
@@ -3374,7 +4149,9 @@
   "mesto": "Moravské Bránice",
   "lat": 49.082982,
   "lon": 16.437608,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Víno Drábek",
@@ -3383,7 +4160,9 @@
   "mesto": "Čejkovice",
   "lat": 48.905169,
   "lon": 16.938695,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro U kostela & Vinotéka",
@@ -3392,7 +4171,9 @@
   "mesto": "Lukov",
   "lat": 50.602225,
   "lon": 14.368869,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dvorek jako víno",
@@ -3401,7 +4182,9 @@
   "mesto": "Bulhary",
   "lat": 48.830075,
   "lon": 16.751335,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka Vínovín",
@@ -3410,7 +4193,9 @@
   "mesto": "Znojmo",
   "lat": 48.855434,
   "lon": 16.048946,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka a vinárna Jezuitská",
@@ -3419,7 +4204,9 @@
   "mesto": "Znojmo",
   "lat": 48.858534,
   "lon": 16.047669,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Mini bistro - Vinotéka u Dušků",
@@ -3428,7 +4215,9 @@
   "mesto": "Suchdol nad Lužnicí",
   "lat": 48.88942,
   "lon": 14.876085,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka/Pivotéka v Podhájí",
@@ -3437,7 +4226,9 @@
   "mesto": "Jedovnice",
   "lat": 49.345283,
   "lon": 16.76111,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "CerFis Wines",
@@ -3446,7 +4237,9 @@
   "mesto": "Trutnov",
   "lat": 50.561643,
   "lon": 15.915158,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kafíno",
@@ -3455,7 +4248,9 @@
   "mesto": "Nové Město na Moravě",
   "lat": 49.56582,
   "lon": 16.076409,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka Adina",
@@ -3464,7 +4259,9 @@
   "mesto": "Mladá Boleslav",
   "lat": 50.411903,
   "lon": 14.923962,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna a kavárna U tří císařů",
@@ -3473,7 +4270,9 @@
   "mesto": "Slavkov u Brna",
   "lat": 49.152675,
   "lon": 16.877053,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrářství a pekařství Stáňa",
@@ -3482,7 +4281,9 @@
   "mesto": "Jíloviště",
   "lat": 49.927256,
   "lon": 14.341272,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kašša lahůdky",
@@ -3491,7 +4292,9 @@
   "mesto": "Kladno",
   "lat": 50.159501,
   "lon": 14.11461,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Potraviny Flop Straka",
@@ -3500,7 +4303,9 @@
   "mesto": "Kunžak",
   "lat": 49.120464,
   "lon": 15.189744,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bonté Gelaterie",
@@ -3509,7 +4314,9 @@
   "mesto": "Beroun",
   "lat": 49.964244,
   "lon": 14.075317,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Motorest pod Slunečnou",
@@ -3518,7 +4325,9 @@
   "mesto": "Dětřichov nad Bystřicí",
   "lat": 49.834403,
   "lon": 17.401939,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Karlov",
@@ -3527,7 +4336,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.947336,
   "lon": 15.276941,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Točená zmrzlina U Macha",
@@ -3536,7 +4347,9 @@
   "mesto": "Jaroměř",
   "lat": 50.337158,
   "lon": 15.897211,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "BUDKA",
@@ -3545,7 +4358,9 @@
   "mesto": "Dolní Čermná",
   "lat": 49.979076,
   "lon": 16.56459,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina z Rožmíku",
@@ -3554,7 +4369,9 @@
   "mesto": "Rožmitál pod Třemšínem",
   "lat": 49.602738,
   "lon": 13.863193,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Ruzyně",
@@ -3563,7 +4380,9 @@
   "mesto": "Praha",
   "lat": 50.084377,
   "lon": 14.309593,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Valchov",
@@ -3572,7 +4391,9 @@
   "mesto": "Valchov",
   "lat": 49.471801,
   "lon": 16.719276,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cukrárna U Borůvky",
@@ -3581,7 +4402,9 @@
   "mesto": "Praha",
   "lat": 50.098737,
   "lon": 14.398407,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlinárna Husova Crème de la Crème",
@@ -3590,7 +4413,9 @@
   "mesto": "Praha",
   "lat": 50.085706,
   "lon": 14.418297,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Zlín - Miroslav Mokroš",
@@ -3599,7 +4424,9 @@
   "mesto": "Zlín",
   "lat": 49.223266,
   "lon": 17.695156,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Srbsko",
@@ -3608,7 +4435,9 @@
   "mesto": "Kněžmost",
   "lat": 50.505738,
   "lon": 15.099558,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bistro u Strnada",
@@ -3617,7 +4446,9 @@
   "mesto": "Doksy",
   "lat": 50.567449,
   "lon": 14.65845,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina od Zrcadla",
@@ -3626,7 +4457,9 @@
   "mesto": "Březno",
   "lat": 50.402618,
   "lon": 13.423928,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "ICEKRAM",
@@ -3635,7 +4468,9 @@
   "mesto": "Náchod",
   "lat": 50.417229,
   "lon": 16.168539,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kiosek Ptáčci",
@@ -3644,7 +4479,9 @@
   "mesto": "Škrdlovice",
   "lat": 49.634355,
   "lon": 15.929204,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Agnes zmrzka",
@@ -3653,7 +4490,9 @@
   "mesto": "Brno",
   "lat": 49.250808,
   "lon": 16.581969,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zmrzlina Sedlec",
@@ -3662,7 +4501,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.965256,
   "lon": 15.291588,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kavárna a čajovna V Kaštanech",
@@ -3671,7 +4512,9 @@
   "mesto": "Dačice",
   "lat": 49.078213,
   "lon": 15.431812,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kavárna Nobilis Tilia",
@@ -3680,7 +4523,9 @@
   "mesto": "Krásná Lípa",
   "lat": 50.931888,
   "lon": 14.465061,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dobrá čajovna Kutná Hora",
@@ -3689,7 +4534,9 @@
   "mesto": "Kutná Hora",
   "lat": 49.948601,
   "lon": 15.267751,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Bezejmenná čajovna",
@@ -3698,7 +4545,9 @@
   "mesto": "Šťáhlavy",
   "lat": 49.667535,
   "lon": 13.524681,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Expediční klubovna Brno",
@@ -3707,7 +4556,9 @@
   "mesto": "Brno",
   "lat": 49.196792,
   "lon": 16.609342,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna Setkání",
@@ -3716,7 +4567,9 @@
   "mesto": "Praha",
   "lat": 50.077683,
   "lon": 14.415278,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajový obchod a Tao čajovna",
@@ -3725,7 +4578,9 @@
   "mesto": "Česká Lípa",
   "lat": 50.687455,
   "lon": 14.535417,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dobrá čajovna Brno",
@@ -3734,7 +4589,9 @@
   "mesto": "Brno",
   "lat": 49.192601,
   "lon": 16.611885,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dobrá Čajovna Tábor",
@@ -3743,7 +4600,9 @@
   "mesto": "Tábor",
   "lat": 49.413908,
   "lon": 14.666738,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna U zlatého kohouta",
@@ -3752,7 +4611,9 @@
   "mesto": "Praha",
   "lat": 50.084627,
   "lon": 14.419854,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna U Bílého draka",
@@ -3761,7 +4622,9 @@
   "mesto": "Hronov",
   "lat": 50.48079,
   "lon": 16.181097,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Moje Čajovna",
@@ -3770,7 +4633,9 @@
   "mesto": "Zlín",
   "lat": 49.224592,
   "lon": 17.675712,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Dobrá čajovna Náročného pijáka",
@@ -3779,7 +4644,9 @@
   "mesto": "Ostrava",
   "lat": 49.83488,
   "lon": 18.286939,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovnička - Jan Liška",
@@ -3788,7 +4655,9 @@
   "mesto": "Neratovice",
   "lat": 50.257699,
   "lon": 14.520795,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna u Pekla",
@@ -3797,7 +4666,9 @@
   "mesto": "Plzeň",
   "lat": 49.749119,
   "lon": 13.373384,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Nalitý Čaj",
@@ -3806,7 +4677,9 @@
   "mesto": "Brno",
   "lat": 49.178512,
   "lon": 16.595209,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Cha Dō",
@@ -3815,7 +4688,9 @@
   "mesto": "Brno",
   "lat": 49.192823,
   "lon": 16.609116,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna a klub Ulita",
@@ -3824,7 +4699,9 @@
   "mesto": "Blansko",
   "lat": 49.36161,
   "lon": 16.648567,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna Kašmír",
@@ -3833,7 +4710,9 @@
   "mesto": "Kadaň",
   "lat": 50.376913,
   "lon": 13.267848,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Čajovna U Džoudyho",
@@ -3842,7 +4721,9 @@
   "mesto": "Praha",
   "lat": 50.075741,
   "lon": 14.43142,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Chata Adélka & kavárna",
@@ -3851,7 +4732,9 @@
   "mesto": "Boží Dar",
   "lat": 50.411341,
   "lon": 12.922224,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekařství NIPPAN BAKERY",
@@ -3860,7 +4743,9 @@
   "mesto": "Praha",
   "lat": 50.026547,
   "lon": 14.367713,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekařství Pana Koláčka",
@@ -3869,7 +4754,9 @@
   "mesto": "Praha",
   "lat": 50.125636,
   "lon": 14.506008,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekařství Towers Café",
@@ -3878,7 +4765,9 @@
   "mesto": "Praha",
   "lat": 50.040171,
   "lon": 14.335764,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekárna Pec nám spadla",
@@ -3887,7 +4776,9 @@
   "mesto": "Praha",
   "lat": 50.124986,
   "lon": 14.503002,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Pekařství U Dolského potoka",
@@ -3896,7 +4787,9 @@
   "mesto": "Špindlerův Mlýn",
   "lat": 50.724926,
   "lon": 15.609131,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Obchod vínem Podskalí",
@@ -3905,7 +4798,9 @@
   "mesto": "Praha",
   "lat": 50.069421,
   "lon": 14.415406,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinařství Vladimír Tetur - Vinotéka",
@@ -3914,7 +4809,9 @@
   "mesto": "Velké Bílovice",
   "lat": 48.849388,
   "lon": 16.892052,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinotéka v Zámecké bráně",
@@ -3923,7 +4820,9 @@
   "mesto": "Valtice",
   "lat": 48.740879,
   "lon": 16.756128,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Winebar Telč",
@@ -3932,7 +4831,9 @@
   "mesto": "Telč",
   "lat": 49.183046,
   "lon": 15.454181,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Vinoterie",
@@ -3941,7 +4842,9 @@
   "mesto": "Svitavy",
   "lat": 49.757488,
   "lon": 16.464078,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Eldorádo pivnice",
@@ -3950,7 +4853,9 @@
   "mesto": "Olomouc",
   "lat": 49.598571,
   "lon": 17.252164,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "malý pivo",
@@ -3959,7 +4864,9 @@
   "mesto": "Praha",
   "lat": 50.072657,
   "lon": 14.48561,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Kurnik Šopa Hospoda",
@@ -3968,7 +4875,9 @@
   "mesto": "Ostrava",
   "lat": 49.838795,
   "lon": 18.162974,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Poctivej Výčep",
@@ -3977,7 +4886,9 @@
   "mesto": "Praha",
   "lat": 50.12617,
   "lon": 14.447565,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Ruelto Café",
@@ -3986,7 +4897,9 @@
   "mesto": "Praha",
   "lat": 50.068775,
   "lon": 14.406379,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Aida Balkan market",
@@ -3995,7 +4908,9 @@
   "mesto": "Praha",
   "lat": 50.071166,
   "lon": 14.383018,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "FRYENDS & pivovar Netopýrka",
@@ -4004,7 +4919,9 @@
   "mesto": "Brno",
   "lat": 49.19727,
   "lon": 16.605134,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Mexicali Mercado",
@@ -4013,7 +4930,9 @@
   "mesto": "Praha",
   "lat": 50.106043,
   "lon": 14.491737,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "OVOCNÝ SVĚTOZOR",
@@ -4022,7 +4941,9 @@
   "mesto": "Praha",
   "lat": 50.044012,
   "lon": 14.455959,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví a uzenářství Mareček",
@@ -4031,7 +4952,9 @@
   "mesto": "Želiv",
   "lat": 49.529582,
   "lon": 15.221625,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Patrik",
@@ -4040,7 +4963,9 @@
   "mesto": "Jistebník",
   "lat": 49.745881,
   "lon": 18.132631,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Touškovské řeznictví a uzenářství",
@@ -4049,7 +4974,9 @@
   "mesto": "Město Touškov",
   "lat": 49.776715,
   "lon": 13.250586,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Josefovská uzenina",
@@ -4058,7 +4985,9 @@
   "mesto": "Jaroměř",
   "lat": 50.337821,
   "lon": 15.931159,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví a bistro u Waldy",
@@ -4067,7 +4996,9 @@
   "mesto": "Verneřice",
   "lat": 50.661371,
   "lon": 14.300878,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Prostě MASO",
@@ -4076,7 +5007,9 @@
   "mesto": "Olbramovice",
   "lat": 49.660003,
   "lon": 14.608983,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví & bistro - Jaroslav Durček",
@@ -4085,7 +5018,9 @@
   "mesto": "Litoměřice",
   "lat": 50.537731,
   "lon": 14.12815,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Maso - závod Hovorany",
@@ -4094,7 +5029,9 @@
   "mesto": "Hovorany",
   "lat": 48.941678,
   "lon": 16.987218,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví - uzenářství U Pozdníků",
@@ -4103,7 +5040,9 @@
   "mesto": "Nové Dvory",
   "lat": 49.97138,
   "lon": 15.326215,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví U Petra",
@@ -4112,7 +5051,9 @@
   "mesto": "Uherský Brod",
   "lat": 49.021887,
   "lon": 17.6443,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "MAJER - ŘEZNICTVÍ A UZENÁŘSTVÍ",
@@ -4121,7 +5062,9 @@
   "mesto": "Třemošná",
   "lat": 49.816094,
   "lon": 13.395259,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Domacihovezi.cz - Masomat",
@@ -4130,7 +5073,9 @@
   "mesto": "Borotice",
   "lat": 49.732231,
   "lon": 14.327134,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Jakl",
@@ -4139,7 +5084,9 @@
   "mesto": "Broumov",
   "lat": 50.584691,
   "lon": 16.332198,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Šindelová",
@@ -4148,7 +5095,9 @@
   "mesto": "Šindelová",
   "lat": 50.318759,
   "lon": 12.602806,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Koudelka",
@@ -4157,7 +5106,9 @@
   "mesto": "Střelské Hoštice",
   "lat": 49.297084,
   "lon": 13.755897,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Zbyněk Solnař",
@@ -4166,7 +5117,9 @@
   "mesto": "Hostomice",
   "lat": 50.587436,
   "lon": 13.808075,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "ŘEZNICTVÍ SLOUPNICE",
@@ -4175,7 +5128,9 @@
   "mesto": "Česká Třebová",
   "lat": 49.905879,
   "lon": 16.443757,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví-uzenařství Jůza",
@@ -4184,7 +5139,9 @@
   "mesto": "Čebín",
   "lat": 49.313624,
   "lon": 16.47881,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  },
  {
   "nazev": "Řeznictví Uzenářství Marek Aron",
@@ -4193,6 +5150,8 @@
   "mesto": "Praha",
   "lat": 50.090369,
   "lon": 14.434938,
-  "uroven": "vyber_ck"
+  "oceneni": [
+   "vyber_ck"
+  ]
  }
 ]

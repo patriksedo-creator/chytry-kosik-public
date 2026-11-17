@@ -253,6 +253,11 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       try{ map.setPaintProperty(id,'text-halo-width', c.street?1.8:2.2); }catch(e){}
       try{ map.setPaintProperty(id,'text-halo-blur', 0.4); }catch(e){}
     });
+    // ceske nazvy statu a admin. celku (Czechia -> Česko, Slovakia -> Slovensko) - jen lokalizace textu, vzhled vrstvy beze zmeny
+    ['place_country_major','place_country_minor','place_country_other','place_state','place_continent'].forEach(function(id){
+      if(!map.getLayer(id)) return;
+      try{ map.setLayoutProperty(id,'text-field',['coalesce',['get','name:cs'],['get','name:latin'],['get','name']]); }catch(e){}
+    });
   }
 
   // ---- data + body ----
@@ -315,7 +320,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   var VT_PRESENT = [], VU_PRESENT = [];
   function initVenueFilters(){
     var ts={}, us={};
-    ALLV.forEach(function(v){ ts[v.typ]=1; us[v.uroven||'vyber_ck']=1; });
+    ALLV.forEach(function(v){ ts[v.typ]=1; (v.oceneni&&v.oceneni.length?v.oceneni:['vyber_ck']).forEach(function(a){ us[a]=1; }); });
     VT_PRESENT = VT_ORDER.filter(function(t){ return ts[t]; });
     VU_PRESENT = VU_ORDER.filter(function(u){ return us[u]; });
     var svt=null, svu=null;
@@ -334,20 +339,24 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
         properties:{nazev:s.nazev, retezec:s.retezec, adresa:s.adresa||'', color:COLORS[s.retezec]||'#2de2e6', ini:(s.retezec||'?').charAt(0)}};
     })};
   }
+  function ocOf(v){ return (v.oceneni && v.oceneni.length) ? v.oceneni.slice().sort() : ['vyber_ck']; }
   function venuesFC(){
-    return {type:'FeatureCollection', features:ALLV.filter(function(v){ return activeVT[v.typ] && activeVU[v.uroven||'vyber_ck'] && !(activeStezka && v.stezka===activeStezka); }).map(function(v){
-      var u=v.uroven||'vyber_ck';
+    return {type:'FeatureCollection', features:ALLV.filter(function(v){
+      return activeVT[v.typ] && ocOf(v).some(function(a){ return activeVU[a]; }) && !(activeStezka && v.stezka===activeStezka);
+    }).map(function(v){
+      var oc=ocOf(v), rep=oc[0], graded=oc.some(function(a){ return a!=='vyber_ck'; })?1:0;
       return {type:'Feature', geometry:{type:'Point', coordinates:[v.lon,v.lat]},
-        properties:{nazev:v.nazev, typ:v.typ, uroven:u, adresa:v.adresa||'',
-          color:VT_COLOR[v.typ]||'#2de2e6', ring:VU_COLOR[u]||'#ffffff', ini:VT_INI[v.typ]||'•'}};
+        properties:{nazev:v.nazev, typ:v.typ, oceneni:oc.join(','), graded:graded, adresa:v.adresa||'',
+          color:VT_COLOR[v.typ]||'#2de2e6', ring:VU_COLOR[rep]||'#ffffff', ini:VT_INI[v.typ]||'•'}};
     })};
   }
   function popupVenueHtml(v){
     var color = VT_COLOR[v.typ]||'#2de2e6';
-    var u = v.uroven||'vyber_ck';
-    var badge = '<span class="badge" style="border-color:'+VU_COLOR[u]+';color:'+VU_COLOR[u]+'">'+VU_SHORT[u]+'</span>';
+    var oc = Array.isArray(v.oceneni) ? v.oceneni.slice() : (v.oceneni ? String(v.oceneni).split(',') : ['vyber_ck']);
+    oc.sort(); // pevne neutralni poradi (abecedni), Michelin neni prvni
+    var badges = oc.map(function(a){ return '<span class="badge" style="border-color:'+VU_COLOR[a]+';color:'+VU_COLOR[a]+'">'+VU_SHORT[a]+'</span>'; }).join(' ');
     return '<div class="pop-venue" style="color:'+color+'">'+v.nazev+'</div>'+
-      '<div class="pop-meta">'+(VT_LABEL[v.typ]||'')+' '+badge+'</div>'+
+      '<div class="pop-meta">'+(VT_LABEL[v.typ]||'')+' '+badges+'</div>'+
       (v.adresa?'<div class="pop-addr">'+v.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
       '<div class="times"><div class="trow"><span class="muted">Medailonek a časy přidáme brzy.</span></div></div>';
   }
@@ -430,7 +439,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     map.addLayer({id:'v-points', type:'circle', source:'venues', filter:['!',['has','point_count']], paint:{
       'circle-color':['get','color'], 'circle-radius':8,
       'circle-stroke-color':['get','ring'],
-      'circle-stroke-width':['case',['==',['get','uroven'],'vyber_ck'],1.6,3.2],
+      'circle-stroke-width':['case',['==',['get','graded'],0],1.6,3.2],
       'circle-stroke-opacity':0.95
     }});
     map.addLayer({id:'v-pt-label', type:'symbol', source:'venues', filter:['!',['has','point_count']], layout:{
@@ -451,7 +460,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     });
     map.on('click','v-points',function(e){
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
-      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, uroven:p.uroven, adresa:p.adresa})).addTo(map);
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa})).addTo(map);
     });
     ['v-clusters','v-points'].forEach(function(id){
       map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
