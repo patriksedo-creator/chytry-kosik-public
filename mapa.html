@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chytrý košík: mapa prodejen (pilot)</title>
+<meta name="description" content="Chytrý košík. Pilot mapy.">
+<meta name="theme-color" content="#120726">
+<link rel="icon" href="/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;1,800;1,900&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{--pink:#FF2E97;--cyan:#2de2e6;--lime:#c8e84b;--ink:#0b0318}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#120726;color:#fff;font-family:'Barlow Semi Condensed','Arial Narrow',Arial,sans-serif;font-size:17px;line-height:1.5;display:flex;flex-direction:column;min-height:100vh}
+header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 20px;background:linear-gradient(180deg,#1b0b4a,#120726);border-bottom:2px solid var(--pink);box-shadow:0 2px 24px rgba(255,46,151,.4)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:38px;height:38px;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,.4))}
+.brand span{font-family:'Yellowtail',cursive;font-size:30px;color:#fff0f8;text-shadow:0 0 6px var(--pink),0 0 18px var(--pink)}
+.tag{font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.spacer{flex:1 1 auto}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:40px;padding:0 16px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#fff;font:600 15px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;transition:background .2s,box-shadow .2s}
+.chip:hover{box-shadow:0 0 16px var(--cyan)}
+.chip.on{background:var(--cyan);color:#150628}
+.chip:disabled{opacity:.4;cursor:not-allowed;border-color:#5a5a6e;box-shadow:none}
+.locbtn{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--lime);color:#150628;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.locbtn:hover{box-shadow:0 0 22px var(--lime)}
+#map{flex:1 1 auto;min-height:420px;background:#0b0318}
+/* GTA neon nadech na tmave dlazdice */
+.leaflet-tile-pane{filter:hue-rotate(230deg) saturate(1.55) contrast(1.12) brightness(1.04)}
+.leaflet-container{background:#0b0318;font-family:inherit}
+/* neonovy spendlik */
+.pin{position:relative;width:30px;height:30px;transform:translateY(-4px)}
+.pin .dot{position:absolute;inset:0;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ink);border:2px solid var(--cyan);box-shadow:0 0 10px var(--cyan),0 0 2px #fff;display:flex;align-items:center;justify-content:center}
+.pin svg{transform:rotate(45deg);width:15px;height:15px}
+.leaflet-popup-content-wrapper{background:#160a33;color:#fff;border:2px solid var(--pink);box-shadow:0 0 26px rgba(255,46,151,.5);border-radius:14px}
+.leaflet-popup-tip{background:#160a33;border:2px solid var(--pink)}
+.leaflet-popup-content{margin:14px 16px;font-size:15px}
+.pop-name{font-weight:800;font-style:italic;font-size:18px;text-transform:uppercase;color:#fff}
+.pop-addr{color:#cbb9ef;font-size:13px;margin:2px 0 10px}
+.times{display:flex;flex-direction:column;gap:6px}
+.trow{display:flex;align-items:center;gap:8px}
+.trow b{display:inline-flex;align-items:center;gap:6px;min-width:66px;color:#eaffff}
+.trow .v{font-weight:600}
+.muted{color:#9f8fc4}
+.leaflet-control-attribution{background:rgba(11,3,24,.7)!important;color:#b9a9e0!important}
+.leaflet-control-attribution a{color:var(--lime)!important}
+@media (max-width:620px){.tag{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#"><img src="/img/logo-mark.png" alt="Chytrý košík"><span>Chytrý košík</span></a>
+  <span class="tag">Mapa · pilot Praha</span>
+  <span class="spacer"></span>
+  <div class="chips">
+    <button type="button" class="chip on" data-filter="vse">Vše</button>
+    <button type="button" class="chip" data-filter="obchody">Obchody</button>
+    <button type="button" class="chip" disabled title="Přidáme později">Podniky</button>
+  </div>
+  <button type="button" class="locbtn" id="locbtn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+    Moje poloha
+  </button>
+</header>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  var PRAHA = [50.0755, 14.4378];
+  var map = L.map('map', {zoomControl:true}).setView(PRAHA, 12);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 20, subdomains:'abcd',
+    attribution: '&copy; OpenStreetMap, &copy; CARTO | prodejny: OpenStreetMap (ODbL)'
+  }).addTo(map);
+
+  var storeIcon = L.divIcon({
+    className:'', iconSize:[30,30], iconAnchor:[15,30], popupAnchor:[0,-28],
+    html:'<div class="pin"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#2de2e6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 12h10L20 7H6"></path><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle></svg></div></div>'
+  });
+
+  var userLoc = null, userMarker = null;
+  var markers = [];
+
+  function fmtMin(sec){ if(sec==null) return null; var m=Math.round(sec/60); return m<1?'<1 min':m+' min'; }
+
+  function route(profilePath, prof, a, b){
+    // a,b = [lat,lon]; FOSSGIS verejny OSRM
+    var url='https://routing.openstreetmap.de/'+profilePath+'/route/v1/'+prof+'/'+a[1]+','+a[0]+';'+b[1]+','+b[0]+'?overview=false';
+    return fetch(url).then(function(r){return r.json();}).then(function(j){
+      if(j && j.routes && j.routes[0]) return j.routes[0].duration;
+      return null;
+    }).catch(function(){return null;});
+  }
+
+  function popupHtml(s){
+    return '<div class="pop-name">'+s.nazev+'</div>'+
+      (s.adresa?'<div class="pop-addr">'+s.adresa+'</div>':'<div class="pop-addr muted">'+s.retezec+'</div>')+
+      '<div class="times">'+
+        '<div class="trow"><b>🚶 Pěšky</b><span class="v" data-foot>—</span></div>'+
+        '<div class="trow"><b>🚗 Autem</b><span class="v" data-car>—</span></div>'+
+        '<div class="trow"><b>🚌 MHD</b><span class="v muted">brzy</span></div>'+
+      '</div>';
+  }
+
+  function fillTimes(s, popupEl){
+    var footEl = popupEl.querySelector('[data-foot]');
+    var carEl  = popupEl.querySelector('[data-car]');
+    if(!userLoc){
+      if(footEl) footEl.innerHTML='<span class="muted">zapni Moje poloha</span>';
+      if(carEl)  carEl.innerHTML='<span class="muted">zapni Moje poloha</span>';
+      return;
+    }
+    if(footEl) footEl.textContent='…';
+    if(carEl)  carEl.textContent='…';
+    var dest=[s.lat,s.lon];
+    route('routed-foot','foot',userLoc,dest).then(function(d){ if(footEl) footEl.textContent=fmtMin(d)||'nedostupné'; });
+    route('routed-car','driving',userLoc,dest).then(function(d){ if(carEl) carEl.textContent=fmtMin(d)||'nedostupné'; });
+  }
+
+  function addStores(list){
+    list.forEach(function(s){
+      var m=L.marker([s.lat,s.lon],{icon:storeIcon});
+      m.storeData=s;
+      m.bindPopup(function(){return popupHtml(s);});
+      m.on('popupopen', function(ev){ fillTimes(s, ev.popup.getElement()); });
+      m.addTo(map); markers.push(m);
+    });
+  }
+
+  fetch('/data/mapa/prodejny_praha.json').then(function(r){return r.json();}).then(function(list){
+    addStores(list);
+    if(markers.length){
+      var g=L.featureGroup(markers);
+      map.fitBounds(g.getBounds().pad(0.08));
+    }
+  }).catch(function(e){ console.error('prodejny load error', e); });
+
+  // Moje poloha
+  var locIcon=L.divIcon({className:'',iconSize:[18,18],iconAnchor:[9,9],
+    html:'<div style="width:18px;height:18px;border-radius:50%;background:#c8e84b;box-shadow:0 0 0 3px #0d0626,0 0 16px #c8e84b"></div>'});
+  document.getElementById('locbtn').addEventListener('click', function(){
+    if(!navigator.geolocation){ map.setView(PRAHA,12); return; }
+    navigator.geolocation.getCurrentPosition(function(pos){
+      userLoc=[pos.coords.latitude,pos.coords.longitude];
+      if(userMarker) map.removeLayer(userMarker);
+      userMarker=L.marker(userLoc,{icon:locIcon,zIndexOffset:1000}).addTo(map).bindTooltip('Jsi tady');
+      map.setView(userLoc,13);
+    }, function(){ // odmitnuto / chyba -> default Praha
+      map.setView(PRAHA,12);
+    }, {enableHighAccuracy:true, timeout:8000});
+  });
+
+  // filtr chips (Vse / Obchody prozatim stejne; Podniky disabled)
+  document.querySelectorAll('.chip[data-filter]').forEach(function(c){
+    c.addEventListener('click', function(){
+      document.querySelectorAll('.chip[data-filter]').forEach(function(o){o.classList.toggle('on',o===c);});
+    });
+  });
+})();
+</script>
+</body>
+</html>
