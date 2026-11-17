@@ -256,7 +256,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     var color = COLORS[s.retezec]||'#2de2e6';
     var store = (s.nazev && s.nazev!==s.retezec) ? '<div class="pop-store">'+s.nazev+'</div>' : '';
     return '<div class="pop-chain" style="color:'+color+'">'+s.retezec+'</div>'+ store +
-      (s.adresa?'<div class="pop-addr">'+s.adresa+'</div>':'<div class="pop-addr muted">Praha</div>')+
+      (s.adresa?'<div class="pop-addr">'+s.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
       '<div class="times">'+
         '<div class="trow"><b>🚶 Pěšky</b><span class="v" data-foot>—</span></div>'+
         '<div class="trow"><b>🚗 Autem</b><span class="v" data-car>—</span></div>'+
@@ -331,7 +331,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     var badge = '<span class="badge" style="border-color:'+VU_COLOR[u]+';color:'+VU_COLOR[u]+'">'+VU_SHORT[u]+'</span>';
     return '<div class="pop-venue" style="color:'+color+'">'+v.nazev+'</div>'+
       '<div class="pop-meta">'+(VT_LABEL[v.typ]||'')+' '+badge+'</div>'+
-      (v.adresa?'<div class="pop-addr">'+v.adresa+'</div>':'<div class="pop-addr muted">Praha</div>')+
+      (v.adresa?'<div class="pop-addr">'+v.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
       '<div class="times"><div class="trow"><span class="muted">Medailonek a časy přidáme brzy.</span></div></div>';
   }
 
@@ -472,7 +472,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     applyNeon();
     applyLabels();
     Promise.all([
-      fetch('/data/mapa/prodejny_praha.json').then(function(r){return r.json();}).catch(function(){return [];}),
+      fetch('/data/mapa/prodejny.json').then(function(r){return r.json();}).catch(function(){return [];}),
       fetch('/data/mapa/podniky.json').then(function(r){return r.json();}).catch(function(){return [];})
     ]).then(function(res){
       ALL = res[0]||[]; ALLV = res[1]||[];
