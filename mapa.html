@@ -99,7 +99,18 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .pcap{padding:8px 12px 2px;font:800 12px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9fe9ec}
 .legcap{margin:6px 0 2px;font:800 11px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#9fe9ec}
 .legend .d.ring,.panel .d.ring{background:transparent!important}
-@media (max-width:620px){.tag{display:none}.legend{bottom:12px;left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}}
+/* pivni stezky: selektor tras + info box (zvlastni zelena, GTA neon) */
+#stezky{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:640;display:none;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;max-width:74vw;padding:6px 10px;background:rgba(18,8,46,.9);border:2px solid #8cff3a;border-radius:999px;box-shadow:0 0 18px rgba(140,255,58,.35)}
+#stezky.open{display:flex}
+#stezky .stz-cap{font:800 13px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#bfffa0}
+#stezky .stz{min-height:34px;padding:0 13px;border-radius:999px;border:2px solid #8cff3a;background:#102a0c;color:#daffc8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer}
+#stezky .stz.on{background:#8cff3a;color:#0b2206}
+#stezky .stz:hover{box-shadow:0 0 14px rgba(140,255,58,.6)}
+#stezka-info{position:absolute;left:50%;top:62px;transform:translateX(-50%);z-index:640;display:none;flex-direction:column;align-items:center;gap:2px;padding:8px 16px;background:rgba(14,6,36,.92);border:1.5px solid #8cff3a;border-radius:12px;box-shadow:0 0 18px rgba(140,255,58,.3);text-align:center;max-width:80vw}
+#stezka-info.open{display:flex}
+#stezka-info b{font:900 16px 'Barlow Semi Condensed',Arial,sans-serif;font-style:italic;color:#aaff85;text-shadow:0 0 10px rgba(140,255,58,.5)}
+#stezka-info span{font-size:13px;color:#dfeee0}
+@media (max-width:620px){.tag{display:none}.legend{bottom:12px;left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}#stezky{top:60px;max-width:94vw}#stezka-info{top:108px}}
 </style>
 </head>
 <body>
@@ -148,6 +159,10 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 
   <!-- Legenda: barva = retezec -->
   <div class="legend"><h4>Řetězce</h4><div id="legendrows"></div></div>
+
+  <!-- Pivni stezky: selektor tras (jen rezim Podniky) + info o trase -->
+  <div id="stezky"></div>
+  <div id="stezka-info"></div>
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
@@ -292,6 +307,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   var VU_COLOR = {michelin:'#ffd700', gault:'#e5e4e2', bib:'#cd7f32', vyber_ck:'#ffffff', pivni_stezka:'#58c93a'}; // prstenec/odznak
   var VU_ORDER = ['michelin','gault','bib','vyber_ck','pivni_stezka'];
   var LS_VT = 'ck_mapa_podniky_typ', LS_VU = 'ck_mapa_podniky_uroven';
+  var ROUTE_COLOR = '#8cff3a'; // trasa pivni stezky (vazba na uroven Pivni stezka, odlisna od silnic a bodu)
+  var STEZKY = [], STEZKA_BY_KEY = {}, activeStezka = null;
 
   // aktivni mnoziny (naplni se z dat po nacteni; default vse zaskrtnuto)
   var activeVT = {}, activeVU = {};
@@ -318,7 +335,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     })};
   }
   function venuesFC(){
-    return {type:'FeatureCollection', features:ALLV.filter(function(v){ return activeVT[v.typ] && activeVU[v.uroven||'vyber_ck']; }).map(function(v){
+    return {type:'FeatureCollection', features:ALLV.filter(function(v){ return activeVT[v.typ] && activeVU[v.uroven||'vyber_ck'] && !(activeStezka && v.stezka===activeStezka); }).map(function(v){
       var u=v.uroven||'vyber_ck';
       return {type:'Feature', geometry:{type:'Point', coordinates:[v.lon,v.lat]},
         properties:{nazev:v.nazev, typ:v.typ, uroven:u, adresa:v.adresa||'',
@@ -442,6 +459,76 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     });
   }
 
+  // ======== Pivni stezky jako trasy (predpocitane OSRM v stezky.json) ========
+  var STEZKA_LAYERS=['stezka-line-glow','stezka-line','stezka-stop-glow','stezka-stop','stezka-stop-num'];
+  function stezkaFC(s){
+    if(!s) return {type:'FeatureCollection', features:[]};
+    var feats=[{type:'Feature', geometry:s.geometry, properties:{kind:'line'}}];
+    (s.stops||[]).forEach(function(st){ feats.push({type:'Feature', geometry:{type:'Point', coordinates:[st.lon,st.lat]}, properties:{kind:'stop', n:String(st.n), nazev:st.nazev}}); });
+    return {type:'FeatureCollection', features:feats};
+  }
+  function addStezkaLayers(){
+    map.addSource('stezka', {type:'geojson', data:stezkaFC(null)});
+    map.addLayer({id:'stezka-line-glow', type:'line', source:'stezka', filter:['==',['get','kind'],'line'],
+      layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':ROUTE_COLOR, 'line-width':['interpolate',['linear'],['zoom'],8,6,16,16], 'line-blur':4, 'line-opacity':0.4}});
+    map.addLayer({id:'stezka-line', type:'line', source:'stezka', filter:['==',['get','kind'],'line'],
+      layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':ROUTE_COLOR, 'line-width':['interpolate',['linear'],['zoom'],8,2.5,16,6], 'line-opacity':0.98}});
+    map.addLayer({id:'stezka-stop-glow', type:'circle', source:'stezka', filter:['==',['get','kind'],'stop'],
+      paint:{'circle-color':ROUTE_COLOR, 'circle-radius':15, 'circle-blur':1, 'circle-opacity':0.5}});
+    map.addLayer({id:'stezka-stop', type:'circle', source:'stezka', filter:['==',['get','kind'],'stop'],
+      paint:{'circle-color':ROUTE_COLOR, 'circle-radius':12, 'circle-stroke-width':2, 'circle-stroke-color':'#0b0318', 'circle-stroke-opacity':0.9}});
+    map.addLayer({id:'stezka-stop-num', type:'symbol', source:'stezka', filter:['==',['get','kind'],'stop'],
+      layout:{'text-field':['get','n'], 'text-font':['Noto Sans Bold'], 'text-size':13, 'text-allow-overlap':true},
+      paint:{'text-color':'#0b2206'}});
+    map.on('click','stezka-stop',function(e){
+      var p=e.features[0].properties, c=e.features[0].geometry.coordinates.slice();
+      new maplibregl.Popup({offset:14, maxWidth:'260px'}).setLngLat(c).setHTML('<div class="pop-venue" style="color:'+ROUTE_COLOR+'">'+p.n+'. '+p.nazev+'</div>').addTo(map);
+    });
+    map.on('mouseenter','stezka-stop',function(){ map.getCanvas().style.cursor='pointer'; });
+    map.on('mouseleave','stezka-stop',function(){ map.getCanvas().style.cursor=''; });
+  }
+  function renderStezkaInfo(s){
+    var box=document.getElementById('stezka-info');
+    if(!box) return;
+    if(!s){ box.classList.remove('open'); box.innerHTML=''; return; }
+    var icon = s.profile==='foot' ? '🚶 pěšky' : '🚗 autem';
+    box.innerHTML='<b>'+s.name+'</b><span>'+icon+' · '+String(s.distance_km).replace('.',',')+' km · '+s.duration_min+' min · '+(s.stops||[]).length+' zastávek</span>';
+    box.classList.add('open');
+  }
+  function buildStezkaChips(){
+    var bar=document.getElementById('stezky'); if(!bar) return;
+    bar.innerHTML='';
+    if(mode!=='podniky' || !STEZKY.length){ bar.classList.remove('open'); return; }
+    bar.classList.add('open');
+    var cap=document.createElement('span'); cap.className='stz-cap'; cap.textContent='Pivní stezky:'; bar.appendChild(cap);
+    STEZKY.forEach(function(s){
+      var btn=document.createElement('button'); btn.type='button';
+      btn.className='stz'+(activeStezka===s.key?' on':'');
+      btn.textContent=s.name;
+      btn.addEventListener('click',function(){ activeStezka===s.key ? clearStezka() : selectStezka(s.key); });
+      bar.appendChild(btn);
+    });
+  }
+  function selectStezka(key){
+    var s=STEZKA_BY_KEY[key]; if(!s) return;
+    activeStezka=key;
+    var src=map.getSource('stezka'); if(src) src.setData(stezkaFC(s));
+    var v=map.getSource('venues'); if(v) v.setData(venuesFC()); // rozklastruj: odeber body teto stezky z clusteru
+    renderStezkaInfo(s); buildStezkaChips();
+    var b=new maplibregl.LngLatBounds();
+    (s.geometry.coordinates||[]).forEach(function(c){ b.extend(c); });
+    (s.stops||[]).forEach(function(st){ b.extend([st.lon,st.lat]); });
+    try{ map.fitBounds(b, {padding:70, maxZoom:14, duration:600}); }catch(e){}
+  }
+  function clearStezka(){
+    activeStezka=null;
+    var src=map.getSource('stezka'); if(src) src.setData(stezkaFC(null));
+    var v=map.getSource('venues'); if(v) v.setData(venuesFC());
+    renderStezkaInfo(null); buildStezkaChips();
+  }
+
   var STORE_LAYERS=['cluster-glow','clusters','cluster-count','pt-glow','points','pt-label','pt-name'];
   var VENUE_LAYERS=['v-cluster-glow','v-clusters','v-cluster-count','v-pt-glow','v-points','v-pt-label','v-pt-name'];
   function boundsOf(list){
@@ -462,9 +549,11 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     mode=m;
     STORE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='obchody'?'visible':'none'); });
     VENUE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='podniky'?'visible':'none'); });
+    if(m!=='podniky' && activeStezka) clearStezka();
+    STEZKA_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='podniky'?'visible':'none'); });
     document.getElementById('modeObchody').classList.toggle('on', m==='obchody');
     document.getElementById('modePodniky').classList.toggle('on', m==='podniky');
-    buildLegend(); buildPanel();
+    buildLegend(); buildPanel(); buildStezkaChips();
     fitMode(animate!==false);
   }
 
@@ -473,11 +562,14 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     applyLabels();
     Promise.all([
       fetch('/data/mapa/prodejny.json').then(function(r){return r.json();}).catch(function(){return [];}),
-      fetch('/data/mapa/podniky.json').then(function(r){return r.json();}).catch(function(){return [];})
+      fetch('/data/mapa/podniky.json').then(function(r){return r.json();}).catch(function(){return [];}),
+      fetch('/data/mapa/stezky.json').then(function(r){return r.json();}).catch(function(){return {stezky:[]};})
     ]).then(function(res){
       ALL = res[0]||[]; ALLV = res[1]||[];
+      STEZKY = (res[2] && res[2].stezky) || [];
+      STEZKY.forEach(function(s){ STEZKA_BY_KEY[s.key]=s; });
       initVenueFilters();
-      addStoreLayers(); addVenueLayers();
+      addStoreLayers(); addVenueLayers(); addStezkaLayers();
       setMode('obchody', false);
     }).catch(function(e){ console.error('data load error', e); });
   });
