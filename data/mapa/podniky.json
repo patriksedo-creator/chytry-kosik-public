@@ -9531,5 +9531,269 @@
   "oceneni": [
    "vyber_ck"
   ]
+ },
+ {
+  "nazev": "Na Návsi",
+  "typ": "restaurace",
+  "adresa": "Brněnská 53, Říčany u Brna",
+  "mesto": "Říčany u Brna",
+  "lat": 49.214529,
+  "lon": 16.394631,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Na Farmě",
+  "typ": "restaurace",
+  "adresa": "Chotovice 134, Žehuň",
+  "mesto": "Žehuň",
+  "lat": 50.140627,
+  "lon": 15.326672,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Dvůr Seletice",
+  "typ": "restaurace",
+  "adresa": "Seletice 160, Roždalovice",
+  "mesto": "Roždalovice",
+  "lat": 50.317739,
+  "lon": 15.10073,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Piano Nobile, Chateau Mcely",
+  "typ": "restaurace",
+  "adresa": "Mcely 61, Mcely",
+  "mesto": "Mcely",
+  "lat": 50.299482,
+  "lon": 15.077341,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Zikmundov",
+  "typ": "restaurace",
+  "adresa": "Staré Hutě 93, Staré Hutě",
+  "mesto": "Staré Hutě",
+  "lat": 49.131007,
+  "lon": 17.292686,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "PePe bakery & coffee",
+  "typ": "pekarna",
+  "adresa": "Ostravice 352, Ostravice",
+  "mesto": "Ostravice",
+  "lat": 49.548676,
+  "lon": 18.381214,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Cøkafe Centrum",
+  "typ": "kavarna",
+  "adresa": "Nádražní 26, Ostrava 1",
+  "mesto": "Ostrava 1",
+  "lat": 49.8367,
+  "lon": 18.2862,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Baroque",
+  "typ": "restaurace",
+  "adresa": "Kuks 57, Kuks",
+  "mesto": "Kuks",
+  "lat": 50.40093,
+  "lon": 15.889885,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Komár kafe",
+  "typ": "kavarna",
+  "adresa": "Kounicova 58/85, 602 00 Brno",
+  "mesto": "Brno",
+  "lat": 49.212079,
+  "lon": 16.592403,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Srdcovka",
+  "typ": "kavarna",
+  "adresa": "Závodní 369, 360 06 Karlovy Vary",
+  "mesto": "Karlovy Vary",
+  "lat": 50.217626,
+  "lon": 12.82676,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Sezóna",
+  "typ": "kavarna",
+  "adresa": "Husova 103/26, 274 01 Slaný",
+  "mesto": "Slaný",
+  "lat": 50.23131,
+  "lon": 14.084385,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Kavárna Pod pavlačí",
+  "typ": "kavarna",
+  "adresa": "Bílenecké náměstí 15/11, 184 00 Praha 8",
+  "mesto": "Dolní Chabry",
+  "lat": 50.149318,
+  "lon": 14.443568,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Jdem tam",
+  "typ": "bistro",
+  "adresa": "U Černé věže 21, 370 01 České Budějovice",
+  "mesto": "České Budějovice",
+  "lat": 48.975235,
+  "lon": 14.4755,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Bistro Feast",
+  "typ": "bistro",
+  "adresa": "Masarykovo náměstí 58, 537 01 Chrudim",
+  "mesto": "Chrudim",
+  "lat": 49.953181,
+  "lon": 15.789402,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "The Bistro",
+  "typ": "bistro",
+  "adresa": "Londýnská 315/71, 120 00 Praha 2",
+  "mesto": "Praha",
+  "lat": 50.076003,
+  "lon": 14.432952,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "BistroT10",
+  "typ": "bistro",
+  "adresa": "Pražská 157/12, 390 01 Tábor",
+  "mesto": "Tábor",
+  "lat": 49.413628,
+  "lon": 14.659959,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Lesa",
+  "typ": "bistro",
+  "adresa": "Jihoslovanská 149, 541 01 Trutnov",
+  "mesto": "Trutnov",
+  "lat": 50.560829,
+  "lon": 15.914426,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Agnes",
+  "typ": "restaurace",
+  "adresa": "Bohdaneč 167, 285 25 Bohdaneč",
+  "mesto": "Bohdaneč",
+  "lat": 49.7803,
+  "lon": 15.2244,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "U Štěpána",
+  "typ": "restaurace",
+  "adresa": "Vojetice 9, 342 01 Petrovice u Sušice",
+  "mesto": "Vojetice",
+  "lat": 49.219186,
+  "lon": 13.435343,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "La Terrena",
+  "typ": "restaurace",
+  "adresa": "Klostermannova 148/12, 430 01 Chomutov",
+  "mesto": "Chomutov",
+  "lat": 50.462065,
+  "lon": 13.41711,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Grandhotel Pupp",
+  "typ": "restaurace",
+  "adresa": "Mírové náměstí 2, 360 01 Karlovy Vary",
+  "mesto": "Karlovy Vary",
+  "lat": 50.220021,
+  "lon": 12.878562,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Kocour",
+  "typ": "restaurace",
+  "adresa": "Žerotínovo náměstí 19/17, 674 01 Třebíč",
+  "mesto": "Třebíč",
+  "lat": 49.2168,
+  "lon": 15.876,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Sýrárna Klimeš",
+  "typ": "lahudky",
+  "adresa": "Brněnská 339/10, 692 01 Mikulov",
+  "mesto": "Mikulov",
+  "lat": 48.808522,
+  "lon": 16.637018,
+  "oceneni": [
+   "vyber_ck"
+  ]
+ },
+ {
+  "nazev": "Frankies",
+  "typ": "pivnice",
+  "adresa": "Jana Palacha 121/8, 690 02 Břeclav",
+  "mesto": "Břeclav",
+  "lat": 48.7564,
+  "lon": 16.8886,
+  "oceneni": [
+   "vyber_ck"
+  ]
  }
 ]
