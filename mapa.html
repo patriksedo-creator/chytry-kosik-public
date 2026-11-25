@@ -70,6 +70,12 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .legend .row:hover{background:rgba(45,226,230,.12)}
 .legend .row.sel{background:rgba(45,226,230,.2);box-shadow:inset 0 0 0 1px rgba(45,226,230,.55)}
 .legend .d{width:18px;height:18px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 11px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+/* MAPA_UX: chip aktivniho filtru nahore (ukaze co je zapnute, klik = reset na Vse) */
+.afilter{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:650;display:none;align-items:center;gap:8px;min-height:36px;padding:0 6px 0 14px;border-radius:999px;border:2px solid var(--pink);background:rgba(18,8,46,.96);color:#fff0f8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;box-shadow:0 0 16px rgba(255,46,151,.4);max-width:80vw}
+.afilter.on{display:inline-flex}
+.afilter:hover{box-shadow:0 0 22px rgba(255,46,151,.6)}
+.afilter .aflabel{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.afilter .afx{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,46,151,.25);font-size:16px;line-height:1}
 /* filtr panel (jako Na ovoce) */
 .panel{position:absolute;right:12px;top:12px;z-index:700;width:244px;background:rgba(18,8,46,.96);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden;display:none}
 .panel.open{display:block}
@@ -118,7 +124,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 #stezka-info.open{display:flex}
 #stezka-info b{font:900 16px 'Barlow Semi Condensed',Arial,sans-serif;font-style:italic;color:#aaff85;text-shadow:0 0 10px rgba(140,255,58,.5)}
 #stezka-info span{font-size:13px;color:#dfeee0}
-@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}#stezky{bottom:12px;max-width:94vw}#stezka-info{bottom:56px}}
+@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:12px;max-width:94vw}#stezka-info{bottom:56px}}
 </style>
 </head>
 <body>
@@ -175,6 +181,9 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   <!-- Pivni stezky: selektor tras (jen rezim Podniky) + info o trase -->
   <div id="stezky"></div>
   <div id="stezka-info"></div>
+
+  <!-- MAPA_UX: chip aktivniho filtru (ukaze co je zapnute, klik = reset na Vse) -->
+  <button type="button" class="afilter" id="afilter"></button>
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
@@ -644,7 +653,40 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     } else if(group==='chain'){ CHAINS.forEach(function(c){ active[c]=(c===key); }); }
     else if(group==='typ'){ VT_PRESENT.forEach(function(t){ activeVT[t]=(t===key); }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
     else if(group==='uroven'){ VU_PRESENT.forEach(function(u){ activeVU[u]=(u===key); }); VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); }
-    saveActive(); buildLegend(); buildPanel(); applyActive();
+    saveActive(); buildLegend(); buildPanel(); applyActive(); closeLegend(); // zavri legendu = odkryj mapu
+  }
+  // MAPA_UX: popisek aktivniho filtru pro chip (null = nic nefiltrujeme / vse vybrano)
+  function activeFilterLabel(){
+    if(mode==='obchody'){
+      var act=CHAINS.filter(function(c){ return active[c]; });
+      if(act.length===CHAINS.length) return null;
+      if(act.length===1) return act[0];
+      if(act.length===0) return 'Nic nevybráno';
+      return act.length+' řetězců';
+    }
+    var vt=VT_PRESENT.filter(function(t){ return activeVT[t]; });
+    var vu=VU_PRESENT.filter(function(u){ return activeVU[u]; });
+    var allVT=vt.length===VT_PRESENT.length, allVU=vu.length===VU_PRESENT.length;
+    if(allVT && allVU) return null;
+    if(vt.length===1 && allVU) return VT_LABEL[vt[0]]||vt[0];
+    if(vu.length===1 && allVT) return VU_LABEL[vu[0]]||vu[0];
+    var parts=[];
+    if(!allVT) parts.push(vt.length===1?(VT_LABEL[vt[0]]||vt[0]):(vt.length+' typů'));
+    if(!allVU) parts.push(vu.length===1?(VU_LABEL[vu[0]]||vu[0]):(vu.length+' úrovní'));
+    return parts.join(' + ')||'Filtr';
+  }
+  function renderActiveFilter(){
+    var el=document.getElementById('afilter'); if(!el) return;
+    var lbl=activeFilterLabel();
+    if(!lbl){ el.classList.remove('on'); el.innerHTML=''; return; }
+    el.innerHTML='<span class="aflabel">'+lbl+'</span><span class="afx">&times;</span>';
+    el.classList.add('on');
+  }
+  // reset na "Vse" (sdili allbtn i chip)
+  function resetAllFilters(){
+    if(mode==='obchody'){ CHAINS.forEach(function(c){ active[c]=true; }); }
+    else { VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
+    saveActive(); buildPanel(); buildLegend(); applyActive();
   }
   function buildLegend(){
     var title=document.querySelector('.legend h4'); if(title) title.textContent = mode==='obchody'?'Řetězce':'Podniky';
@@ -657,6 +699,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       cap('Typ'); VT_PRESENT.forEach(function(t){ row('typ',t, dotHtml(VT_COLOR[t], VT_INI[t], '7px')+VT_LABEL[t]); });
       cap('Úroveň'); VU_PRESENT.forEach(function(u){ row('uroven',u, ringHtml(VU_COLOR[u])+VU_LABEL[u]); });
     }
+    renderActiveFilter();
   }
   function buildPanel(){
     list.innerHTML='';
@@ -696,12 +739,13 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     });
     saveActive(); applyActive(); buildLegend(); closePanel();
   });
-  // rychle "Vse" (podle rezimu) — zrusi i solo zvyrazneni v legende
+  // rychle "Vse" (podle rezimu) — zrusi i solo zvyrazneni v legende a chip
   document.getElementById('allbtn').addEventListener('click', function(){
-    if(mode==='obchody'){ CHAINS.forEach(function(c){ active[c]=true; }); }
-    else { VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
-    saveActive(); buildPanel(); buildLegend(); applyActive(); closePanel();
+    resetAllFilters(); closePanel();
   });
+  // MAPA_UX: chip aktivniho filtru nahore — klik = reset na Vse
+  var afilterEl=document.getElementById('afilter');
+  if(afilterEl) afilterEl.addEventListener('click', function(e){ e.stopPropagation(); resetAllFilters(); });
   // MAPA_UX: legenda — otevira/zavira ji male tlacitko, zavre se krizkem nebo klepnutim mimo
   var legendEl=document.getElementById('legend');
   var legbtn=document.getElementById('legbtn');
