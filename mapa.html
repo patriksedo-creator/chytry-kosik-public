@@ -114,23 +114,55 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .legcap{margin:6px 0 2px;font:800 11px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#9fe9ec}
 .legend .d.ring,.panel .d.ring{background:transparent!important}
 /* pivni stezky: selektor tras + info box (zvlastni zelena, GTA neon) */
-#stezky{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);z-index:640;display:none;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;max-width:74vw;padding:6px 10px;background:rgba(18,8,46,.9);border:2px solid #8cff3a;border-radius:999px;box-shadow:0 0 18px rgba(140,255,58,.35)}
+#stezky{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);z-index:640;display:none;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;max-width:74vw;padding:6px 10px;background:rgba(18,8,46,.9);border:2px solid #8cff3a;border-radius:18px;box-shadow:0 0 18px rgba(140,255,58,.35)}
+#stezky .stz-more{min-height:34px;padding:0 13px;border-radius:999px;border:2px dashed #8cff3a;background:transparent;color:#bfffa0;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer}
 #stezky.open{display:flex}
 #stezky .stz-cap{font:800 13px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#bfffa0}
 #stezky .stz{min-height:34px;padding:0 13px;border-radius:999px;border:2px solid #8cff3a;background:#102a0c;color:#daffc8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer}
 #stezky .stz.on{background:#8cff3a;color:#0b2206}
 #stezky .stz:hover{box-shadow:0 0 14px rgba(140,255,58,.6)}
-#stezka-info{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);z-index:640;display:none;flex-direction:column;align-items:center;gap:2px;padding:8px 16px;background:rgba(14,6,36,.92);border:1.5px solid #8cff3a;border-radius:12px;box-shadow:0 0 18px rgba(140,255,58,.3);text-align:center;max-width:80vw}
+#stezka-info{position:absolute;left:50%;bottom:112px;transform:translateX(-50%);z-index:640;display:none;flex-direction:column;align-items:center;gap:2px;padding:8px 16px;background:rgba(14,6,36,.92);border:1.5px solid #8cff3a;border-radius:12px;box-shadow:0 0 18px rgba(140,255,58,.3);text-align:center;max-width:80vw}
 #stezka-info.open{display:flex}
 #stezka-info b{font:900 16px 'Barlow Semi Condensed',Arial,sans-serif;font-style:italic;color:#aaff85;text-shadow:0 0 10px rgba(140,255,58,.5)}
 #stezka-info span{font-size:13px;color:#dfeee0}
-@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:12px;max-width:94vw}#stezka-info{bottom:56px}}
+/* MAPA_UX_2: tlacitko Pivni stezky (styl Legendy, zelena) */
+.stezbtn{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);z-index:620;display:none;min-height:38px;padding:0 16px;border-radius:999px;border:2px solid #8cff3a;background:rgba(16,42,12,.92);color:#daffc8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;align-items:center;gap:7px;box-shadow:0 0 14px rgba(140,255,58,.3)}
+.stezbtn.show{display:inline-flex}
+.stezbtn:hover{box-shadow:0 0 18px rgba(140,255,58,.6)}
+.stezbtn.on{background:#8cff3a;color:#0b2206}
+/* MAPA_UX_2: Co je blizko — spodni listka (max tretina mapy) */
+.nearby{position:absolute;left:12px;right:12px;bottom:12px;z-index:660;max-height:33vh;display:none;flex-direction:column;background:rgba(18,8,46,.97);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden}
+.nearby.open{display:flex}
+.nearby .nh{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,#241056,#160a33);border-bottom:1px solid rgba(45,226,230,.3)}
+.nearby .nh b{font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.nearby .nx{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.nearby .nlist{overflow:auto;padding:4px 6px}
+.nearby .nr{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;border-bottom:1px solid rgba(45,226,230,.1)}
+.nearby .nr:hover{background:rgba(45,226,230,.12)}
+.nearby .nr .d{width:22px;height:22px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 12px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+.nearby .nr .nm{flex:1 1 auto;min-width:0}
+.nearby .nr .nm b{display:block;font-weight:700;color:#fff;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .nm span{display:block;color:#b9a9e0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .dist{flex:0 0 auto;color:var(--lime);font-weight:800;font-size:14px}
+.nearby .nfoot{display:none}
+.nearby .nfoot.show{display:block;padding:10px 12px;border-top:1px solid rgba(45,226,230,.3)}
+.nearby .nfoot button{width:100%;min-height:42px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#eaffff;font:800 14px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer}
+.nearby .nfoot button:hover{box-shadow:0 0 16px var(--cyan)}
+.nearby .nempty{padding:14px;color:#9f8fc4;font-size:14px;text-align:center}
+/* MAPA_UX_2: toast */
+.toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:900;display:none;max-width:80vw;padding:11px 18px;background:rgba(14,6,36,.96);border:2px solid var(--pink);border-radius:12px;color:#fff0f8;font:700 15px 'Barlow Semi Condensed',Arial,sans-serif;text-align:center;box-shadow:0 0 24px rgba(255,46,151,.5)}
+.toast.show{display:block}
+/* MAPA_UX_2: navigacni tlacitka v okne mista (Google Mapy) */
+.navrow{display:flex;gap:6px;margin-top:10px}
+.navbtn{flex:1 1 0;display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:7px 4px;border-radius:10px;border:2px solid var(--cyan);background:#150628;color:#eaffff;font:800 12px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer}
+.navbtn:hover{box-shadow:0 0 14px var(--cyan)}
+.navbtn svg{width:18px;height:18px}
+@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:58px;max-width:94vw}#stezka-info{bottom:112px}.nearby{left:8px;right:8px}}
 </style>
 </head>
 <body>
 <header>
   <a class="brand" href="#"><img src="/img/logo-mark.png" alt="Chytrý košík"><span>Chytrý košík</span></a>
-  <span class="tag">Mapa · pilot Praha</span>
   <span class="spacer"></span>
   <div class="seg" role="tablist">
     <button type="button" class="segbtn on" id="modeObchody">Obchody</button>
@@ -141,6 +173,10 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     <button type="button" class="chip on" id="filterbtn">
       <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"></path></svg>
       Filtry
+    </button>
+    <button type="button" class="chip" id="nearbtn">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
+      Co je blízko
     </button>
   </div>
   <button type="button" class="locbtn" id="locbtn">
@@ -184,6 +220,19 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 
   <!-- MAPA_UX: chip aktivniho filtru (ukaze co je zapnute, klik = reset na Vse) -->
   <button type="button" class="afilter" id="afilter"></button>
+
+  <!-- MAPA_UX_2: Pivni stezky — tlacitko ve stylu Legendy, otevira spodni listu (default zavreno) -->
+  <button type="button" class="stezbtn" id="stezbtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h8a3 3 0 0 1 0 6h-1"></path><path d="M6 8h9M6 8v9a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2"></path></svg>Pivní stezky</button>
+
+  <!-- MAPA_UX_2: Co je blizko — spodni listka nejblizsich mist (max tretina mapy) -->
+  <div class="nearby" id="nearby">
+    <div class="nh"><b id="nearbytitle">Co je blízko</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
+    <div class="nlist" id="nearbylist"></div>
+    <div class="nfoot" id="nearbyfoot"></div>
+  </div>
+
+  <!-- MAPA_UX_2: kratka hlaska (poloha se nepodarila apod.) -->
+  <div class="toast" id="toast"></div>
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
@@ -212,6 +261,35 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   try{ var _mm = new URLSearchParams(location.search).get('mode'); if(_mm==='obchody'||_mm==='podniky') FORCE_MODE=_mm; }catch(e){}
   if(!FORCE_MODE){ var _wm = window.__MAPA_FORCE_MODE__; if(_wm==='obchody'||_wm==='podniky') FORCE_MODE=_wm; }
   if(FORCE_MODE){ var _seg=document.querySelector('.seg'); if(_seg) _seg.style.display='none'; }
+
+  // MAPA_UX_2 A1: v appce (vynuceny rezim nebo ?embed=1) schovej logo a nazev; na webu zustava.
+  var IN_APP = !!FORCE_MODE;
+  try{ if(new URLSearchParams(location.search).get('embed')==='1') IN_APP=true; }catch(e){}
+  if(IN_APP){ var _br=document.querySelector('.brand'); if(_br) _br.style.display='none'; }
+
+  // MAPA_UX_2: kratka hlaska (toast)
+  var _toastT=null;
+  function toast(msg){
+    var el=document.getElementById('toast'); if(!el) return;
+    el.textContent=msg; el.classList.add('show');
+    if(_toastT) clearTimeout(_toastT);
+    _toastT=setTimeout(function(){ el.classList.remove('show'); }, 3200);
+  }
+  // MAPA_UX_2: vzdalenost dvou bodu [lat,lon] v metrech (haversine)
+  function distM(a, b){
+    var R=6371000, toR=Math.PI/180;
+    var dLat=(b[0]-a[0])*toR, dLon=(b[1]-a[1])*toR;
+    var la1=a[0]*toR, la2=b[0]*toR;
+    var h=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)*Math.sin(dLon/2);
+    return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));
+  }
+  function fmtDist(m){ return m<950 ? Math.round(m/10)*10+' m' : (m/1000).toFixed(m<9500?1:0).replace('.',',')+' km'; }
+  // MAPA_UX_2: polygon kruhu o polomeru rM metru kolem [lon,lat] (pro kruh presnosti)
+  function circlePolygon(lon, lat, rM){
+    var pts=[], n=64, dLat=rM/111320, dLon=rM/(111320*Math.cos(lat*Math.PI/180));
+    for(var i=0;i<=n;i++){ var t=2*Math.PI*i/n; pts.push([lon+dLon*Math.cos(t), lat+dLat*Math.sin(t)]); }
+    return {type:'Feature', geometry:{type:'Polygon', coordinates:[pts]}, properties:{}};
+  }
 
   var map = new maplibregl.Map({
     container:'map',
@@ -301,6 +379,23 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 
   var userLoc = null, userMarker = null;
 
+  // MAPA_UX_2 A4: navigacni tlacitka (Google Mapy). Pokud zname moji polohu, prida se origin.
+  function navButtonsHtml(lat, lon){
+    function dir(mode){
+      var u='https://www.google.com/maps/dir/?api=1&destination='+lat+','+lon+'&travelmode='+mode;
+      if(userLoc) u+='&origin='+userLoc[0]+','+userLoc[1];
+      return u;
+    }
+    var walk='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="1.6"></circle><path d="M11 21l1.5-6 2.5 2v4M11 15l-1.5-5 4-1 2 3 2.5 1"></path></svg>';
+    var bus='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="13" rx="2"></rect><path d="M5 11h14M8 20v-3M16 20v-3"></path><circle cx="8.5" cy="14.5" r="0.6"></circle><circle cx="15.5" cy="14.5" r="0.6"></circle></svg>';
+    var car='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l2-5a2 2 0 0 1 2-1.3h8A2 2 0 0 1 18 8l2 5v5h-3v-2H7v2H4z"></path><circle cx="7.5" cy="15.5" r="0.6"></circle><circle cx="16.5" cy="15.5" r="0.6"></circle></svg>';
+    return '<div class="navrow">'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('walking')+'">'+walk+'Pěšky</a>'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('transit')+'">'+bus+'MHD</a>'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('driving')+'">'+car+'Autem</a>'+
+    '</div>';
+  }
+
   function popupHtml(s){
     var color = COLORS[s.retezec]||'#2de2e6';
     var store = (s.nazev && s.nazev!==s.retezec) ? '<div class="pop-store">'+s.nazev+'</div>' : '';
@@ -309,8 +404,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       '<div class="times">'+
         '<div class="trow"><b>🚶 Pěšky</b><span class="v" data-foot>—</span></div>'+
         '<div class="trow"><b>🚗 Autem</b><span class="v" data-car>—</span></div>'+
-        '<div class="trow"><b>🚌 MHD</b><span class="v muted">brzy</span></div>'+
-      '</div>';
+      '</div>'+
+      navButtonsHtml(s.lat, s.lon);
   }
   function fillTimes(s, popupEl){
     if(!popupEl) return;
@@ -387,7 +482,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     return '<div class="pop-venue" style="color:'+color+'">'+v.nazev+'</div>'+
       '<div class="pop-meta">'+(VT_LABEL[v.typ]||'')+' '+badges+'</div>'+
       (v.adresa?'<div class="pop-addr">'+v.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
-      '<div class="times"><div class="trow"><span class="muted">Medailonek a časy přidáme brzy.</span></div></div>';
+      '<div class="times"><div class="trow"><span class="muted">Medailonek a časy přidáme brzy.</span></div></div>'+
+      ((v.lat!=null && v.lon!=null) ? navButtonsHtml(v.lat, v.lon) : '');
   }
 
   function addStoreLayers(){
@@ -489,7 +585,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     });
     map.on('click','v-points',function(e){
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
-      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa})).addTo(map);
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa, lat:c[1], lon:c[0]})).addTo(map);
     });
     ['v-clusters','v-points'].forEach(function(id){
       map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
@@ -535,19 +631,49 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     box.innerHTML='<b>'+s.name+'</b><span>'+icon+' · '+String(s.distance_km).replace('.',',')+' km · '+s.duration_min+' min · '+(s.stops||[]).length+' zastávek</span>';
     box.classList.add('open');
   }
+  // MAPA_UX_2 A5: stezky skryte za tlacitkem (default zavreno), razeni podle vyrezu mapy,
+  // vzdalene (>60 km od stredu) pod "Dalsi stezky".
+  var stezkyOpen=false, stezkyShowMore=false;
+  function stezkaCenterDist(s){
+    var c=map.getCenter(), o=[c.lat,c.lng], best=Infinity;
+    (s.stops||[]).forEach(function(st){ var d=distM(o,[st.lat,st.lon]); if(d<best) best=d; });
+    if(best===Infinity && s.geometry && s.geometry.coordinates){ s.geometry.coordinates.forEach(function(cc){ var d=distM(o,[cc[1],cc[0]]); if(d<best) best=d; }); }
+    return best;
+  }
+  function updateStezbtn(){
+    var b=document.getElementById('stezbtn'); if(!b) return;
+    var show = mode==='podniky' && STEZKY.length;
+    b.classList.toggle('show', !!show);
+    if(!show) stezkyOpen=false;
+    b.classList.toggle('on', stezkyOpen && !!show);
+  }
   function buildStezkaChips(){
     var bar=document.getElementById('stezky'); if(!bar) return;
     bar.innerHTML='';
-    if(mode!=='podniky' || !STEZKY.length){ bar.classList.remove('open'); return; }
+    updateStezbtn();
+    if(mode!=='podniky' || !STEZKY.length || !stezkyOpen){ bar.classList.remove('open'); return; }
     bar.classList.add('open');
+    var sorted=STEZKY.slice().sort(function(a,b){ return stezkaCenterDist(a)-stezkaCenterDist(b); });
+    var near=sorted.filter(function(s){ return stezkaCenterDist(s)<=60000; });
+    var far =sorted.filter(function(s){ return stezkaCenterDist(s) >60000; });
     var cap=document.createElement('span'); cap.className='stz-cap'; cap.textContent='Pivní stezky:'; bar.appendChild(cap);
-    STEZKY.forEach(function(s){
+    function addChip(s){
       var btn=document.createElement('button'); btn.type='button';
       btn.className='stz'+(activeStezka===s.key?' on':'');
       btn.textContent=s.name;
       btn.addEventListener('click',function(){ activeStezka===s.key ? clearStezka() : selectStezka(s.key); });
       bar.appendChild(btn);
-    });
+    }
+    (near.length?near:sorted).forEach(addChip);       // kdyz je vse dal nez 60 km, ukaz aspon nejblizsi
+    var rest = near.length ? far : [];
+    if(rest.length && !stezkyShowMore){
+      var more=document.createElement('button'); more.type='button'; more.className='stz-more';
+      more.textContent='Další stezky ('+rest.length+')';
+      more.addEventListener('click',function(){ stezkyShowMore=true; buildStezkaChips(); });
+      bar.appendChild(more);
+    } else if(rest.length && stezkyShowMore){
+      rest.forEach(addChip);
+    }
   }
   function selectStezka(key){
     var s=STEZKA_BY_KEY[key]; if(!s) return;
@@ -612,17 +738,91 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     }).catch(function(e){ console.error('data load error', e); });
   });
 
-  // ---- Moje poloha ----
+  // ---- Moje poloha (MAPA_UX_2 A2) ----
+  function ensureMeLayers(){
+    if(map.getSource('me-acc')) return;
+    map.addSource('me-acc', {type:'geojson', data:{type:'FeatureCollection', features:[]}});
+    map.addLayer({id:'me-acc-fill', type:'fill', source:'me-acc', paint:{'fill-color':'#c8e84b', 'fill-opacity':0.12}});
+    map.addLayer({id:'me-acc-line', type:'line', source:'me-acc', paint:{'line-color':'#c8e84b', 'line-opacity':0.55, 'line-width':1.5}});
+  }
+  function setUserLocation(lat, lon, acc, center){
+    userLoc=[lat,lon];
+    var el=document.createElement('div'); el.className='me-dot';
+    if(userMarker) userMarker.remove();
+    userMarker=new maplibregl.Marker({element:el}).setLngLat([lon,lat]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
+    try{ ensureMeLayers(); var feats=(acc && acc>0 && acc<100000)?[circlePolygon(lon,lat,acc)]:[]; var src=map.getSource('me-acc'); if(src) src.setData({type:'FeatureCollection', features:feats}); }catch(e){}
+    if(center){ map.flyTo({center:[lon,lat], zoom: Math.max(map.getZoom(),13)}); }
+  }
+  function appLoc(){ var ap=window.__MAPA_MOJE_POLOHA__; return (ap && typeof ap.lat==='number' && typeof ap.lon==='number') ? ap : null; }
   document.getElementById('locbtn').addEventListener('click', function(){
-    if(!navigator.geolocation){ map.flyTo({center:PRAHA, zoom:11}); return; }
-    navigator.geolocation.getCurrentPosition(function(pos){
-      userLoc=[pos.coords.latitude,pos.coords.longitude];
-      var el=document.createElement('div'); el.className='me-dot';
-      if(userMarker) userMarker.remove();
-      userMarker=new maplibregl.Marker({element:el}).setLngLat([userLoc[1],userLoc[0]]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
-      map.flyTo({center:[userLoc[1],userLoc[0]], zoom:13});
-    }, function(){ map.flyTo({center:PRAHA, zoom:11}); }, {enableHighAccuracy:true, timeout:8000});
+    var ap=appLoc();
+    if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, true); openNearby(); return; }      // 1. poloha z appky
+    if(!navigator.geolocation){ toast('Polohu se nepodařilo zjistit'); return; }          // 3. nic
+    navigator.geolocation.getCurrentPosition(function(pos){                               // 2. prohlizec
+      setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, true);
+      openNearby();
+    }, function(){ toast('Polohu se nepodařilo zjistit'); }, {enableHighAccuracy:true, timeout:8000});
   });
+  // poloha vlozena/aktualizovana appkou (cast B) — udalost mapa:poloha
+  window.addEventListener('mapa:poloha', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, true); });
+  // pokud appka polohu vlozila jeste pred nactenim mapy
+  map.on('load', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, false); });
+
+  // ---- Co je blizko (MAPA_UX_2 A3) ----
+  var nearbyRadius=2000;
+  function nearbyOrigin(){ if(userLoc) return userLoc; var c=map.getCenter(); return [c.lat, c.lng]; }
+  function nearbyCandidates(){
+    if(mode==='obchody'){
+      return ALL.filter(function(s){ return active[s.retezec]; }).map(function(s){
+        return {name:s.retezec, sub:(s.nazev&&s.nazev!==s.retezec?s.nazev+' · ':'')+(s.adresa||''), lat:s.lat, lon:s.lon, kind:'store', row:s, color:COLORS[s.retezec]||'#2de2e6', ini:(s.retezec||'?').charAt(0)};
+      });
+    }
+    return ALLV.filter(function(v){ return activeVT[v.typ] && ocOf(v).some(function(a){ return activeVU[a]; }); }).map(function(v){
+      return {name:v.nazev, sub:VT_LABEL[v.typ]||'', lat:v.lat, lon:v.lon, kind:'venue', row:v, color:VT_COLOR[v.typ]||'#2de2e6', ini:VT_INI[v.typ]||'•'};
+    });
+  }
+  function flyToNearby(it){
+    map.flyTo({center:[it.lon,it.lat], zoom:16});
+    if(it.kind==='store'){
+      var s={nazev:it.row.nazev, retezec:it.row.retezec, adresa:it.row.adresa, lon:it.lon, lat:it.lat};
+      var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupHtml(s)).addTo(map);
+      fillTimes(s, pop.getElement());
+    } else {
+      var vr={}; Object.keys(it.row).forEach(function(k){ vr[k]=it.row[k]; }); vr.lat=it.lat; vr.lon=it.lon;
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(vr)).addTo(map);
+    }
+  }
+  function renderNearby(){
+    var o=nearbyOrigin();
+    var list=nearbyCandidates().map(function(it){ it.d=distM(o,[it.lat,it.lon]); return it; })
+      .filter(function(it){ return it.d<=nearbyRadius; })
+      .sort(function(a,b){ return a.d-b.d; }).slice(0,10);
+    var box=document.getElementById('nearbylist'), foot=document.getElementById('nearbyfoot');
+    box.innerHTML='';
+    if(!list.length){
+      box.innerHTML='<div class="nempty">V okruhu '+fmtDist(nearbyRadius)+' tu nic není.</div>';
+    } else {
+      list.forEach(function(it){
+        var r=document.createElement('div'); r.className='nr';
+        r.innerHTML=dotHtml(it.color, it.ini, '7px')+'<span class="nm"><b>'+it.name+'</b><span>'+(it.sub||'')+'</span></span><span class="dist">'+fmtDist(it.d)+'</span>';
+        r.addEventListener('click', function(){ flyToNearby(it); });
+        box.appendChild(r);
+      });
+    }
+    foot.innerHTML='<button type="button" id="nearbymore">Rozšířit okolí</button>';
+    foot.classList.add('show');
+    document.getElementById('nearbymore').addEventListener('click', function(){ nearbyRadius*=2; renderNearby(); });
+  }
+  function openNearby(){
+    nearbyRadius=2000;
+    document.getElementById('nearbytitle').textContent = userLoc ? 'Co je blízko' : 'Blízko středu mapy';
+    renderNearby();
+    document.getElementById('nearby').classList.add('open');
+    document.getElementById('nearbtn').classList.add('on');
+  }
+  function closeNearby(){ document.getElementById('nearby').classList.remove('open'); document.getElementById('nearbtn').classList.remove('on'); }
+  document.getElementById('nearbtn').addEventListener('click', function(){ document.getElementById('nearby').classList.contains('open')?closeNearby():openNearby(); });
+  document.getElementById('nearbyx').addEventListener('click', closeNearby);
 
   // ---- Legenda + Filtr (podle rezimu) ----
   var panel=document.getElementById('panel');
@@ -754,8 +954,17 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   if(legbtn) legbtn.addEventListener('click', function(e){ e.stopPropagation(); legendEl.classList.contains('open')?closeLegend():openLegend(); });
   var legx=document.getElementById('legx'); if(legx) legx.addEventListener('click', closeLegend);
   document.addEventListener('click', function(e){ if(legendEl&&legendEl.classList.contains('open') && !e.target.closest('.legend') && !e.target.closest('.legtoggle')) closeLegend(); });
+  // MAPA_UX_2 A5: tlacitko Pivni stezky otevira/zavira spodni listu
+  var stezbtnEl=document.getElementById('stezbtn');
+  if(stezbtnEl) stezbtnEl.addEventListener('click', function(){ stezkyOpen=!stezkyOpen; if(stezkyOpen) stezkyShowMore=false; buildStezkaChips(); });
+  // po posunu mapy preradit stezky podle noveho stredu (jen kdyz je lista otevrena a neni vybrana trasa)
+  map.on('moveend', function(){ if(stezkyOpen && !activeStezka) buildStezkaChips(); });
+  // MAPA_UX_2 A6: atribuce po nacteni sbalena do (i), at se sama nerozbali pres Legendu
+  map.on('load', function(){
+    try{ var a=document.querySelector('.maplibregl-ctrl-attrib'); if(a){ a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); } }catch(e){}
+  });
   // prepinac Obchody / Podniky
-  function switchMode(m){ if(mode!==m){ closePanel(); clearSearch(); setMode(m); } }
+  function switchMode(m){ if(mode!==m){ closePanel(); clearSearch(); closeNearby(); setMode(m); } }
   document.getElementById('modeObchody').addEventListener('click', function(){ switchMode('obchody'); });
   document.getElementById('modePodniky').addEventListener('click', function(){ switchMode('podniky'); });
 
