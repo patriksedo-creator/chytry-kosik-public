@@ -184,6 +184,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .routep .rstep{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;border-bottom:1px solid rgba(200,232,75,.1)}
 .routep .rstep:hover{background:rgba(200,232,75,.12)}
 .routep .rstep .ri{flex:0 0 auto;width:22px;height:22px;color:var(--lime)}
+.routep .rstep .rline{flex:0 0 auto;min-width:22px;height:20px;padding:0 6px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:#0b0318;font:900 12px 'Barlow Semi Condensed',Arial,sans-serif}
 .routep .rstep .rtx{flex:1 1 auto;min-width:0;font-size:15px;color:#f2ecff}
 .routep .rstep .rd{flex:0 0 auto;color:#9f8fc4;font-weight:700;font-size:13px}
 .routep .rfoot{display:flex;gap:8px;padding:9px 12px;border-top:1px solid rgba(200,232,75,.3);flex-wrap:wrap;align-items:center}
@@ -1217,10 +1218,17 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   }
   function setRouteData(){ ensureRouteLayers(); var s=map.getSource('route'); if(s) s.setData(routeFC()); }
 
-  function profilePath(p){ return p==='car' ? 'routed-car' : 'routed-foot'; }
-  function profileName(p){ return p==='car' ? 'driving' : 'foot'; }
+  // Rezimy trasy jsou DATA-RIZENE (seznam) + kroky maji obecny segmentovy model, aby sel pozdeji pridat
+  // TRETI rezim MHD (useky: pesky / linka / prestup / pesky). Pridani = jeden zaznam {key:'transit', transit:true}
+  // sem + vetev v buildStepModel (segmenty) a v doRoute. Vypocet MHD se zkousi zvlast v okne 2 (MHD_PROVEDITELNOST).
+  var ROUTE_MODES=[
+    {key:'foot', label:'Pěšky', icon:'🚶', osrm:{path:'routed-foot', profile:'foot'}},
+    {key:'car',  label:'Autem', icon:'🚗', osrm:{path:'routed-car',  profile:'driving'}}
+  ];
+  function modeOf(key){ for(var i=0;i<ROUTE_MODES.length;i++){ if(ROUTE_MODES[i].key===key) return ROUTE_MODES[i]; } return ROUTE_MODES[0]; }
   function fetchRoute(start, dest, profile){ // start,dest = [lat,lon]
-    var url='https://routing.openstreetmap.de/'+profilePath(profile)+'/route/v1/'+profileName(profile)+'/'+
+    var o=modeOf(profile).osrm;
+    var url='https://routing.openstreetmap.de/'+o.path+'/route/v1/'+o.profile+'/'+
       start[1]+','+start[0]+';'+dest[1]+','+dest[0]+'?overview=full&geometries=geojson&steps=true';
     return fetch(url).then(function(r){ return r.json(); }).then(function(j){
       if(!j || j.code!=='Ok' || !j.routes || !j.routes[0]) throw new Error('no route');
@@ -1257,6 +1265,24 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     return '<svg class="ri" style="transform:rotate('+deg+'deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>';
   }
 
+  // Obecny model kroku {icon, badge, text, dist, lon, lat}. Dnes plni jen OSRM manevry (pesky/auto).
+  // Budouci MHD rezim by tu mel vlastni vetev: segmenty pesky/linka/prestup/pesky, u linky badge s cislem/barvou linky.
+  function buildStepModel(rs){
+    var out=[];
+    // if(modeOf(rs.profile).transit){ /* MHD: rs.segments -> {icon, badge:{text,color}, text, dist, lon, lat} */ return out; }
+    (rs.steps||[]).forEach(function(st){
+      var m=st.maneuver||{}, loc=m.location||[rs.dest.lon, rs.dest.lat];
+      out.push({icon:stepIcon(st), badge:null, text:stepText(st),
+        dist:(st.distance>5 && m.type!=='arrive')?st.distance:null, lon:loc[0], lat:loc[1]});
+    });
+    return out;
+  }
+  function stepRowHtml(s){
+    var d=s.dist!=null ? '<span class="rd">'+fmtDist(s.dist)+'</span>' : '';
+    var badge=s.badge ? '<span class="rline" style="background:'+(s.badge.color||'#2de2e6')+'">'+escAttr(s.badge.text||'')+'</span>' : '';
+    return '<div class="rstep" data-slon="'+s.lon+'" data-slat="'+s.lat+'">'+(s.icon||'')+badge+'<span class="rtx">'+escAttr(s.text||'')+'</span>'+d+'</div>';
+  }
+
   function gmHref(dest, travel){
     var u='https://www.google.com/maps/dir/?api=1&destination='+dest.lat+','+dest.lon+'&travelmode='+travel;
     if(userLoc) u+='&origin='+userLoc[0]+','+userLoc[1];
@@ -1281,16 +1307,15 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       return;
     }
     if(!routeState) return;
-    var prof=routeState.profile, steps=routeState.steps||[];
-    var stepsHtml=steps.map(function(st){
-      var loc=st.maneuver.location, d=(st.distance>5 && st.maneuver.type!=='arrive')?'<span class="rd">'+fmtDist(st.distance)+'</span>':'';
-      return '<div class="rstep" data-slon="'+loc[0]+'" data-slat="'+loc[1]+'">'+stepIcon(st)+'<span class="rtx">'+escAttr(stepText(st))+'</span>'+d+'</div>';
+    var prof=routeState.profile, m=modeOf(prof);
+    var stepsHtml=buildStepModel(routeState).map(stepRowHtml).join('');
+    var modeBtns=ROUTE_MODES.map(function(rm){
+      return '<button type="button" class="seg2'+(rm.key===prof?' on':'')+'" data-rp="'+rm.key+'">'+rm.icon+' '+rm.label+'</button>';
     }).join('');
     box.innerHTML=
-      '<div class="rh"><div class="rt"><b>'+destName+'</b><span>'+(prof==='car'?'🚗 autem':'🚶 pěšky')+' · '+(fmtMin(routeState.duration)||'—')+' · '+fmtDist(routeState.distance)+'</span></div>'+
+      '<div class="rh"><div class="rt"><b>'+destName+'</b><span>'+m.icon+' '+m.label.toLowerCase()+' · '+(fmtMin(routeState.duration)||'—')+' · '+fmtDist(routeState.distance)+'</span></div>'+
       '<button type="button" class="rx" id="routex" aria-label="Zavřít">&times;</button></div>'+
-      '<div class="rmode"><button type="button" class="seg2'+(prof==='foot'?' on':'')+'" data-rp="foot">🚶 Pěšky</button>'+
-      '<button type="button" class="seg2'+(prof==='car'?' on':'')+'" data-rp="car">🚗 Autem</button></div>'+
+      '<div class="rmode">'+modeBtns+'</div>'+
       '<div class="rsteps">'+(stepsHtml||'<div class="rstep"><span class="rtx">Žádné kroky.</span></div>')+'</div>'+
       '<div class="rfoot"><button type="button" class="cancel" id="routecancel">Zrušit trasu</button>'+
       '<button type="button" class="recalc" id="routerecalc">Přepočítat</button>'+
