@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chytrý košík: mapa (nová, náhled)</title>
+<!-- MAPA_UX_2 ČÁST C: experimentální kopie, noindex, nikde neodkazovaná. Živá mapa = mapa.html. -->
+<meta name="description" content="Chytrý košík. Pilot mapy.">
+<meta name="theme-color" content="#120726">
+<link rel="icon" href="/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;1,800;1,900&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<style>
+:root{--pink:#FF2E97;--cyan:#2de2e6;--lime:#c8e84b;--ink:#0b0318}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#120726;color:#fff;font-family:'Barlow Semi Condensed','Arial Narrow',Arial,sans-serif;font-size:17px;line-height:1.5;display:flex;flex-direction:column;min-height:100vh}
+header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:14px 20px;background:linear-gradient(180deg,#1b0b4a,#120726);border-bottom:2px solid var(--pink);box-shadow:0 2px 24px rgba(255,46,151,.4)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:38px;height:38px;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,.4))}
+.brand span{font-family:'Yellowtail',cursive;font-size:30px;color:#fff0f8;text-shadow:0 0 6px var(--pink),0 0 18px var(--pink)}
+.tag{font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.spacer{flex:1 1 auto}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:40px;padding:0 16px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#fff;font:600 15px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .2s,box-shadow .2s}
+.chip:hover{box-shadow:0 0 16px var(--cyan)}
+.chip.on{background:var(--cyan);color:#150628}
+.seg{display:inline-flex;border:2px solid var(--pink);border-radius:999px;overflow:hidden;background:#150628}
+.segbtn{min-height:40px;padding:0 18px;border:0;background:transparent;color:#fff;font:800 15px 'Barlow Semi Condensed',Arial,sans-serif;font-style:italic;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;transition:background .2s}
+.segbtn.on{background:var(--pink);color:#160a33;text-shadow:none}
+.segbtn:not(.on):hover{box-shadow:inset 0 0 14px rgba(255,46,151,.4)}
+.locbtn{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--lime);color:#150628;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.locbtn:hover{box-shadow:0 0 22px var(--lime)}
+.wrap{flex:1 1 auto;position:relative;min-height:440px}
+#map{position:absolute;inset:0;background:#07031a}
+/* GTA neon pop na vektorovou mapu */
+.maplibregl-canvas{filter:saturate(1.2) contrast(1.06) brightness(1.02)}
+.maplibregl-ctrl-attribution{background:rgba(11,3,24,.72)!important}
+.maplibregl-ctrl-attribution a{color:var(--lime)!important}
+.maplibregl-ctrl-group{background:#160a33!important;border:1px solid rgba(45,226,230,.5)!important;box-shadow:0 0 14px rgba(45,226,230,.35)!important}
+.maplibregl-ctrl-group button+button{border-top:1px solid rgba(45,226,230,.3)!important}
+.maplibregl-ctrl-group button span{filter:invert(1)}
+/* popup */
+.maplibregl-popup-content{background:#160a33;color:#fff;border:2px solid var(--pink);box-shadow:0 0 26px rgba(255,46,151,.5);border-radius:14px;padding:14px 16px}
+.maplibregl-popup-tip{border-top-color:#160a33!important;border-bottom-color:#160a33!important}
+.maplibregl-popup-close-button{color:#cbb9ef;font-size:20px;padding:2px 8px}
+.pop-chain{font-weight:900;font-style:italic;font-size:24px;letter-spacing:.02em;text-transform:uppercase;line-height:1.05;text-shadow:0 0 12px currentColor}
+.pop-venue{font-weight:900;font-style:italic;font-size:21px;line-height:1.12;text-shadow:0 0 12px currentColor}
+.pop-store{color:#fff;font-weight:700;font-size:15px;margin-top:2px}
+.pop-addr{color:#cbb9ef;font-size:13px;margin:3px 0 10px}
+.times{display:flex;flex-direction:column;gap:6px}
+.trow{display:flex;align-items:center;gap:8px}
+.trow b{display:inline-flex;align-items:center;gap:6px;min-width:70px;color:#eaffff;font-weight:700}
+.trow .v{font-weight:600}
+.muted{color:#9f8fc4}
+/* uzivatelska poloha (MAPA_UX_2 C8: GTA sipka kdyz zname smer, jinak tecka) */
+.me-dot{width:18px;height:18px;border-radius:50%;background:#c8e84b;box-shadow:0 0 0 3px #0d0626,0 0 16px #c8e84b;position:relative}
+.me-dot.hasdir{background:transparent;box-shadow:none;width:0;height:0}
+.me-dot.hasdir::before{content:"";position:absolute;left:-11px;top:-14px;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:26px solid #c8e84b;transform:rotate(var(--rot,0deg));transform-origin:50% 70%;filter:drop-shadow(0 0 8px #c8e84b)}
+.me-dot.hasdir::after{content:"";position:absolute;left:-5px;top:0;width:10px;height:10px;border-radius:50%;background:#0d0626}
+/* pulz vybraneho mista (C7) */
+.sel-pulse{width:16px;height:16px;border-radius:50%;pointer-events:none}
+.sel-pulse.go{animation:ckpulse 1.1s ease-out 2}
+@keyframes ckpulse{0%{box-shadow:0 0 0 0 rgba(255,46,151,.7)}100%{box-shadow:0 0 0 26px rgba(255,46,151,0)}}
+/* tlacitko 3D (C5) */
+.btn3d{position:absolute;right:12px;bottom:118px;z-index:620;width:44px;height:44px;border-radius:12px;border:2px solid var(--cyan);background:#160a33;color:#eaffff;font:900 italic 15px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;box-shadow:0 0 14px rgba(45,226,230,.35)}
+.btn3d:hover{box-shadow:0 0 18px var(--cyan)}
+.btn3d.on{background:var(--cyan);color:#150628}
+/* legenda (MAPA_UX: defaultne skryta, otevira ji tlacitko legbtn; radek = solo filtr klikem) */
+.legtoggle{position:absolute;left:12px;bottom:12px;z-index:600;min-height:38px;padding:0 14px;border-radius:999px;border:2px solid var(--cyan);background:rgba(18,8,46,.92);color:#eaffff;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:7px;box-shadow:0 0 14px rgba(45,226,230,.3)}
+.legtoggle:hover{box-shadow:0 0 18px var(--cyan)}
+.legtoggle.on{background:var(--cyan);color:#150628}
+.legend{position:absolute;left:12px;bottom:58px;z-index:600;background:rgba(14,6,36,.92);border:1px solid rgba(45,226,230,.45);border-radius:12px;padding:8px 10px;backdrop-filter:blur(4px);box-shadow:0 0 18px rgba(45,226,230,.25);max-width:180px;display:none}
+.legend.open{display:block}
+.legend .lh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 6px}
+.legend h4{margin:0;font:800 12px/1 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.legend .lx{background:none;border:0;color:#cbb9ef;font-size:18px;line-height:1;cursor:pointer;padding:0 2px}
+.legend .row{display:flex;align-items:center;gap:8px;font-size:13px;color:#e9e0ff;margin:2px 0;padding:3px 5px;border-radius:8px;cursor:pointer}
+.legend .row:hover{background:rgba(45,226,230,.12)}
+.legend .row.sel{background:rgba(45,226,230,.2);box-shadow:inset 0 0 0 1px rgba(45,226,230,.55)}
+.legend .d{width:18px;height:18px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 11px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+/* MAPA_UX: chip aktivniho filtru nahore (ukaze co je zapnute, klik = reset na Vse) */
+.afilter{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:650;display:none;align-items:center;gap:8px;min-height:36px;padding:0 6px 0 14px;border-radius:999px;border:2px solid var(--pink);background:rgba(18,8,46,.96);color:#fff0f8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;box-shadow:0 0 16px rgba(255,46,151,.4);max-width:80vw}
+.afilter.on{display:inline-flex}
+.afilter:hover{box-shadow:0 0 22px rgba(255,46,151,.6)}
+.afilter .aflabel{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.afilter .afx{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,46,151,.25);font-size:16px;line-height:1}
+/* filtr panel (jako Na ovoce) */
+.panel{position:absolute;right:12px;top:12px;z-index:700;width:244px;background:rgba(18,8,46,.96);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden;display:none}
+.panel.open{display:block}
+.panel .ph{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(180deg,#241056,#160a33);border-bottom:1px solid rgba(45,226,230,.3)}
+.panel .ph h3{margin:0;font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.panel .x{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.panel .list{padding:8px 6px;max-height:50vh;overflow:auto}
+.panel label{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;font-size:16px;color:#f2ecff}
+.panel label:hover{background:rgba(45,226,230,.1)}
+.panel .d{width:22px;height:22px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 13px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+.panel .nm{flex:1 1 auto;font-weight:600}
+.panel input[type=checkbox]{width:22px;height:22px;accent-color:var(--cyan);cursor:pointer}
+.panel .foot{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(45,226,230,.3)}
+.panel .foot button{flex:1 1 auto;min-height:42px;border-radius:999px;font:800 14px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;border:2px solid var(--cyan);background:#150628;color:#eaffff}
+.panel .foot .save{border:0;background:var(--lime);color:#150628;font-style:italic}
+.panel .foot button:hover{box-shadow:0 0 16px var(--cyan)}
+.panel .foot .save:hover{box-shadow:0 0 18px var(--lime)}
+/* vyhledavac */
+.search{position:absolute;left:12px;top:12px;z-index:650;width:260px;max-width:70vw}
+.searchbar{display:flex;align-items:center;gap:8px;padding:0 12px;height:44px;background:rgba(18,8,46,.96);border:2px solid var(--cyan);border-radius:999px;box-shadow:0 0 18px rgba(45,226,230,.35)}
+.searchbar svg{color:var(--cyan);flex:0 0 auto}
+.searchbar input{flex:1 1 auto;background:none;border:0;outline:none;color:#fff;font:600 16px 'Barlow Semi Condensed',Arial,sans-serif}
+.searchbar input::placeholder{color:#9f8fc4}
+.searchres{display:none;margin-top:6px;background:rgba(18,8,46,.98);border:1px solid rgba(45,226,230,.4);border-radius:12px;overflow:hidden;box-shadow:0 0 22px rgba(45,226,230,.3);max-height:46vh;overflow-y:auto}
+.searchres.open{display:block}
+.sr{padding:9px 12px;cursor:pointer;border-bottom:1px solid rgba(45,226,230,.12)}
+.sr:hover{background:rgba(45,226,230,.12)}
+.sr b{display:block;font-weight:700;color:#fff;font-size:15px}
+.sr span{display:block;color:#b9a9e0;font-size:12px}
+.sr-empty{padding:10px 12px;color:#9f8fc4;font-size:14px}
+/* popup odznak urovne */
+.pop-meta{color:#cbb9ef;font-size:13px;margin:3px 0 2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{display:inline-block;padding:1px 8px;border:1.5px solid;border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.02em;text-shadow:0 0 8px currentColor}
+/* skupinove nadpisy ve filtru/legende + prstencova tecka */
+.pcap{padding:8px 12px 2px;font:800 12px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9fe9ec}
+.legcap{margin:6px 0 2px;font:800 11px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#9fe9ec}
+.legend .d.ring,.panel .d.ring{background:transparent!important}
+/* pivni stezky: selektor tras + info box (zvlastni zelena, GTA neon) */
+#stezky{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);z-index:640;display:none;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;max-width:74vw;padding:6px 10px;background:rgba(18,8,46,.9);border:2px solid #8cff3a;border-radius:18px;box-shadow:0 0 18px rgba(140,255,58,.35)}
+#stezky .stz-more{min-height:34px;padding:0 13px;border-radius:999px;border:2px dashed #8cff3a;background:transparent;color:#bfffa0;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer}
+#stezky.open{display:flex}
+#stezky .stz-cap{font:800 13px 'Barlow Semi Condensed',Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#bfffa0}
+#stezky .stz{min-height:34px;padding:0 13px;border-radius:999px;border:2px solid #8cff3a;background:#102a0c;color:#daffc8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer}
+#stezky .stz.on{background:#8cff3a;color:#0b2206}
+#stezky .stz:hover{box-shadow:0 0 14px rgba(140,255,58,.6)}
+#stezka-info{position:absolute;left:50%;bottom:112px;transform:translateX(-50%);z-index:640;display:none;flex-direction:column;align-items:center;gap:2px;padding:8px 16px;background:rgba(14,6,36,.92);border:1.5px solid #8cff3a;border-radius:12px;box-shadow:0 0 18px rgba(140,255,58,.3);text-align:center;max-width:80vw}
+#stezka-info.open{display:flex}
+#stezka-info b{font:900 16px 'Barlow Semi Condensed',Arial,sans-serif;font-style:italic;color:#aaff85;text-shadow:0 0 10px rgba(140,255,58,.5)}
+#stezka-info span{font-size:13px;color:#dfeee0}
+/* MAPA_UX_2: tlacitko Pivni stezky (styl Legendy, zelena) */
+.stezbtn{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);z-index:620;display:none;min-height:38px;padding:0 16px;border-radius:999px;border:2px solid #8cff3a;background:rgba(16,42,12,.92);color:#daffc8;font:700 14px 'Barlow Semi Condensed',Arial,sans-serif;cursor:pointer;align-items:center;gap:7px;box-shadow:0 0 14px rgba(140,255,58,.3)}
+.stezbtn.show{display:inline-flex}
+.stezbtn:hover{box-shadow:0 0 18px rgba(140,255,58,.6)}
+.stezbtn.on{background:#8cff3a;color:#0b2206}
+/* MAPA_UX_2: Co je blizko — spodni listka (max tretina mapy) */
+.nearby{position:absolute;left:12px;right:12px;bottom:12px;z-index:660;max-height:33vh;display:none;flex-direction:column;background:rgba(18,8,46,.97);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden}
+.nearby.open{display:flex}
+.nearby .nh{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,#241056,#160a33);border-bottom:1px solid rgba(45,226,230,.3)}
+.nearby .nh b{font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
+.nearby .nx{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.nearby .nlist{overflow:auto;padding:4px 6px}
+.nearby .nr{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;border-bottom:1px solid rgba(45,226,230,.1)}
+.nearby .nr:hover{background:rgba(45,226,230,.12)}
+.nearby .nr .d{width:22px;height:22px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 12px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+.nearby .nr .nm{flex:1 1 auto;min-width:0}
+.nearby .nr .nm b{display:block;font-weight:700;color:#fff;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .nm span{display:block;color:#b9a9e0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .dist{flex:0 0 auto;color:var(--lime);font-weight:800;font-size:14px}
+.nearby .nfoot{display:none}
+.nearby .nfoot.show{display:block;padding:10px 12px;border-top:1px solid rgba(45,226,230,.3)}
+.nearby .nfoot button{width:100%;min-height:42px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#eaffff;font:800 14px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer}
+.nearby .nfoot button:hover{box-shadow:0 0 16px var(--cyan)}
+.nearby .nempty{padding:14px;color:#9f8fc4;font-size:14px;text-align:center}
+/* MAPA_UX_2: toast */
+.toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:900;display:none;max-width:80vw;padding:11px 18px;background:rgba(14,6,36,.96);border:2px solid var(--pink);border-radius:12px;color:#fff0f8;font:700 15px 'Barlow Semi Condensed',Arial,sans-serif;text-align:center;box-shadow:0 0 24px rgba(255,46,151,.5)}
+.toast.show{display:block}
+/* MAPA_UX_2: navigacni tlacitka v okne mista (Google Mapy) */
+.navrow{display:flex;gap:6px;margin-top:10px}
+.navbtn{flex:1 1 0;display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:7px 4px;border-radius:10px;border:2px solid var(--cyan);background:#150628;color:#eaffff;font:800 12px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer}
+.navbtn:hover{box-shadow:0 0 14px var(--cyan)}
+.navbtn svg{width:18px;height:18px}
+@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:58px;max-width:94vw}#stezka-info{bottom:112px}.nearby{left:8px;right:8px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#"><img src="/img/logo-mark.png" alt="Chytrý košík"><span>Chytrý košík</span></a>
+  <span class="spacer"></span>
+  <div class="seg" role="tablist">
+    <button type="button" class="segbtn on" id="modeObchody">Obchody</button>
+    <button type="button" class="segbtn" id="modePodniky">Podniky</button>
+  </div>
+  <div class="chips">
+    <button type="button" class="chip" id="allbtn">Vše</button>
+    <button type="button" class="chip on" id="filterbtn">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"></path></svg>
+      Filtry
+    </button>
+    <button type="button" class="chip" id="nearbtn">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
+      Co je blízko
+    </button>
+  </div>
+  <button type="button" class="locbtn" id="locbtn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+    Moje poloha
+  </button>
+</header>
+
+<div class="wrap">
+  <div id="map"></div>
+
+  <!-- Vyhledavac -->
+  <div class="search">
+    <div class="searchbar">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.2-4.2"></path></svg>
+      <input type="text" id="search" placeholder="Hledat na mapě…" autocomplete="off">
+    </div>
+    <div class="searchres" id="searchres"></div>
+  </div>
+
+  <!-- Filtr: nastavit vyber retezcu (jako Na ovoce) -->
+  <div class="panel" id="panel">
+    <div class="ph"><h3>Nastavit výběr</h3><button type="button" class="x" id="panelx" aria-label="Zavřít">&times;</button></div>
+    <div class="list" id="panellist"></div>
+    <div class="foot">
+      <button type="button" id="selall">Vybrat vše</button>
+      <button type="button" class="save" id="save">Uložit</button>
+    </div>
+  </div>
+
+  <!-- Legenda (MAPA_UX): defaultne skryta, otevira ji tlacitko; klik na radek = solo filtr -->
+  <button type="button" class="legtoggle" id="legbtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>Legenda</button>
+  <div class="legend" id="legend">
+    <div class="lh"><h4>Řetězce</h4><button type="button" class="lx" id="legx" aria-label="Zavřít">&times;</button></div>
+    <div id="legendrows"></div>
+  </div>
+
+  <!-- Pivni stezky: selektor tras (jen rezim Podniky) + info o trase -->
+  <div id="stezky"></div>
+  <div id="stezka-info"></div>
+
+  <!-- MAPA_UX: chip aktivniho filtru (ukaze co je zapnute, klik = reset na Vse) -->
+  <button type="button" class="afilter" id="afilter"></button>
+
+  <!-- MAPA_UX_2: Pivni stezky — tlacitko ve stylu Legendy, otevira spodni listu (default zavreno) -->
+  <button type="button" class="stezbtn" id="stezbtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h8a3 3 0 0 1 0 6h-1"></path><path d="M6 8h9M6 8v9a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2"></path></svg>Pivní stezky</button>
+
+  <!-- MAPA_UX_2: Co je blizko — spodni listka nejblizsich mist (max tretina mapy) -->
+  <div class="nearby" id="nearby">
+    <div class="nh"><b id="nearbytitle">Co je blízko</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
+    <div class="nlist" id="nearbylist"></div>
+    <div class="nfoot" id="nearbyfoot"></div>
+  </div>
+
+  <!-- MAPA_UX_2 C5: tlacitko 3D (vychozi vyp) -->
+  <button type="button" class="btn3d" id="btn3d">3D</button>
+
+  <!-- MAPA_UX_2: kratka hlaska (poloha se nepodarila apod.) -->
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+(function(){
+  var PRAHA = [14.4378, 50.0755]; // [lon,lat] pro MapLibre
+  var CHAINS = ['Lidl','Albert','Kaufland','Penny','Billa','Tesco','Globus'];
+  var COLORS = {
+    Lidl:'#ffd400', Albert:'#1f8bff', Kaufland:'#ff2d2d', Penny:'#ff2ec4',
+    Billa:'#ff8a1e', Tesco:'#25e05a', Globus:'#a65cff'
+  };
+  var LS_KEY = 'ck_mapa_filtr';
+
+  // nacteni ulozeneho vyberu (default = vse)
+  var active = {};
+  CHAINS.forEach(function(c){ active[c]=true; });
+  try{
+    var saved = JSON.parse(localStorage.getItem(LS_KEY)||'null');
+    if(saved && typeof saved==='object'){ CHAINS.forEach(function(c){ active[c] = saved[c]!==false; }); }
+  }catch(e){}
+
+  // MAPA_UX: vynuceny rezim (appka ma dve samostatne mapy). URL ?mode=obchody|podniky nebo
+  // injectovana promenna window.__MAPA_FORCE_MODE__. Pri vynuceni se skryje prepinac Obchody/Podniky.
+  // Bez parametru (web) = kombinovana mapa s prepinacem jako dnes.
+  var FORCE_MODE = null;
+  try{ var _mm = new URLSearchParams(location.search).get('mode'); if(_mm==='obchody'||_mm==='podniky') FORCE_MODE=_mm; }catch(e){}
+  if(!FORCE_MODE){ var _wm = window.__MAPA_FORCE_MODE__; if(_wm==='obchody'||_wm==='podniky') FORCE_MODE=_wm; }
+  if(FORCE_MODE){ var _seg=document.querySelector('.seg'); if(_seg) _seg.style.display='none'; }
+
+  // MAPA_UX_2 A1: v appce (vynuceny rezim nebo ?embed=1) schovej logo a nazev; na webu zustava.
+  var IN_APP = !!FORCE_MODE;
+  try{ if(new URLSearchParams(location.search).get('embed')==='1') IN_APP=true; }catch(e){}
+  if(IN_APP){ var _br=document.querySelector('.brand'); if(_br) _br.style.display='none'; }
+
+  // MAPA_UX_2: kratka hlaska (toast)
+  var _toastT=null;
+  function toast(msg){
+    var el=document.getElementById('toast'); if(!el) return;
+    el.textContent=msg; el.classList.add('show');
+    if(_toastT) clearTimeout(_toastT);
+    _toastT=setTimeout(function(){ el.classList.remove('show'); }, 3200);
+  }
+  // MAPA_UX_2: vzdalenost dvou bodu [lat,lon] v metrech (haversine)
+  function distM(a, b){
+    var R=6371000, toR=Math.PI/180;
+    var dLat=(b[0]-a[0])*toR, dLon=(b[1]-a[1])*toR;
+    var la1=a[0]*toR, la2=b[0]*toR;
+    var h=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)*Math.sin(dLon/2);
+    return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));
+  }
+  function fmtDist(m){ return m<950 ? Math.round(m/10)*10+' m' : (m/1000).toFixed(m<9500?1:0).replace('.',',')+' km'; }
+  // MAPA_UX_2: polygon kruhu o polomeru rM metru kolem [lon,lat] (pro kruh presnosti)
+  function circlePolygon(lon, lat, rM){
+    var pts=[], n=64, dLat=rM/111320, dLon=rM/(111320*Math.cos(lat*Math.PI/180));
+    for(var i=0;i<=n;i++){ var t=2*Math.PI*i/n; pts.push([lon+dLon*Math.cos(t), lat+dLat*Math.sin(t)]); }
+    return {type:'Feature', geometry:{type:'Polygon', coordinates:[pts]}, properties:{}};
+  }
+
+  var map = new maplibregl.Map({
+    container:'map',
+    style:'https://tiles.openfreemap.org/styles/dark', // OpenFreeMap: zdarma, bez klice, bez limitu
+    center:PRAHA, zoom:11, attributionControl:false, hash:false
+  });
+  map.addControl(new maplibregl.AttributionControl({compact:true, customAttribution:'prodejny: OpenStreetMap (ODbL)'}));
+  map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'bottom-right');
+
+  // ---- GTA neon prebarveni (svitici silnice magenta/cyan, tmava voda) ----
+  var NEON = {
+    'background':            {'background-color':'#07031a'},
+    'water':                 {'fill-color':'#0c2742'},
+    'water_name':            {},
+    'highway_motorway_casing':{'line-color':'#ff2e97','line-blur':4,'line-opacity':0.45,'line-width':['interpolate',['linear'],['zoom'],8,2,16,14]},
+    'highway_motorway_inner': {'line-color':'#ff8fd1','line-blur':0.5,'line-opacity':0.98},
+    'highway_motorway_subtle':{'line-color':'#8a1f5a','line-opacity':0.6},
+    'highway_major_casing':  {'line-color':'#ff2e97','line-blur':3,'line-opacity':0.32},
+    'highway_major_inner':   {'line-color':'#ff6ec0','line-blur':0.4,'line-opacity':0.92},
+    'highway_major_subtle':  {'line-color':'#5c2449','line-opacity':0.7},
+    'highway_minor':         {'line-color':'#2de2e6','line-blur':0.5,'line-opacity':0.82},
+    'highway_path':          {'line-color':'#1f8a9c','line-opacity':0.45},
+    'railway':               {'line-color':'#7a3cff','line-opacity':0.5},
+    'railway_transit':       {'line-color':'#7a3cff','line-opacity':0.4}
+  };
+  function applyNeon(){
+    Object.keys(NEON).forEach(function(id){
+      if(!map.getLayer(id)) return;
+      var props = NEON[id];
+      Object.keys(props).forEach(function(p){
+        try{ map.setPaintProperty(id, p, props[p]); }catch(e){}
+      });
+    });
+  }
+
+  // ---- zvyraznene nazvy mist (GTA nadech): tucne, svetle neon + tmave halo ----
+  // Font: OpenFreeMap glyphy nabizi jen Noto Sans Regular/Bold -> pouzivame Noto Sans Bold.
+  //   Pravy Pricedown by vyzadoval vlastni SDF glyphy (viz report).
+  var PLACE_COLOR='#ffd9f3', PLACE_HALO='#0a0418'; // svetle ruzova na tmavem halo
+  var STREET_COLOR='#ffffff', STREET_HALO='#07031a';
+  // velke celky driv, ulice az pri priblizeni
+  var LABELS = {
+    // ctvrti / obce / mesta
+    'place_city_large':{z:[3,24], size:['interpolate',['linear'],['zoom'],4,15,10,24], paint:1},
+    'place_city':      {z:[5,24], size:['interpolate',['linear'],['zoom'],6,14,12,21], paint:1},
+    'place_town':      {z:[8,24], size:['interpolate',['linear'],['zoom'],8,13,13,19], paint:1},
+    'place_suburb':    {z:[10,24],size:['interpolate',['linear'],['zoom'],10,13,15,20], paint:1},
+    'place_village':   {z:[11,24],size:['interpolate',['linear'],['zoom'],11,12,15,17], paint:1},
+    'place_other':     {z:[13,24],size:['interpolate',['linear'],['zoom'],13,11,16,16], paint:1},
+    // ulice az od vetsiho priblizeni
+    'highway_name_motorway':{z:[13,24], size:['interpolate',['linear'],['zoom'],13,11,18,15], street:1},
+    'highway_name_other':   {z:[14,24], size:['interpolate',['linear'],['zoom'],14,11,18,15], street:1}
+  };
+  function applyLabels(){
+    Object.keys(LABELS).forEach(function(id){
+      if(!map.getLayer(id)) return;
+      var c=LABELS[id];
+      try{ map.setLayerZoomRange(id, c.z[0], c.z[1]); }catch(e){}
+      // ceske nazvy s fallbackem (name:cs -> name:latin -> name)
+      try{ map.setLayoutProperty(id,'text-field',['coalesce',['get','name:cs'],['get','name:latin'],['get','name']]); }catch(e){}
+      try{ map.setLayoutProperty(id,'text-font',['Noto Sans Bold']); }catch(e){}
+      try{ map.setLayoutProperty(id,'text-size', c.size); }catch(e){}
+      if(c.paint){ try{ map.setLayoutProperty(id,'text-letter-spacing',0.04); }catch(e){} }
+      var col = c.street?STREET_COLOR:PLACE_COLOR;
+      var halo= c.street?STREET_HALO:PLACE_HALO;
+      try{ map.setPaintProperty(id,'text-color',col); }catch(e){}
+      try{ map.setPaintProperty(id,'text-halo-color',halo); }catch(e){}
+      try{ map.setPaintProperty(id,'text-halo-width', c.street?1.8:2.2); }catch(e){}
+      try{ map.setPaintProperty(id,'text-halo-blur', 0.4); }catch(e){}
+    });
+    // ceske nazvy statu a admin. celku (Czechia -> Česko, Slovakia -> Slovensko) - jen lokalizace textu, vzhled vrstvy beze zmeny
+    ['place_country_major','place_country_minor','place_country_other','place_state','place_continent'].forEach(function(id){
+      if(!map.getLayer(id)) return;
+      try{ map.setLayoutProperty(id,'text-field',['coalesce',['get','name:cs'],['get','name:latin'],['get','name']]); }catch(e){}
+    });
+  }
+
+  // ---- data + body ----
+  function fmtMin(sec){ if(sec==null) return null; var m=Math.round(sec/60); return m<1?'<1 min':m+' min'; }
+
+  function route(profilePath, prof, a, b){ // a,b = [lat,lon]; FOSSGIS verejny OSRM
+    var url='https://routing.openstreetmap.de/'+profilePath+'/route/v1/'+prof+'/'+a[1]+','+a[0]+';'+b[1]+','+b[0]+'?overview=false';
+    return fetch(url).then(function(r){return r.json();}).then(function(j){
+      return (j && j.routes && j.routes[0]) ? j.routes[0].duration : null;
+    }).catch(function(){return null;});
+  }
+
+  var userLoc = null, userMarker = null;
+
+  // MAPA_UX_2 A4: navigacni tlacitka (Google Mapy). Pokud zname moji polohu, prida se origin.
+  function navButtonsHtml(lat, lon){
+    function dir(mode){
+      var u='https://www.google.com/maps/dir/?api=1&destination='+lat+','+lon+'&travelmode='+mode;
+      if(userLoc) u+='&origin='+userLoc[0]+','+userLoc[1];
+      return u;
+    }
+    var walk='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="1.6"></circle><path d="M11 21l1.5-6 2.5 2v4M11 15l-1.5-5 4-1 2 3 2.5 1"></path></svg>';
+    var bus='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="13" rx="2"></rect><path d="M5 11h14M8 20v-3M16 20v-3"></path><circle cx="8.5" cy="14.5" r="0.6"></circle><circle cx="15.5" cy="14.5" r="0.6"></circle></svg>';
+    var car='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l2-5a2 2 0 0 1 2-1.3h8A2 2 0 0 1 18 8l2 5v5h-3v-2H7v2H4z"></path><circle cx="7.5" cy="15.5" r="0.6"></circle><circle cx="16.5" cy="15.5" r="0.6"></circle></svg>';
+    return '<div class="navrow">'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('walking')+'">'+walk+'Pěšky</a>'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('transit')+'">'+bus+'MHD</a>'+
+      '<a class="navbtn" target="_blank" rel="noopener" href="'+dir('driving')+'">'+car+'Autem</a>'+
+    '</div>';
+  }
+
+  function popupHtml(s){
+    var color = COLORS[s.retezec]||'#2de2e6';
+    var store = (s.nazev && s.nazev!==s.retezec) ? '<div class="pop-store">'+s.nazev+'</div>' : '';
+    return '<div class="pop-chain" style="color:'+color+'">'+s.retezec+'</div>'+ store +
+      (s.adresa?'<div class="pop-addr">'+s.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
+      '<div class="times">'+
+        '<div class="trow"><b>🚶 Pěšky</b><span class="v" data-foot>—</span></div>'+
+        '<div class="trow"><b>🚗 Autem</b><span class="v" data-car>—</span></div>'+
+      '</div>'+
+      navButtonsHtml(s.lat, s.lon);
+  }
+  function fillTimes(s, popupEl){
+    if(!popupEl) return;
+    var footEl = popupEl.querySelector('[data-foot]');
+    var carEl  = popupEl.querySelector('[data-car]');
+    if(!userLoc){
+      if(footEl) footEl.innerHTML='<span class="muted">zapni Moje poloha</span>';
+      if(carEl)  carEl.innerHTML='<span class="muted">zapni Moje poloha</span>';
+      return;
+    }
+    if(footEl) footEl.textContent='…';
+    if(carEl)  carEl.textContent='…';
+    var dest=[s.lat,s.lon];
+    route('routed-foot','foot',userLoc,dest).then(function(d){ if(footEl) footEl.textContent=fmtMin(d)||'nedostupné'; });
+    route('routed-car','driving',userLoc,dest).then(function(d){ if(carEl) carEl.textContent=fmtMin(d)||'nedostupné'; });
+  }
+
+  // ======== Rezimy: Obchody (stores) + Podniky (venues) ========
+  var mode = 'obchody'; // 'obchody' | 'podniky'
+
+  // Podniky: TYP (barva spendliku) + UROVEN (odznak = prstenec)
+  var VT_LABEL = {restaurace:'Restaurace', kavarna:'Kavárna', pivnice:'Pivnice', bistro:'Bistro', cukrarna:'Cukrárna', reznictvi:'Řeznictví', obchod:'Obchod', trh:'Trh', vyrobce:'Výrobce', pivovar:'Pivovar', hospoda:'Hospoda', zmrzlinarna:'Zmrzlinárna', rychle_obcerstveni:'Rychlé občerstvení', pekarna:'Pekárna', vinoteka:'Vinotéka', lahudky:'Lahůdky', cajovna:'Čajovna'};
+  var VT_INI   = {restaurace:'R', kavarna:'K', pivnice:'P', bistro:'B', cukrarna:'C', reznictvi:'Ř', obchod:'O', trh:'T', vyrobce:'V', pivovar:'Pv', hospoda:'H', zmrzlinarna:'Z', rychle_obcerstveni:'Ro', pekarna:'Pk', vinoteka:'Vi', lahudky:'L', cajovna:'Č'};
+  var VT_COLOR = {restaurace:'#ff4b4b', kavarna:'#ff9e2c', pivnice:'#f2d20c', bistro:'#2ee6c6', cukrarna:'#ff6ad5', reznictvi:'#ff3d6e', obchod:'#35a0ff', trh:'#7a6bff', vyrobce:'#9be52e', pivovar:'#e8961e', hospoda:'#b5794a', zmrzlinarna:'#7fd4ff', rychle_obcerstveni:'#ff6a1a', pekarna:'#e8c65a', vinoteka:'#b04dff', lahudky:'#3bd99a', cajovna:'#4ab0b8'};
+  var VT_ORDER = ['restaurace','kavarna','pivnice','bistro','cukrarna','reznictvi','obchod','trh','vyrobce','pivovar','hospoda','zmrzlinarna','rychle_obcerstveni','pekarna','vinoteka','lahudky','cajovna'];
+  var VU_LABEL = {michelin:'Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr Chytrého košíku', pivni_stezka:'Pivní stezka'};
+  var VU_SHORT = {michelin:'★ Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr CK', pivni_stezka:'Pivní stezka'};
+  var VU_COLOR = {michelin:'#ffd700', gault:'#e5e4e2', bib:'#cd7f32', vyber_ck:'#ffffff', pivni_stezka:'#58c93a'}; // prstenec/odznak
+  var VU_ORDER = ['michelin','gault','bib','vyber_ck','pivni_stezka'];
+  var LS_VT = 'ck_mapa_podniky_typ', LS_VU = 'ck_mapa_podniky_uroven';
+  var ROUTE_COLOR = '#8cff3a'; // trasa pivni stezky (vazba na uroven Pivni stezka, odlisna od silnic a bodu)
+  var STEZKY = [], STEZKA_BY_KEY = {}, activeStezka = null;
+
+  // aktivni mnoziny (naplni se z dat po nacteni; default vse zaskrtnuto)
+  var activeVT = {}, activeVU = {};
+  var VT_PRESENT = [], VU_PRESENT = [];
+  function initVenueFilters(){
+    var ts={}, us={};
+    ALLV.forEach(function(v){ ts[v.typ]=1; (v.oceneni&&v.oceneni.length?v.oceneni:['vyber_ck']).forEach(function(a){ us[a]=1; }); });
+    VT_PRESENT = VT_ORDER.filter(function(t){ return ts[t]; });
+    VU_PRESENT = VU_ORDER.filter(function(u){ return us[u]; });
+    var svt=null, svu=null;
+    try{ svt=JSON.parse(localStorage.getItem(LS_VT)||'null'); }catch(e){}
+    try{ svu=JSON.parse(localStorage.getItem(LS_VU)||'null'); }catch(e){}
+    VT_PRESENT.forEach(function(t){ activeVT[t] = svt&&typeof svt==='object' ? svt[t]!==false : true; });
+    VU_PRESENT.forEach(function(u){ activeVU[u] = svu&&typeof svu==='object' ? svu[u]!==false : true; });
+  }
+
+  var ALL = [];  // prodejny
+  var ALLV = []; // podniky
+
+  function storesFC(){
+    return {type:'FeatureCollection', features:ALL.filter(function(s){ return active[s.retezec]; }).map(function(s){
+      return {type:'Feature', geometry:{type:'Point', coordinates:[s.lon,s.lat]},
+        properties:{nazev:s.nazev, retezec:s.retezec, adresa:s.adresa||'', color:COLORS[s.retezec]||'#2de2e6', ini:(s.retezec||'?').charAt(0)}};
+    })};
+  }
+  function ocOf(v){ return (v.oceneni && v.oceneni.length) ? v.oceneni.slice().sort() : ['vyber_ck']; }
+  function venuesFC(){
+    return {type:'FeatureCollection', features:ALLV.filter(function(v){
+      return activeVT[v.typ] && ocOf(v).some(function(a){ return activeVU[a]; }) && !(activeStezka && v.stezka===activeStezka);
+    }).map(function(v){
+      var oc=ocOf(v), rep=oc[0], graded=oc.some(function(a){ return a!=='vyber_ck'; })?1:0;
+      return {type:'Feature', geometry:{type:'Point', coordinates:[v.lon,v.lat]},
+        properties:{nazev:v.nazev, typ:v.typ, oceneni:oc.join(','), graded:graded, adresa:v.adresa||'',
+          color:VT_COLOR[v.typ]||'#2de2e6', ring:VU_COLOR[rep]||'#ffffff', ini:VT_INI[v.typ]||'•', pico:VT_PICO[v.typ]||'shop'}};
+    })};
+  }
+  function popupVenueHtml(v){
+    var color = VT_COLOR[v.typ]||'#2de2e6';
+    var oc = Array.isArray(v.oceneni) ? v.oceneni.slice() : (v.oceneni ? String(v.oceneni).split(',') : ['vyber_ck']);
+    oc.sort(); // pevne neutralni poradi (abecedni), Michelin neni prvni
+    var badges = oc.map(function(a){ return '<span class="badge" style="border-color:'+VU_COLOR[a]+';color:'+VU_COLOR[a]+'">'+VU_SHORT[a]+'</span>'; }).join(' ');
+    return '<div class="pop-venue" style="color:'+color+'">'+v.nazev+'</div>'+
+      '<div class="pop-meta">'+(VT_LABEL[v.typ]||'')+' '+badges+'</div>'+
+      (v.adresa?'<div class="pop-addr">'+v.adresa+'</div>':'<div class="pop-addr muted">Adresa neuvedena</div>')+
+      '<div class="times"><div class="trow"><span class="muted">Medailonek a časy přidáme brzy.</span></div></div>'+
+      ((v.lat!=null && v.lon!=null) ? navButtonsHtml(v.lat, v.lon) : '');
+  }
+
+  function addStoreLayers(){
+    map.addSource('stores', {type:'geojson', data:storesFC(), cluster:true, clusterRadius:48, clusterMaxZoom:13});
+
+    // shluk: zarici halo
+    map.addLayer({id:'cluster-glow', type:'circle', source:'stores', filter:['has','point_count'], paint:{
+      'circle-color':'#ff2e97',
+      'circle-radius':['step',['get','point_count'],22,10,28,30,36],
+      'circle-blur':1, 'circle-opacity':0.45
+    }});
+    // shluk: jadro
+    map.addLayer({id:'clusters', type:'circle', source:'stores', filter:['has','point_count'], paint:{
+      'circle-color':'#160a33',
+      'circle-radius':['step',['get','point_count'],15,10,19,30,25],
+      'circle-stroke-width':2.4, 'circle-stroke-color':'#ff2e97', 'circle-stroke-opacity':0.95
+    }});
+    map.addLayer({id:'cluster-count', type:'symbol', source:'stores', filter:['has','point_count'], layout:{
+      'text-field':['get','point_count_abbreviated'], 'text-font':['Noto Sans Regular'], 'text-size':14
+    }, paint:{'text-color':'#0b0318'}});
+
+    // jednotlivy spendlik: zare
+    map.addLayer({id:'pt-glow', type:'circle', source:'stores', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':13, 'circle-blur':1, 'circle-opacity':0.5
+    }});
+    // jednotlivy spendlik: jadro v barve retezce
+    map.addLayer({id:'points', type:'circle', source:'stores', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':8,
+      'circle-stroke-width':1.6, 'circle-stroke-color':'#ffffff', 'circle-stroke-opacity':0.9
+    }});
+    // ikona = inicial retezce
+    map.addLayer({id:'pt-label', type:'symbol', source:'stores', filter:['!',['has','point_count']], layout:{
+      'text-field':['get','ini'], 'text-font':['Noto Sans Regular'], 'text-size':11, 'text-allow-overlap':true
+    }, paint:{'text-color':'#0b0318'}});
+    // nazev retezce u spendliku (jako Google), az pri priblizeni; nepreklada se, pri oddaleni zmizi
+    map.addLayer({id:'pt-name', type:'symbol', source:'stores', filter:['!',['has','point_count']], minzoom:14, layout:{
+      'text-field':['get','retezec'], 'text-font':['Noto Sans Bold'],
+      'text-size':['interpolate',['linear'],['zoom'],14,11,18,15],
+      'text-offset':[0,1.1], 'text-anchor':'top', 'text-allow-overlap':false, 'text-optional':true
+    }, paint:{'text-color':['get','color'], 'text-halo-color':'#07031a', 'text-halo-width':2, 'text-halo-blur':0.3}});
+
+    // kliky
+    map.on('click','clusters',function(e){
+      var f=e.features[0];
+      map.getSource('stores').getClusterExpansionZoom(f.properties.cluster_id,function(err,z){
+        if(err) return; map.easeTo({center:f.geometry.coordinates, zoom:z});
+      });
+    });
+    map.on('click','points',function(e){
+      var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
+      var s={nazev:p.nazev, retezec:p.retezec, adresa:p.adresa, lon:c[0], lat:c[1]};
+      var popup=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupHtml(s)).addTo(map);
+      fillTimes(s, popup.getElement());
+    });
+    ['clusters','points'].forEach(function(id){
+      map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
+      map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
+    });
+  }
+  function addVenueLayers(){
+    map.addSource('venues', {type:'geojson', data:venuesFC(), cluster:true, clusterRadius:48, clusterMaxZoom:13});
+    map.addLayer({id:'v-cluster-glow', type:'circle', source:'venues', filter:['has','point_count'], paint:{
+      'circle-color':'#ff2e97',
+      'circle-radius':['step',['get','point_count'],22,10,28,30,36], 'circle-blur':1, 'circle-opacity':0.45
+    }});
+    map.addLayer({id:'v-clusters', type:'circle', source:'venues', filter:['has','point_count'], paint:{
+      'circle-color':'#160a33',
+      'circle-radius':['step',['get','point_count'],15,10,19,30,25],
+      'circle-stroke-width':2.4, 'circle-stroke-color':'#ff2e97', 'circle-stroke-opacity':0.95
+    }});
+    map.addLayer({id:'v-cluster-count', type:'symbol', source:'venues', filter:['has','point_count'], layout:{
+      'text-field':['get','point_count_abbreviated'], 'text-font':['Noto Sans Regular'], 'text-size':14
+    }, paint:{'text-color':'#0b0318'}});
+    map.addLayer({id:'v-pt-glow', type:'circle', source:'venues', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':13, 'circle-blur':1, 'circle-opacity':0.5
+    }});
+    // jadro = barva TYPU; prstenec = odznak UROVNE (zlata/stribrna/bronz, silnejsi u ocenenych)
+    map.addLayer({id:'v-points', type:'circle', source:'venues', filter:['!',['has','point_count']], paint:{
+      'circle-color':['get','color'], 'circle-radius':8,
+      'circle-stroke-color':['get','ring'],
+      'circle-stroke-width':['case',['==',['get','graded'],0],1.6,3.2],
+      'circle-stroke-opacity':0.95
+    }});
+    map.addLayer({id:'v-pt-label', type:'symbol', source:'venues', filter:['!',['has','point_count']], layout:{
+      'icon-image':['concat','pico-',['get','pico']], 'icon-size':0.5, 'icon-allow-overlap':true, 'icon-ignore-placement':true
+    }});
+    // nazev podniku u spendliku (jako Google), az pri priblizeni
+    map.addLayer({id:'v-pt-name', type:'symbol', source:'venues', filter:['!',['has','point_count']], minzoom:14, layout:{
+      'text-field':['get','nazev'], 'text-font':['Noto Sans Bold'],
+      'text-size':['interpolate',['linear'],['zoom'],14,11,18,15],
+      'text-offset':[0,1.1], 'text-anchor':'top', 'text-allow-overlap':false, 'text-optional':true
+    }, paint:{'text-color':['get','color'], 'text-halo-color':'#07031a', 'text-halo-width':2, 'text-halo-blur':0.3}});
+
+    map.on('click','v-clusters',function(e){
+      var f=e.features[0];
+      map.getSource('venues').getClusterExpansionZoom(f.properties.cluster_id,function(err,z){
+        if(err) return; map.easeTo({center:f.geometry.coordinates, zoom:z});
+      });
+    });
+    map.on('click','v-points',function(e){
+      var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa, lat:c[1], lon:c[0]})).addTo(map);
+    });
+    ['v-clusters','v-points'].forEach(function(id){
+      map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
+      map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
+    });
+  }
+
+  // ======== Pivni stezky jako trasy (predpocitane OSRM v stezky.json) ========
+  var STEZKA_LAYERS=['stezka-line-glow','stezka-line','stezka-stop-glow','stezka-stop','stezka-stop-num'];
+  function stezkaFC(s){
+    if(!s) return {type:'FeatureCollection', features:[]};
+    var feats=[{type:'Feature', geometry:s.geometry, properties:{kind:'line'}}];
+    (s.stops||[]).forEach(function(st){ feats.push({type:'Feature', geometry:{type:'Point', coordinates:[st.lon,st.lat]}, properties:{kind:'stop', n:String(st.n), nazev:st.nazev}}); });
+    return {type:'FeatureCollection', features:feats};
+  }
+  function addStezkaLayers(){
+    map.addSource('stezka', {type:'geojson', data:stezkaFC(null)});
+    map.addLayer({id:'stezka-line-glow', type:'line', source:'stezka', filter:['==',['get','kind'],'line'],
+      layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':ROUTE_COLOR, 'line-width':['interpolate',['linear'],['zoom'],8,6,16,16], 'line-blur':4, 'line-opacity':0.4}});
+    map.addLayer({id:'stezka-line', type:'line', source:'stezka', filter:['==',['get','kind'],'line'],
+      layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':ROUTE_COLOR, 'line-width':['interpolate',['linear'],['zoom'],8,2.5,16,6], 'line-opacity':0.98}});
+    map.addLayer({id:'stezka-stop-glow', type:'circle', source:'stezka', filter:['==',['get','kind'],'stop'],
+      paint:{'circle-color':ROUTE_COLOR, 'circle-radius':15, 'circle-blur':1, 'circle-opacity':0.5}});
+    map.addLayer({id:'stezka-stop', type:'circle', source:'stezka', filter:['==',['get','kind'],'stop'],
+      paint:{'circle-color':ROUTE_COLOR, 'circle-radius':12, 'circle-stroke-width':2, 'circle-stroke-color':'#0b0318', 'circle-stroke-opacity':0.9}});
+    map.addLayer({id:'stezka-stop-num', type:'symbol', source:'stezka', filter:['==',['get','kind'],'stop'],
+      layout:{'text-field':['get','n'], 'text-font':['Noto Sans Bold'], 'text-size':13, 'text-allow-overlap':true},
+      paint:{'text-color':'#0b2206'}});
+    map.on('click','stezka-stop',function(e){
+      var p=e.features[0].properties, c=e.features[0].geometry.coordinates.slice();
+      new maplibregl.Popup({offset:14, maxWidth:'260px'}).setLngLat(c).setHTML('<div class="pop-venue" style="color:'+ROUTE_COLOR+'">'+p.n+'. '+p.nazev+'</div>').addTo(map);
+    });
+    map.on('mouseenter','stezka-stop',function(){ map.getCanvas().style.cursor='pointer'; });
+    map.on('mouseleave','stezka-stop',function(){ map.getCanvas().style.cursor=''; });
+  }
+  function renderStezkaInfo(s){
+    var box=document.getElementById('stezka-info');
+    if(!box) return;
+    if(!s){ box.classList.remove('open'); box.innerHTML=''; return; }
+    var icon = s.profile==='foot' ? '🚶 pěšky' : '🚗 autem';
+    box.innerHTML='<b>'+s.name+'</b><span>'+icon+' · '+String(s.distance_km).replace('.',',')+' km · '+s.duration_min+' min · '+(s.stops||[]).length+' zastávek</span>';
+    box.classList.add('open');
+  }
+  // MAPA_UX_2 A5: stezky skryte za tlacitkem (default zavreno), razeni podle vyrezu mapy,
+  // vzdalene (>60 km od stredu) pod "Dalsi stezky".
+  var stezkyOpen=false, stezkyShowMore=false;
+  function stezkaCenterDist(s){
+    var c=map.getCenter(), o=[c.lat,c.lng], best=Infinity;
+    (s.stops||[]).forEach(function(st){ var d=distM(o,[st.lat,st.lon]); if(d<best) best=d; });
+    if(best===Infinity && s.geometry && s.geometry.coordinates){ s.geometry.coordinates.forEach(function(cc){ var d=distM(o,[cc[1],cc[0]]); if(d<best) best=d; }); }
+    return best;
+  }
+  function updateStezbtn(){
+    var b=document.getElementById('stezbtn'); if(!b) return;
+    var show = mode==='podniky' && STEZKY.length;
+    b.classList.toggle('show', !!show);
+    if(!show) stezkyOpen=false;
+    b.classList.toggle('on', stezkyOpen && !!show);
+  }
+  function buildStezkaChips(){
+    var bar=document.getElementById('stezky'); if(!bar) return;
+    bar.innerHTML='';
+    updateStezbtn();
+    if(mode!=='podniky' || !STEZKY.length || !stezkyOpen){ bar.classList.remove('open'); return; }
+    bar.classList.add('open');
+    var sorted=STEZKY.slice().sort(function(a,b){ return stezkaCenterDist(a)-stezkaCenterDist(b); });
+    var near=sorted.filter(function(s){ return stezkaCenterDist(s)<=60000; });
+    var far =sorted.filter(function(s){ return stezkaCenterDist(s) >60000; });
+    var cap=document.createElement('span'); cap.className='stz-cap'; cap.textContent='Pivní stezky:'; bar.appendChild(cap);
+    function addChip(s){
+      var btn=document.createElement('button'); btn.type='button';
+      btn.className='stz'+(activeStezka===s.key?' on':'');
+      btn.textContent=s.name;
+      btn.addEventListener('click',function(){ activeStezka===s.key ? clearStezka() : selectStezka(s.key); });
+      bar.appendChild(btn);
+    }
+    (near.length?near:sorted).forEach(addChip);       // kdyz je vse dal nez 60 km, ukaz aspon nejblizsi
+    var rest = near.length ? far : [];
+    if(rest.length && !stezkyShowMore){
+      var more=document.createElement('button'); more.type='button'; more.className='stz-more';
+      more.textContent='Další stezky ('+rest.length+')';
+      more.addEventListener('click',function(){ stezkyShowMore=true; buildStezkaChips(); });
+      bar.appendChild(more);
+    } else if(rest.length && stezkyShowMore){
+      rest.forEach(addChip);
+    }
+  }
+  function selectStezka(key){
+    var s=STEZKA_BY_KEY[key]; if(!s) return;
+    activeStezka=key;
+    var src=map.getSource('stezka'); if(src) src.setData(stezkaFC(s));
+    var v=map.getSource('venues'); if(v) v.setData(venuesFC()); // rozklastruj: odeber body teto stezky z clusteru
+    renderStezkaInfo(s); buildStezkaChips();
+    var b=new maplibregl.LngLatBounds();
+    (s.geometry.coordinates||[]).forEach(function(c){ b.extend(c); });
+    (s.stops||[]).forEach(function(st){ b.extend([st.lon,st.lat]); });
+    try{ map.fitBounds(b, {padding:70, maxZoom:14, duration:600}); }catch(e){}
+  }
+  function clearStezka(){
+    activeStezka=null;
+    var src=map.getSource('stezka'); if(src) src.setData(stezkaFC(null));
+    var v=map.getSource('venues'); if(v) v.setData(venuesFC());
+    renderStezkaInfo(null); buildStezkaChips();
+  }
+
+  var STORE_LAYERS=['cluster-glow','clusters','cluster-count','pt-glow','points','pt-label','pt-name'];
+  var VENUE_LAYERS=['v-cluster-glow','v-clusters','v-cluster-count','v-pt-glow','v-points','v-pt-label','v-pt-name'];
+  function boundsOf(list){
+    if(!list || !list.length) return null;
+    var b=new maplibregl.LngLatBounds();
+    list.forEach(function(p){ b.extend([p.lon,p.lat]); });
+    return b;
+  }
+  // Obchody = pilot Praha; Podniky = cela CR (clustering resi hustotu)
+  function fitMode(animate){
+    var b = mode==='podniky'
+      ? boundsOf(ALLV)
+      : boundsOf(ALL.filter(function(s){ return active[s.retezec]; }));
+    if(!b) return;
+    map.fitBounds(b, {padding:50, maxZoom: mode==='podniky'?11:13, duration: animate?600:0});
+  }
+  function setMode(m, animate){
+    mode=m;
+    STORE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='obchody'?'visible':'none'); });
+    VENUE_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='podniky'?'visible':'none'); });
+    if(m!=='podniky' && activeStezka) clearStezka();
+    STEZKA_LAYERS.forEach(function(id){ if(map.getLayer(id)) map.setLayoutProperty(id,'visibility', m==='podniky'?'visible':'none'); });
+    document.getElementById('modeObchody').classList.toggle('on', m==='obchody');
+    document.getElementById('modePodniky').classList.toggle('on', m==='podniky');
+    buildLegend(); buildPanel(); buildStezkaChips();
+    fitMode(animate!==false);
+  }
+
+
+  // ===================== MAPA_UX_2 ČÁST C: GTA styl + orientace =====================
+  var OMT='openmaptiles'; // zdroj vektorovych dlazdic (OpenMapTiles schema)
+  function _sp(id,p,v){ try{ if(map.getLayer(id)) map.setPaintProperty(id,p,v); }catch(e){} }
+  function _sl(id,p,v){ try{ if(map.getLayer(id)) map.setLayoutProperty(id,p,v); }catch(e){} }
+  function _zr(id,a,b){ try{ if(map.getLayer(id)) map.setLayerZoomRange(id,a,b); }catch(e){} }
+
+  // piktogramy podniku (C7): bile kresby na pruhledu, pres map.addImage
+  var VT_PICO = {restaurace:'pribor', kavarna:'salek', pivnice:'pullitr', bistro:'pribor', cukrarna:'dort', reznictvi:'maso', obchod:'shop', trh:'shop', vyrobce:'maso', pivovar:'pullitr', hospoda:'pullitr', zmrzlinarna:'zmrzlina', rychle_obcerstveni:'pribor', pekarna:'chleb', vinoteka:'vino', lahudky:'maso', cajovna:'salek'};
+  function picoImage(key){
+    var S=36, c=document.createElement('canvas'); c.width=S; c.height=S;
+    var x=c.getContext('2d'); x.strokeStyle='#ffffff'; x.fillStyle='#ffffff'; x.lineWidth=2.6; x.lineCap='round'; x.lineJoin='round';
+    function line(a,b,d,e){ x.beginPath(); x.moveTo(a,b); x.lineTo(d,e); x.stroke(); }
+    if(key==='pribor'){ line(12,7,12,17); line(9,7,9,12); line(15,7,15,12); line(9,12,15,12); x.beginPath(); x.moveTo(24,7); x.quadraticCurveTo(28,9,24,16); x.stroke(); line(24,16,24,29); line(12,17,12,29); }
+    else if(key==='salek'){ x.beginPath(); x.moveTo(10,15); x.lineTo(10,22); x.quadraticCurveTo(10,28,18,28); x.quadraticCurveTo(26,28,26,22); x.lineTo(26,15); x.closePath(); x.stroke(); x.beginPath(); x.arc(27,19,4,-1.2,1.2); x.stroke(); line(8,31,28,31); line(14,8,13,12); line(19,8,18,12); }
+    else if(key==='pullitr'){ x.strokeRect(11,12,13,18); x.beginPath(); x.arc(27,18,4,-1.4,1.4); x.stroke(); x.beginPath(); x.moveTo(11,12); x.quadraticCurveTo(12,7,17,8); x.quadraticCurveTo(22,7,24,12); x.stroke(); }
+    else if(key==='dort'){ x.strokeRect(9,17,18,11); line(18,9,18,14); x.beginPath(); x.arc(18,8,1.4,0,6.3); x.fill(); x.beginPath(); x.moveTo(9,21); x.quadraticCurveTo(13,25,18,21); x.quadraticCurveTo(23,25,27,21); x.stroke(); }
+    else if(key==='chleb'){ x.beginPath(); x.moveTo(8,20); x.quadraticCurveTo(8,12,18,12); x.quadraticCurveTo(28,12,28,20); x.lineTo(28,26); x.lineTo(8,26); x.closePath(); x.stroke(); line(14,15,12,20); line(19,15,17,20); line(24,15,22,20); }
+    else if(key==='zmrzlina'){ x.beginPath(); x.arc(18,14,6,Math.PI,0); x.stroke(); x.beginPath(); x.moveTo(12,14); x.lineTo(18,30); x.lineTo(24,14); x.stroke(); }
+    else if(key==='vino'){ x.beginPath(); x.moveTo(11,7); x.lineTo(25,7); x.quadraticCurveTo(24,18,18,18); x.quadraticCurveTo(12,18,11,7); x.stroke(); line(18,18,18,28); line(12,29,24,29); }
+    else if(key==='maso'){ x.beginPath(); x.arc(15,16,7,0,6.3); x.stroke(); line(20,21,27,28); x.beginPath(); x.arc(27,26,2,0,6.3); x.stroke(); x.beginPath(); x.arc(29,29,2,0,6.3); x.stroke(); }
+    else if(key==='train'){ x.strokeRect(10,8,16,16); line(10,16,26,16); x.strokeRect(12,10,5,4); x.strokeRect(19,10,5,4); x.beginPath(); x.arc(14,26,2,0,6.3); x.stroke(); x.beginPath(); x.arc(22,26,2,0,6.3); x.stroke(); line(10,29,15,24); line(26,29,21,24); }
+    else { x.beginPath(); x.moveTo(10,14); x.lineTo(26,14); x.lineTo(24,29); x.lineTo(12,29); x.closePath(); x.stroke(); x.beginPath(); x.arc(18,13,5,Math.PI,0); x.stroke(); } // shop = taska
+    return x.getImageData(0,0,S,S);
+  }
+  function registerPicos(){
+    ['pribor','salek','pullitr','dort','chleb','zmrzlina','vino','maso','shop','train'].forEach(function(k){
+      try{ if(!map.hasImage('pico-'+k)) map.addImage('pico-'+k, picoImage(k), {pixelRatio:2}); }catch(e){}
+    });
+  }
+
+  // prazska metra: nazev stanice -> barva linky (jine zdroje linku nemaji; nezname = neutralni)
+  var METRO_A=['Nemocnice Motol','Petřiny','Nádraží Veleslavín','Bořislavka','Dejvická','Hradčanská','Malostranská','Staroměstská','Můstek','Muzeum','Náměstí Míru','Jiřího z Poděbrad','Flora','Želivského','Strašnická','Skalka','Depo Hostivař'];
+  var METRO_B=['Zličín','Stodůlky','Luka','Lužiny','Hůrka','Nové Butovice','Jinonice','Radlická','Smíchovské nádraží','Anděl','Karlovo náměstí','Národní třída','Náměstí Republiky','Florenc','Křižíkova','Invalidovna','Palmovka','Českomoravská','Vysočanská','Kolbenova','Hloubětín','Rajská zahrada','Černý Most'];
+  var METRO_C=['Letňany','Prosek','Střížkov','Ládví','Kobylisy','Nádraží Holešovice','Vltavská','Hlavní nádraží','I. P. Pavlova','Vyšehrad','Pražského povstání','Pankrác','Budějovická','Kačerov','Roztyly','Chodov','Opatov','Háje'];
+
+  function applyOrientation(){
+    // --- C1 VODA: tmave modra + azurova svitici hrana + nazvy rek ---
+    _sp('water','fill-color','#0c2742');
+    try{ if(!map.getLayer('water-edge')) map.addLayer({id:'water-edge', type:'line', source:OMT, 'source-layer':'water',
+      paint:{'line-color':'#2de2e6','line-opacity':0.55,'line-blur':0.6,'line-width':['interpolate',['linear'],['zoom'],7,0.3,13,1.6,16,2.6]}}, 'waterway'); }catch(e){
+      try{ if(!map.getLayer('water-edge')) map.addLayer({id:'water-edge', type:'line', source:OMT, 'source-layer':'water',
+        paint:{'line-color':'#2de2e6','line-opacity':0.55,'line-blur':0.6,'line-width':['interpolate',['linear'],['zoom'],7,0.3,13,1.6,16,2.6]}}); }catch(e2){}
+    }
+    _sp('waterway','line-color','#38b6e6'); _sp('waterway','line-opacity',0.85);
+    _sp('waterway','line-width',['interpolate',['linear'],['zoom'],8,0.6,13,1.8,16,3.2]);
+    // nazvy rek (water_name) — azurove
+    _sl('water_name','text-font',['Noto Sans Bold']);
+    _sp('water_name','text-color','#bfefff'); _sp('water_name','text-halo-color','#04121f'); _sp('water_name','text-halo-width',1.6);
+
+    // --- C2 ZELEN: parky a lesy tlumene zelenomodre ---
+    _sp('landuse_park','fill-color','#113126'); _sp('landuse_park','fill-opacity',0.6);
+    _sp('landcover_wood','fill-color','#0e2a22'); _sp('landcover_wood','fill-opacity',0.5);
+    _sp('landuse_residential','fill-color','#120a2a'); _sp('landuse_residential','fill-opacity',0.35);
+
+    // --- C3 NAZVY ctvrti mensi nez mesta (uz v applyLabels; tady doladime cisla dalnic driv) ---
+    _zr('highway_name_motorway',11,24); // cisla/nazvy dalnic uz pri oddaleni
+
+    // --- C4 MHD a vlak: koleje viditelne + stanice z poi ---
+    _sp('railway','line-color','#b58cff'); _sp('railway','line-opacity',0.75);
+    _sp('railway','line-width',['interpolate',['linear'],['zoom'],8,0.6,14,2.4,16,4]);
+    _sp('railway_transit','line-color','#b58cff'); _sp('railway_transit','line-opacity',0.6);
+    try{
+      // vlakova nadrazi (poi class=railway, subclass=station) od z11
+      if(!map.getLayer('rail-station')) map.addLayer({id:'rail-station', type:'symbol', source:OMT, 'source-layer':'poi', minzoom:11,
+        filter:['all',['==',['get','class'],'railway'],['==',['get','subclass'],'station']],
+        layout:{'icon-image':'pico-train','icon-size':0.45,'icon-allow-overlap':true,
+          'text-field':['coalesce',['get','name:cs'],['get','name']],'text-font':['Noto Sans Bold'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-optional':true},
+        paint:{'text-color':'#d7c8ff','text-halo-color':'#07031a','text-halo-width':1.6}});
+      // metro (poi subclass=subway) od z11, M v barve linky
+      if(!map.getLayer('metro-pt')) map.addLayer({id:'metro-pt', type:'symbol', source:OMT, 'source-layer':'poi', minzoom:11,
+        filter:['==',['get','subclass'],'subway'],
+        layout:{'text-field':'M','text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],11,12,16,18],'text-allow-overlap':true},
+        paint:{'text-color':['match',['coalesce',['get','name:cs'],['get','name']],
+          METRO_A,'#1aa34a', METRO_B,'#ffce00', METRO_C,'#e2482f', '#9aa6ff'],
+          'text-halo-color':'#0b0318','text-halo-width':2.4}});
+      // tram a bus zastavky od z15 (male tecky)
+      if(!map.getLayer('stop-pt')) map.addLayer({id:'stop-pt', type:'circle', source:OMT, 'source-layer':'poi', minzoom:15,
+        filter:['any',['==',['get','subclass'],'tram_stop'],['==',['get','class'],'bus']],
+        paint:{'circle-radius':3,'circle-color':'#2de2e6','circle-stroke-color':'#07031a','circle-stroke-width':1,'circle-opacity':0.9}});
+    }catch(e){}
+
+    // --- C5 BUDOVY: od z15 o stupen svetlejsi nez pozadi ---
+    _zr('building',15,24); _sp('building','fill-color','#1a0f36'); _sp('building','fill-opacity',0.85);
+    try{ if(!map.getLayer('building-3d')) map.addLayer({id:'building-3d', type:'fill-extrusion', source:OMT, 'source-layer':'building', minzoom:14,
+      layout:{visibility:'none'},
+      paint:{'fill-extrusion-color':'#2a1858',
+        'fill-extrusion-height':['coalesce',['get','render_height'],['get','height'],8],
+        'fill-extrusion-base':['coalesce',['get','render_min_height'],['get','min_height'],0],
+        'fill-extrusion-opacity':0.9}}); }catch(e){}
+
+    // piktogramy podniku pripravit do atlasu
+    registerPicos();
+
+    // pulz vybraneho mista (C7) — DOM marker
+    ensurePulseHandlers();
+  }
+
+  // ---- pulz vybraneho mista ----
+  var pulseMarker=null;
+  function setPulse(lng,lat){
+    try{
+      if(!pulseMarker){ var pe=document.createElement('div'); pe.className='sel-pulse'; pulseMarker=new maplibregl.Marker({element:pe}).setLngLat([lng,lat]).addTo(map); }
+      else { pulseMarker.setLngLat([lng,lat]); }
+      var el=pulseMarker.getElement(); el.classList.remove('go'); void el.offsetWidth; el.classList.add('go');
+    }catch(e){}
+  }
+  function ensurePulseHandlers(){
+    ['points','v-points'].forEach(function(id){ map.on('click', id, function(e){ var c=e.features[0].geometry.coordinates; setPulse(c[0],c[1]); }); });
+  }
+
+  // ---- C8: smer zarizeni (deviceorientation) -> rotace GTA sipky ----
+  var meHeading=null, meEl=null;
+  function onHeading(ev){
+    var hd=null;
+    if(typeof ev.webkitCompassHeading==='number') hd=ev.webkitCompassHeading;
+    else if(ev.absolute && typeof ev.alpha==='number') hd=360-ev.alpha;
+    if(hd==null || isNaN(hd)) return;
+    meHeading=Math.round(hd);
+    if(meEl){ meEl.classList.add('hasdir'); meEl.style.setProperty('--rot', meHeading+'deg'); }
+  }
+  try{ window.addEventListener('deviceorientationabsolute', onHeading); window.addEventListener('deviceorientation', onHeading); }catch(e){}
+
+  // ---- C5: tlacitko 3D ----
+  var is3D=false;
+  function set3D(on){
+    is3D=on; var b=document.getElementById('btn3d'); if(b) b.classList.toggle('on',on);
+    _sl('building-3d','visibility', on?'visible':'none');
+    _sl('building','visibility', on?'none':'visible');
+    try{ map.easeTo({pitch: on?55:0, duration:500}); }catch(e){}
+  }
+  (function(){ var b=document.getElementById('btn3d'); if(b) b.addEventListener('click', function(){ set3D(!is3D); }); })();
+
+  map.on('load', function(){
+    applyNeon();
+    applyLabels();
+    applyOrientation();
+    Promise.all([
+      fetch('/data/mapa/prodejny.json').then(function(r){return r.json();}).catch(function(){return [];}),
+      fetch('/data/mapa/podniky.json').then(function(r){return r.json();}).catch(function(){return [];}),
+      fetch('/data/mapa/stezky.json').then(function(r){return r.json();}).catch(function(){return {stezky:[]};})
+    ]).then(function(res){
+      ALL = res[0]||[]; ALLV = res[1]||[];
+      STEZKY = (res[2] && res[2].stezky) || [];
+      STEZKY.forEach(function(s){ STEZKA_BY_KEY[s.key]=s; });
+      initVenueFilters();
+      addStoreLayers(); addVenueLayers(); addStezkaLayers();
+      setMode(FORCE_MODE||'obchody', false);
+    }).catch(function(e){ console.error('data load error', e); });
+  });
+
+  // ---- Moje poloha (MAPA_UX_2 A2) ----
+  function ensureMeLayers(){
+    if(map.getSource('me-acc')) return;
+    map.addSource('me-acc', {type:'geojson', data:{type:'FeatureCollection', features:[]}});
+    map.addLayer({id:'me-acc-fill', type:'fill', source:'me-acc', paint:{'fill-color':'#c8e84b', 'fill-opacity':0.12}});
+    map.addLayer({id:'me-acc-line', type:'line', source:'me-acc', paint:{'line-color':'#c8e84b', 'line-opacity':0.55, 'line-width':1.5}});
+  }
+  function setUserLocation(lat, lon, acc, center){
+    userLoc=[lat,lon];
+    var el=document.createElement('div'); el.className='me-dot'+(meHeading!=null?' hasdir':''); if(meHeading!=null) el.style.setProperty('--rot', meHeading+'deg'); meEl=el;
+    if(userMarker) userMarker.remove();
+    userMarker=new maplibregl.Marker({element:el}).setLngLat([lon,lat]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
+    try{ ensureMeLayers(); var feats=(acc && acc>0 && acc<100000)?[circlePolygon(lon,lat,acc)]:[]; var src=map.getSource('me-acc'); if(src) src.setData({type:'FeatureCollection', features:feats}); }catch(e){}
+    if(center){ map.flyTo({center:[lon,lat], zoom: Math.max(map.getZoom(),13)}); }
+  }
+  function appLoc(){ var ap=window.__MAPA_MOJE_POLOHA__; return (ap && typeof ap.lat==='number' && typeof ap.lon==='number') ? ap : null; }
+  document.getElementById('locbtn').addEventListener('click', function(){
+    var ap=appLoc();
+    if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, true); openNearby(); return; }      // 1. poloha z appky
+    if(!navigator.geolocation){ toast('Polohu se nepodařilo zjistit'); return; }          // 3. nic
+    navigator.geolocation.getCurrentPosition(function(pos){                               // 2. prohlizec
+      setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, true);
+      openNearby();
+    }, function(){ toast('Polohu se nepodařilo zjistit'); }, {enableHighAccuracy:true, timeout:8000});
+  });
+  // poloha vlozena/aktualizovana appkou (cast B) — udalost mapa:poloha
+  window.addEventListener('mapa:poloha', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, true); });
+  // pokud appka polohu vlozila jeste pred nactenim mapy
+  map.on('load', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, false); });
+
+  // ---- Co je blizko (MAPA_UX_2 A3) ----
+  var nearbyRadius=2000;
+  function nearbyOrigin(){ if(userLoc) return userLoc; var c=map.getCenter(); return [c.lat, c.lng]; }
+  function nearbyCandidates(){
+    if(mode==='obchody'){
+      return ALL.filter(function(s){ return active[s.retezec]; }).map(function(s){
+        return {name:s.retezec, sub:(s.nazev&&s.nazev!==s.retezec?s.nazev+' · ':'')+(s.adresa||''), lat:s.lat, lon:s.lon, kind:'store', row:s, color:COLORS[s.retezec]||'#2de2e6', ini:(s.retezec||'?').charAt(0)};
+      });
+    }
+    return ALLV.filter(function(v){ return activeVT[v.typ] && ocOf(v).some(function(a){ return activeVU[a]; }); }).map(function(v){
+      return {name:v.nazev, sub:VT_LABEL[v.typ]||'', lat:v.lat, lon:v.lon, kind:'venue', row:v, color:VT_COLOR[v.typ]||'#2de2e6', ini:VT_INI[v.typ]||'•'};
+    });
+  }
+  function flyToNearby(it){
+    map.flyTo({center:[it.lon,it.lat], zoom:16});
+    if(it.kind==='store'){
+      var s={nazev:it.row.nazev, retezec:it.row.retezec, adresa:it.row.adresa, lon:it.lon, lat:it.lat};
+      var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupHtml(s)).addTo(map);
+      fillTimes(s, pop.getElement());
+    } else {
+      var vr={}; Object.keys(it.row).forEach(function(k){ vr[k]=it.row[k]; }); vr.lat=it.lat; vr.lon=it.lon;
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(vr)).addTo(map);
+    }
+  }
+  function renderNearby(){
+    var o=nearbyOrigin();
+    var list=nearbyCandidates().map(function(it){ it.d=distM(o,[it.lat,it.lon]); return it; })
+      .filter(function(it){ return it.d<=nearbyRadius; })
+      .sort(function(a,b){ return a.d-b.d; }).slice(0,10);
+    var box=document.getElementById('nearbylist'), foot=document.getElementById('nearbyfoot');
+    box.innerHTML='';
+    if(!list.length){
+      box.innerHTML='<div class="nempty">V okruhu '+fmtDist(nearbyRadius)+' tu nic není.</div>';
+    } else {
+      list.forEach(function(it){
+        var r=document.createElement('div'); r.className='nr';
+        r.innerHTML=dotHtml(it.color, it.ini, '7px')+'<span class="nm"><b>'+it.name+'</b><span>'+(it.sub||'')+'</span></span><span class="dist">'+fmtDist(it.d)+'</span>';
+        r.addEventListener('click', function(){ flyToNearby(it); });
+        box.appendChild(r);
+      });
+    }
+    foot.innerHTML='<button type="button" id="nearbymore">Rozšířit okolí</button>';
+    foot.classList.add('show');
+    document.getElementById('nearbymore').addEventListener('click', function(){ nearbyRadius*=2; renderNearby(); });
+  }
+  function openNearby(){
+    nearbyRadius=2000;
+    document.getElementById('nearbytitle').textContent = userLoc ? 'Co je blízko' : 'Blízko středu mapy';
+    renderNearby();
+    document.getElementById('nearby').classList.add('open');
+    document.getElementById('nearbtn').classList.add('on');
+  }
+  function closeNearby(){ document.getElementById('nearby').classList.remove('open'); document.getElementById('nearbtn').classList.remove('on'); }
+  document.getElementById('nearbtn').addEventListener('click', function(){ document.getElementById('nearby').classList.contains('open')?closeNearby():openNearby(); });
+  document.getElementById('nearbyx').addEventListener('click', closeNearby);
+
+  // ---- Legenda + Filtr (podle rezimu) ----
+  var panel=document.getElementById('panel');
+  var list=document.getElementById('panellist');
+  function dotHtml(color, ini, shadow, ring){
+    var rb = ring ? ';border:2px solid '+ring : '';
+    return '<span class="d" style="background:'+color+';box-shadow:0 0 '+shadow+' '+color+rb+'">'+ini+'</span>';
+  }
+  function ringHtml(color){
+    return '<span class="d ring" style="border:2.5px solid '+color+';box-shadow:0 0 7px '+color+'"></span>';
+  }
+  function applyActive(){
+    if(mode==='obchody'){ var s=map.getSource('stores'); if(s) s.setData(storesFC()); }
+    else { var v=map.getSource('venues'); if(v) v.setData(venuesFC()); }
+  }
+  // MAPA_UX: je prave tahle polozka jedina aktivni ve svem rozmeru? (solo = zvyraznit)
+  function isSolo(group, key){
+    if(group==='chain'){ return !!active[key] && CHAINS.every(function(c){ return c===key ? active[c] : !active[c]; }); }
+    if(group==='typ'){ return !!activeVT[key] && VT_PRESENT.every(function(t){ return t===key?activeVT[t]:!activeVT[t]; }) && VU_PRESENT.every(function(u){ return activeVU[u]; }); }
+    if(group==='uroven'){ return !!activeVU[key] && VU_PRESENT.every(function(u){ return u===key?activeVU[u]:!activeVU[u]; }) && VT_PRESENT.every(function(t){ return activeVT[t]; }); }
+    return false;
+  }
+  // MAPA_UX: klik na polozku legendy = solo filtr (jen ta); opetovny klik na solo = zpet vse.
+  function soloFilter(group, key){
+    if(isSolo(group,key)){
+      if(group==='chain'){ CHAINS.forEach(function(c){ active[c]=true; }); }
+      else { VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
+    } else if(group==='chain'){ CHAINS.forEach(function(c){ active[c]=(c===key); }); }
+    else if(group==='typ'){ VT_PRESENT.forEach(function(t){ activeVT[t]=(t===key); }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
+    else if(group==='uroven'){ VU_PRESENT.forEach(function(u){ activeVU[u]=(u===key); }); VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); }
+    saveActive(); buildLegend(); buildPanel(); applyActive(); closeLegend(); // zavri legendu = odkryj mapu
+  }
+  // MAPA_UX: popisek aktivniho filtru pro chip (null = nic nefiltrujeme / vse vybrano)
+  function activeFilterLabel(){
+    if(mode==='obchody'){
+      var act=CHAINS.filter(function(c){ return active[c]; });
+      if(act.length===CHAINS.length) return null;
+      if(act.length===1) return act[0];
+      if(act.length===0) return 'Nic nevybráno';
+      return act.length+' řetězců';
+    }
+    var vt=VT_PRESENT.filter(function(t){ return activeVT[t]; });
+    var vu=VU_PRESENT.filter(function(u){ return activeVU[u]; });
+    var allVT=vt.length===VT_PRESENT.length, allVU=vu.length===VU_PRESENT.length;
+    if(allVT && allVU) return null;
+    if(vt.length===1 && allVU) return VT_LABEL[vt[0]]||vt[0];
+    if(vu.length===1 && allVT) return VU_LABEL[vu[0]]||vu[0];
+    var parts=[];
+    if(!allVT) parts.push(vt.length===1?(VT_LABEL[vt[0]]||vt[0]):(vt.length+' typů'));
+    if(!allVU) parts.push(vu.length===1?(VU_LABEL[vu[0]]||vu[0]):(vu.length+' úrovní'));
+    return parts.join(' + ')||'Filtr';
+  }
+  function renderActiveFilter(){
+    var el=document.getElementById('afilter'); if(!el) return;
+    var lbl=activeFilterLabel();
+    if(!lbl){ el.classList.remove('on'); el.innerHTML=''; return; }
+    el.innerHTML='<span class="aflabel">'+lbl+'</span><span class="afx">&times;</span>';
+    el.classList.add('on');
+  }
+  // reset na "Vse" (sdili allbtn i chip)
+  function resetAllFilters(){
+    if(mode==='obchody'){ CHAINS.forEach(function(c){ active[c]=true; }); }
+    else { VT_PRESENT.forEach(function(t){ activeVT[t]=true; }); VU_PRESENT.forEach(function(u){ activeVU[u]=true; }); }
+    saveActive(); buildPanel(); buildLegend(); applyActive();
+  }
+  function buildLegend(){
+    var title=document.querySelector('.legend h4'); if(title) title.textContent = mode==='obchody'?'Řetězce':'Podniky';
+    var lr=document.getElementById('legendrows'); lr.innerHTML='';
+    function row(group,key,html){ var d=document.createElement('div'); d.className='row'+(isSolo(group,key)?' sel':''); d.innerHTML=html; d.addEventListener('click',function(e){ e.stopPropagation(); soloFilter(group,key); }); lr.appendChild(d); }
+    function cap(t){ var d=document.createElement('div'); d.className='legcap'; d.textContent=t; lr.appendChild(d); }
+    if(mode==='obchody'){
+      CHAINS.forEach(function(c){ row('chain',c, dotHtml(COLORS[c], c.charAt(0), '7px')+c); });
+    } else {
+      cap('Typ'); VT_PRESENT.forEach(function(t){ row('typ',t, dotHtml(VT_COLOR[t], VT_INI[t], '7px')+VT_LABEL[t]); });
+      cap('Úroveň'); VU_PRESENT.forEach(function(u){ row('uroven',u, ringHtml(VU_COLOR[u])+VU_LABEL[u]); });
+    }
+    renderActiveFilter();
+  }
+  function buildPanel(){
+    list.innerHTML='';
+    function cap(t){ var d=document.createElement('div'); d.className='pcap'; d.textContent=t; list.appendChild(d); }
+    function cb(group, key, color, ini, name, on, ring){
+      var lbl=document.createElement('label');
+      var icon = ring ? ringHtml(color) : dotHtml(color, ini, '8px');
+      lbl.innerHTML=icon+'<span class="nm">'+name+'</span>'+
+        '<input type="checkbox" data-g="'+group+'" data-c="'+key+'"'+(on?' checked':'')+'>';
+      list.appendChild(lbl);
+    }
+    if(mode==='obchody'){
+      CHAINS.forEach(function(c){ cb('chain', c, COLORS[c], c.charAt(0), c, active[c], false); });
+    } else {
+      cap('Typ'); VT_PRESENT.forEach(function(t){ cb('typ', t, VT_COLOR[t], VT_INI[t], VT_LABEL[t], activeVT[t], false); });
+      cap('Úroveň'); VU_PRESENT.forEach(function(u){ cb('uroven', u, VU_COLOR[u], '', VU_LABEL[u], activeVU[u], true); });
+    }
+  }
+  function saveActive(){
+    if(mode==='obchody'){ try{ localStorage.setItem(LS_KEY, JSON.stringify(active)); }catch(e){} }
+    else { try{ localStorage.setItem(LS_VT, JSON.stringify(activeVT)); localStorage.setItem(LS_VU, JSON.stringify(activeVU)); }catch(e){} }
+  }
+
+  function openPanel(){ panel.classList.add('open'); document.getElementById('filterbtn').classList.add('on'); }
+  function closePanel(){ panel.classList.remove('open'); document.getElementById('filterbtn').classList.remove('on'); }
+  document.getElementById('filterbtn').addEventListener('click', function(){ panel.classList.contains('open')?closePanel():openPanel(); });
+  document.getElementById('panelx').addEventListener('click', closePanel);
+  document.getElementById('selall').addEventListener('click', function(){
+    list.querySelectorAll('input[type=checkbox]').forEach(function(cb){ cb.checked=true; });
+  });
+  document.getElementById('save').addEventListener('click', function(){
+    list.querySelectorAll('input[type=checkbox]').forEach(function(cb){
+      var g=cb.getAttribute('data-g'), k=cb.getAttribute('data-c');
+      if(g==='chain') active[k]=cb.checked;
+      else if(g==='typ') activeVT[k]=cb.checked;
+      else if(g==='uroven') activeVU[k]=cb.checked;
+    });
+    saveActive(); applyActive(); buildLegend(); closePanel();
+  });
+  // rychle "Vse" (podle rezimu) — zrusi i solo zvyrazneni v legende a chip
+  document.getElementById('allbtn').addEventListener('click', function(){
+    resetAllFilters(); closePanel();
+  });
+  // MAPA_UX: chip aktivniho filtru nahore — klik = reset na Vse
+  var afilterEl=document.getElementById('afilter');
+  if(afilterEl) afilterEl.addEventListener('click', function(e){ e.stopPropagation(); resetAllFilters(); });
+  // MAPA_UX: legenda — otevira/zavira ji male tlacitko, zavre se krizkem nebo klepnutim mimo
+  var legendEl=document.getElementById('legend');
+  var legbtn=document.getElementById('legbtn');
+  function closeLegend(){ if(legendEl) legendEl.classList.remove('open'); if(legbtn) legbtn.classList.remove('on'); }
+  function openLegend(){ if(legendEl) legendEl.classList.add('open'); if(legbtn) legbtn.classList.add('on'); }
+  if(legbtn) legbtn.addEventListener('click', function(e){ e.stopPropagation(); legendEl.classList.contains('open')?closeLegend():openLegend(); });
+  var legx=document.getElementById('legx'); if(legx) legx.addEventListener('click', closeLegend);
+  document.addEventListener('click', function(e){ if(legendEl&&legendEl.classList.contains('open') && !e.target.closest('.legend') && !e.target.closest('.legtoggle')) closeLegend(); });
+  // MAPA_UX_2 A5: tlacitko Pivni stezky otevira/zavira spodni listu
+  var stezbtnEl=document.getElementById('stezbtn');
+  if(stezbtnEl) stezbtnEl.addEventListener('click', function(){ stezkyOpen=!stezkyOpen; if(stezkyOpen) stezkyShowMore=false; buildStezkaChips(); });
+  // po posunu mapy preradit stezky podle noveho stredu (jen kdyz je lista otevrena a neni vybrana trasa)
+  map.on('moveend', function(){ if(stezkyOpen && !activeStezka) buildStezkaChips(); });
+  // MAPA_UX_2 A6: atribuce po nacteni sbalena do (i), at se sama nerozbali pres Legendu
+  map.on('load', function(){
+    try{ var a=document.querySelector('.maplibregl-ctrl-attrib'); if(a){ a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); } }catch(e){}
+  });
+  // prepinac Obchody / Podniky
+  function switchMode(m){ if(mode!==m){ closePanel(); clearSearch(); closeNearby(); setMode(m); } }
+  document.getElementById('modeObchody').addEventListener('click', function(){ switchMode('obchody'); });
+  document.getElementById('modePodniky').addEventListener('click', function(){ switchMode('podniky'); });
+
+  // ---- Vyhledavac (hleda v aktualnim rezimu) ----
+  var searchInput=document.getElementById('search');
+  var searchRes=document.getElementById('searchres');
+  function clearSearch(){ if(searchInput) searchInput.value=''; if(searchRes){ searchRes.innerHTML=''; searchRes.classList.remove('open'); } }
+  function selectResult(it){
+    map.flyTo({center:[it.lon,it.lat], zoom:16});
+    if(it.kind==='store'){
+      var s={nazev:it.row.nazev, retezec:it.row.retezec, adresa:it.row.adresa, lon:it.lon, lat:it.lat};
+      var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupHtml(s)).addTo(map);
+      fillTimes(s, pop.getElement());
+    } else {
+      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(it.row)).addTo(map);
+    }
+    searchRes.classList.remove('open');
+    searchInput.value=it.name;
+  }
+  function doSearch(){
+    var q=(searchInput.value||'').trim().toLowerCase();
+    searchRes.innerHTML='';
+    if(q.length<2){ searchRes.classList.remove('open'); return; }
+    var items=[];
+    if(mode==='obchody'){
+      ALL.forEach(function(s){ if(((s.nazev||'')+' '+(s.adresa||'')).toLowerCase().indexOf(q)>=0) items.push({name:s.nazev, sub:s.adresa||s.retezec, lon:s.lon, lat:s.lat, kind:'store', row:s}); });
+    } else {
+      ALLV.forEach(function(v){ if((v.nazev||'').toLowerCase().indexOf(q)>=0) items.push({name:v.nazev, sub:VT_LABEL[v.typ]||'', lon:v.lon, lat:v.lat, kind:'venue', row:v}); });
+    }
+    items=items.slice(0,8);
+    if(!items.length){ searchRes.innerHTML='<div class="sr-empty">Nic nenalezeno</div>'; searchRes.classList.add('open'); return; }
+    items.forEach(function(it){
+      var r=document.createElement('div'); r.className='sr';
+      r.innerHTML='<b>'+it.name+'</b><span>'+(it.sub||'')+'</span>';
+      r.addEventListener('click', function(){ selectResult(it); });
+      searchRes.appendChild(r);
+    });
+    searchRes.classList.add('open');
+  }
+  if(searchInput){
+    searchInput.addEventListener('input', doSearch);
+    searchInput.addEventListener('focus', function(){ if(searchRes.children.length) searchRes.classList.add('open'); });
+    document.addEventListener('click', function(e){ if(!e.target.closest('.search')) searchRes.classList.remove('open'); });
+  }
+})();
+</script>
+</body>
+</html>
