@@ -145,37 +145,27 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 .stezbtn.show{display:inline-flex}
 .stezbtn:hover{box-shadow:0 0 18px rgba(140,255,58,.6)}
 .stezbtn.on{background:#8cff3a;color:#0b2206}
-/* MAPA_UX_2 / MAPY_UX_5 (bod 5): Co je blizko — defaultne maly nahled (jedna radka), mapa zustane videt;
-   plny seznam az po klepnuti (.expanded). Pozadi polopruhledne. */
-.nearby{position:absolute;left:12px;right:12px;bottom:12px;z-index:660;display:none;flex-direction:column;background:rgba(18,8,46,.8);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 24px rgba(45,226,230,.32);overflow:hidden}
+/* MAPY_UX_7: Co je blizko = mala futuristicka plovouci karta v rohu (ne spodni lista pres celou sirku).
+   Polopruhledna, neonovy ram, ukaze par nejblizsich mist najednou (3-4 kompaktni radky), uvnitr scroll. */
+.nearby{position:absolute;left:12px;top:66px;z-index:655;width:244px;max-width:72vw;max-height:46vh;display:none;flex-direction:column;background:rgba(14,6,36,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1.5px solid var(--cyan);border-radius:16px;box-shadow:0 0 22px rgba(45,226,230,.45),inset 0 0 20px rgba(45,226,230,.08);overflow:hidden}
 .nearby.open{display:flex}
-.nearby.expanded{max-height:42vh}
-/* sbaleny nahled = jedna radka (nejblizsi misto + pocet dalsich), klepnuti rozbali */
-.nearby .npreview{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:0 12px;border:0;background:transparent;color:#fff;font:inherit;text-align:left;cursor:pointer}
-.nearby.expanded .npreview{display:none}
-.nearby .npreview .npvnm{flex:1 1 auto;min-width:0}
-.nearby .npreview .npvnm b{display:block;font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
-.nearby .npreview .npvnm span{display:block;color:#b9a9e0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nearby .npreview .npvchev{flex:0 0 auto;color:var(--cyan);font-size:15px;font-weight:800}
-.nearby .npreview .npvtxt{flex:1 1 auto;color:#9f8fc4;font-size:14px}
-/* plny seznam az po rozbaleni */
-.nearby:not(.expanded) .nh,.nearby:not(.expanded) .nlist,.nearby:not(.expanded) .nfoot.show{display:none}
-.nearby .nh{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,rgba(36,16,86,.9),rgba(22,10,51,.9));border-bottom:1px solid rgba(45,226,230,.3)}
-.nearby .nh b{font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
-.nearby .nx{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
-.nearby .nlist{overflow:auto;padding:4px 6px}
-.nearby .nr{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;border-bottom:1px solid rgba(45,226,230,.1)}
-.nearby .nr:hover{background:rgba(45,226,230,.12)}
-.nearby .nr .d{width:22px;height:22px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 12px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
+.nearby .nh{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 6px 12px;border-bottom:1px solid rgba(45,226,230,.22)}
+.nearby .nh b{font:800 italic 13px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eaffff;text-shadow:0 0 8px var(--cyan);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nx{flex:0 0 auto;background:none;border:0;color:#cbb9ef;font-size:19px;line-height:1;cursor:pointer;padding:0 2px}
+.nearby .nlist{overflow-y:auto;overflow-x:hidden;padding:4px;max-height:118px}
+.nearby .nr{display:flex;align-items:center;gap:8px;padding:6px 7px;border-radius:9px;cursor:pointer}
+.nearby .nr:hover{background:rgba(45,226,230,.14)}
+.nearby .nr+.nr{border-top:1px solid rgba(45,226,230,.08)}
+.nearby .nr .d{width:20px;height:20px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:900 11px 'Barlow Semi Condensed',Arial,sans-serif;color:#0b0318}
 .nearby .nr .nm{flex:1 1 auto;min-width:0}
-.nearby .nr .nm b{display:block;font-weight:700;color:#fff;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nearby .nr .nm span{display:block;color:#b9a9e0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nearby .nr .dist{flex:0 0 auto;color:var(--lime);font-weight:800;font-size:14px}
+.nearby .nr .nm b{display:block;font-weight:700;color:#fff;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .nm span{display:block;color:#b9a9e0;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .nr .dist{flex:0 0 auto;color:var(--lime);font-weight:800;font-size:12px}
 .nearby .nfoot{display:none}
-.nearby .nfoot.show{display:block;padding:10px 12px;border-top:1px solid rgba(45,226,230,.3)}
-.nearby .nfoot button{width:100%;min-height:42px;border-radius:999px;border:2px solid var(--cyan);background:#150628;color:#eaffff;font:800 14px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer}
-.nearby .nfoot button:hover{box-shadow:0 0 16px var(--cyan)}
-.nearby .nempty{padding:14px;color:#9f8fc4;font-size:14px;text-align:center}
+.nearby .nfoot.show{display:block;padding:6px 8px 8px;border-top:1px solid rgba(45,226,230,.18)}
+.nearby .nfoot button{width:100%;min-height:32px;border-radius:999px;border:1.5px solid var(--cyan);background:rgba(21,6,40,.6);color:#eaffff;font:700 12px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;cursor:pointer}
+.nearby .nfoot button:hover{box-shadow:0 0 14px var(--cyan)}
+.nearby .nempty{padding:12px 10px;color:#9f8fc4;font-size:13px;text-align:center}
 /* MAPA_UX_2: toast */
 .toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:900;display:none;max-width:80vw;padding:11px 18px;background:rgba(14,6,36,.96);border:2px solid var(--pink);border-radius:12px;color:#fff0f8;font:700 15px 'Barlow Semi Condensed',Arial,sans-serif;text-align:center;box-shadow:0 0 24px rgba(255,46,151,.5)}
 .toast.show{display:block}
@@ -206,7 +196,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 .clusterhint{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:850;display:none;max-width:84vw;padding:10px 16px;background:rgba(14,6,36,.96);border:2px solid var(--cyan);border-radius:12px;color:#eaffff;font:600 14px 'Barlow Semi Condensed',Arial,sans-serif;text-align:center;box-shadow:0 0 22px rgba(45,226,230,.4)}
 .clusterhint.show{display:block}
 .legend .legnote{margin-top:8px;padding-top:6px;border-top:1px solid rgba(45,226,230,.25);font-size:11px;color:#9f8fc4;line-height:1.3}
-@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:58px;max-width:94vw}#stezka-info{bottom:112px}.nearby{left:8px;right:8px}.routebar{left:8px;right:8px}}
+@media (max-width:620px){.tag{display:none}.legend{left:8px}.legtoggle{left:8px}.panel{right:8px;left:8px;width:auto}.search{top:8px;left:8px}.afilter{top:62px}#stezky{bottom:58px;max-width:94vw}#stezka-info{bottom:112px}.nearby{left:8px}.routebar{left:8px;right:8px}}
 </style>
 </head>
 <body>
@@ -273,9 +263,8 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
   <!-- MAPA_UX_2: Pivni stezky — tlacitko ve stylu Legendy, otevira spodni listu (default zavreno) -->
   <button type="button" class="stezbtn" id="stezbtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h8a3 3 0 0 1 0 6h-1"></path><path d="M6 8h9M6 8v9a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2"></path></svg>Pivní stezky</button>
 
-  <!-- MAPA_UX_2 / MAPY_UX_5: Co je blizko — maly nahled (1 radka), plny seznam az po klepnuti -->
+  <!-- MAPY_UX_7: Co je blizko — mala plovouci karta v rohu, par nejblizsich mist najednou -->
   <div class="nearby" id="nearby">
-    <button type="button" class="npreview" id="nearbypreview"></button>
     <div class="nh"><b id="nearbytitle">Co je blízko</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
     <div class="nlist" id="nearbylist"></div>
     <div class="nfoot" id="nearbyfoot"></div>
@@ -710,12 +699,19 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     });
   }
 
-  // ======== Pivni stezky jako trasy (predpocitane OSRM v stezky.json) ========
+  // ======== Pivni stezky jako trasy ========
   var STEZKA_LAYERS=['stezka-line-glow','stezka-line','stezka-stop-glow','stezka-stop','stezka-stop-num'];
+  // MAPY_UX_7: trasa vede PŘÍMO přes zastávky (= konkrétní podniky), ne po silnici vedle nich.
+  // Zastávky mají stejné souřadnice jako podniky (ověřeno: stop == venue), předpočítaná OSRM geometrie
+  // se ale snapuje na silnici a driftovala až 263 m od značky podniku (Trautenberk). Proto čáru skládáme
+  // z bodů zastávek seřazených podle pořadí n -> zelená čára sedí přesně na značky podniků, co do stezky patří.
   function stezkaFC(s){
     if(!s) return {type:'FeatureCollection', features:[]};
-    var feats=[{type:'Feature', geometry:s.geometry, properties:{kind:'line'}}];
-    (s.stops||[]).forEach(function(st){ feats.push({type:'Feature', geometry:{type:'Point', coordinates:[st.lon,st.lat]}, properties:{kind:'stop', n:String(st.n), nazev:st.nazev}}); });
+    var stops=(s.stops||[]).slice().sort(function(a,b){ return (a.n||0)-(b.n||0); });
+    var coords=stops.map(function(st){ return [st.lon, st.lat]; });
+    var feats=[];
+    if(coords.length>1){ feats.push({type:'Feature', geometry:{type:'LineString', coordinates:coords}, properties:{kind:'line'}}); }
+    stops.forEach(function(st){ feats.push({type:'Feature', geometry:{type:'Point', coordinates:[st.lon,st.lat]}, properties:{kind:'stop', n:String(st.n), nazev:st.nazev}}); });
     return {type:'FeatureCollection', features:feats};
   }
   function addStezkaLayers(){
@@ -1105,23 +1101,12 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       trackPopup(pop2, {kind:'venue', v:vr});
     }
   }
+  // MAPY_UX_7: malá karta ukáže rovnou pár nejbližších míst (seznam se scrolluje uvnitř karty).
   function renderNearby(){
     var o=nearbyOrigin();
     var list=nearbyCandidates().map(function(it){ it.d=distM(o,[it.lat,it.lon]); return it; })
       .filter(function(it){ return it.d<=nearbyRadius; })
-      .sort(function(a,b){ return a.d-b.d; }).slice(0,10);
-    // MAPY_UX_5 (bod 5): maly nahled = nejblizsi misto + pocet dalsich (klepnuti rozbali plny seznam)
-    var pv=document.getElementById('nearbypreview');
-    if(pv){
-      if(!list.length){
-        pv.innerHTML='<span class="npvtxt">V okruhu '+fmtDist(nearbyRadius)+' nic není.</span><span class="npvchev">⌃</span>';
-      } else {
-        var f0=list[0], more=list.length-1;
-        pv.innerHTML=dotHtml(f0.color, f0.ini, '7px')+
-          '<span class="npvnm"><b>'+f0.name+'</b><span>'+fmtDist(f0.d)+(more>0?' · a '+more+' dalších':'')+'</span></span>'+
-          '<span class="npvchev">⌃</span>';
-      }
-    }
+      .sort(function(a,b){ return a.d-b.d; }).slice(0,12);
     var box=document.getElementById('nearbylist'), foot=document.getElementById('nearbyfoot');
     box.innerHTML='';
     if(!list.length){
@@ -1129,8 +1114,8 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     } else {
       list.forEach(function(it){
         var r=document.createElement('div'); r.className='nr';
-        r.innerHTML=dotHtml(it.color, it.ini, '7px')+'<span class="nm"><b>'+it.name+'</b><span>'+(it.sub||'')+'</span></span><span class="dist">'+fmtDist(it.d)+'</span>';
-        r.addEventListener('click', function(){ flyToNearby(it); miniNearby(); }); // po vyberu zpet na nahled, at je mapa videt
+        r.innerHTML=dotHtml(it.color, it.ini, '6px')+'<span class="nm"><b>'+it.name+'</b><span>'+(it.sub||'')+'</span></span><span class="dist">'+fmtDist(it.d)+'</span>';
+        r.addEventListener('click', function(){ flyToNearby(it); }); // výběr = skok na místo + okno místa; karta zůstává
         box.appendChild(r);
       });
     }
@@ -1142,16 +1127,12 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     nearbyRadius=2000;
     document.getElementById('nearbytitle').textContent = userLoc ? 'Co je blízko' : 'Blízko středu mapy';
     renderNearby();
-    var el=document.getElementById('nearby');
-    el.classList.add('open'); el.classList.remove('expanded');  // defaultne maly nahled
+    document.getElementById('nearby').classList.add('open');
     document.getElementById('nearbtn').classList.add('on');
   }
-  function expandNearby(){ document.getElementById('nearby').classList.add('expanded'); }
-  function miniNearby(){ document.getElementById('nearby').classList.remove('expanded'); }
-  function closeNearby(){ var el=document.getElementById('nearby'); el.classList.remove('open'); el.classList.remove('expanded'); document.getElementById('nearbtn').classList.remove('on'); }
+  function closeNearby(){ document.getElementById('nearby').classList.remove('open'); document.getElementById('nearbtn').classList.remove('on'); }
   document.getElementById('nearbtn').addEventListener('click', function(){ document.getElementById('nearby').classList.contains('open')?closeNearby():openNearby(); });
-  document.getElementById('nearbypreview').addEventListener('click', expandNearby); // klepnuti na nahled = plny seznam
-  document.getElementById('nearbyx').addEventListener('click', miniNearby);          // krizek v seznamu = zpet na nahled
+  document.getElementById('nearbyx').addEventListener('click', closeNearby);
 
   // ---- Legenda + Filtr (podle rezimu) ----
   var panel=document.getElementById('panel');
