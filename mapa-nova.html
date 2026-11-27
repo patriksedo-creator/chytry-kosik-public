@@ -145,10 +145,22 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 .stezbtn.show{display:inline-flex}
 .stezbtn:hover{box-shadow:0 0 18px rgba(140,255,58,.6)}
 .stezbtn.on{background:#8cff3a;color:#0b2206}
-/* MAPA_UX_2: Co je blizko — spodni listka (max tretina mapy) */
-.nearby{position:absolute;left:12px;right:12px;bottom:12px;z-index:660;max-height:33vh;display:none;flex-direction:column;background:rgba(18,8,46,.97);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 30px rgba(45,226,230,.4);overflow:hidden}
+/* MAPA_UX_2 / MAPY_UX_5 (bod 5): Co je blizko — defaultne maly nahled (jedna radka), mapa zustane videt;
+   plny seznam az po klepnuti (.expanded). Pozadi polopruhledne. */
+.nearby{position:absolute;left:12px;right:12px;bottom:12px;z-index:660;display:none;flex-direction:column;background:rgba(18,8,46,.8);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:2px solid var(--cyan);border-radius:16px;box-shadow:0 0 24px rgba(45,226,230,.32);overflow:hidden}
 .nearby.open{display:flex}
-.nearby .nh{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,#241056,#160a33);border-bottom:1px solid rgba(45,226,230,.3)}
+.nearby.expanded{max-height:42vh}
+/* sbaleny nahled = jedna radka (nejblizsi misto + pocet dalsich), klepnuti rozbali */
+.nearby .npreview{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:0 12px;border:0;background:transparent;color:#fff;font:inherit;text-align:left;cursor:pointer}
+.nearby.expanded .npreview{display:none}
+.nearby .npreview .npvnm{flex:1 1 auto;min-width:0}
+.nearby .npreview .npvnm b{display:block;font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
+.nearby .npreview .npvnm span{display:block;color:#b9a9e0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nearby .npreview .npvchev{flex:0 0 auto;color:var(--cyan);font-size:15px;font-weight:800}
+.nearby .npreview .npvtxt{flex:1 1 auto;color:#9f8fc4;font-size:14px}
+/* plny seznam az po rozbaleni */
+.nearby:not(.expanded) .nh,.nearby:not(.expanded) .nlist,.nearby:not(.expanded) .nfoot.show{display:none}
+.nearby .nh{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,rgba(36,16,86,.9),rgba(22,10,51,.9));border-bottom:1px solid rgba(45,226,230,.3)}
 .nearby .nh b{font:800 italic 16px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#eaffff;text-shadow:0 0 8px var(--cyan)}
 .nearby .nx{background:none;border:0;color:#cbb9ef;font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
 .nearby .nlist{overflow:auto;padding:4px 6px}
@@ -261,8 +273,9 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
   <!-- MAPA_UX_2: Pivni stezky — tlacitko ve stylu Legendy, otevira spodni listu (default zavreno) -->
   <button type="button" class="stezbtn" id="stezbtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h8a3 3 0 0 1 0 6h-1"></path><path d="M6 8h9M6 8v9a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2"></path></svg>Pivní stezky</button>
 
-  <!-- MAPA_UX_2: Co je blizko — spodni listka nejblizsich mist (max tretina mapy) -->
+  <!-- MAPA_UX_2 / MAPY_UX_5: Co je blizko — maly nahled (1 radka), plny seznam az po klepnuti -->
   <div class="nearby" id="nearby">
+    <button type="button" class="npreview" id="nearbypreview"></button>
     <div class="nh"><b id="nearbytitle">Co je blízko</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
     <div class="nlist" id="nearbylist"></div>
     <div class="nfoot" id="nearbyfoot"></div>
@@ -1078,6 +1091,18 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     var list=nearbyCandidates().map(function(it){ it.d=distM(o,[it.lat,it.lon]); return it; })
       .filter(function(it){ return it.d<=nearbyRadius; })
       .sort(function(a,b){ return a.d-b.d; }).slice(0,10);
+    // MAPY_UX_5 (bod 5): maly nahled = nejblizsi misto + pocet dalsich (klepnuti rozbali plny seznam)
+    var pv=document.getElementById('nearbypreview');
+    if(pv){
+      if(!list.length){
+        pv.innerHTML='<span class="npvtxt">V okruhu '+fmtDist(nearbyRadius)+' nic není.</span><span class="npvchev">⌃</span>';
+      } else {
+        var f0=list[0], more=list.length-1;
+        pv.innerHTML=dotHtml(f0.color, f0.ini, '7px')+
+          '<span class="npvnm"><b>'+f0.name+'</b><span>'+fmtDist(f0.d)+(more>0?' · a '+more+' dalších':'')+'</span></span>'+
+          '<span class="npvchev">⌃</span>';
+      }
+    }
     var box=document.getElementById('nearbylist'), foot=document.getElementById('nearbyfoot');
     box.innerHTML='';
     if(!list.length){
@@ -1086,7 +1111,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       list.forEach(function(it){
         var r=document.createElement('div'); r.className='nr';
         r.innerHTML=dotHtml(it.color, it.ini, '7px')+'<span class="nm"><b>'+it.name+'</b><span>'+(it.sub||'')+'</span></span><span class="dist">'+fmtDist(it.d)+'</span>';
-        r.addEventListener('click', function(){ flyToNearby(it); });
+        r.addEventListener('click', function(){ flyToNearby(it); miniNearby(); }); // po vyberu zpet na nahled, at je mapa videt
         box.appendChild(r);
       });
     }
@@ -1098,12 +1123,16 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     nearbyRadius=2000;
     document.getElementById('nearbytitle').textContent = userLoc ? 'Co je blízko' : 'Blízko středu mapy';
     renderNearby();
-    document.getElementById('nearby').classList.add('open');
+    var el=document.getElementById('nearby');
+    el.classList.add('open'); el.classList.remove('expanded');  // defaultne maly nahled
     document.getElementById('nearbtn').classList.add('on');
   }
-  function closeNearby(){ document.getElementById('nearby').classList.remove('open'); document.getElementById('nearbtn').classList.remove('on'); }
+  function expandNearby(){ document.getElementById('nearby').classList.add('expanded'); }
+  function miniNearby(){ document.getElementById('nearby').classList.remove('expanded'); }
+  function closeNearby(){ var el=document.getElementById('nearby'); el.classList.remove('open'); el.classList.remove('expanded'); document.getElementById('nearbtn').classList.remove('on'); }
   document.getElementById('nearbtn').addEventListener('click', function(){ document.getElementById('nearby').classList.contains('open')?closeNearby():openNearby(); });
-  document.getElementById('nearbyx').addEventListener('click', closeNearby);
+  document.getElementById('nearbypreview').addEventListener('click', expandNearby); // klepnuti na nahled = plny seznam
+  document.getElementById('nearbyx').addEventListener('click', miniNearby);          // krizek v seznamu = zpet na nahled
 
   // ---- Legenda + Filtr (podle rezimu) ----
   var panel=document.getElementById('panel');
