@@ -378,6 +378,10 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   }
 
   var userLoc = null, userMarker = null;
+  // MAPY_UX_4 (oprava 1): drz referenci na otevrene okno mista, at ho jde pri prepnuti rezimu zavrit
+  var currentPopup = null;
+  function closeCurrentPopup(){ if(currentPopup){ try{ currentPopup.remove(); }catch(e){} currentPopup=null; } }
+  function trackPopup(pop){ currentPopup=pop; pop.on('close', function(){ if(currentPopup===pop) currentPopup=null; }); }
 
   // MAPA_UX_2 A4: navigacni tlacitka (Google Mapy). Pokud zname moji polohu, prida se origin.
   function navButtonsHtml(lat, lon){
@@ -536,6 +540,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
       var s={nazev:p.nazev, retezec:p.retezec, adresa:p.adresa, lon:c[0], lat:c[1]};
       var popup=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupHtml(s)).addTo(map);
+      trackPopup(popup);
       fillTimes(s, popup.getElement());
     });
     ['clusters','points'].forEach(function(id){
@@ -585,7 +590,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     });
     map.on('click','v-points',function(e){
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
-      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa, lat:c[1], lon:c[0]})).addTo(map);
+      trackPopup(new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml({nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa, lat:c[1], lon:c[0]})).addTo(map));
     });
     ['v-clusters','v-points'].forEach(function(id){
       map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
@@ -786,10 +791,11 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     if(it.kind==='store'){
       var s={nazev:it.row.nazev, retezec:it.row.retezec, adresa:it.row.adresa, lon:it.lon, lat:it.lat};
       var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupHtml(s)).addTo(map);
+      trackPopup(pop);
       fillTimes(s, pop.getElement());
     } else {
       var vr={}; Object.keys(it.row).forEach(function(k){ vr[k]=it.row[k]; }); vr.lat=it.lat; vr.lon=it.lon;
-      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(vr)).addTo(map);
+      trackPopup(new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(vr)).addTo(map));
     }
   }
   function renderNearby(){
@@ -964,7 +970,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     try{ var a=document.querySelector('.maplibregl-ctrl-attrib'); if(a){ a.classList.remove('maplibregl-compact-show'); a.removeAttribute('open'); } }catch(e){}
   });
   // prepinac Obchody / Podniky
-  function switchMode(m){ if(mode!==m){ closePanel(); clearSearch(); closeNearby(); setMode(m); } }
+  // MAPY_UX_4 (oprava 1): prepnuti rezimu vzdy zavre otevrene okno mista
+  function switchMode(m){ if(mode!==m){ closeCurrentPopup(); closePanel(); clearSearch(); closeNearby(); setMode(m); } }
   document.getElementById('modeObchody').addEventListener('click', function(){ switchMode('obchody'); });
   document.getElementById('modePodniky').addEventListener('click', function(){ switchMode('podniky'); });
 
@@ -977,9 +984,10 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     if(it.kind==='store'){
       var s={nazev:it.row.nazev, retezec:it.row.retezec, adresa:it.row.adresa, lon:it.lon, lat:it.lat};
       var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupHtml(s)).addTo(map);
+      trackPopup(pop);
       fillTimes(s, pop.getElement());
     } else {
-      new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(it.row)).addTo(map);
+      trackPopup(new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat([it.lon,it.lat]).setHTML(popupVenueHtml(it.row)).addTo(map));
     }
     searchRes.classList.remove('open');
     searchInput.value=it.name;
