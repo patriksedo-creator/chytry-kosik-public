@@ -579,6 +579,33 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       ((v.lat!=null && v.lon!=null) ? navButtonsHtml(v.lat, v.lon, v.nazev) : '');
   }
 
+  // MAPY_UX_6: klik na číselný shluk přiblíží na jeho oblast a rozpadne ho (zoom na expansion-zoom).
+  // MapLibre v4 vrací getClusterExpansionZoom jako Promise (callback forma z v3 je no-op = shluk „nereagoval").
+  // Držíme obě formy + plynulý easeTo + fallback (zoom+2.5), aby klik VŽDY něco udělal.
+  function zoomToCluster(srcId, f){
+    var src=map.getSource(srcId); if(!src || !f) return;
+    var cid=f.properties.cluster_id, c=f.geometry.coordinates.slice(), done=false;
+    function go(z){ if(done) return; done=true;
+      var cur=map.getZoom();
+      var zoom=(z!=null && isFinite(z)) ? z : cur+2.5;
+      // velke shluky vraci expansion-zoom <= aktualni zoom -> klik by nic neudelal; vzdy se znatelne priblizit
+      if(zoom <= cur+0.5) zoom = cur+2.5;
+      zoom=Math.min(zoom, 20);
+      map.easeTo({center:c, zoom:zoom, duration:650});
+    }
+    try{
+      var p=src.getClusterExpansionZoom(cid, function(err,z){ if(!err) go(z); }); // v3 callback
+      if(p && typeof p.then==='function') p.then(go).catch(function(){ go(null); }); // v4 Promise
+    }catch(e){ go(null); }
+  }
+  function wireClusterLayers(ids, srcId){
+    ids.forEach(function(id){
+      map.on('click', id, function(e){ if(e.features && e.features[0]) zoomToCluster(srcId, e.features[0]); });
+      map.on('mouseenter', id, function(){ map.getCanvas().style.cursor='pointer'; });
+      map.on('mouseleave', id, function(){ map.getCanvas().style.cursor=''; });
+    });
+  }
+
   function addStoreLayers(){
     map.addSource('stores', {type:'geojson', data:storesFC(), cluster:true, clusterRadius:48, clusterMaxZoom:13});
 
@@ -619,13 +646,9 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       'text-offset':[0,1.1], 'text-anchor':'top', 'text-allow-overlap':false, 'text-optional':true
     }, paint:{'text-color':['get','color'], 'text-halo-color':'#07031a', 'text-halo-width':2, 'text-halo-blur':0.3}});
 
-    // kliky
-    map.on('click','clusters',function(e){
-      var f=e.features[0];
-      map.getSource('stores').getClusterExpansionZoom(f.properties.cluster_id,function(err,z){
-        if(err) return; map.easeTo({center:f.geometry.coordinates, zoom:z});
-      });
-    });
+    // kliky: celá bublina shluku (zář + jádro + číslo) přibliží a rozpadne shluk
+    wireClusterLayers(['cluster-glow','clusters','cluster-count'], 'stores');
+    // jednotlivý marker (nejnižší úroveň) = okno místa. Kruh 'points' leží pod ikonou/názvem, stačí jeden.
     map.on('click','points',function(e){
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
       var s={nazev:p.nazev, retezec:p.retezec, adresa:p.adresa, lon:c[0], lat:c[1]};
@@ -633,7 +656,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       trackPopup(popup, {kind:'store', s:s});
       fillTimes(s, popup.getElement());
     });
-    ['clusters','points'].forEach(function(id){
+    ['points'].forEach(function(id){
       map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
       map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
     });
@@ -673,19 +696,15 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       'text-offset':[0,1.1], 'text-anchor':'top', 'text-allow-overlap':false, 'text-optional':true
     }, paint:{'text-color':['get','color'], 'text-halo-color':'#07031a', 'text-halo-width':2, 'text-halo-blur':0.3}});
 
-    map.on('click','v-clusters',function(e){
-      var f=e.features[0];
-      map.getSource('venues').getClusterExpansionZoom(f.properties.cluster_id,function(err,z){
-        if(err) return; map.easeTo({center:f.geometry.coordinates, zoom:z});
-      });
-    });
+    // kliky: celá bublina shluku přibliží a rozpadne shluk
+    wireClusterLayers(['v-cluster-glow','v-clusters','v-cluster-count'], 'venues');
     map.on('click','v-points',function(e){
       var f=e.features[0], p=f.properties, c=f.geometry.coordinates.slice();
       var v={nazev:p.nazev, typ:p.typ, oceneni:p.oceneni, adresa:p.adresa, mesto:p.mesto, stezka:p.stezka, lat:c[1], lon:c[0]};
       var pop=new maplibregl.Popup({offset:16, maxWidth:'280px'}).setLngLat(c).setHTML(popupVenueHtml(v)).addTo(map);
       trackPopup(pop, {kind:'venue', v:v});
     });
-    ['v-clusters','v-points'].forEach(function(id){
+    ['v-points'].forEach(function(id){
       map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
       map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
     });
