@@ -147,12 +147,12 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 .stezbtn.on{background:#8cff3a;color:#0b2206}
 /* MAPY_UX_7: Co je blizko = mala futuristicka plovouci karta v rohu (ne spodni lista pres celou sirku).
    Polopruhledna, neonovy ram, ukaze par nejblizsich mist najednou (3-4 kompaktni radky), uvnitr scroll. */
-.nearby{position:absolute;left:12px;top:66px;z-index:655;width:244px;max-width:72vw;max-height:46vh;display:none;flex-direction:column;background:rgba(14,6,36,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1.5px solid var(--cyan);border-radius:16px;box-shadow:0 0 22px rgba(45,226,230,.45),inset 0 0 20px rgba(45,226,230,.08);overflow:hidden}
+.nearby{position:absolute;left:12px;top:66px;z-index:655;width:244px;max-width:72vw;max-height:66vh;display:none;flex-direction:column;background:rgba(14,6,36,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1.5px solid var(--cyan);border-radius:16px;box-shadow:0 0 22px rgba(45,226,230,.45),inset 0 0 20px rgba(45,226,230,.08);overflow:hidden}
 .nearby.open{display:flex}
 .nearby .nh{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 6px 12px;border-bottom:1px solid rgba(45,226,230,.22)}
 .nearby .nh b{font:800 italic 13px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#eaffff;text-shadow:0 0 8px var(--cyan);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nearby .nx{flex:0 0 auto;background:none;border:0;color:#cbb9ef;font-size:19px;line-height:1;cursor:pointer;padding:0 2px}
-.nearby .nlist{overflow-y:auto;overflow-x:hidden;padding:4px;max-height:118px}
+.nearby .nlist{overflow-y:auto;overflow-x:hidden;padding:4px;max-height:300px}
 .nearby .nr{display:flex;align-items:center;gap:8px;padding:6px 7px;border-radius:9px;cursor:pointer}
 .nearby .nr:hover{background:rgba(45,226,230,.14)}
 .nearby .nr+.nr{border-top:1px solid rgba(45,226,230,.08)}
@@ -215,7 +215,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     </button>
     <button type="button" class="chip" id="nearbtn">
       <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
-      Co je blízko
+      V mém okolí
     </button>
   </div>
   <button type="button" class="locbtn" id="locbtn">
@@ -265,7 +265,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 
   <!-- MAPY_UX_7: Co je blizko — mala plovouci karta v rohu, par nejblizsich mist najednou -->
   <div class="nearby" id="nearby">
-    <div class="nh"><b id="nearbytitle">Co je blízko</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
+    <div class="nh"><b id="nearbytitle">V mém okolí</b><button type="button" class="nx" id="nearbyx" aria-label="Zavřít">&times;</button></div>
     <div class="nlist" id="nearbylist"></div>
     <div class="nfoot" id="nearbyfoot"></div>
   </div>
@@ -513,7 +513,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
   var VT_COLOR = {restaurace:'#ff4b4b', kavarna:'#ff9e2c', pivnice:'#f2d20c', bistro:'#2ee6c6', cukrarna:'#ff6ad5', reznictvi:'#ff3d6e', obchod:'#35a0ff', trh:'#7a6bff', vyrobce:'#9be52e', pivovar:'#e8961e', hospoda:'#b5794a', zmrzlinarna:'#7fd4ff', rychle_obcerstveni:'#ff6a1a', pekarna:'#e8c65a', vinoteka:'#b04dff', lahudky:'#3bd99a', cajovna:'#4ab0b8'};
   var VT_ORDER = ['restaurace','kavarna','pivnice','bistro','cukrarna','reznictvi','obchod','trh','vyrobce','pivovar','hospoda','zmrzlinarna','rychle_obcerstveni','pekarna','vinoteka','lahudky','cajovna'];
   var VU_LABEL = {michelin:'Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr Chytrého košíku', pivni_stezka:'Pivní stezka'};
-  var VU_SHORT = {michelin:'★ Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Výběr CK', pivni_stezka:'Pivní stezka'};
+  var VU_SHORT = {michelin:'★ Michelin', gault:'Gault & Millau', bib:'Bib Gourmand', vyber_ck:'Chytrý výběr', pivni_stezka:'Pivní stezka'};
   var VU_COLOR = {michelin:'#ffd700', gault:'#e5e4e2', bib:'#cd7f32', vyber_ck:'#ffffff', pivni_stezka:'#58c93a'}; // prstenec/odznak
   var VU_ORDER = ['michelin','gault','bib','vyber_ck','pivni_stezka'];
   var LS_VT = 'ck_mapa_podniky_typ', LS_VU = 'ck_mapa_podniky_uroven';
@@ -523,15 +523,21 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
   // aktivni mnoziny (naplni se z dat po nacteni; default vse zaskrtnuto)
   var activeVT = {}, activeVU = {};
   var VT_PRESENT = [], VU_PRESENT = [];
+  // MAPY_UX_8: typy, co se zakaznikovi nenabizi ve filtru (na mape zustavaji). Drzime je vzdy zapnute.
+  var VT_FILTER_HIDE = {trh:1, vyrobce:1};
+  var VT_FILTER = []; // typy nabizene ve filtru/legende (bez skrytych)
   function initVenueFilters(){
     var ts={}, us={};
     ALLV.forEach(function(v){ ts[v.typ]=1; (v.oceneni&&v.oceneni.length?v.oceneni:['vyber_ck']).forEach(function(a){ us[a]=1; }); });
     VT_PRESENT = VT_ORDER.filter(function(t){ return ts[t]; });
+    VT_FILTER = VT_PRESENT.filter(function(t){ return !VT_FILTER_HIDE[t]; });
     VU_PRESENT = VU_ORDER.filter(function(u){ return us[u]; });
     var svt=null, svu=null;
     try{ svt=JSON.parse(localStorage.getItem(LS_VT)||'null'); }catch(e){}
     try{ svu=JSON.parse(localStorage.getItem(LS_VU)||'null'); }catch(e){}
     VT_PRESENT.forEach(function(t){ activeVT[t] = svt&&typeof svt==='object' ? svt[t]!==false : true; });
+    // skryte typy (Vyrobce, Trh) nejde ve filtru vypnout -> drz je zapnute i proti stare localStorage
+    VT_PRESENT.forEach(function(t){ if(VT_FILTER_HIDE[t]) activeVT[t]=true; });
     VU_PRESENT.forEach(function(u){ activeVU[u] = svu&&typeof svu==='object' ? svu[u]!==false : true; });
   }
 
@@ -1076,7 +1082,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
   map.on('load', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, false); });
 
   // ---- Co je blizko (MAPA_UX_2 A3) ----
-  var nearbyRadius=2000;
+  var nearbyRadius=5000, nearbyLimit=25;
   function nearbyOrigin(){ if(userLoc) return userLoc; var c=map.getCenter(); return [c.lat, c.lng]; }
   function nearbyCandidates(){
     if(mode==='obchody'){
@@ -1106,7 +1112,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     var o=nearbyOrigin();
     var list=nearbyCandidates().map(function(it){ it.d=distM(o,[it.lat,it.lon]); return it; })
       .filter(function(it){ return it.d<=nearbyRadius; })
-      .sort(function(a,b){ return a.d-b.d; }).slice(0,12);
+      .sort(function(a,b){ return a.d-b.d; }).slice(0,nearbyLimit);
     var box=document.getElementById('nearbylist'), foot=document.getElementById('nearbyfoot');
     box.innerHTML='';
     if(!list.length){
@@ -1121,11 +1127,11 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     }
     foot.innerHTML='<button type="button" id="nearbymore">Rozšířit okolí</button>';
     foot.classList.add('show');
-    document.getElementById('nearbymore').addEventListener('click', function(){ nearbyRadius*=2; renderNearby(); });
+    document.getElementById('nearbymore').addEventListener('click', function(){ nearbyRadius*=2; nearbyLimit+=25; renderNearby(); });
   }
   function openNearby(){
-    nearbyRadius=2000;
-    document.getElementById('nearbytitle').textContent = userLoc ? 'Co je blízko' : 'Blízko středu mapy';
+    nearbyRadius=5000; nearbyLimit=25;
+    document.getElementById('nearbytitle').textContent = userLoc ? 'V mém okolí' : 'Blízko středu mapy';
     renderNearby();
     document.getElementById('nearby').classList.add('open');
     document.getElementById('nearbtn').classList.add('on');
@@ -1185,9 +1191,9 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
       if(act.length===0) return 'Nic nevybráno';
       return act.length+' řetězců';
     }
-    var vt=VT_PRESENT.filter(function(t){ return activeVT[t]; });
+    var vt=VT_FILTER.filter(function(t){ return activeVT[t]; });
     var vu=VU_PRESENT.filter(function(u){ return activeVU[u]; });
-    var allVT=vt.length===VT_PRESENT.length, allVU=vu.length===VU_PRESENT.length;
+    var allVT=vt.length===VT_FILTER.length, allVU=vu.length===VU_PRESENT.length;
     if(allVT && allVU) return null;
     if(vt.length===1 && allVU) return VT_LABEL[vt[0]]||vt[0];
     if(vu.length===1 && allVT) return VU_LABEL[vu[0]]||vu[0];
@@ -1217,7 +1223,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     if(mode==='obchody'){
       CHAINS.forEach(function(c){ row('chain',c, dotHtml(COLORS[c], c.charAt(0), '7px')+c); });
     } else {
-      cap('Typ'); VT_PRESENT.forEach(function(t){ row('typ',t, dotHtml(VT_COLOR[t], VT_INI[t], '7px')+VT_LABEL[t]); });
+      cap('Typ'); VT_FILTER.forEach(function(t){ row('typ',t, dotHtml(VT_COLOR[t], VT_INI[t], '7px')+VT_LABEL[t]); });
       cap('Úroveň'); VU_PRESENT.forEach(function(u){ row('uroven',u, ringHtml(VU_COLOR[u])+VU_LABEL[u]); });
     }
     var note=document.createElement('div'); note.className='legnote';
@@ -1238,7 +1244,7 @@ body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
     if(mode==='obchody'){
       CHAINS.forEach(function(c){ cb('chain', c, COLORS[c], c.charAt(0), c, active[c], false); });
     } else {
-      cap('Typ'); VT_PRESENT.forEach(function(t){ cb('typ', t, VT_COLOR[t], VT_INI[t], VT_LABEL[t], activeVT[t], false); });
+      cap('Typ'); VT_FILTER.forEach(function(t){ cb('typ', t, VT_COLOR[t], VT_INI[t], VT_LABEL[t], activeVT[t], false); });
       cap('Úroveň'); VU_PRESENT.forEach(function(u){ cb('uroven', u, VU_COLOR[u], '', VU_LABEL[u], activeVU[u], true); });
     }
   }
