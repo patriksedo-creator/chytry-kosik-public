@@ -36,8 +36,11 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .locbtn:hover{box-shadow:0 0 22px var(--lime)}
 .wrap{flex:1 1 auto;position:relative;min-height:440px}
 #map{position:absolute;inset:0;background:#07031a}
-/* GTA neon pop na vektorovou mapu */
-.maplibregl-canvas{filter:saturate(1.2) contrast(1.06) brightness(1.02)}
+/* GTA neon pop na vektorovou mapu.
+   MAPY_UX_5: celoplosny CSS filtr na canvas se prekresluje KAZDY snimek (hlavni skubani na slabem GPU).
+   Neon barvy ale drzi primo paint vrstev (NEON/applyOrientation), takze filtr jen lehce dobarvuje.
+   Zapina se jen kdyz prohlizec umi GPU akceleraci levne (telo dostane tridu .neonfx), jinak se vynecha. */
+body.neonfx .maplibregl-canvas{filter:saturate(1.15) contrast(1.04)}
 .maplibregl-ctrl-attribution{background:rgba(11,3,24,.72)!important}
 .maplibregl-ctrl-attribution a{color:var(--lime)!important}
 .maplibregl-ctrl-group{background:#160a33!important;border:1px solid rgba(45,226,230,.5)!important;box-shadow:0 0 14px rgba(45,226,230,.35)!important}
@@ -171,31 +174,17 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
 .navbtn svg{width:18px;height:18px}
 /* MAPY_UX_3/4: maly odkaz Google Mapy v okne mista (cela navigace venku) */
 .navall{display:block;text-align:center;margin-top:8px;color:#9fe9ec;font-size:13px;text-decoration:underline}
-/* MAPY_UX_4: uzky pruh trasy misto velkeho panelu (sbaleny = jedna radka, klepnuti rozbali kroky) */
-.routebar{position:absolute;left:12px;right:12px;bottom:12px;z-index:670;display:none;flex-direction:column;max-height:60vh}
-.routebar.show{display:flex}
-.routebar .rsteps{order:-1;display:none;overflow:auto;max-height:42vh;background:rgba(18,8,46,.97);border:2px solid var(--lime);border-bottom:0;border-radius:16px 16px 0 0;padding:4px 6px;box-shadow:0 0 30px rgba(200,232,75,.35)}
-.routebar.expanded .rsteps{display:block}
-.routebar .rbar{display:flex;align-items:center;gap:10px;min-height:52px;max-height:56px;padding:0 8px 0 14px;background:rgba(18,8,46,.97);border:2px solid var(--lime);border-radius:16px;box-shadow:0 0 30px rgba(200,232,75,.35);cursor:pointer}
-.routebar.expanded .rbar{border-radius:0 0 16px 16px}
+/* MAPY_UX_5: uzky pruh trasy — JEN zbyvajici cas + vzdalenost + krizek (zadne kroky, nic neprekryva mapu) */
+.routebar{position:absolute;left:12px;right:12px;bottom:12px;z-index:670;display:none}
+.routebar.show{display:block}
+.routebar .rbar{display:flex;align-items:center;gap:10px;min-height:52px;max-height:56px;padding:0 8px 0 14px;background:rgba(18,8,46,.97);border:2px solid var(--lime);border-radius:16px;box-shadow:0 0 24px rgba(200,232,75,.3)}
 .routebar .rbar .ric{flex:0 0 auto;font-size:20px;line-height:1}
-.routebar .rbar .rtxt{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;line-height:1.12}
-.routebar .rbar .rtxt b{font:900 italic 17px 'Barlow Semi Condensed',Arial,sans-serif;color:#eaffff;text-shadow:0 0 8px var(--lime);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.routebar .rbar .rtxt span{color:#c8e84b;font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.routebar .rbar .rrecalc{flex:0 0 auto;display:none;min-height:36px;padding:0 13px;border-radius:999px;border:0;background:var(--lime);color:#150628;font:800 italic 13px 'Barlow Semi Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;cursor:pointer;align-items:center}
-.routebar .rbar .rrecalc.show{display:inline-flex}
-.routebar .rbar .rchev{flex:0 0 auto;color:#c8e84b;font-size:14px;transition:transform .2s;transform:rotate(180deg)}
-.routebar.expanded .rbar .rchev{transform:rotate(0deg)}
+.routebar .rbar .rtxt{flex:1 1 auto;min-width:0;display:flex;align-items:baseline;gap:10px;line-height:1.12}
+.routebar .rbar .rtxt b{font:900 italic 18px 'Barlow Semi Condensed',Arial,sans-serif;color:#eaffff;text-shadow:0 0 8px var(--lime);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.routebar .rbar .rtxt span{color:#c8e84b;font-weight:700;font-size:14px;white-space:nowrap}
+.routebar .rbar .rgm{flex:0 0 auto;color:var(--lime);font-size:13px;text-decoration:underline;white-space:nowrap}
 .routebar .rbar .rxc{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:2px solid var(--pink);background:#150628;color:#ffd9f3;font-size:20px;line-height:1;cursor:pointer}
 .routebar .rbar .rxc:hover{box-shadow:0 0 14px rgba(255,46,151,.5)}
-.routebar .rstep{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;border-bottom:1px solid rgba(200,232,75,.1)}
-.routebar .rstep:hover{background:rgba(200,232,75,.12)}
-.routebar .rstep .ri{flex:0 0 auto;width:22px;height:22px;color:var(--lime)}
-.routebar .rstep .rline{flex:0 0 auto;min-width:22px;height:20px;padding:0 6px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:#0b0318;font:900 12px 'Barlow Semi Condensed',Arial,sans-serif}
-.routebar .rstep .rtx{flex:1 1 auto;min-width:0;font-size:15px;color:#f2ecff}
-.routebar .rstep .rd{flex:0 0 auto;color:#9f8fc4;font-weight:700;font-size:13px}
-.routebar .rerr{padding:14px 16px;text-align:center}
-.routebar .rerr a{color:var(--lime);font-weight:700;text-decoration:underline}
 /* MAPY_UX_4: pri aktivni trase zdvihni ovladani u spodniho okraje, at je pruh nezakryva */
 .wrap.routing .legtoggle,.wrap.routing .stezbtn{bottom:76px}
 .wrap.routing #stezky{bottom:122px}
@@ -348,10 +337,32 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     return {type:'Feature', geometry:{type:'Polygon', coordinates:[pts]}, properties:{}};
   }
 
+  // MAPY_UX_5: na kapabilnim zarizeni zapni lehky neon CSS filtr (viz .neonfx), na slabem ho vynech.
+  // Celoplosny filtr se prekresluje kazdy snimek -> na slabem GPU hlavni skubani pri posunu.
+  // Slabe = softwarove vykreslovani (stary PC bez/se spatnym ovladacem GPU -> SwiftShader/llvmpipe),
+  // malo jader, malo pameti, nebo uzivatel chce omezeny pohyb.
+  function _softwareGL(){
+    try{
+      var c=document.createElement('canvas'); var gl=c.getContext('webgl')||c.getContext('experimental-webgl');
+      if(!gl) return true;
+      var ext=gl.getExtension('WEBGL_debug_renderer_info');
+      var r=(ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'')||''; r=(''+r).toLowerCase();
+      return r.indexOf('swiftshader')>=0||r.indexOf('llvmpipe')>=0||r.indexOf('software')>=0||r.indexOf('basic render')>=0;
+    }catch(e){ return false; }
+  }
+  try{
+    var _weak = _softwareGL() ||
+                (navigator.deviceMemory && navigator.deviceMemory < 4) ||
+                (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) ||
+                (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if(!_weak) document.body.classList.add('neonfx');
+  }catch(e){ try{ document.body.classList.add('neonfx'); }catch(e2){} }
+
   var map = new maplibregl.Map({
     container:'map',
     style:'https://tiles.openfreemap.org/styles/dark', // OpenFreeMap: zdarma, bez klice, bez limitu
-    center:PRAHA, zoom:11, attributionControl:false, hash:false
+    center:PRAHA, zoom:11, attributionControl:false, hash:false,
+    fadeDuration:0 // MAPY_UX_5: bez prolinani popisku = min prekreslovani pri posunu (plynulejsi na slabem stroji)
   });
   map.addControl(new maplibregl.AttributionControl({compact:true, customAttribution:'prodejny a trasy: OpenStreetMap (ODbL), OSRM'}));
   map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'bottom-right');
@@ -991,30 +1002,48 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   }
   function setUserLocation(lat, lon, acc, center){
     userLoc=[lat,lon];
-    var el=document.createElement('div'); el.className='me-dot'+(meHeading!=null?' hasdir':''); if(meHeading!=null) el.style.setProperty('--rot', meHeading+'deg'); meEl=el;
-    if(userMarker) userMarker.remove();
-    userMarker=new maplibregl.Marker({element:el}).setLngLat([lon,lat]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
+    // MAPY_UX_5: znacku vytvor jen jednou a dal ji JEN posouvej (watchPosition ji aktualizuje casto).
+    // Drive se pri kazdem snimku polohy rusila a tvorila nova DOM znacka = zbytecne skubani a prace.
+    if(!userMarker){
+      var el=document.createElement('div'); el.className='me-dot'; meEl=el;
+      userMarker=new maplibregl.Marker({element:el}).setLngLat([lon,lat]).setPopup(new maplibregl.Popup({offset:14}).setText('Jsi tady')).addTo(map);
+    } else {
+      userMarker.setLngLat([lon,lat]);
+    }
+    if(meEl){ if(meHeading!=null){ meEl.classList.add('hasdir'); meEl.style.setProperty('--rot', meHeading+'deg'); } else { meEl.classList.remove('hasdir'); } }
     try{ ensureMeLayers(); var feats=(acc && acc>0 && acc<100000)?[circlePolygon(lon,lat,acc)]:[]; var src=map.getSource('me-acc'); if(src) src.setData({type:'FeatureCollection', features:feats}); }catch(e){}
     if(center){ map.flyTo({center:[lon,lat], zoom: Math.max(map.getZoom(),13)}); }
     else if(routeState && followMode){ try{ map.easeTo({center:[lon,lat], duration:600}); }catch(e){} }  // MAPY_UX_4: sledovani pri trase
     if(routeState) updateRouteProgress();                                                                 // MAPY_UX_4: posun po trase
   }
   function appLoc(){ var ap=window.__MAPA_MOJE_POLOHA__; return (ap && typeof ap.lat==='number' && typeof ap.lon==='number') ? ap : null; }
-  // MAPY_UX_4 (oprava 2): Moje poloha VZDY vycentruje a zapne sledovani — i kdyz je otevrene okno mista nebo bezi trasa.
+  // MAPY_UX_5 (oprava bugu): spolehliva geolokace NEZAVISLA na rezimu (Obchody/Podniky) a na poradi kliknuti.
+  // Dvoustupnova: nejdriv vysoka presnost (GPS), pri selhani (slaby/stary stroj bez GPS) znovu bez vysoke
+  // presnosti + s akceptaci starsi polohy. Chybu hlasime jen kdyz polohu NEMAME vubec.
+  function requestFix(onOk){
+    if(!navigator.geolocation){ if(!userLoc) toast('Polohu se nepodařilo zjistit'); return; }
+    startWatch();
+    function fail(){ if(!userLoc) toast('Polohu se nepodařilo zjistit'); }
+    navigator.geolocation.getCurrentPosition(onOk, function(){
+      navigator.geolocation.getCurrentPosition(onOk, fail, {enableHighAccuracy:false, timeout:12000, maximumAge:120000});
+    }, {enableHighAccuracy:true, timeout:8000, maximumAge:30000});
+  }
+  // Moje poloha VZDY vycentruje a zapne sledovani — v obou rezimech, i kdyz je otevrene okno mista nebo bezi trasa.
   document.getElementById('locbtn').addEventListener('click', function(){
     followMode=true;                                                                      // zapni sledovani
     var ap=appLoc();
     if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, true); if(!routeState) openNearby(); return; } // 1. poloha z appky
-    if(!navigator.geolocation){ toast('Polohu se nepodařilo zjistit'); return; }          // 3. nic
-    navigator.geolocation.getCurrentPosition(function(pos){                               // 2. prohlizec
+    // 2. uz polohu znam -> vycentruj HNED (funguje vzdy, nezavisle na rezimu); na pozadi ji obnovim
+    if(userLoc){ try{ map.flyTo({center:[userLoc[1],userLoc[0]], zoom: Math.max(map.getZoom(),13)}); }catch(e){} if(!routeState) openNearby(); }
+    requestFix(function(pos){                                                             // 3. cerstva poloha z prohlizece
       setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, true);
-      if(!routeState) openNearby(); startWatch();
-    }, function(){ toast('Polohu se nepodařilo zjistit'); }, {enableHighAccuracy:true, timeout:8000});
+      if(!routeState) openNearby();
+    });
   });
   // posun mapy rukou vypne sledovani (jen behem trasy, jinak nerozhoduje)
   map.on('dragstart', function(){ followMode=false; });
   // poloha vlozena/aktualizovana appkou (cast B) — udalost mapa:poloha. Pri trase sleduje (center resi followMode uvnitr).
-  window.addEventListener('mapa:poloha', function(){ var ap=appLoc(); if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, !routeState); maybeShowRecalc(); } });
+  window.addEventListener('mapa:poloha', function(){ var ap=appLoc(); if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, !routeState); } });
   // pokud appka polohu vlozila jeste pred nactenim mapy
   map.on('load', function(){ var ap=appLoc(); if(ap) setUserLocation(ap.lat, ap.lon, ap.acc, false); });
 
@@ -1246,8 +1275,8 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   var ROUTE_HL='#ffe53a';              // svitiva zluto-limetka, odlisna od silnic (ruzova/cyan) i vody
   var routeState=null;                 // {dest:{lat,lon,name}, profile:'foot'|'car', geometry, steps, distance, duration, reopen}
   var routeWaitClick=false, routePendingDest=null, routePendingProfile=null, watchId=null;
-  // MAPY_UX_4: sledovani polohy (mapa drzi polohu ve vyrezu), stav rozbaleni pruhu, prubeh po trase
-  var followMode=false, routeExpanded=false, routeCum=null, routeProgIdx=0, routePendingReopen=null;
+  // MAPY_UX_4/5: sledovani polohy (mapa drzi polohu ve vyrezu), prubeh po trase (uz bez krokoveho seznamu)
+  var followMode=false, routeCum=null, routeProgIdx=0, routePendingReopen=null;
 
   var ROUTE_DONE='#4a5c6e';            // ujita cast trasy — tlumena (zbyvajici sviti ROUTE_HL)
   function ensureRouteLayers(){
@@ -1323,7 +1352,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     var total=routeCum[routeCum.length-1]||routeState.distance||0;
     var remain=Math.max(0, total-routeCum[bi]);
     var remSec=(total>0)?routeState.duration*(remain/total):routeState.duration;
-    updateRouteBarInfo(remSec, remain, best>50);
+    updateRouteBarInfo(remSec, remain);
   }
   function bearing(a, b){ // a,b=[lat,lon] -> uhel ve stupnich (0=sever)
     var toR=Math.PI/180, toD=180/Math.PI;
@@ -1331,16 +1360,14 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     var x=Math.cos(a[0]*toR)*Math.sin(b[0]*toR)-Math.sin(a[0]*toR)*Math.cos(b[0]*toR)*Math.cos((b[1]-a[1])*toR);
     return (Math.atan2(y,x)*toD+360)%360;
   }
-  function updateRouteBarInfo(remSec, remM, offRoute){
+  function updateRouteBarInfo(remSec, remM){
     var b=document.getElementById('rremain'), d=document.getElementById('rremdist');
     if(b) b.textContent=fmtMin(remSec)||'—';
     if(d) d.textContent=fmtDist(remM);
-    var rc=document.getElementById('routerecalc'); if(rc) rc.classList.toggle('show', !!offRoute);
   }
 
-  // Rezimy trasy jsou DATA-RIZENE (seznam) + kroky maji obecny segmentovy model, aby sel pozdeji pridat
-  // TRETI rezim MHD (useky: pesky / linka / prestup / pesky). Pridani = jeden zaznam {key:'transit', transit:true}
-  // sem + vetev v buildStepModel (segmenty) a v doRoute. Vypocet MHD se zkousi zvlast v okne 2 (MHD_PROVEDITELNOST).
+  // Rezimy trasy jsou DATA-RIZENE (seznam). MAPY_UX_5: krokova navigace (turn-by-turn) odstranena na vyslovny
+  // pokyn Patrika — uzivatel jde podle cary na mape, pruh ukazuje jen zbyvajici cas a vzdalenost.
   var ROUTE_MODES=[
     {key:'foot', label:'Pěšky', icon:'🚶', osrm:{path:'routed-foot', profile:'foot'}},
     {key:'car',  label:'Autem', icon:'🚗', osrm:{path:'routed-car',  profile:'driving'}}
@@ -1348,59 +1375,14 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
   function modeOf(key){ for(var i=0;i<ROUTE_MODES.length;i++){ if(ROUTE_MODES[i].key===key) return ROUTE_MODES[i]; } return ROUTE_MODES[0]; }
   function fetchRoute(start, dest, profile){ // start,dest = [lat,lon]
     var o=modeOf(profile).osrm;
+    // MAPY_UX_5: uz nechceme kroky (steps) — jen geometrii trasy, cas a vzdalenost. Mensi odpoved, nic navic.
     var url='https://routing.openstreetmap.de/'+o.path+'/route/v1/'+o.profile+'/'+
-      start[1]+','+start[0]+';'+dest[1]+','+dest[0]+'?overview=full&geometries=geojson&steps=true';
+      start[1]+','+start[0]+';'+dest[1]+','+dest[0]+'?overview=full&geometries=geojson';
     return fetch(url).then(function(r){ return r.json(); }).then(function(j){
       if(!j || j.code!=='Ok' || !j.routes || !j.routes[0]) throw new Error('no route');
-      var rt=j.routes[0], steps=[];
-      (rt.legs||[]).forEach(function(lg){ (lg.steps||[]).forEach(function(s){ steps.push(s); }); });
-      return {geometry:rt.geometry, steps:steps, distance:rt.distance, duration:rt.duration};
+      var rt=j.routes[0];
+      return {geometry:rt.geometry, distance:rt.distance, duration:rt.duration};
     });
-  }
-
-  // cesky text kroku z typu manevru + smeru + nazvu ulice (napr. "Zahni vlevo do ulice Sokolovská")
-  var STEP_DIR={'left':'vlevo','right':'vpravo','slight left':'mírně vlevo','slight right':'mírně vpravo',
-    'sharp left':'ostře vlevo','sharp right':'ostře vpravo','straight':'rovně','uturn':'zpět'};
-  function stepText(st){
-    var m=st.maneuver||{}, t=m.type, mod=m.modifier, name=st.name||'', base;
-    if(t==='depart') base = name ? 'Vyraž ulicí '+name : 'Vyraž';
-    else if(t==='arrive') return name ? 'Jsi u cíle ('+name+')' : 'Jsi u cíle';
-    else if(t==='turn') base = mod==='uturn' ? 'Otoč se' : (mod==='straight' ? 'Pokračuj rovně' : 'Zahni '+(STEP_DIR[mod]||''));
-    else if(t==='continue') base = (mod && mod!=='straight') ? 'Pokračuj '+(STEP_DIR[mod]||'') : 'Pokračuj rovně';
-    else if(t==='new name') base = 'Pokračuj dál';
-    else if(t==='end of road') base = 'Na konci ulice zahni '+(STEP_DIR[mod]||'rovně');
-    else if(t==='fork') base = 'Na rozcestí se drž '+((mod&&mod.indexOf('left')>=0)?'vlevo':'vpravo');
-    else if(t==='merge') base = 'Zařaď se'+(mod&&mod!=='straight'?' '+(STEP_DIR[mod]||''):'');
-    else if(t==='roundabout'||t==='rotary'||t==='roundabout turn') base = 'Jeď přes kruhový objezd';
-    else if(t==='on ramp') base = 'Najeď na silnici';
-    else if(t==='off ramp') base = 'Sjeď ze silnice';
-    else base = 'Pokračuj dál';
-    if(name && t!=='depart') base += ' do ulice '+name;
-    return base;
-  }
-  function stepIcon(st){
-    var m=st.maneuver||{}, mod=m.modifier||'', t=m.type;
-    if(t==='arrive') return '<svg class="ri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>';
-    var deg=0; if(mod.indexOf('left')>=0) deg=-90; else if(mod.indexOf('right')>=0) deg=90; else if(mod==='uturn') deg=180;
-    return '<svg class="ri" style="transform:rotate('+deg+'deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>';
-  }
-
-  // Obecny model kroku {icon, badge, text, dist, lon, lat}. Dnes plni jen OSRM manevry (pesky/auto).
-  // Budouci MHD rezim by tu mel vlastni vetev: segmenty pesky/linka/prestup/pesky, u linky badge s cislem/barvou linky.
-  function buildStepModel(rs){
-    var out=[];
-    // if(modeOf(rs.profile).transit){ /* MHD: rs.segments -> {icon, badge:{text,color}, text, dist, lon, lat} */ return out; }
-    (rs.steps||[]).forEach(function(st){
-      var m=st.maneuver||{}, loc=m.location||[rs.dest.lon, rs.dest.lat];
-      out.push({icon:stepIcon(st), badge:null, text:stepText(st),
-        dist:(st.distance>5 && m.type!=='arrive')?st.distance:null, lon:loc[0], lat:loc[1]});
-    });
-    return out;
-  }
-  function stepRowHtml(s){
-    var d=s.dist!=null ? '<span class="rd">'+fmtDist(s.dist)+'</span>' : '';
-    var badge=s.badge ? '<span class="rline" style="background:'+(s.badge.color||'#2de2e6')+'">'+escAttr(s.badge.text||'')+'</span>' : '';
-    return '<div class="rstep" data-slon="'+s.lon+'" data-slat="'+s.lat+'">'+(s.icon||'')+badge+'<span class="rtx">'+escAttr(s.text||'')+'</span>'+d+'</div>';
   }
 
   function gmHref(dest, travel){
@@ -1417,42 +1399,29 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
       '<button type="button" class="rxc" id="routecancel" aria-label="Zrušit">&times;</button></div>';
     var x=document.getElementById('routecancel'); if(x) x.addEventListener('click', function(e){ e.stopPropagation(); cancelRoute(); });
   }
-  // MAPY_UX_4: hlavni pruh trasy (sbaleny = jedna radka; klepnuti rozbali kroky). Prepinac rezimu je v okne mista.
+  // MAPY_UX_5: pruh trasy = jen jedna radka (ikona rezimu + zbyvajici cas + vzdalenost + krizek). Zadne kroky.
   function renderRoutePanel(err){
     var box=document.getElementById('routep'); if(!box) return;
     var dest=(routeState?routeState.dest:routePendingDest)||{lat:0,lon:0,name:'Cíl'};
-    var destName=escAttr(dest.name||'Cíl');
     if(err){
-      box.className='routebar show expanded';
-      box.innerHTML='<div class="rsteps"><div class="rerr"><a href="'+gmHref(dest, routePendingProfile==='car'?'driving':'walking')+'" target="_blank" rel="noopener">Otevřít v Google Mapách</a></div></div>'+
-        '<div class="rbar"><span class="ric">⚠️</span><span class="rtxt"><b>'+destName+'</b><span>Trasu se nepodařilo spočítat</span></span>'+
+      box.className='routebar show';
+      box.innerHTML='<div class="rbar"><span class="ric">⚠️</span>'+
+        '<span class="rtxt"><b>Trasu se nepodařilo spočítat</b></span>'+
+        '<a class="rgm" href="'+gmHref(dest, routePendingProfile==='car'?'driving':'walking')+'" target="_blank" rel="noopener">Google Mapy</a>'+
         '<button type="button" class="rxc" id="routecancel" aria-label="Zrušit">&times;</button></div>';
       document.getElementById('routecancel').addEventListener('click', function(e){ e.stopPropagation(); cancelRoute(); });
       return;
     }
     if(!routeState) return;
     var m=modeOf(routeState.profile);
-    var stepsHtml=buildStepModel(routeState).map(stepRowHtml).join('');
-    box.className='routebar show'+(routeExpanded?' expanded':'');
+    box.className='routebar show';
     box.innerHTML=
-      '<div class="rsteps">'+(stepsHtml||'<div class="rstep"><span class="rtx">Žádné kroky.</span></div>')+'</div>'+
-      '<div class="rbar" id="rbartap">'+
+      '<div class="rbar">'+
         '<span class="ric">'+m.icon+'</span>'+
         '<span class="rtxt"><b id="rremain">'+(fmtMin(routeState.duration)||'—')+'</b><span id="rremdist">'+fmtDist(routeState.distance)+'</span></span>'+
-        '<button type="button" class="rrecalc" id="routerecalc">Přepočítat</button>'+
-        '<span class="rchev">⌄</span>'+
         '<button type="button" class="rxc" id="routecancel" aria-label="Zrušit trasu">&times;</button>'+
       '</div>';
-    document.getElementById('rbartap').addEventListener('click', function(e){
-      if(e.target.closest('#routecancel') || e.target.closest('#routerecalc')) return;
-      routeExpanded=!routeExpanded; box.classList.toggle('expanded', routeExpanded);
-    });
     document.getElementById('routecancel').addEventListener('click', function(e){ e.stopPropagation(); cancelRoute(); });
-    document.getElementById('routerecalc').addEventListener('click', function(e){ e.stopPropagation(); recomputeRoute(); });
-    box.querySelectorAll('.rstep').forEach(function(r){ r.addEventListener('click', function(){
-      map.flyTo({center:[parseFloat(r.getAttribute('data-slon')), parseFloat(r.getAttribute('data-slat'))], zoom:16});
-    }); });
-    maybeShowRecalc();
     updateRouteProgress(); // kdyz uz polohu zname, rovnou doplnit zbyvajici cas/vzdalenost
   }
   function fitRoute(){
@@ -1469,7 +1438,7 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     var reopen=(routeState && routeState.reopen) || routePendingReopen || null; // zachovej okno mista pri prepocitani
     renderRouteLoading(dest);
     fetchRoute(start, [dest.lat, dest.lon], profile).then(function(r){
-      routeState={dest:dest, profile:profile, geometry:r.geometry, steps:r.steps, distance:r.distance, duration:r.duration, reopen:reopen};
+      routeState={dest:dest, profile:profile, geometry:r.geometry, distance:r.distance, duration:r.duration, reopen:reopen};
       routeProgIdx=0; computeRouteCum(); followMode=true;                   // od startu sleduj polohu
       try{ document.querySelector('.wrap').classList.add('routing'); }catch(e){}
       setRouteData(); fitRoute(); renderRoutePanel(false);
@@ -1487,34 +1456,27 @@ header{position:relative;z-index:1000;display:flex;flex-wrap:wrap;align-items:ce
     if(userLoc){ doRoute(dest, profile, userLoc); return; }                 // 1. uz znam polohu
     var ap=appLoc();
     if(ap){ setUserLocation(ap.lat, ap.lon, ap.acc, false); doRoute(dest, profile, [ap.lat, ap.lon]); return; } // 2. z appky
-    if(navigator.geolocation){                                              // 3. zkus geolokaci prohlizece
+    if(navigator.geolocation){                                              // 3. zkus geolokaci prohlizece (dvoustupnove)
       toast('Hledám tvoji polohu…');
-      navigator.geolocation.getCurrentPosition(function(pos){
-        setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, false); startWatch();
-        doRoute(dest, profile, userLoc);
-      }, function(){ awaitClickStart(dest, profile); }, {enableHighAccuracy:true, timeout:8000});
+      startWatch();
+      var gotFix=function(pos){ setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, false); doRoute(dest, profile, userLoc); };
+      navigator.geolocation.getCurrentPosition(gotFix, function(){
+        navigator.geolocation.getCurrentPosition(gotFix, function(){ awaitClickStart(dest, profile); }, {enableHighAccuracy:false, timeout:12000, maximumAge:120000});
+      }, {enableHighAccuracy:true, timeout:8000, maximumAge:30000});
     } else { awaitClickStart(dest, profile); }                             // 4. klepnuti do mapy = start
   }
-  function recomputeRoute(){ if(routeState && userLoc) doRoute(routeState.dest, routeState.profile, userLoc); }
   function cancelRoute(){
     routeState=null; routeWaitClick=false; routePendingDest=null; routePendingReopen=null;
-    routeExpanded=false; routeCum=null; routeProgIdx=0; followMode=false;
+    routeCum=null; routeProgIdx=0; followMode=false;
     map.getCanvas().style.cursor='';
     try{ document.querySelector('.wrap').classList.remove('routing'); }catch(e){}
     setRouteData();
     var box=document.getElementById('routep'); if(box){ box.className='routebar'; box.innerHTML=''; }
   }
-  function pointToRouteDist(){
-    if(!routeState || !userLoc) return 0;
-    var best=Infinity, coords=(routeState.geometry && routeState.geometry.coordinates)||[];
-    for(var i=0;i<coords.length;i++){ var d=distM(userLoc,[coords[i][1],coords[i][0]]); if(d<best) best=d; }
-    return best===Infinity?0:best;
-  }
-  function maybeShowRecalc(){ var btn=document.getElementById('routerecalc'); if(btn && routeState) btn.classList.toggle('show', pointToRouteDist()>50); }
   function startWatch(){
     if(IN_APP || watchId!=null || !navigator.geolocation) return; // v appce chodi poloha pres mapa:poloha (cast B)
     try{ watchId=navigator.geolocation.watchPosition(function(pos){
-      setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, false); maybeShowRecalc();
+      setUserLocation(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, false);
     }, function(){}, {enableHighAccuracy:true, maximumAge:10000, timeout:15000}); }catch(e){}
   }
   // navigacni tlacitka z popupu (delegovane, popup se renderuje jako HTML)
